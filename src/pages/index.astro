@@ -3,6 +3,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
+import Sidebar from '../components/Sidebar/Sidebar.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -60,7 +61,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			}
 		</style>
 	</head>
-
+	<Sidebar />
 	<body>
 		<BlogHeader />
 		<div class="wrapper">

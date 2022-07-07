@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
 
-
 :root {
     --color-teal: rgb(0, 255, 255);
     --color-orange: #ff5d01;
@@ -15,14 +14,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
     position: relative;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+    /* overflow: auto; */
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,12 +34,21 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar.active{
+.sidebar-spacer {
+    width: 78px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.sidebar-spacer.active {
     width: 240px;
 }
 
 /* LOGO */
-.sidebar .logo_content .logo{
+.sidebar .logo_content .logo {
     color: var(--color-teal);
     display: flex;
     height: 50px;
@@ -51,12 +59,12 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar.active .logo_content .logo{
+.sidebar.active .logo_content .logo {
     opacity: 1;
     pointer-events: auto;
 }
 
-.logo_content .logo i{
+.logo_content .logo i {
     font-size: 28px;
     margin-right: 10px;
     color: var(--color-orange);
@@ -91,7 +99,7 @@ body{
     margin-top: 20px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     position: relative;
     height: 50px;
     width: 100%;
@@ -100,7 +108,7 @@ body{
     line-height: 50px;
 }
 
-.sidebar ul li .tooltip, .tooltipMenu{
+.sidebar ul li .tooltip, .tooltipMenu {
     position: absolute;
     left: 120px;
     top: 0%;
@@ -118,18 +126,18 @@ body{
     display: block;
 }
 
-.sidebar.active ul li .tooltip, .tooltipMenu{
+.sidebar.active ul li .tooltip, .tooltipMenu {
     display: none;
 }
 
-.sidebar ul li:hover .tooltip, .tooltipMenu{
+.sidebar ul li:hover .tooltip, .tooltipMenu {
     transition: all 0.5s ease;
     opacity: 1;
     pointer-events: auto;
     left: 70px;
 }
 
-.sidebar ul li input{
+.sidebar ul li input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -144,7 +152,7 @@ body{
     color: var(--color-teal);
 }
 
-.sidebar ul li .bx-search-alt{
+.sidebar ul li .bx-search-alt {
     position: absolute;
     z-index: 99;
     color: var(--color-orange);
@@ -152,12 +160,12 @@ body{
     transition: all 0.5s ease;
 }
 
-.sidebar ul li .bx-search-alt:hover{
+.sidebar ul li .bx-search-alt:hover {
     background-color: var(--color-lightPurple); 
     color: var(--color-teal);
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
     color: var(--color-orange);
     display: flex;
     align-items: center;
@@ -167,12 +175,12 @@ body{
     white-space: nowrap;
 }
 
-.sidebar ul li a:hover, .links_name:hover{
+.sidebar ul li a:hover, .links_name:hover {
     color: var(--color-purple);
     background: var(--color-orange);
 }
 
-.sidebar ul li i{
+.sidebar ul li i {
     height: 50px;
     min-width: 50px;
     border-radius: 12px;
@@ -180,17 +188,17 @@ body{
     text-align: center;
 }
 
-.sidebar ul li span{
+.sidebar ul li span {
     color: var(--color-teal);
 }
 
-.sidebar .links_name{
+.sidebar .links_name {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease;
 }
 
-.sidebar.active .links_name{
+.sidebar.active .links_name {
     opacity: 1;
     pointer-events: auto;
 }
@@ -203,7 +211,7 @@ body{
     width: 100%;
 }
 
-.sidebar .profile_content .profile{
+.sidebar .profile_content .profile {
     position: relative;
     padding: 10px 6px;
     height: 60px;
@@ -211,11 +219,11 @@ body{
     transition: all 0.4s ease;
 }
 
-.sidebar.active .profile_content .profile{
+.sidebar.active .profile_content .profile {
     background-color: var(--color-orange);
 }
 
-.sidebar .profile_content .profile .profile_details{
+.sidebar .profile_content .profile .profile_details {
     display: flex;
     align-items: center;
     background-color: var(--color-lightPurple);
@@ -225,32 +233,32 @@ body{
     white-space: nowrap;
 }
 
-.sidebar.active .profile_content .profile .profile_details{
+.sidebar.active .profile_content .profile .profile_details {
     opacity: 1;
     pointer-events: auto;
 }
 
-.profile .profile_details img{
+.profile .profile_details img {
     height: 45px;
     width: 45px;
     object-fit: cover;
     border-radius: 12px;
 }
 
-.profile .profile_details .name_job{
+.profile .profile_details .name_job {
     margin-left: 10px;
 }
 
-.profile .profile_details .name{
+.profile .profile_details .name {
     font-size: 18px;
     font-weight: 400;
 }
 
-.profile .profile_details .job{
+.profile .profile_details .job {
     font-size: 12px;
 }
 
-.profile #logout{
+.profile #logout {
     position: absolute;
     bottom: 5px;
     left: 50%;
@@ -264,31 +272,35 @@ body{
     background-color: var(--color-orange);
 }
 
-.sidebar.active .profile #logout{
+.sidebar.active .profile #logout {
     left: 88%;
     color: var(--color-orange);
 }
 
-.sidebar.active .profile #logout{
+.sidebar.active .profile #logout {
    background: none;
 }
 
-.home_content{
-    position: absolute;
-    height: 100%;
-    width: calc(100% - 78px);
-    left: 78px;  
-    transition: all 0.5s ease;  
+.body {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
-.home_content .text{
+.home_content {
+    flex-grow: 1;
+    width: 1px;
+    padding-left: 1rem;
+}
+
+.home_content .text {
     font-size: 25px;
     font-weight: 500;
     color: var(--color-purple);
     margin: 12px;
 }
 
-.sidebar.active ~ .home_content .text{
+.sidebar.active ~ .home_content .text {
     width: calc(100% - 240px);
     left: 240px;
 }

@@ -6,6 +6,7 @@ import BlogPostPreview from '../components/BlogPostPreview.astro';
 import Sidebar from '../components/Sidebar/Sidebar.astro';
 
 
+
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
@@ -17,6 +18,7 @@ let permalink = 'https://example.com/';
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = await Astro.glob('./posts/*.md');
+
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
 // Full Astro Component Syntax:
@@ -24,7 +26,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 ---
 
 <html lang="en">
-	<Sidebar />
+	
 	<head>
 		<BaseHead { title }{ description }{ permalink } />
 
@@ -65,17 +67,21 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 	</head>
 	
 	<body>
-		<BlogHeader />
-		<div class="wrapper">
-			<main class="content">
-				<section class="intro">
-					<h1 class="latest">{ title }</h1>
-					<p>{ description }</p>
-				</section>
-				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
-				</section>
-			</main>
+		<div class="body">
+			<Sidebar />
+			
+			<div class="home_content">
+				<BlogHeader />
+				<main class="content">
+					<section class="intro">
+						<h1 class="latest">{ title }</h1>
+						<p>{ description }</p>
+					</section>
+					<section aria-label="Blog post list">
+						{allPosts.map((p) => <BlogPostPreview post={p} />)}
+					</section>
+				</main>
+			</div>
 		</div>
 	</body>
 </html>

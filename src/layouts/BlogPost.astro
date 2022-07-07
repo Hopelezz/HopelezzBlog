@@ -4,26 +4,28 @@ import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
 import Sidebar from '../components/Sidebar/Sidebar.astro';
 
-
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 ---
 
 <html lang={content.lang || 'en'}>
-	<Sidebar />
-<post class="container">
+	
 	<head>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
 		<BaseHead {title} {description} {permalink} />
 	</head>
 
 	<body>
-		<BlogHeader />
-		<div class="wrapper">
-			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
-				<slot />
-			</BlogPost>
-		</div>
+		<div class="body">
+		<Sidebar />
+		<main class="home_content">
+			<BlogHeader />
+			<div class="wrapper">
+				<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+					<slot />
+				</BlogPost>
+			</div>
+		</main>
+	</div>
 	</body>
-</post>
 </html>

@@ -1,11 +1,10 @@
 ---
-import "../../styles/sidebar.css"
+import "../../styles/sidebar.css";
 
 ---
 <!--Icons from https://boxicons.com/  -->
-<body>
-    <div class="sidebar">
 
+    <nav class="sidebar">
 <!-- SIDEBAR HEADER -->
         <div class="logo_content">
             <div class="logo">
@@ -16,50 +15,48 @@ import "../../styles/sidebar.css"
             <span class="tooltipMenu">Menu</span>
         </div>
 <!--NAV LIST -->        
-            <ul class="nav_list">
-                <li>
-                    <i class='bx bx-search-alt' ></i>
-                    <input type='text' name='' placeholder='Search...'>
-                    <span class="tooltip">Search</span>
-                </li>
-                <li>
-                    <a href="/">
-                        <i class='bx bx-grid-alt' ></i>
-                    <span class="links_name">Dashboard</span>
-                    </a>
-                    <span class="tooltip">Dashboard</span>
-                </li>
-                <li>
-                    <a href="posts/helloWorld">
-                    <i class='bx bx-receipt'></i>
-                    <span class="links_name">Most Recent</span>
-                    </a>
-                    <span class="tooltip">Most Recent</span>
-                </li>
-                <li>
-                    <a href="https://twitter.com/_Hopelezz">
-                        <i class='bx bxl-twitter' ></i>
-                    <span class="links_name">Twitter</span>
-                    </a>
-                    <span class="tooltip">Twitter</span>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/mark-spratt/">
-                        <i class='bx bxl-linkedin' ></i>
-                    <span class="links_name">LinkedIn</span>
-                    </a>
-                    <span class="tooltip">LinkedIn</span>
-                </li>
-                <li>
-                    <a href="https://github.com/Hopelezz">
-                        <i class='bx bxl-github' ></i>
-                    <span class="links_name">GitHub</span>
-                    </a>
-                    <span class="tooltip">GitHub</span>
-                </li>
-                
-            </ul>
-
+        <ul class="nav_list">
+            <li>
+                <i class='bx bx-search-alt' ></i>
+                <input type='text' name='' placeholder='Search...'>
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="/">
+                    <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="posts/helloWorld">
+                <i class='bx bx-receipt'></i>
+                <span class="links_name">Most Recent</span>
+                </a>
+                <span class="tooltip">Most Recent</span>
+            </li>
+            <li>
+                <a href="https://twitter.com/_Hopelezz">
+                    <i class='bx bxl-twitter' ></i>
+                <span class="links_name">Twitter</span>
+                </a>
+                <span class="tooltip">Twitter</span>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/mark-spratt/">
+                    <i class='bx bxl-linkedin' ></i>
+                <span class="links_name">LinkedIn</span>
+                </a>
+                <span class="tooltip">LinkedIn</span>
+            </li>
+            <li>
+                <a href="https://github.com/Hopelezz">
+                    <i class='bx bxl-github' ></i>
+                <span class="links_name">GitHub</span>
+                </a>
+                <span class="tooltip">GitHub</span>
+            </li>         
+        </ul>
 <!-- PROFILE -->
             <!-- <div class="profile_content">
                 <div class="profile">
@@ -72,26 +69,25 @@ import "../../styles/sidebar.css"
                     </div>
                     <i class='bx bx-log-out' id="logout" ></i> 
                 </div> -->
-            </div>
-    </div>
-
-    <div class="home_content">
-        
-    </div>
+    </nav>
+    <div class="sidebar-spacer"></div>
 
 <script>
     // Toggle Sidebar
     let btn = document.querySelector('#btn');
     let sidebar = document.querySelector('.sidebar');
+    let sidebarSpacer = document.querySelector('.sidebar-spacer');
     let searchBtn = document.querySelector('.bx-search-alt');
 
-    btn.onclick = function () {
-        sidebar.classList.toggle('active');       
-    }
+    btn.addEventListener('click', () => {
+        // TODO: Add `aria-expanded`
+        sidebar.classList.toggle('active');     
+        sidebarSpacer.classList.toggle('active');
+    })
+
     searchBtn.onclick = function () {
-        sidebar.classList.toggle('active');       
+        sidebar.classList.toggle('active');
+        sidebarSpacer.classList.toggle('active');
     }
 
 </script>
-
-</body>

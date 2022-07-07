@@ -1,0 +1,34 @@
+---
+
+---
+
+<p>You've written <strong><span id="character-count">0</span> characters</strong>.</p>
+
+ <!-- Get the number of characters in a text area
+        @param {Node} textArea The text area
+        @returns {Number} The character count -->
+
+
+ ;(function() {
+
+    "use strict";
+  
+    // Get the #text element
+    let text = document.querySelector("#text");
+
+    // Get the #character-count element
+    let characterCount = document.querySelector("#character-count");
+
+
+    function getCount (textArea) {
+    return textArea.value.length;
+    }
+
+    function updateCount () {
+    characterCount.textContent = getCount(this);
+    }
+    
+    // Update the count when the value of #text changes
+    text.addEventListener("input", updateCount);
+  
+  })();

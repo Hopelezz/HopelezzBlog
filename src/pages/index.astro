@@ -5,8 +5,6 @@ import BlogHeader from '../components/BlogHeader.astro';
 import BlogPostPreview from '../components/BlogPostPreview.astro';
 import Sidebar from '../components/Sidebar/Sidebar.astro';
 
-
-
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
@@ -16,7 +14,6 @@ let description = 'The perfect starter for your perfect blog.';
 let permalink = 'https://example.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
-
 let allPosts = await Astro.glob('./posts/*.md');
 
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());

@@ -1,4 +1,5 @@
 ---
+import "../styles/blogfrontpage.css";
 export interface Props {
 	post: any;
 }
@@ -23,7 +24,7 @@ const { post } = Astro.props;
 	.post-preview {
 		padding-bottom: 2rem;
 		margin-bottom: 2rem;
-		border-bottom: 4px solid var(--theme-divider);
+		border-bottom: 4px solid var(--th-primary);
 	}
 
 	header {
@@ -44,12 +45,12 @@ const { post } = Astro.props;
 	.publish-date,
 	.author {
 		font-size: 1.25rem;
-		color: var(--theme-text-lighter);
+		color: var(--th-text-light);
 	}
 
 	.title {
 		font-size: 2.25rem;
 		font-weight: 700;
-		color: var(--theme-text);
+		color: var(--th-text-dark);
 	}
 </style>

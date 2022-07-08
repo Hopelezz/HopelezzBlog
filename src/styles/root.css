@@ -102,7 +102,8 @@ body {
 
 ::selection {
 	color: var(--th-primary);
-	background-color: rgba(var(--th-accent-rgb), var(--th-opacity-light));
+	background-color: var(--th-glow-rgb);
+	/* background-color: rgba(var(--th-accent-rgb), var(--th-opacity-light)); */
 }
 
 * {
@@ -172,6 +173,7 @@ a {
 	text-decoration: none;
 	align-items: center;
 	gap: 0.5rem;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 
@@ -199,6 +201,8 @@ a:hover,
 a:focus {
 	text-decoration: underline;
 	text-decoration-color: var(--th-primary);
+	transition: all 0.5s ease;
+    text-shadow: -8px 8px 10px rgba(0,0,0,0.5);
 }
 
 a:focus {

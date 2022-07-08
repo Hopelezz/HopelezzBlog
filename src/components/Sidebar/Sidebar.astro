@@ -9,10 +9,15 @@ import "../../styles/sidebar.css";
         <div class="logo_content">
             <div class="logo">
                 <i class='bx bxs-quote-alt-left hero'></i>
-            <div class="logo_name">BlackSkies</div>
+                <div class="hero">
+                    <span class="logo_name">BlackSkies</span>
+                </div>
             </div>
-            <i class='bx bx-menu hero' id="btn" ></i>
-            <span class="tooltipMenu">Menu</span>
+            <div class="hero">
+                <i class='bx bx-menu' id="btn" ></i>
+            </div>
+                <span class="tooltipMenu">Menu</span>
+            
         </div>
 <!--NAV LIST -->        
         <ul class="nav_list">
@@ -30,7 +35,7 @@ import "../../styles/sidebar.css";
             </li>
             <li>
                 <a href="posts/helloWorld">
-                <i class='bx bx-receipt hero'></i>
+                <i class='bx bx-receipt'></i>
                 <span class="links_name">Most Recent</span>
                 </a>
                 <span class="tooltip">Most Recent</span>
@@ -73,8 +78,8 @@ import "../../styles/sidebar.css";
     <div class="sidebar-spacer"></div>
 
     <style>
-        .bx{
-            text-shadow: -3px 5px 0 rgba(0,0,0,0.2);
+        i {
+            text-shadow: 0px 0px 0 rgba(0,0,0,0.3);
         }
     </style>
 
@@ -97,25 +102,27 @@ import "../../styles/sidebar.css";
     }
 
 // create shadow based mouse location
-    const bx = document.querySelector('.bx');
-    const text = bx.querySelector('i');
+    const hero = document.querySelector('.hero');
+    const text = document.querySelector('i');
     const walk = 100; //100px
     function shadow(e){
-        const width = bx.offsetWidth;
-        const height = bx.offsetHeight;
-        let { offsetX: x, offsetY: y } = e;
+        console.log(e)
+        
+        // const { offsetWidth: width, offsetHeight: height } = hero;
 
-        if (this !== e.target) {
-            x = x + e.target.offsetLeft;
-            y = y + e.target.offsetTop;
-        }
+        // let { offsetX: x, offsetY: y } = e;
 
-        const xWalk = Math.round((x / width * walk) - (walk / 2));
-        const yWalk = Math.round((y / height * walk) - (walk / 2));
+        // if (this !== e.target) {
+        //     x = x + e.target.offsetLeft;
+        //     y = y + e.target.offsetTop;
+        // }
 
-        text.style.textShadow = `
-            ${xWalk}px ${yWalk}px 0 rgba(0, 0, 0, 0.7)
-        `;
+        // const xWalk = Math.round((x / width * walk ) - ( walk / 2 ));
+        // const yWalk = Math.round((y / height * walk ) - ( walk / 2 ));
+
+        // text.style.textShadow = `
+        //     ${xWalk}px ${yWalk}px 0 rgba(0, 0, 0, 0.3)
+        // `;
     }
 
     hero.addEventListener("mouseover", shadow);

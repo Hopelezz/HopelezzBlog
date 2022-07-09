@@ -23,10 +23,9 @@ body {
     height: 100%;
     background-color: rgba(var(--c-pacific-blue-rgb), 0.1);
     text-shadow: 0 8px 10px rgba(0,0,0,0.5);
-    
-    /* background: #11101d; */
     padding: 6px 14px;
     z-index: 1;
+    color: var(--th-accent);
     transition: all 0.5s ease;
 }
 
@@ -64,24 +63,24 @@ body {
     font-size: 28px;
     margin-right: 10px;
     color: var(--th-primary);
-    text-shadow: 0 5px 10px rgba(0, 255, 213, 0.8);
+    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .logo_content .logo .logo_name {
     font-size: 25px;
     font-weight: 800;
-    color: var(--th-accent);
-    text-shadow: 0 5px 10px rgba(0, 255, 213, 0.8);
+    color: var(--th-primary);
+    text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* text-shadow: 0 5px 10px rgba(0, 255, 213, 0.8); */
 }
 
-.bx {
+.bx, a {
     text-shadow: 0 0 0 var(--c-raisin-black);
 }
 
 /* Button Menu */
 .sidebar #btn {
     position: absolute;
-    color: var(--th-primary);
     left: 50%;
     top: 6px;
     font-size: 30px;
@@ -89,10 +88,12 @@ body {
     width: 50px;
     text-align: center;
     line-height: 50px;
-    transform: translateX(-50%);
-    
+    color: var(--th-accent);
+    transform: translateX(-50%); 
 }
-#btn:hover {
+
+#btn:hover, .bx-search-alt:hover {
+    color: var(--th-primary);
     cursor: pointer;
     transition: all 0.3s ease;
     text-shadow: -5px 5px 4px rgba(0, 0, 0, 0.4);
@@ -124,11 +125,11 @@ body {
     border-radius: 6px;
     height: 35px;
     width: 122px;
-    background-color: var(--c-light-blue);
+    background-color: var(--th-background);
     line-height: 35px;
     text-align: center;
     /* box-shadow: 0 5px 10px rgba(0, 250, 182, 0.8); */
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(4, 169, 150, 0.724);
     transition: 0s;
     opacity: 0;
     pointer-events: none;
@@ -155,24 +156,18 @@ body {
     border-radius: 12px;
     outline: none;
     border: none;
-    background-color: var(--c-pacific-blue-rgb);
+    background-color: var(--th-background);
     padding-left: 50px;
     font-size: 25px;
-    color: var(--th-accent);
+    color: var(--th-primary);
 }
 
 .sidebar ul li .bx-search-alt {
     position: absolute;
     z-index: 99;
-    color: var(--th-primary);
     font-size: 22px;
+    
     transition: all 0.5s ease;
-}
-
-.sidebar ul li .bx-search-alt:hover {
-    --h: 255;
-    background-color: var(--c-light-cyan-rgb); 
-    color: var(--th-glow);
 }
 
 .sidebar ul li a {

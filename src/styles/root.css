@@ -35,15 +35,13 @@
 	--c-og-rgb: 255, 93, 1;
 	--c-pr: #a50ab9;
 	--c-pr-rgb: 136, 45, 231;
-	--c-rd: #ff1639;
+	--c-rd: rgb(255, 20, 56);
 	--c-rd-rgb: 255, 22, 57;
 	--c-ye: #ffbe2d;
 	--c-ye-rgb: 255, 190, 45;
 
 	/* Theme Colors */
     --c-light-cyan: #dbeeee;
-    --c-light-cyan-rgb:rgb(211, 238, 238);
-	--c-light-blue: #C8E8EC;
 	--c-sea-green-crayola: #00ffd4;
     --c-sea-green-crayola-rgb: 0, 250, 182;
     --c-raisin-black: #1F1D20;
@@ -52,7 +50,6 @@
     --c-royal-purple-rgb: 126, 82, 160;
     --c-pacific-blue: #23B5D3;
     --c-pacific-blue-rgb: 34, 181, 211;
-
 }
 
 :root {
@@ -65,12 +62,13 @@
     --th-accent-rgb: var(--c-pacific-blue-rgb);
 
     --th-glow: var(--c-sea-green-crayola);
-	--th-glow-rgb: rgba(0, 250, 182, 0.2);
+	--th-glow-rgb: rgba(0, 250, 182, 0.3);
 
     --th-opacity-light: 0.2;
     --th-opacity-dark: 0.8;
 
     --th-background: var(--c-light-cyan);
+	--th-background-hsl: hsl(var(--h, 180), var(--s, 44%), var(--l, 88%));
     --th-background-darker: rgba(var(--c-light-cyan-rgb), 1);
 
     --th-text: var(--c-raisin-black);
@@ -78,11 +76,11 @@
     --th-text-dark: rgba(var(--c-raisin-black-rgb), 0.8);
 
     --th-inline-bg: rgba(var(--c-pacific-blue-rgb), 0.2);
- 
 }
 
 body {
-	background: var(--th-background);
+	--l: 55%;
+	background: var(--th-background-hsl);
 	color: var(--th-text);
 }
 
@@ -161,11 +159,9 @@ p {
 	color: var(--th-text-dark);
 }
 
-small,
-.text_small {
-	font-size: 0.833rem;
+aside {
+	color: var(--th-background);
 }
-
 a {
 	color: var(--th-accent);
 	font-weight: 500;
@@ -245,6 +241,8 @@ pre {
 	overflow-y: hidden;
 	overflow-x: auto;
 }
+
+
 
 @media (min-width: 37.75em) {
 	pre {

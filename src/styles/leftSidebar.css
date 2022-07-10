@@ -21,7 +21,9 @@ body {
     left: 0;
     width: 78px;
     height: 100%;
-    background-color: rgba(var(--c-pacific-blue-rgb), 0.1);
+    
+    background: rgb(var(--th-accent-rgb), 25%);
+    /* background-color: rgba(var(--c-pacific-blue-rgb), 0.1); */
     text-shadow: 0 8px 10px rgba(0,0,0,0.5);
     padding: 6px 14px;
     z-index: 1;
@@ -176,12 +178,20 @@ body {
     align-items: center;
     text-decoration: none;
     border-radius: 12px;
+    box-shadow: 0 0px 0px rgb(4, 169, 150);
     white-space: nowrap;
 }
 
 .sidebar ul li a:hover{
     color: var(--c-sea-green-crayola);
     background: var(--th-primary);
+    text-shadow: 0 5px 10px rgba(4, 169, 150, 1);
+    box-shadow: 0 5px 10px rgba(4, 169, 150, 0.724);
+}
+
+.sidebar ul li a:active{
+    background: var(--th-accent);
+    transition: all 0.3s ease;
 }
 
 .sidebar ul li i {

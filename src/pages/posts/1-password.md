@@ -4,6 +4,7 @@ setup: |
   import Cool from '../../components/Author.astro'
 title: Password
 publishDate: 05 JUL 2022
+href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
 description: What is a Password vault?
@@ -43,7 +44,6 @@ We know currently, that passwords aren't supposed to be simple. Oh, and they sho
 Emerging onto the stage a wizard performing magic goes by the name of Robert Morris. To set the stage there is a realm called Unix, an operating system that was first developed in the 1960s. Morris conjured a process known as `Hashing`. Not the same thing used for getting stoned; although they may have been at the time. His son later created the [Morris Worm](https://wikipedia.org/wiki/Morris_worm) on November 2, 1988, with the hashing concept. This infected large groups of systems. Its intended use was to see the size of the internet by exploiting loopholes in the codebase of machines. Doesn't sound like a bad idea, but it didn’t work quite as expected... leading to the first felony conviction of its kind.
 
 Skipping a few years we get to the serious concerns for Password... theft. Such as Email accounts, MSN messengers, Geocities, Myspace, Blogger, Xanga, AIM, Yahoo, Hotmail, AOL... Remembers these? These all came with the advent of the internet created by Al Gore... Whoa... _looks at script_, wait one sec checking sources. Never mind, he horribly misquoted. Sources believe XEROX stumbled upon the concept of the internet without knowing what size it would become. So we have the internet and passwords are being encrypted by hashes...
-
 ## Hashing
 
 What even are hashes? Don't freak out...Breath. You're about to see a long string of letters and numbers. This is intentional! You don't have to memorize this or even read it. Just know it's a random string of characters.
@@ -68,26 +68,30 @@ Let's sprinkle it with SALT. The SALT is a random string of letters and numbers 
 >("hello" + "bv5PehSMfV11Cd") = d1d3ec2e6f20fd420d50e2642992841d8338a314b8ea157c9e18477aaef226ab
 
 This prevented hackers from using banks of passwords like [dictionary attacks](https://en.wikipedia.org/wiki/Dictionary_attack), which use lookup tables... _Those perverts_!
-There have since been numerous other alternatives to the hashing system. One of them is called `PBKDF1` and `PBKDF2`(Password-Based Key Derivation Function 1 and 2).
+
+There have since been many other alternatives to the hashing system. For example: Password-Based Key Derivation Function 1 and 2 or [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) for short.
 
 >Wiki: PBKDF2 applies a pseudorandom function, such as hash-based message authentication code (HMAC), to the input password or passphrase along with a salt value and repeats the process many times to produce a derived key, which can then be used as a cryptographic key in subsequent operations.
 
-Basically, the SALT is reapeated many times to create a key.
+In short, the SALT is repeated many times to create a key.
 
 ## The Fix
 
-We have a lot of passwords, but we don't want to have to remember them all. In comes the advent of Password Managers.
+We have a lot of passwords, but we don't want to recall all them. On top of that each should be unique. In comes the advent of Password Managers a.k.a. vaults.
 
-Various systems work in different ways, but the majority of them encrypt the passwords along with other important information such as Credit Cards, addresses, etc. They will also generate strong passwords for you to use and then saves them for you so you don’t have to recall them. The next time you log in they regurgitate the information and it unlocks the account assuming you are on the same device or have linked your device to this vault.
+The majority of vaults encrypt passwords along with other information such as Credit Cards, addresses, and so on. Some even generate strong passwords for you to use and recalls them so you don’t have to remember what they were. Assuming you are on the same device or have linked your device to the vault.
 
-“But this still doesn’t tell me what app to use!?!” (I hear you mom)
+“But this still doesn’t tell me what app to use!?!” _I hear you mom_
+
 There is a lot to choose from, but these are the ones used the most.
 
-LastPass is a cloud-based password manager. Allowing you to access your passwords regardless of the device you’re on.
+Truth is if you've been using Google Chrome for any period of time you're most likely already using one. Google Password Manager is a website password manage. This feature is baked into the Google Chrome web browser. Includes generated unique, secure passwords for each website you visit as well as. check if any of the passwords you’re using online have been compromised in a data security breach. 
 
-KeePass is a locally stored password manager. Means you need the device you're on in order to log into that account.
+LastPass is a cloud-based manager. Allowing you to access your passwords regardless of the device you’re on.
 
-Some apps has the ability rerence Google, Facebook, Twitter, etc accounts. To help reduce the total number passwords. 
+KeePass is a locally stored manager. Meaning you need the device you're on to log into the account.
+
+Some apps has the ability refence Google, Facebook, Twitter, etc accounts. To help reduce the total number passwords. 
 
 ## Suggestion
 

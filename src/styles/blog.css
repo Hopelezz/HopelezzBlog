@@ -246,6 +246,8 @@ code {
 	word-break: break-word;
 }
 
+
+
 pre.astro-code > code {
 	all: unset;
 }

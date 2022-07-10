@@ -1,5 +1,5 @@
 ---
-import "../../styles/sidebar.css";
+import "../../styles/leftSidebar.css";
 
 ---
 <!--Icons from https://boxicons.com/  -->
@@ -29,7 +29,7 @@ import "../../styles/sidebar.css";
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="posts/helloWorld">
+                <a href='#'>
                     <i class='bx bx-receipt'></i>
                     <span class="links_name">Most Recent</span>
                 </a>
@@ -60,17 +60,6 @@ import "../../styles/sidebar.css";
     </nav>
     <div class="sidebar-spacer"></div>
 
-    
-<style>
-    :root{
-    --shadow-color: #14011dbe;
-}
-    /* Sets the Shadow of i */
-i {
-    text-shadow: 0px 0px 0 var(--shadow-color);
-}
-</style>
-
 <script>
 // Toggle Sidebar
     let btn = document.querySelector('#btn');
@@ -88,81 +77,4 @@ i {
         sidebar.classList.toggle('active');
         sidebarSpacer.classList.toggle('active');
     }
-
-// // Create shadow based mouse location
-//     const hero = document.querySelector('.hero');
-    
-//     const text = document.querySelector('i');
-//     const walk = 100; //100px
-
-//     function shadow(e){
-           
-//         const { offsetWidth: width, offsetHeight: height } = hero;
-        
-//         let { offsetX: x, offsetY: y } = e;
-        
-//         if(this !== e.target){
-//             x = x + e.target.offsetLeft;
-//             y = y + e.target.offsetTop;
-//         }
-   
-//         // if (e.currentTarget == e.target) { 
-//         //     x = x + e.target.offsetLeft;
-//         //     y = y + e.target.offsetTop;
-//         // }
-
-//         const xWalk = Math.round((x / width * walk ) - ( walk / 2 ));
-//         const yWalk = Math.round((y / height * walk ) - ( walk / 2 ));
-//         text.style.textShadow = `${xWalk}px ${yWalk}px 0 rgba(0, 0, 0, 1)`;
-
-//         console.log('success', text.style.textShadow)
-//     }
-
-//     hero.addEventListener("mouseover", shadow);
-
-
-
-
-const hero = document.querySelector('.hero')
-const text = hero.querySelector('i')
-
-//how far should the text shadow go
-const walk = 20; //px
-
-//function that moves the shadow by moving the mouse in the hero div
-const shadow = function(e){
-    //the measure differs if we resize the window of the browser -responsive element
-    //offsetWidth gives the measurement in pixels of the element's CSS width
-    //offsetHeight gives the measurement in pixels of the element's CSS height
-
-    //measures of the hero div
-    const width = this.offsetWidth;
-    const height = this.offsetHeight;
-
-    //the exact measure pixel in the hero where the mouse is moving (e -mousemove) in x and y
-    let x = e.offsetX
-    let y = e.offsetY
-    //console.log(x,y)
-        
-    //we want  to update the values of x and y exaclty near by the text h1 top left, to start there.
-    if(this !== e.target) {
-        x = x + e.target.offsetLeft;
-        y = y + e.target.offsetTop;
-    }
-
-    //Math.round() method returns  the value of a number rounder to the neareast integer
-
-    const xWalk = Math.round(( x / width * walk) - (walk / 2))
-    const yWalk = Math.round(( y /height * walk) - (walk / 2))
-
-    //having  already the values of walk of x and y its time to add a style in our h1
-    text.style.textShadow = `
-    ${xWalk}px ${yWalk}px  var(--shadow-color)`;
-   
-}
-
-
-
-hero.addEventListener('mousemove', shadow)
-
 </script>

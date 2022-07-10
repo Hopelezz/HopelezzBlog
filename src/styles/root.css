@@ -68,7 +68,7 @@
     --th-opacity-dark: 0.8;
 
     --th-background: var(--c-light-cyan);
-	--th-background-hsl: hsl(var(--h, 180), var(--s, 44%), var(--l, 88%));
+	--th-background-hsl: hsl(var(--h, 180), var(--s, 44%), var(--l, 90%));
     --th-background-darker: rgba(var(--c-light-cyan-rgb), 1);
 
     --th-text: var(--c-raisin-black);
@@ -80,8 +80,8 @@
 
 body {
 	--l: 55%;
-	background: var(--th-background-hsl);
-	color: var(--th-text);
+	background: var(--th-background);
+	color: var(--th-text-dark);
 }
 
 /* :root.theme-dark {
@@ -116,7 +116,7 @@ body {
 
 @media (min-width: 50em) {
 	:root {
-		--max-width: 40em;
+		--max-width: 50em;
 	}
 }
 
@@ -137,31 +137,33 @@ body {
 
 h1 {
 	font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
+	color: var(--th-text-dark);
 }
 
 h2 {
 	font-size: clamp(2.074rem, 1.707rem + 0.9175vw, 2.441rem);
+	color: var(--th-text-dark);
 }
 
 h3 {
 	font-size: clamp(1.728rem, 1.503rem + 0.5625vw, 1.953rem);
+	color: var(--th-text-dark);
 }
 
 h4 {
 	font-size: clamp(1.44rem, 1.317rem + 0.3075vw, 1.563rem);
+	color: var(--th-text-dark);
 }
 
 h5 {
 	font-size: clamp(1.2rem, 1.15rem + 0.125vw, 1.25rem);
+	color: var(--th-text-dark);
 }
 
 p {
 	color: var(--th-text-dark);
 }
 
-aside {
-	color: var(--th-background);
-}
 a {
 	color: var(--th-accent);
 	font-weight: 500;
@@ -169,7 +171,7 @@ a {
 	text-decoration: none;
 	align-items: center;
 	gap: 0.5rem;
-    text-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    text-shadow: 0 0px 0px rgba(0,0,0,1);
 }
 
 
@@ -195,6 +197,7 @@ a > code::before {
 
 a:hover,
 a:focus {
+	color: var(--th-primary);
 	text-decoration: underline;
 	text-decoration-color: var(--th-primary);
 	transition: all 0.5s ease;
@@ -218,13 +221,20 @@ code {
 	--padding-inline: 0.33rem;
 
 	font-family: var(--font-mono);
-	font-size: 0.85em;
+	font-weight: 600;
+	text-shadow: 0px 0px 2px var(--th-glow);
+	font-size: 0.90em;
 	color: inherit;
 	background-color: var(--th-inline-bg);
 	padding: var(--padding-block) var(--padding-inline);
 	margin: calc(var(--padding-block) * -1) -0.125em;
 	border-radius: var(--border-radius);
 	word-break: break-word;
+}
+
+pre.astro-code{
+	background-color: rgb(var(--c-pacific-blue-rgb), 0.4);
+	color: var(--th-accent);
 }
 
 pre.astro-code > code {
@@ -237,7 +247,6 @@ pre {
 	--padding-inline: 2rem;
 	padding: var(--padding-block) var(--padding-inline);
 	padding-right: calc(var(--padding-inline) * 2);
-
 	overflow-y: hidden;
 	overflow-x: auto;
 }

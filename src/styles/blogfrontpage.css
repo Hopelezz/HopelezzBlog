@@ -1,3 +1,5 @@
+@import './root.css';
+
 .content :global(main > * + *) {
     margin-top: 1rem;
 }
@@ -5,7 +7,7 @@
 .post-preview {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
-    border-bottom: 4px solid var(--theme-divider);
+    border-bottom: 4px solid var(--th-primary);
 }
 
 header {
@@ -26,11 +28,15 @@ header {
 .publish-date,
 .author {
     font-size: 1.25rem;
-    color: var(--theme-text-lighter);
+    color: var(--th-text-light);
 }
 
-.title {
+#title {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--theme-text);
+    color: var(--th-text-dark);
+}
+
+#title:hover{
+    color: var(--th-text);
 }

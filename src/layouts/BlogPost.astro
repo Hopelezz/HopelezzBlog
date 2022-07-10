@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
 import BlogPost from '../components/BlogPost.astro';
-import Sidebar from '../components/Sidebar/Sidebar.astro';
+import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
@@ -17,7 +17,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 
 	<body>
 		<div class="body">
-		<Sidebar />
+		<LeftSidebar />
 		<main class="home_content">
 			<BlogHeader />
 			<div class="wrapper">

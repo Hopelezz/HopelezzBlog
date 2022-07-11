@@ -21,9 +21,7 @@ body {
     left: 0;
     width: 78px;
     height: 100%;
-    
     background: rgb(var(--th-accent-rgb), 25%);
-    /* background-color: rgba(var(--c-pacific-blue-rgb), 0.1); */
     text-shadow: 0 8px 10px rgba(0,0,0,0.5);
     padding: 6px 14px;
     z-index: 1;
@@ -92,6 +90,7 @@ body {
     line-height: 50px;
     color: var(--th-accent);
     transform: translateX(-50%); 
+    transition: all 0.5s ease;
 }
 
 #btn:hover, .bx-search-alt:hover {

@@ -106,4 +106,4 @@ This one:
 
 It memes on the idea that `Tr0ub4dor&3` is far harder to recall than `correcthorsebatterystaple`. This is true!
 
- `1MillionBabyParrots!` is still a viable password, readable, and provide the higher level of security than something like `Tr0ub4dor&3`.
+ `1MillionBabyParrots!` is still a viable password, readable, and provides a higher level of security than something like `Tr0ub4dor&3`.

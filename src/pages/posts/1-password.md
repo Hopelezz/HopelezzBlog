@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Cool from '../../components/Blog/Author.astro'
 title: Password
 publishDate: 05 JUL 2022
 href: https://twitter.com/_Hopelezz

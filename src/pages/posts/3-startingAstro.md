@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Cool from '../../components/Blog/Author.astro'
 title: Part 1 - Starting an Astro Blog 
 publishDate: 10 JUL 2022
 href: https://twitter.com/_Hopelezz
@@ -18,6 +18,7 @@ _Not gonna lie, I just learned how to make this link to a different header on th
 ```
 [Things I want to Do](#things-i-want-to-do)
 ```
+
 A description plus in the url part has to have #all-words-in-lower-case with hiphens between each words.
 
 If you are struggling with the idea of `How To` for something like this I hope I can inspires you with this journey. Admittedly, I'm winging it...enjoying the process. If I break something I try to learn why it broke and how to fix it.
@@ -45,17 +46,23 @@ The first post I wrote actually started back in 2011 as a facebook post. My mom 
 
 One evening on Twitch I stumbled on a bootcamp called #100Devs. An instructor who goes by the name Leon was teaching about JavaScript. Honestly, at first I was just going to use the platform to hustle my way into a job, but using python instead. That was until I saw the different projects that were being built. 
 
-### Step 1
+## Baby Steps
 
-First thing was make a Logo! So I still have to work on creating an SVG version of it. That'll come when I have some creative headroom. For now I'll be using a simple PNG.
+First thing I did was make a Logo! Sure, it's not tied directly to programming the blog or anything, but I wanted to set a theme around a `brand`. It's not a bran YET, but it could be. I still have to work on creating an SVG version of it. That'll come when I have some creative headroom. For now I'll be using a simple PNG.
 
-Secondly, I wanted to add some flexibilty to my site. One thing it was missing is a navigation bar. So I created one! This is what it looked like originally:
+>SVG stands for Scalable Vector Graphics. It's a way to draw images that can be scaled, colored, and rotated.
+
+## The Road
+
+I wanted to add some flexibilty to my site. One thing it was missing was a navigation bar. So I created one! This is what it looked like originally:
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/88TWvWO"  ><a href="//imgur.com/a/88TWvWO">Sidebar</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
+I've since redesigned it, adding and removing features based on what I need.
+
 For the icons I used this website [Boxicons](https://boxicons.com/). You can search over 1600 icons. You can even use the icons as fonts! Because of this I was able to rather easily modify the CSS of the icons.
 
-### Step 2
+
 
 <!-- TODO -->
 
@@ -66,9 +73,9 @@ For the icons I used this website [Boxicons](https://boxicons.com/). You can sea
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page
 - [ ] Add a Dark Theme.
-  - [ ] Add a LeftSideBar button.
-  - [ ] Invert the colors and make everything Glow.
-- [ ] Fix the `Most Recent Posts` button on the LeftSideBar
+- [ ] Searchbar for posts.
+  - Invert the colors and make everything Glow.
+- [x] Fix the `Most Recent Posts` button on the LeftSideBar
 - [ ] Add a Search Feature to query the posts for keywords
 - [ ] Change the way `Lists` look
 - [ ] Change the way `Check Boxes` look

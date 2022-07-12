@@ -1,11 +1,17 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BaseHead from '../components/Blog/BaseHead.astro';
+import BlogHeader from '../components/Blog/Header.astro';
+import BlogPost from '../components/Blog/BlogPost.astro';
 import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+
+let allPosts = await Astro.glob('../pages/posts/*.md');
+
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let mostRecentPost = allPosts[0];
 ---
 
 <html lang={content.lang || 'en'}>
@@ -17,7 +23,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 
 	<body>
 		<div class="body">
-		<LeftSidebar />
+		<LeftSidebar mostRecentPost = {mostRecentPost}/>
 		<main class="home_content">
 			<BlogHeader />
 			<div class="wrapper">

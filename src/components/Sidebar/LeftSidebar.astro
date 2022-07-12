@@ -1,7 +1,7 @@
 ---
 import "../../styles/leftSidebar.css";
 
-const { url } = Astro.props;
+const { mostRecentPost } = Astro.props;
 ---
 <!--Icons from https://boxicons.com/  -->
 
@@ -30,7 +30,7 @@ const { url } = Astro.props;
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href={ url }>
+                <a href={ mostRecentPost.url }>
                     <i class='bx bx-receipt'></i>
                     <span class="links_name">Most Recent</span>
                 </a>
@@ -74,8 +74,9 @@ const { url } = Astro.props;
         sidebarSpacer.classList.toggle('active');
     })
 
-    searchBtn.onclick = function () {
+    searchBtn.addEventListener('click', () => {
         sidebar.classList.toggle('active');
         sidebarSpacer.classList.toggle('active');
-    }
+    })
+
 </script>

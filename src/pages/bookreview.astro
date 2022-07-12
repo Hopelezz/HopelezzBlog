@@ -1,0 +1,86 @@
+---
+// Component Imports
+import BaseHead from '../components/Blog/BaseHead.astro';
+import BlogHeader from '../components/Blog/Header.astro';
+import BlogPostPreview from '../components/BookShelf/BookPostPreview.astro';
+import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = '<BLACKSKIES />';
+let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
+let permalink = 'https://example.com/';
+
+// Data Fetching: List all Markdown posts in the repo.
+let allBookPosts = await Astro.glob('./posts/bookreview/*.md');
+
+allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+
+let mostRecentBookPost = allBookPosts[0];
+---
+
+<html lang="en">
+	
+	<head>
+		<BaseHead { title }{ description }{ permalink } />
+
+		<style>
+			header {
+				width: 100%;
+				height: 100%;
+				background-color: var(--th-background);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.content {
+				margin-top: 4rem;
+				margin-bottom: 8rem;
+			}
+
+			.content :global(main > * + *) {
+				margin-top: 1rem;
+			}
+
+			.intro {
+				padding-bottom: 4rem;
+				margin-bottom: 2rem;
+				border-bottom: 4px solid var(--th-accent);
+			}
+
+			.intro > * {
+				margin: 0;
+			}
+
+			.latest {
+				font-size: 2.5rem;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="body">
+			<LeftSidebar  mostRecentBookPost = {mostRecentBookPost} />
+			
+			<div class="home_content">
+				<BlogHeader />
+				<main class="content">
+					<section class="intro">
+						<h1 class="latest">{ title }</h1>
+						<p>"If you're afraid of something then do things in fear."</p>
+						<br/>
+						<p>{ description }</p>
+					</section>
+					<section aria-label="Blog post list">
+						{allBookPosts.map((p) => <BlogPostPreview post={p} />)}
+					</section>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
+  import Layout from '../../layouts/BookPost.astro'
   import Cool from '../../components/Blog/Author.astro'
 title: Armada 
 publishDate: 11 JUL 2017
@@ -8,6 +8,7 @@ href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
 description: Documenting my journey in creating this website.
+img: public\assets\bookreview\Armada.jpg
 ---
 
 # Book Review:

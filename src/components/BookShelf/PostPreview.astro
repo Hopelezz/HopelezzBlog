@@ -1,0 +1,19 @@
+---
+import "../../styles/blogFrontPage.css";
+
+export interface Props {
+	bookpost: any;
+}
+
+const { bookpost } = Astro.props;
+---
+
+<article class="post-preview">
+	<header>
+		<p class="publish-date">{bookpost.frontmatter.publishDate}</p>
+		<a href={bookpost.url}><h1 id="title">{bookpost.frontmatter.title}</h1></a>
+	</header>
+	<p>{bookpost.frontmatter.description}</p>
+	<a href={bookpost.url}>Read more</a>
+</article>
+

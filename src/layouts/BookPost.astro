@@ -1,13 +1,13 @@
 ---
-import BaseHead from '../components/Blog/BaseHead.astro';
-import BlogHeader from '../components/Blog/Header.astro';
-import BlogPost from '../components/Blog/BlogPost.astro';
-import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
+import Meta from '../components/MetaTags.astro';
+import BlogHeader from '../components/Header.astro';
+import BookPost from '../components/bookShelf/Post.astro';
+import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt} = content;
 
-let allBookPosts = await Astro.glob('../pages/posts/bookreview/*.md');
+let allBookPosts = await Astro.glob('../pages/bookreview/*.md');
 
 allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
@@ -15,10 +15,8 @@ let mostRecentPost = allBookPosts[0];
 ---
 
 <html lang={content.lang || 'en'}>
-	
 	<head>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
-		<BaseHead {title} {description} {permalink} />
+		<Meta {title} {description} {permalink} />
 	</head>
 
 	<body>
@@ -27,9 +25,9 @@ let mostRecentPost = allBookPosts[0];
 		<main class="home_content">
 			<BlogHeader />
 			<div class="wrapper">
-				<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+				<BookPost {title} {author} {heroImage} {publishDate} {alt}>
 					<slot />
-				</BlogPost>
+				</BookPost>
 			</div>
 		</main>
 	</div>

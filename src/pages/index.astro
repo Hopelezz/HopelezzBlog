@@ -1,9 +1,9 @@
 ---
 // Component Imports
-import BaseHead from '../components/Blog/BaseHead.astro';
-import BlogHeader from '../components/Blog/Header.astro';
-import BlogPostPreview from '../components/Blog/PostPreview.astro';
-import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
+import Meta from '../components/MetaTags.astro';
+import BlogHeader from '../components/Header.astro';
+import BlogPostPreview from '../components/blog/PostPreview.astro';
+import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -14,18 +14,18 @@ let description = 'Hi! My name is Mark Spratt. I am a software engineer who star
 let permalink = 'https://example.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
-let allPosts = await Astro.glob('./posts/*.md');
+let allBlogPosts = await Astro.glob('./blog/*.md');
 
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
 
-let mostRecentPost = allPosts[0];
+let mostRecentBlogPost = allBlogPosts[0];
 ---
 
 <html lang="en">
 	
 	<head>
-		<BaseHead { title }{ description }{ permalink } />
+		<Meta { title }{ description }{ permalink } />
 
 		<style>
 			header {
@@ -65,7 +65,7 @@ let mostRecentPost = allPosts[0];
 	
 	<body>
 		<div class="body">
-			<LeftSidebar  mostRecentPost = {mostRecentPost} />
+			<LeftSidebar  mostRecentPost = {mostRecentBlogPost} />
 			
 			<div class="home_content">
 				<BlogHeader />
@@ -77,7 +77,7 @@ let mostRecentPost = allPosts[0];
 						<p>{ description }</p>
 					</section>
 					<section aria-label="Blog post list">
-						{allPosts.map((p) => <BlogPostPreview post={p} />)}
+						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

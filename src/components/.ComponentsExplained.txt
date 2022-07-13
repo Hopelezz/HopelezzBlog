@@ -1,0 +1,14 @@
+
+Shared Components are in the Main "Components" folder.
+    Author
+    BaseHead
+    Header
+    Heading
+
+Blog
+    | - Post
+    + - PostPreview
+
+BookShelf
+    | - Post
+    + - PostPreview    

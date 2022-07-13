@@ -1,9 +1,9 @@
 ---
 // Component Imports
-import BaseHead from '../components/Blog/BaseHead.astro';
-import BlogHeader from '../components/Blog/Header.astro';
-import BlogPostPreview from '../components/BookShelf/BookPostPreview.astro';
-import LeftSidebar from '../components/Sidebar/LeftSidebar.astro';
+import Meta from '../components/MetaTags.astro';
+import Header from '../components/Header.astro';
+import BookPostPreview from '../components/bookShelf/PostPreview.astro';
+import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -14,10 +14,9 @@ let description = 'Hi! My name is Mark Spratt. I am a software engineer who star
 let permalink = 'https://example.com/';
 
 // Data Fetching: List all Markdown posts in the repo.
-let allBookPosts = await Astro.glob('./posts/bookreview/*.md');
+let allBookPosts = await Astro.glob('./bookreview/*.md');
 
 allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
 
 let mostRecentBookPost = allBookPosts[0];
 ---
@@ -25,7 +24,8 @@ let mostRecentBookPost = allBookPosts[0];
 <html lang="en">
 	
 	<head>
-		<BaseHead { title }{ description }{ permalink } />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
+		<Meta { title }{ description }{ permalink } />
 
 		<style>
 			header {
@@ -68,7 +68,7 @@ let mostRecentBookPost = allBookPosts[0];
 			<LeftSidebar  mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
-				<BlogHeader />
+				<Header />
 				<main class="content">
 					<section class="intro">
 						<h1 class="latest">{ title }</h1>
@@ -77,7 +77,7 @@ let mostRecentBookPost = allBookPosts[0];
 						<p>{ description }</p>
 					</section>
 					<section aria-label="Blog post list">
-						{allBookPosts.map((p) => <BlogPostPreview post={p} />)}
+						{allBookPosts.map((p) => <BookPostPreview bookpost={p} />)}
 					</section>
 				</main>
 			</div>

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Blog/Author.astro'
+  import Cool from '../../components/Author.astro'
 title: Armada 
 publishDate: 11 JUL 2017
 href: https://twitter.com/_Hopelezz

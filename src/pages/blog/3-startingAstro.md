@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Blog/Author.astro'
+  import Cool from '../../components/Author.astro'
 title: Part 1 - Starting an Astro Blog 
 publishDate: 10 JUL 2022
 href: https://twitter.com/_Hopelezz

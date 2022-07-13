@@ -1,6 +1,6 @@
 ---
 import Meta from '../components/MetaTags.astro';
-import BlogHeader from '../components/Header.astro';
+import Header from '../components/Header.astro';
 import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 
@@ -21,9 +21,9 @@ let mostRecentPost = allBookPosts[0];
 
 	<body>
 		<div class="body">
-		<LeftSidebar mostRecentPost = {mostRecentPost}/>
+		<LeftSidebar mostRecentPost = {mostRecentPost} />
 		<main class="home_content">
-			<BlogHeader />
+			<Header />
 			<div class="wrapper">
 				<BookPost {title} {author} {heroImage} {publishDate} {alt}>
 					<slot />

@@ -7,11 +7,11 @@ import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 
-let allBlogPosts = await Astro.glob('../pages/blog/*.md');
+let allPosts = await Astro.glob('../pages/blog/*.md');
 
-allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
-let mostRecentPost = allBlogPosts[0];
+let mostRecentBlogPost = allPosts[0];
 ---
 
 <html lang={content.lang || 'en'}>
@@ -21,7 +21,7 @@ let mostRecentPost = allBlogPosts[0];
 
 	<body>
 		<div class="body">
-		<LeftSidebar mostRecentPost = {mostRecentPost} />
+		<LeftSidebar mostRecentBlogPost = {mostRecentBlogPost} />
 		<main class="home_content">
 			<Header />
 			<div class="wrapper">

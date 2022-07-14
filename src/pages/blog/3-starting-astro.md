@@ -4,8 +4,8 @@ setup: |
   import Cool from '../../components/Author.astro'
 title: Part 1 - Starting an Astro Blog 
 publishDate: 10 JUL 2022
-href: https://twitter.com/_Hopelezz
 name: Mark Spratt
+href: https://twitter.com/_Hopelezz
 value: 128
 description: Documenting my journey in creating this website.
 ---
@@ -62,13 +62,14 @@ I've since redesigned it, adding and removing features based on what I need.
 
 For the icons I used this website [Boxicons](https://boxicons.com/). You can search over 1600 icons. You can even use the icons as fonts! Because of this I was able to rather easily modify the CSS of the icons.
 
-
+I also added search (that doesn't work yet. I head that's hard...),
 
 <!-- TODO -->
 
 # Things I Want To Do:
 
 - [ ] Turn the Logo into an SVG version
+- [ ] Create a section for Book Reviews
 - [ ] Add a `About Me` page
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page

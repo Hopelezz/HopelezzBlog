@@ -9,12 +9,19 @@ import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = '<BLACKSKIES />';
-let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
-let permalink = 'https://example.com/';
+let title = '<BOOKSHELF />';
+let description = 'Looking for something to read next? Consider checking out my book shelf!';
+let permalink = '#';
 
-// Data Fetching: List all Markdown posts in the repo.
-let allBookPosts = await Astro.glob('./bookreview/*.md');
+// Data Fetching: List all Markdown Blog posts in the repo.
+let allBlogPosts = await Astro.glob('./blog/*.md');
+
+allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let mostRecentBlogPost = allBlogPosts[0];
+
+// Data Fetching: List all Markdown Book posts in the repo.
+let allBookPosts = await Astro.glob('../pages/book/*.md');
 
 allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
@@ -65,7 +72,7 @@ let mostRecentBookPost = allBookPosts[0];
 	
 	<body>
 		<div class="body">
-			<LeftSidebar  mostRecentBookPost = {mostRecentBookPost} />
+			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
 				<Header />
@@ -76,8 +83,8 @@ let mostRecentBookPost = allBookPosts[0];
 						<br/>
 						<p>{ description }</p>
 					</section>
-					<section aria-label="Blog post list">
-						{allBookPosts.map((p) => <BookPostPreview bookpost={p} />)}
+					<section aria-label="Book post list">
+						{allBookPosts.map((p) => <BookPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

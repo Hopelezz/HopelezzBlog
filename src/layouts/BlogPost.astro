@@ -7,11 +7,20 @@ import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 
-let allPosts = await Astro.glob('../pages/blog/*.md');
 
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+// Data Fetching: List all Markdown Blog posts in the repo.
+let allBlogPosts = await Astro.glob('../pages/blog/*.md');
 
-let mostRecentBlogPost = allPosts[0];
+allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let mostRecentBlogPost = allBlogPosts[0];
+
+// Data Fetching: List all Markdown Book posts in the repo.
+let allBookPosts = await Astro.glob('../pages/book/*.md');
+
+allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let mostRecentBookPost = allBookPosts[0];
 ---
 
 <html lang={content.lang || 'en'}>
@@ -21,7 +30,7 @@ let mostRecentBlogPost = allPosts[0];
 
 	<body>
 		<div class="body">
-		<LeftSidebar mostRecentBlogPost = {mostRecentBlogPost} />
+			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 		<main class="home_content">
 			<Header />
 			<div class="wrapper">

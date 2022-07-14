@@ -9,17 +9,25 @@ import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = '<BLACKSKIES />';
+let title = '<BLOGS />';
 let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
-let permalink = 'https://example.com/';
+let permalink = '#';
 
-// Data Fetching: List all Markdown posts in the repo.
+// Data Fetching: List all Markdown Blog posts in the repo.
 let allBlogPosts = await Astro.glob('./blog/*.md');
 
 allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
-
 let mostRecentBlogPost = allBlogPosts[0];
+
+// Data Fetching: List all Markdown Book posts in the repo.
+let allBookPosts = await Astro.glob('../pages/book/*.md');
+
+allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+let mostRecentBookPost = allBookPosts[0];
+
+
 ---
 
 <html lang="en">
@@ -65,7 +73,7 @@ let mostRecentBlogPost = allBlogPosts[0];
 	
 	<body>
 		<div class="body">
-			<LeftSidebar  mostRecentPost = {mostRecentBlogPost} />
+			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
 				<BlogHeader />

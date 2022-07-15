@@ -69,7 +69,8 @@ I also added search (that doesn't work yet. I head that's hard...),
 # Things I Want To Do:
 
 - [ ] Turn the Logo into an SVG version
-- [ ] Create a section for Book Reviews
+- [x] Create a section for Book Reviews
+  - [ ] Add images to Post Preview.
 - [ ] Add a `About Me` page
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page

@@ -1,11 +1,11 @@
 ---
-import "../../styles/blogFrontPage.css";
+import "../../styles/frontPage.css";
 
 export interface Props {
 	post: any;
 }
 
-const { post } = Astro.props;
+let { post } = Astro.props;
 ---
 
 <article class="post-preview">

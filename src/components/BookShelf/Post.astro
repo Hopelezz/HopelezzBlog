@@ -1,5 +1,5 @@
 ---
-import Author from '../Blog/Author.astro';
+import Author from '../Author.astro';
 
 export interface Props {
 	title: string;
@@ -7,9 +7,10 @@ export interface Props {
 	publishDate: string;
 	heroImage: string;
 	alt: string;
+	img: string
 }
 
-const { title, author, publishDate, heroImage, alt } = Astro.props;
+const { title, author, publishDate, heroImage, alt, img } = Astro.props;
 ---
 
 <div class="layout">
@@ -18,8 +19,9 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
 			<header>
 				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
 				<p class="publish-date">{publishDate}</p>
+				<Author name="Book Review by: Mark Spratt" href="https://twitter.com/_Hopelezz" />
 				<h1 class="title">{title}</h1>
-				<Author name="Mark Spratt" href="https://twitter.com/_Hopelezz" />
+				<img src={img}>
 			</header>
 			<main>
 				<slot />

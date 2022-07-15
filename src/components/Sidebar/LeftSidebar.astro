@@ -1,7 +1,7 @@
 ---
 import "../../styles/leftSidebar.css";
 
-const { mostRecentPost } = Astro.props;
+const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
 ---
 <!--Icons from https://boxicons.com/  -->
 
@@ -24,17 +24,31 @@ const { mostRecentPost } = Astro.props;
             </li>
             <li>
                 <a href="/">
-                    <i class='bx bx-grid-alt' ></i>
-                    <span class="links_name">Dashboard</span>
+                    <i class='bx bxs-book-content'></i>
+                    <span class="links_name">Blogs</span>
                 </a>
-                <span class="tooltip">Dashboard</span>
+                <span class="tooltip">Blogs</span>
             </li>
             <li>
-                <a href={ mostRecentPost.url }>
-                    <i class='bx bx-receipt'></i>
-                    <span class="links_name">Most Recent</span>
+                <a href={ mostRecentBlogPost.url }>
+                    <i class='bx bx-book-content' ></i>
+                    <span class="links_name">Recent Blog</span>
                 </a>
-                <span class="tooltip">Most Recent</span>
+                <span class="tooltip">Recent Blog</span>
+            </li>
+            <li>
+                <a href="/bookreview">
+                    <i class='bx bxs-book'></i>
+                    <span class="links_name">Books</span>
+                </a>
+                <span class="tooltip">Books</span>
+            </li>
+            <li>
+                <a href={ mostRecentBookPost.url }>
+                    <i class='bx bx-book'></i>
+                    <span class="links_name">Recent Book</span>
+                </a>
+                <span class="tooltip">Recent Book</span>
             </li>
             <li>
                 <a href="https://twitter.com/_Hopelezz">
@@ -78,5 +92,4 @@ const { mostRecentPost } = Astro.props;
         sidebar.classList.toggle('active');
         sidebarSpacer.classList.toggle('active');
     })
-
 </script>

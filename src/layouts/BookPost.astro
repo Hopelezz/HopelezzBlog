@@ -1,12 +1,12 @@
 ---
 import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
-import BlogPost from '../components/blog/Post.astro';
+import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getLatestPost } from '../utils/api.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
 const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 
 ---
@@ -22,9 +22,9 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 		<main class="home_content">
 			<Header />
 			<div class="wrapper">
-				<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+				<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
 					<slot />
-				</BlogPost>
+				</BookPost>
 			</div>
 		</main>
 	</div>

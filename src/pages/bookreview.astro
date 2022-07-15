@@ -1,8 +1,8 @@
 ---
 // Component Imports
 import Meta from '../components/MetaTags.astro';
-import BlogHeader from '../components/Header.astro';
-import BlogPostPreview from '../components/blog/PostPreview.astro';
+import Header from '../components/Header.astro';
+import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getLatestPost } from '../utils/api.astro';
 
@@ -10,18 +10,17 @@ import { getLatestPost } from '../utils/api.astro';
 // You can write any JavaScript/TypeScript that you'd like here.
 // It will run during the build, but never in the browser.
 // All variables are available to use in the HTML template below.
-let title = '<BLOGS />';
-let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
+let title = '<BOOKSHELF />';
+let description = 'Looking for something to read next? Consider checking out my book shelf!';
 let permalink = '#';
 
-console.log("Log 1: ",Astro.glob);
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost() ;
-console.log("Log 2: ",Astro.glob);
+const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 ---
 
 <html lang="en">
 	
 	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
 		<Meta { title }{ description }{ permalink } />
 
 		<style>
@@ -65,7 +64,7 @@ console.log("Log 2: ",Astro.glob);
 			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
-				<BlogHeader />
+				<Header />
 				<main class="content">
 					<section class="intro">
 						<h1 class="latest">{ title }</h1>
@@ -73,8 +72,8 @@ console.log("Log 2: ",Astro.glob);
 						<br/>
 						<p>{ description }</p>
 					</section>
-					<section aria-label="Blog post list">
-						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
+					<section aria-label="Book post list">
+						{allBookPosts.map((p) => <BookPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

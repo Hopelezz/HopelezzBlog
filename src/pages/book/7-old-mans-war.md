@@ -7,19 +7,15 @@ publishDate: 2 MAR 2019
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
-description: A space expedition goes horribly wrong...
-img: public\assets\bookreview\Armada.jpg
+description: Hitchhickers guide to the Galaxy meets Stormship troopers!
+img: https://covers.openlibrary.org/b/id/3365280-L.jpg
+# img: public\assets\bookreview\OldMansWar.jpg
 Tags: Sci-fi, Comedy, Charming, Is-A-Movie
 ---
 
-# Book Review : Old Man's War by John Scalzi
+# Rating : 10/10
 
-<div align="center" style="width:200px;">
-![Old Mans War](../../../public/assets/bookreview/OldMansWar.jpg)
-</div>
-
-### Rating : 10/10
-Sci-fi, Comedy
+### _Sci-fi, Comedy_
 
 Hitchhickers guide to the Galaxy meets Stormship troopers! Old Man's War is brilliantly written! Scalzi has some of the freshest and most unique take on future tech I've come across in a while.
 

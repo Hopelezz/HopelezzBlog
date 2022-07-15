@@ -4,6 +4,7 @@ import Meta from '../components/MetaTags.astro';
 import BlogHeader from '../components/Header.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
+import { getLatestPost } from '../utils/api.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -13,21 +14,9 @@ let title = '<BLOGS />';
 let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
 let permalink = '#';
 
-// Data Fetching: List all Markdown Blog posts in the repo.
-let allBlogPosts = await Astro.glob('./blog/*.md');
-
-allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBlogPost = allBlogPosts[0];
-
-// Data Fetching: List all Markdown Book posts in the repo.
-let allBookPosts = await Astro.glob('../pages/book/*.md');
-
-allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBookPost = allBookPosts[0];
-
-
+console.log("Log 1: ",Astro.glob);
+const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost() ;
+console.log("Log 2: ",Astro.glob);
 ---
 
 <html lang="en">

@@ -4,6 +4,7 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
+import { getLatestPost } from '../utils/api.astro';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -13,19 +14,7 @@ let title = '<BOOKSHELF />';
 let description = 'Looking for something to read next? Consider checking out my book shelf!';
 let permalink = '#';
 
-// Data Fetching: List all Markdown Blog posts in the repo.
-let allBlogPosts = await Astro.glob('./blog/*.md');
-
-allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBlogPost = allBlogPosts[0];
-
-// Data Fetching: List all Markdown Book posts in the repo.
-let allBookPosts = await Astro.glob('../pages/book/*.md');
-
-allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBookPost = allBookPosts[0];
+const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 ---
 
 <html lang="en">

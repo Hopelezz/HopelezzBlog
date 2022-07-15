@@ -3,23 +3,12 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
+import { getLatestPost } from '../utils/api.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt} = content;
+const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
+const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 
-// Data Fetching: List all Markdown Blog posts in the repo.
-let allBlogPosts = await Astro.glob('../pages/blog/*.md');
-
-allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBlogPost = allBlogPosts[0];
-
-// Data Fetching: List all Markdown Book posts in the repo.
-let allBookPosts = await Astro.glob('../pages/book/*.md');
-
-allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-let mostRecentBookPost = allBookPosts[0];
 ---
 
 <html lang={content.lang || 'en'}>
@@ -33,7 +22,7 @@ let mostRecentBookPost = allBookPosts[0];
 		<main class="home_content">
 			<Header />
 			<div class="wrapper">
-				<BookPost {title} {author} {heroImage} {publishDate} {alt}>
+				<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
 					<slot />
 				</BookPost>
 			</div>

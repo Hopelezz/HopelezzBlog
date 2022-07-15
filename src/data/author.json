@@ -1,0 +1,11 @@
+{
+    "Mark": {
+        "name": "Mark Spratt",
+        "born": "09-29-1987",
+        "twitter": "http://twitter.com",
+        "github": "http://github.com",
+        "photo": "#",
+        "bio": "I am a web developer and I love to code.",
+        "location": "#"
+    }
+}

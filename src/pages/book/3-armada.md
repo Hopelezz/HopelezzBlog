@@ -8,19 +8,13 @@ href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
 description: Documenting my journey in creating this website.
-img: ../../../public/assets/bookreview/Armada.jpg
+img: https://covers.openlibrary.org/b/id/10375880-L.jpg
 Tags: Thriller, Action-packed, Aliens, Ender's-Game-Clone
 ---
 
-# Book Review: Armada by Ernest Cline
+# Rating : 10/10
 
-<div align="center">
-![Armada](../../../public/assets/bookreview/Armada.jpg)
-</div>
-
-### Rating : 10/10
-
-_Sci-fi, Thriller, Action-packed, Aliens, Ender's-Game-Clone_
+### _Sci-fi, Thriller, Action-packed, Aliens, Ender's-Game-Clone_
 
 Armada is about a guy named Zack Lightman, who is daydreaming out a window in class and sees an alien spaceship. The same ship from a video game he’s been playing for 3 years. He comes to realize that the powers-that-be have been preparing the world to defend against an Alien invasion for years. Zack’s personal story will have you in a whirl of emotions and engaged through the entire story.
 

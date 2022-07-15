@@ -8,19 +8,13 @@ href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
 description: A space expedition goes horribly wrong...
-img: ../../../public/assets/bookreview/TheMartian.jpg
+img: https://covers.openlibrary.org/b/id/11446888-L.jpg
 Tags: Sci-fi, Comedy, Charming, Is-A-Movie
 ---
 
-# Book Review: The Martian by Andy Weir
+# Rating : 10/10
 
-<div align="center">
-![The Martian](../../../public/assets/bookreview/TheMartian.jpg)
-</div>
-
-### Rating : 10/10
-
-_Sci-fi, Comedy, Charming, Is-A-Movie_
+### _Sci-fi, Comedy, Charming, Is-A-Movie_
 
 A space expedition goes wrong after Sol 6 on the planet of Mars (The Antagonist). A sudden dust storm causes the team to evacuate, but Mark Watney (the protagonist) gets injured and presumed dead. Watney, a botanist and mechanical mastermind, has the skillset needed to survive on the treacherous planet, but for how long?
 

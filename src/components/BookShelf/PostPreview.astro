@@ -5,14 +5,14 @@ export interface Props {
 	post: any;
 }
 
-const { post } = Astro.props;
+let { post } = Astro.props;
 ---
 <!-- TODO: Change to have the images from the post used from (public\assets\bookreview) -->
 <article class="post-preview">
 	<header>
 		<p class="publish-date">{post.frontmatter.publishDate}</p>
 		<a href={post.url}><h1 id="title">{post.frontmatter.title}</h1></a>
-		<img href={post.img}>
+		<img src={post.frontmatter.img}>
 	</header>
 	<p>{post.frontmatter.description}</p>
 	<a href={post.url}>Read more</a>

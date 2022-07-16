@@ -1,0 +1,27 @@
+---
+setup: |
+  import Layout from '../../layouts/BookPost.astro'
+  import Cool from '../../components/Author.astro'
+title: Lord of the Flies by William Golding
+publishDate: 8 OCT 2017
+href: https://twitter.com/_Hopelezz
+name: Mark Spratt
+value: 128
+description: 
+img: https://covers.openlibrary.org/b/id/12723924-L.jpg
+# img: public\assets\bookreview\OldMansWar.jpg
+Tags: Sci-fi, Comedy, Charming, Is-A-Movie
+---
+
+# Rating : 9/10
+### _Classic, Fiction, Dystopian, Adventure_
+
+At the onset of the cold war, a plane full of schoolboys gets shot down over an uninhabited island where only the children survive. Doesn’t take long before the whimsical and imaginative boys start creating a hierarchy amongst themselves. 
+
+>"He who holds the Conch shell has the authority to speak!"
+
+So is the law of the tribe. Shortly thereafter, a system for life was set in motion. Children created a fire, started a camp, and with plenty of fruit to eat; life was good. It doesn't take long before all hell breaks loose amongst the children and their baser instincts start to take hold.
+
+>“Maybe there is a beast… Maybe it’s only us.”
+
+Golding’s writing conveys blood lust, panic, and chaos unlike any author I’ve read. The story starts off slow, but with each new chapter a climax that builds off the last; a crescendo up until the last chapter when the wave of emotions crash down and all is set right again. William Golding was awarded a Nobel Prize for this masterpiece of literature in 1983 and deserves every ounce of praise for his novel.

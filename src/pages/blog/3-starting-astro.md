@@ -8,6 +8,7 @@ name: Mark Spratt
 href: https://twitter.com/_Hopelezz
 value: 128
 description: Documenting my journey in creating this website.
+draft: true
 ---
 ## Motivation
 

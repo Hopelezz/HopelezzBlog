@@ -9,13 +9,13 @@ name: Mark Spratt
 value: 128
 description: "Going outside is highly overrated"
 img: https://covers.openlibrary.org/b/id/8750149-L.jpg
-Tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, Fiction, science fiction, action & adventure, Fiction, dystopian
+Tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic
 
 ---
 
 # Rating : 9/10
 
-### _Cyberpunk, SciFi, Action, Adventure, Dystopian, Puzzles, Virtual Reality, Future, Fiction, Fiction_
+### _Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction_
 
 
 I was hooked from the moment I started the book. Barely putting it down!

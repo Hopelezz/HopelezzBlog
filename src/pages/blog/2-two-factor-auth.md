@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BlogPost.astro
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Two Factor Authentication
 publishDate: 09 JUL 2022
 name: Mark Spratt

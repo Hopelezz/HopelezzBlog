@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BookPost.astro
 setup: |
-  import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Armada by Ernest Cline
 publishDate: 11 JUL 2017
 href: https://twitter.com/_Hopelezz
@@ -9,7 +9,7 @@ name: Mark Spratt
 value: 128
 description: Documenting my journey in creating this website.
 img: https://covers.openlibrary.org/b/id/10375880-L.jpg
-Tags: Thriller, Action-packed, Aliens, Ender's-Game-Clone
+tags: Thriller, Action-packed, Aliens, Ender's-Game-Clone
 ---
 
 # Rating : 10/10

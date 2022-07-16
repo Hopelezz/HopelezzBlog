@@ -1,15 +1,17 @@
 ---
+layout: ../../layouts/BlogPost.astro
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Part 1 - Starting an Astro Blog 
 publishDate: 10 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
 value: 128
 description: Documenting my journey in creating this website.
+tag: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
 draft: true
 ---
+
 ## Motivation
 
 At the time of writing this I'm 3 month into my `Web Development` journey. Details of what I'm capable of can be found here in my [About Me](aboutMe). If that link doesn't work I've either not created the page or a custom 404 Page... they're still under construction. See [Things I want to Do](#things-i-want-to-do) for more details. 

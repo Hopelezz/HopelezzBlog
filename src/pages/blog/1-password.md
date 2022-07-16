@@ -1,13 +1,14 @@
 ---
+layout: ../../layouts/BlogPost.astro
 setup: |
-  import Layout from '../../layouts/BlogPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Password
 publishDate: 05 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
 value: 128
 description: What is a Password vault?
+tags: passwords, vault, hash, recall
 ---
 
 <a href="https://xkcd.com/936/?fbclid=IwAR1dBAc767rK5ni47plmh50MfOJ0f0pnzvUsua_UiZ7mpmBHuwnF_dbzr_U">
@@ -44,6 +45,7 @@ We know currently, that passwords aren't supposed to be simple. Oh, and they sho
 Emerging onto the stage a wizard performing magic goes by the name of Robert Morris. To set the stage there is a realm called Unix, an operating system that was first developed in the 1960s. Morris conjured a process known as `Hashing`. Not the same thing used for getting stoned; although they may have been at the time. His son later created the [Morris Worm](https://wikipedia.org/wiki/Morris_worm) on November 2, 1988, with the hashing concept. This infected large groups of systems. Its intended use was to see the size of the internet by exploiting loopholes in the codebase of machines. Doesn't sound like a bad idea, but it didn’t work quite as expected... leading to the first felony conviction of its kind.
 
 Skipping a few years we get to the serious concerns for Password... theft. Such as Email accounts, MSN messengers, Geocities, Myspace, Blogger, Xanga, AIM, Yahoo, Hotmail, AOL... Remembers these? These all came with the advent of the internet created by Al Gore... Whoa... _looks at script_, wait one sec checking sources. Never mind, he horribly misquoted. Sources believe XEROX stumbled upon the concept of the internet without knowing what size it would become. So we have the internet and passwords are being encrypted by hashes...
+
 ## Hashing
 
 What even are hashes? Don't freak out...Breath. You're about to see a long string of letters and numbers. This is intentional! You don't have to memorize this or even read it. Just know it's a random string of characters.

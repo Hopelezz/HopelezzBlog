@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BookPost.astro
 setup: |
-  import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Net Let Me Go by Kazuo Ishiguro
 publishDate: 20 APR 2020
 href: https://twitter.com/_Hopelezz

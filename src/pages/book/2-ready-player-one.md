@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BookPost.astro
 setup: |
-  import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Ready Player One by Ernest Cline
 publishDate: 02 OCT 2017
 href: https://twitter.com/_Hopelezz
@@ -9,8 +9,7 @@ name: Mark Spratt
 value: 128
 description: "Going outside is highly overrated"
 img: https://covers.openlibrary.org/b/id/8750149-L.jpg
-Tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic
-
+tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic
 ---
 
 # Rating : 9/10

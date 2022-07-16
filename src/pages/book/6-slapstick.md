@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BookPost.astro
 setup: |
-  import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Slapstick by Kurt Vonnegut
 publishDate: 12 OCT 2017
 href: https://twitter.com/_Hopelezz
@@ -9,7 +9,7 @@ name: Mark Spratt
 value: 128
 description: 
 img: https://covers.openlibrary.org/b/id/6632174-L.jpg
-Tags: Presidents, Fiction, American fiction
+tags: Presidents, Fiction, American fiction
 ---
 
 # Rating : 10/10

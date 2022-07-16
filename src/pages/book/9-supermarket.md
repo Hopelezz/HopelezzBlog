@@ -1,7 +1,7 @@
 ---
+layout: ../../layouts/BookPost.astro
 setup: |
-  import Layout from '../../layouts/BookPost.astro'
-  import Cool from '../../components/Author.astro'
+  import Author from '../../components/Author.astro'
 title: Supermarket by Bobby Hall
 publishDate: 23 NOV 2019
 href: https://twitter.com/_Hopelezz

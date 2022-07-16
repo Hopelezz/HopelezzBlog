@@ -14,9 +14,7 @@ let title = '<BLOGS />';
 let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
 let permalink = '#';
 
-console.log("Log 1: ",Astro.glob);
 const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost() ;
-console.log("Log 2: ",Astro.glob);
 ---
 
 <html lang="en">

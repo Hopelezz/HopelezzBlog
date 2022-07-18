@@ -3,20 +3,19 @@ export async function getLatestPost(){
 
     // Data Fetching: List all Markdown Blog posts in the repo.
     let allBlogPosts = await Astro.glob('../pages/blog/*.md');
-
     allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
-    let mostRecentBlogPost = allBlogPosts[0];
+    let mostRecentBlogPost = allBlogPosts[0]; // creates a mostRecentBlogPost based on the last post publishDate.
 
     // Data Fetching: List all Markdown Book posts in the repo.
     let allBookPosts = await Astro.glob('../pages/book/*.md');
-
     allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+    let mostRecentBookPost = allBookPosts[0]; // creates a mostRecentBookPost based on the last post publishDate.
 
-    let mostRecentBookPost = allBookPosts[0];
+    // creates a combined array of all posts.
+    let allPosts = allBlogPosts.concat(allBookPosts); 
 
-    return { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost }
-
+    return { allPosts, allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost };
 }
 
 ---
+

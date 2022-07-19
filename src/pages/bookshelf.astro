@@ -14,7 +14,7 @@ let title = '<BOOKSHELF />';
 let description = 'Looking for something to read next? Consider checking out my book shelf!';
 let permalink = '#';
 
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
+const { allBookPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 ---
 
 <html lang="en">
@@ -67,11 +67,11 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 				<main class="content">
 					<section class="intro">
 						<h1 class="latest">{ title }</h1>
-						<p>"If you're afraid of something then do things in fear."</p>
+						<p>"Books are a uniquely prtable magic" -Stephen King</p>
 						<br/>
 						<p>{ description }</p>
 					</section>
-					<section aria-label="Book post list">
+					<section aria-label="Book list">
 						{allBookPosts.map((p) => <BookPostPreview post={p} />)}
 					</section>
 				</main>

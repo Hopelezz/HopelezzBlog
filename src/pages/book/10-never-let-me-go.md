@@ -7,15 +7,15 @@ publishDate: 20 APR 2020
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
-description: 
-img: https://covers.openlibrary.org/b/id/6425427-L.jpg
-tags: dystopic, Melancholy, Fiction, Organ donors, Cloning, Donation of organs, tissues, Women, Literature, New York Times bestseller, Human cloning, Science fiction, psychological, science fiction, general, England, School, children, Reminiscing, Friendship, English literature
+description: You can feel the melancholy oozing off the pages.
+img: https://covers.openlibrary.org/b/isbn/9780307400994-L.jpg
+tags: Dystopic, Melancholy, Fiction, Organ donors, Cloning, Donation of organs, tissues, Women, Literature, New York Times bestseller, Human cloning, Science fiction, psychological, science fiction, general, England, School, children, Reminiscing, Friendship, English literature
 ---
 
 # Rating : 7/10
 ### _Melancholy, Fiction, Dystopic_
 
-I went into this novel with expectations but was left with a sense of loss but in that good kind of way.
+I went into this novel with certain expectations but was left with a sense of loss but in that good kind of way.
 Never Let Me Go, is a novel of a woman telling her story; similar to an autobiography.
 
 The book starts off:

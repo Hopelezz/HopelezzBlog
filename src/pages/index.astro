@@ -72,7 +72,7 @@ const { allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatest
 						<p>{ description }</p>
 					</section>
 					<section aria-label="Blog post list">
-						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
+						{allBlogPosts.map((post) => <BlogPostPreview post={post} />)}
 					</section>
 				</main>
 			</div>

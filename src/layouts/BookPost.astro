@@ -7,7 +7,7 @@ import { getLatestPost } from '../utils/api.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
+const { mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 
 ---
 

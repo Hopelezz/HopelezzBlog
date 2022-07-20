@@ -1,0 +1,11 @@
+---
+import { getLatestPost } from '../../utils/api.astro';
+
+export async function get({ params }) {
+  const { id } = params;
+
+  return new Response(JSON.stringify(getLatestPost()), {
+    status: 200
+  });
+}
+---

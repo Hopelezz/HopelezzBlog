@@ -1,5 +1,9 @@
 ---
 import "../../styles/leftSidebar.css";
+import Search  from "./Search.jsx";
+import { getLatestPost } from '../../utils/api.astro';
+
+const { allPosts } = await getLatestPost();
 
 const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
 ---
@@ -19,11 +23,7 @@ const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
         <ul class="nav_list">
             <li>
                 <i class='bx bx-search-alt'  ></i>
-                <input 
-                    type='text' 
-                    name='searchBar' 
-                    id='searchBar' 
-                    placeholder='Search...'>
+                <Search client:load allPosts={allPosts} />
                 <span class="tooltip">Search</span>
             </li>
             <li>
@@ -97,25 +97,5 @@ const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
         sidebarSpacer.classList.toggle('active');
     })
 
-// Searches allPosts for search text and returns an array of matching posts   
-    import { getLatestPost } from '../../utils/api.astro';
-    const { allPosts } = await getLatestPost();
-
-    // create search based on every letter added to search input
-    const searchBar = document.getElementById("searchBar");
-
-    searchBar.addEventListener('keyup', (e) => {
-
-        const searchString = e.target.value.toLowerCase();
-        
-        const filteredPosts = allPosts.filter((post) => {
-            return (
-                    post.frontmatter.title.toLowerCase().includes(searchString) ||
-                    post.frontmatter.description.toLowerCase().includes(searchString) ||
-                    post.frontmatter.tags.toLowerCase().includes(searchString)
-                );
-        });
-        console.log(filteredPosts); // <== I want to take filteredPosts and add it to the blog page or book page
-    });
 
 </script>

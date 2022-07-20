@@ -105,11 +105,11 @@ body {
 }
 
 /* LIST */
-.sidebar ul{
+.sidebar > ul{
     margin-top: 20px;
 }
 
-.sidebar ul li {
+.sidebar > ul > li {
     position: relative;
     height: 50px;
     width: 100%;
@@ -118,7 +118,7 @@ body {
     line-height: 50px;
 }
 
-.sidebar ul li .tooltip, .tooltipMenu {
+.sidebar > ul > li .tooltip, .tooltipMenu {
     position: absolute;
     left: 120px;
     top: 0%;
@@ -137,18 +137,18 @@ body {
     display: block;
 }
 
-.sidebar.active ul li .tooltip, .tooltipMenu {
+.sidebar.active > ul > li .tooltip, .tooltipMenu {
     display: none;
 }
 
-.sidebar ul li:hover .tooltip, .tooltipMenu {
+.sidebar > ul > li:hover .tooltip, .tooltipMenu {
     transition: all 0.5s ease;
     opacity: 1;
     pointer-events: auto;
     left: 70px;
 }
 
-.sidebar ul li input {
+.sidebar > ul > li input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -163,7 +163,7 @@ body {
     color: var(--th-primary);
 }
 
-.sidebar ul li .bx-search-alt {
+.sidebar > ul > li .bx-search-alt {
     position: absolute;
     z-index: 99;
     font-size: 22px;
@@ -171,7 +171,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.sidebar ul li a {
+.sidebar > ul > li a {
     color: var(--th-primary);
     display: flex;
     align-items: center;
@@ -181,19 +181,19 @@ body {
     white-space: nowrap;
 }
 
-.sidebar ul li a:hover{
+.sidebar > ul >  li a:hover{
     color: var(--c-sea-green-crayola);
     background: var(--th-primary);
     text-shadow: 0 5px 10px rgba(4, 169, 150, 1);
     box-shadow: 0 5px 10px rgba(4, 169, 150, 0.724);
 }
 
-.sidebar ul li a:active{
+.sidebar > ul > li a:active{
     background: var(--th-accent);
     transition: all 0.3s ease;
 }
 
-.sidebar ul li i {
+.sidebar > ul li i {
     height: 50px;
     min-width: 50px;
     border-radius: 12px;

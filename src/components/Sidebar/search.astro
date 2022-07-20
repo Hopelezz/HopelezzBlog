@@ -1,10 +1,27 @@
-
+---
+import { getLatestPost } from '../../utils/api.astro';
+const { allPosts } = await getLatestPost();
+---
 
 <script>
-    const searchbar = document.getElementById("searchbar");
+// Searches allPosts for search text and returns an array of matching posts   
+    
 
-    searchbar.addEventListener("keyup", (e) => {
-        console.log(e);
+    // create search based on every letter added to search input
+    const searchBar = document.getElementById("searchBar");
+
+    searchBar.addEventListener('keyup', (e) => {
+
+        const searchString = e.target.value.toLowerCase();
+        
+        const filteredPosts = allPosts.filter((post) => {
+            return (
+                    post.frontmatter.title.toLowerCase().includes(searchString) ||
+                    post.frontmatter.description.toLowerCase().includes(searchString) ||
+                    post.frontmatter.tags.toLowerCase().includes(searchString)
+                );
+        });
+        console.log(filteredPosts); // <== I want to take filteredPosts and add it to the blog page or book page
     });
     
 </script>

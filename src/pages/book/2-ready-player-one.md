@@ -9,7 +9,7 @@ name: Mark Spratt
 value: 128
 description: "Going outside is highly overrated"
 img: https://covers.openlibrary.org/b/id/8750149-L.jpg
-tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic
+tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic, oasis
 ---
 
 # Rating : 9/10
@@ -66,6 +66,7 @@ Just to give you an idea.
 - Star Trek
 - Dr.Who
 - The Cosmos
+
 ##### GAMES:
 - PacMan
 - Dig Dug

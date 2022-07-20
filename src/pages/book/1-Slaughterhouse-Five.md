@@ -9,7 +9,8 @@ name: Mark Spratt
 value: 128
 description: Documenting my journey in creating this website.
 img: https://covers.openlibrary.org/b/id/7890961-L.jpg
-tags: American science fiction, bombing of Dresden, military fiction, war stories, World War II, World War, 1939-1945, literature and the war, war, free will and determinism, literary fiction, Fiction, Animals, Boats and boating, Juvenile fiction, Domestic animals, American fiction (fictional works by one author), Large type books, Fiction, general, Fiction, war & military, World war, 1939-1945, fiction, Classic Literature, Drama, Accessible book, Protected DAISY, In library, Vonnegut, kurt, 1922-2007, American literature, history and criticism, Destruction and pillage, Literature, American literature
+tags: ["American science fiction", "bombing of Dresden", "military fiction", "war stories", "World War II", "World War", "1939-1945", "literature and the war", "war", "free will and determinism", "literary fiction", "Fiction", "Animals", "Boats and boating", "Juvenile fiction", "Domestic animals", "American fiction (fictional works by one author)", "Large type books", "Fiction", "general", "Fiction", "war & military", "World war", "1939-1945", "fiction", "Classic Literature", "Drama", "Accessible book", "Protected DAISY", "In library", "Vonnegut", "kurt", "1922-2007", "American literature", "history and criticism", "Destruction and pillage", "Literature", "American literature"]
+
 ---
 
 # Rating : 9/10

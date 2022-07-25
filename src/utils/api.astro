@@ -7,7 +7,7 @@ export async function getLatestPost(){
     allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 
     let mostRecentBlogPost = allBlogPosts[0];
-
+    
     // Data Fetching: List all Markdown Book posts in the repo.
     let allBookPosts = await Astro.glob('../pages/book/*.md');
 

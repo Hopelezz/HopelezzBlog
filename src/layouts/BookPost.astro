@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getLatestPost } from '../utils/api.astro';
+import Footer from '../components/Footer/Footer.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
@@ -16,19 +17,20 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 		<Meta {title} {description} {permalink} />
 	</head>
 
-	<body>
-		<div class="body">
-			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
-		<main class="home_content">
-			<Header />
-			<div class="wrapper">
-				<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
-					<slot />
-				</BookPost>
+		<body>
+			<div class="body">
+				<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
+				<main class="home_content">
+					<Header />
+					<div class="wrapper">
+						<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
+							<slot />
+						</BookPost>
+					</div>
+				</main>
 			</div>
-		</main>
-	</div>
-	</body>
+		</body>
+	<Footer />
 </html>
 
 <style>

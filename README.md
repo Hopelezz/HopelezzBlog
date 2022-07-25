@@ -6,8 +6,6 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -15,7 +13,7 @@
     <img src="https://user-images.githubusercontent.com/72772558/180280901-7d62a24c-0354-4da5-8526-0aef52a4c161.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">BlackSkies</h3>
+<h3 align="center">&#60;BlackSkies &#47;&#62;</h3>
 
   <p align="center">
     This is a personal Blog and Bookreview website. My intentions is to document my journey for creating the website and its features.
@@ -28,8 +26,6 @@
     <a href="https://github.com/Hopelezz/HopelezzBloge/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -81,15 +77,15 @@ To run the projects you will need to follow the instructions below. This will ru
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo:
    ```sh
    git clone https://github.com/Hopelezz/HopelezzBlog.git
    ```
-3. Install NPM packages
+2. Install NPM packages:
    ```sh
    npm install
    ```
-4. Run LocalHost:
+3. Run LocalHost:
    ```sh
    npm run dev
    ```
@@ -107,7 +103,7 @@ To run the projects you will need to follow the instructions below. This will ru
 - [ ] Add a `404` page
 - [ ] Add a Dark Theme.
 - [ ] Searchbar for posts.
-  - Invert the colors and make everything Glow.
+  - Invert the colors and make everything `Glow`.
 - [x] Fix the `Most Recent Posts` button on the LeftSideBar
 - [ ] Add a Search Feature to query the posts for keywords
 - [ ] Change the way `Lists` look

@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import BlogPost from '../components/blog/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getLatestPost } from '../utils/api.astro';
+import Footer from '../components/Footer/Footer.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
@@ -29,6 +30,7 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 		</main>
 	</div>
 	</body>
+	<Footer />
 </html>
 
 <style>

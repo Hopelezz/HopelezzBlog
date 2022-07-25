@@ -5,22 +5,20 @@ import BlogHeader from '../components/Header.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getLatestPost } from '../utils/api.astro';
+import Search from '../components/Search/Search';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = '<BLOGS />';
+
+let title = '<BLOG />';
 let description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
 let permalink = '#';
 
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost() ;
+const { allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost() ;
 ---
 
 <html lang="en">
 	
 	<head>
-		<Meta { title }{ description }{ permalink } />
+		<Meta title= {title} description={description} permalink={permalink} />
 
 		<style>
 			header {
@@ -70,6 +68,9 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 						<p>"If you're afraid of something then do things in fear."</p>
 						<br/>
 						<p>{ description }</p>
+
+						<Search client:load posts={allBlogPosts}/>.
+
 					</section>
 					<section aria-label="Blog post list">
 						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}

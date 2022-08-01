@@ -4,17 +4,15 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import { getLatestPost } from '../utils/api.astro';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
+import { getBookPosts, getBlogPosts  } from '../utils/api.astro';
+	const { allBookPosts, mostRecentBookPost } = await getBookPosts();
+	const { mostRecentBlogPost } = await getBlogPosts();
+
 let title = '<BOOKSHELF />';
 let description = 'Looking for something to read next? Consider checking out my book shelf!';
 let permalink = '#';
 
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
 ---
 
 <html lang="en">
@@ -60,7 +58,9 @@ const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = a
 	
 	<body>
 		<div class="body">
-			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
+			<LeftSidebar  
+				mostRecentBlogPost = {mostRecentBlogPost}
+				mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
 				<Header />

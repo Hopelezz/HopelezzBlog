@@ -10,7 +10,6 @@
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"],
-    "lib": ["es6", "dom", "es2017"]
+    "types": ["vite/client"]
   }
 }

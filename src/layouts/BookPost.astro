@@ -3,13 +3,13 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import { getLatestPost } from '../utils/api.astro';
 import Footer from '../components/Footer/Footer.astro';
+import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
-const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
-const { allBookPosts, allBlogPosts, mostRecentBlogPost, mostRecentBookPost } = await getLatestPost();
-
+const { mostRecentBlogPost } = await getBlogPosts(); // Fetch most recent blog post
+const { mostRecentBookPost } = await getBookPosts(); // Fetch most recent book post
+const { content } = Astro.props; // Get content from props
+const { title, description, publishDate, author, heroImage, permalink, alt, img} = content; 
 ---
 
 <html lang={content.lang || 'en'}>

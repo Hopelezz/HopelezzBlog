@@ -8,6 +8,7 @@ name: Mark Spratt
 href: https://twitter.com/_Hopelezz
 value: 128
 description: How does Two Factor Authentication protect your account?
+tags: template page
 ---
 
 # TODO: Create Post on Two Factor Authentication to go With Password

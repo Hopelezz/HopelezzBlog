@@ -9,7 +9,7 @@ import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
 const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
 const { mostRecentBookPost } = await getBookPosts();
-
+console.log(allBlogPosts.map(post => post.frontmatter.tags));
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
 const permalink = '#';

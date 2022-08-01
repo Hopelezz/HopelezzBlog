@@ -1,6 +1,5 @@
 //@ts-check
-import { createSignal, createMemo } from "solid-js";
-import PostPreview from '../../components/Blog/PostPreview.astro';
+import { createSignal, createMemo, For, Show } from "solid-js";
 
 //Inside the posts we are looking at the frontmatter object for Title, Description, Tags, and URL
 //Note: tags is a string separated by commas.
@@ -8,10 +7,11 @@ interface Props {
   posts: Array<{
       frontmatter: {
         title: string;
+        publishDate: string;
         description: string;
         tags: string;
-        url: string;
       }
+      url: string;
   }>;
 }
 
@@ -21,9 +21,6 @@ export default function Search({ posts }: Props) {
   const filteredPosts = createMemo(() => {
     const searchString = search.toString().toLowerCase();
 
-    if (!searchString) {
-      return posts;
-    }
     //turns the tags string into an array of lowercase strings separated by commas
     const tags = searchString.split(",").map(tag => tag.trim().toLowerCase());
     
@@ -37,14 +34,26 @@ export default function Search({ posts }: Props) {
     });
   }, [posts, search]); //only re-run the filteredPosts function when the posts or search changes
 
+  //return input and filter the existing posts on index page
   return (
-    <div className="search-container">
-      <div>Searching for something?</div>
-      <input type="text" placeholder="Search..." value={search} onChange={e => setSearch(e.target.value.toLowerCase())} />
-      <div className="search-results">
-        {filteredPosts().map((post) => <PostPreview post={post} />
-        )}
-      </div>
+    <div class="search">
+      <p>
+        Searching for something?
+      </p>
+
+      <input
+        type="text"
+        placeholder="Search"
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+      />
+
+      <Show when={search()}>
+          <For each={filteredPosts()}>
+            {post => <a href={post.url}><div> {post.frontmatter.title}
+              </div></a>}
+          </For>
+      </Show>
     </div>
   );
 }

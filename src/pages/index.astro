@@ -34,7 +34,7 @@ const permalink = '#';
 						<Search client:load posts={ allBlogPosts } />
 					</section>
 					<section aria-label="Blog post list">
-						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
+						{allBlogPosts.map((p: any) => <BlogPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

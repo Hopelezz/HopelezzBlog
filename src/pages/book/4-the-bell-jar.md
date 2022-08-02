@@ -7,7 +7,7 @@ publishDate: 05 Oct 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
-description: 
+description: A semi-autobiographical with the names of places and people changed. The book is 
 img: https://covers.openlibrary.org/b/id/8457807-L.jpg
 tags: women college students, summer, Classics, Literature, Psychology, Feminism, Novel, Poetry, Mental Health, American, Adult, Fiction, Mental Depression, Suicidal behavior, Mentally ill, Psychiatric hospital patients, Mental illness, Women authors, Treatment, Women periodical editors, College students, Suicide, Psychological fiction, Autobiographical fiction, Roman à clef, open_syllabus_project, Women psychotherapy patients, Fiction, psychological, American fiction (fictional works by one author), Young women, fiction, Students, fiction, Children's fiction, Depression, mental, fiction, Fiction, biographical, Fiction, general, New york (n.y.), fiction, Large type books, American literature
 ---

@@ -8,7 +8,7 @@ name: Mark Spratt
 href: https://twitter.com/_Hopelezz
 value: 128
 description: Documenting my journey in creating this website.
-tag: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
+tags: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
 
 ---
 

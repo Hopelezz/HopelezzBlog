@@ -7,7 +7,7 @@ publishDate: 11 JUL 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
 value: 128
-description: Documenting my journey in creating this website.
+description: The story follows a teenager who plays an online video game about defending against an alien invasion, only to find out that the game is a simulator to prepare him and people around the world for defending against an actual alien invasion.
 img: https://covers.openlibrary.org/b/id/10375880-L.jpg
 tags: Thriller, Action-packed, Aliens, Ender's-Game-Clone
 ---

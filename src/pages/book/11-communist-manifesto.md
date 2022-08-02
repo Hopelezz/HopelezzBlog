@@ -9,7 +9,7 @@ name: Mark Spratt
 value: 128
 description: 
 img: https://images-na.ssl-images-amazon.com/images/I/51vHCno0a4L._SX330_BO1,204,203,200_.jpg
-Tags: Politics, Dystopic, World View, Communist, 
+tags: Politics, Dystopic, World View, Communist, 
 ---
 
 # Rating : 3/10

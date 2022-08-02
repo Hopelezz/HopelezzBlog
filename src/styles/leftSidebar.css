@@ -148,6 +148,8 @@ body {
     left: 70px;
 }
 
+/* Search Bar */
+
 .sidebar ul li input {
     position: absolute;
     height: 100%;
@@ -167,9 +169,10 @@ body {
     position: absolute;
     z-index: 99;
     font-size: 22px;
-    
     transition: all 0.5s ease;
 }
+
+
 
 .sidebar ul li a {
     color: var(--th-primary);
@@ -200,10 +203,6 @@ body {
     line-height: 50px;
     text-align: center;
 }
-
-/* .sidebar ul li span {
-    color: var(--c-sea-green-crayola);
-} */
 
 .sidebar .links_name {
     opacity: 0;

@@ -5,11 +5,13 @@ import BlogHeader from '../components/Header.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Search from '../components/Search/Search';
-import { getBlogPosts, getBookPosts } from '../utils/api.astro';
+import { getBlogPosts, getBookPosts, getPosts } from '../utils/api.astro';
 
 const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
 const { mostRecentBookPost } = await getBookPosts();
-console.log(allBlogPosts.map(post => post.frontmatter.tags));
+const { allPosts } = await getPosts();
+
+
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
 const permalink = '#';
@@ -29,9 +31,8 @@ const permalink = '#';
 					<section class="intro">
 						<h1 class="latest">{ title }</h1>
 						<p>"If you're afraid of something then do things in fear."</p>
-						<br/>
 						<p>{ description }</p>
-						<Search client:load posts={ allBlogPosts } />
+						<Search client:load posts={ allPosts } />
 					</section>
 					<section aria-label="Blog post list">
 						{allBlogPosts.map((p: any) => <BlogPostPreview post={p} />)}

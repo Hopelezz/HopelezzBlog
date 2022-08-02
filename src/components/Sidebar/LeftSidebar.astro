@@ -1,8 +1,13 @@
 ---
+// import Search from "../Search/Search.tsx";
 import "../../styles/leftSidebar.css";
+// import { getPosts } from "../../utils/api.astro";
 
 const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
+// const { allPosts } = await getPosts();
+
 ---
+
 <!--Icons from https://boxicons.com/  -->
 
     <nav class="sidebar">
@@ -19,7 +24,7 @@ const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
         <ul class="nav_list">
             <!-- <li>
                 <i class='bx bx-search-alt'  ></i>
-                <input type='text' name='' placeholder='Search...'>
+                <Search client:load posts={ allPosts } />
                 <span class="tooltip">Search</span>
             </li> -->
             <li>
@@ -50,27 +55,6 @@ const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
                 </a>
                 <span class="tooltip">Recent Book</span>
             </li>
-            <li>
-                <a href="https://twitter.com/_Hopelezz">
-                    <i class='bx bxl-twitter' ></i>
-                    <span class="links_name">Twitter</span>
-                </a>
-                <span class="tooltip">Twitter</span>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/mark-spratt/">
-                    <i class='bx bxl-linkedin' ></i>
-                    <span class="links_name">LinkedIn</span>
-                </a>
-                <span class="tooltip">LinkedIn</span>
-            </li>
-            <li>
-                <a href="https://github.com/Hopelezz">
-                    <i class='bx bxl-github' ></i>
-                    <span class="links_name">GitHub</span>
-                </a>
-                <span class="tooltip">GitHub</span>
-            </li>         
         </ul>
     </nav>
     <div class="sidebar-spacer"></div>
@@ -88,8 +72,8 @@ const { mostRecentBlogPost, mostRecentBookPost } = Astro.props;
         sidebarSpacer.classList.toggle('active');
     })
 
-    searchBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-        sidebarSpacer.classList.toggle('active');
-    })
+    // searchBtn.addEventListener('click', () => {
+    //     sidebar.classList.toggle('active');
+    //     sidebarSpacer.classList.toggle('active');
+    // })
 </script>

@@ -38,23 +38,25 @@ export default function Search(props: Props) {
   }
 
   return (
-    <div class="search">
-      <br/>
-      <p>Searching for something?</p>
+    <div class="searchContainer">
       <input
         type="text"
-        placeholder="Search"
+        placeholder="Search..."
         onInput={handleInput}
         value={search()}
+        class="searchBar"
       />
+
       <Show when={search()}>
-        <For each={filteredPosts()} fallback={<div>No results found</div>}>
-          {(post, i) => 
-            <div data-index={i() + 1}>
-              <a href={post.url}>{post.frontmatter.title}</a>
-            </div>              
-          }
-        </For>
+        <div class="listContainer">
+          <For each={filteredPosts()} fallback={<div>No results found</div>}>
+            {(post, i) => 
+              <div class="searchlist" data-index={i() + 1}>
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </div>              
+            }
+          </For>
+        </div>
       </Show>
     </div>
   );           

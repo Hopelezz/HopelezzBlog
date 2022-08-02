@@ -21,16 +21,12 @@ export async function getBookPosts(){
     return { allBookPosts, mostRecentBookPost }
 }
 
-export async function getPosts(){
-    //use the getBlogPosts and getBookPosts functions
-    let allBlogPosts = await getBlogPosts();
-    let allBookPosts = await getBookPosts();
-    // concatenate the two arrays into one array.
-    let allPosts = allBlogPosts.allBlogPosts.concat(allBookPosts.allBookPosts);
-    //sorts the array by publishDate.
-    allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+//an export async function that returns an array of all posts. concat all the blog posts and book posts.
+export async function getPosts(){ 
+    let blogPosts = await getBlogPosts();
+    let bookPosts = await getBookPosts();
+    let allPosts = blogPosts.allBlogPosts.concat(bookPosts.allBookPosts);
 
-    return { allPosts }
+    return { allPosts };
 }
-
 ---

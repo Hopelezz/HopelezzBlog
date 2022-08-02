@@ -1,4 +1,6 @@
 <div id="top"></div>
+
+<!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -102,10 +104,12 @@ To run the projects you will need to follow the instructions below. This will ru
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page
 - [ ] Add a Dark Theme.
-- [ ] Searchbar for posts.
   - Invert the colors and make everything `Glow`.
+- [x] Add a Search Feature to query the posts for keywords
+  - _Solved on https://github.com/Hopelezz/HopelezzBlog/issues/6_
+  - [ ] Decide either to search just the blog posts or all posts
 - [x] Fix the `Most Recent Posts` button on the LeftSideBar
-- [ ] Add a Search Feature to query the posts for keywords
+
 - [ ] Change the way `Lists` look
 - [ ] Change the way `Check Boxes` look
 - [ ] Make the Page More responsive to Mobile.
@@ -160,12 +164,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [Corbin](https://github.com/crutchcorn) for constant support ❤️.
+* [Dan](https://github.com/Jutanium) for constant support ❤️.
+* [Fuzzy](https://github.com/aFuzzyBear) for getting me started on the blog project.
+* [Mayank](https://github.com/mayank99) for helping me solve issues with search feature.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -182,77 +186,3 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
-
-
-
-# Astro Starter Kit: Blog
-
-```
-npm init astro -- --template blog
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
-- ✅ Full Markdown support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-├── README.md
-├── astro.config.mjs
-├── package.json
-├── public
-│   ├── assets
-│   │   └── blog
-│   │       └── introducing-astro.jpg
-│   ├── favicon.ico
-│   ├── social.jpg
-│   └── social.png
-├── sandbox.config.json
-├── src
-│   ├── components
-│   │   ├── Author.astro
-│   │   ├── BaseHead.astro
-│   │   ├── BlogHeader.astro
-│   │   ├── BlogPost.astro
-│   │   ├── BlogPostPreview.astro
-│   │   ├── Heading.astro
-│   │   └── Logo.astro
-│   ├── layouts
-│   │   └── BlogPost.astro
-│   ├── pages
-│   │   ├── index.astro
-│   │   └── posts
-│   │       └── index.md
-│   └── styles
-│       └── blog.css
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

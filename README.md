@@ -23,9 +23,9 @@
     <br />
 <!--     <a href="https://github.com/Hopelezz/HopelezzBlog">View Demo</a> 
     ·-->
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/Hopelezz/HopelezzBlog/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Hopelezz/HopelezzBloge/issues">Request Feature</a>
+    <a href="https://github.com/Hopelezz/HopelezzBlog/issues">Request Feature</a>
   </p>
 </div>
 
@@ -60,13 +60,10 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
 * [Astro](https://astro.build/)
 * [Solid-js](https://www.solidjs.com/)
-* [Preact](https://preactjs.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -97,24 +94,30 @@ To run the projects you will need to follow the instructions below. This will ru
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Turn the Logo into an SVG version
+### Features
+
 - [x] Create a section for Book Reviews
-  - [ ] Add images to Post Preview.
+  - [x] Add images to Post Preview.
 - [ ] Add a `About Me` page
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page
-- [ ] Add a Dark Theme.
-  - Invert the colors and make everything `Glow`.
 - [x] Add a Search Feature to query the posts for keywords
   - _Solved on https://github.com/Hopelezz/HopelezzBlog/issues/6_
-  - [ ] Decide either to search just the blog posts or all posts
+  - [ ] Decide either to search just the blog posts or all posts...
 - [x] Fix the `Most Recent Posts` button on the LeftSideBar
+- [ ] Make the Page More accessible
 
+### Style
+
+- [ ] Add a Dark Theme.
+  - Invert the colors and make everything `Glow`.
+- [ ] Turn the Logo into an SVG version
 - [ ] Change the way `Lists` look
 - [ ] Change the way `Check Boxes` look
-- [ ] Make the Page More responsive to Mobile.
-- [ ] Make the Page More accessible to everyone.
-- [ ] Add a RightSideBar that shows the `In This Post` headers.
+- [ ] Make the Page More responsive to Mobile..
+- [ ] Add a RightSideBar that shows the `Post headers`.
+
+### End Goal
 - [ ] Create a template for the Astro Framework based on what I've learned here
 
 See the [open issues](https://github.com/Hopelezz/HopelezzBlog/issues) for a full list of proposed features (and known issues).
@@ -153,9 +156,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Mark Spratt - [@_hopelezz](https://twitter.com/_hopelezz)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -166,7 +169,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 * [Corbin](https://github.com/crutchcorn) for constant support ❤️.
 * [Dan](https://github.com/Jutanium) for constant support ❤️.
-* [Fuzzy](https://github.com/aFuzzyBear) for getting me started on the blog project.
+* [Fuzzy](https://github.com/aFuzzyBear) for getting me started on this blog project!
 * [Mayank](https://github.com/mayank99) for helping me solve issues with search feature.
 
 <p align="right">(<a href="#top">back to top</a>)</p>

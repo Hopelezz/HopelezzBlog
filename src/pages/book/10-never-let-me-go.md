@@ -2,7 +2,7 @@
 layout: ../../layouts/BookPost.astro
 setup: |
   import Author from '../../components/Author.astro'
-title: Net Let Me Go by Kazuo Ishiguro
+title: Never Let Me Go by Kazuo Ishiguro
 publishDate: 20 APR 2020
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt

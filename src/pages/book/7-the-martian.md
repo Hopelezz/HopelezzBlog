@@ -6,7 +6,6 @@ title: The Martian by Andy Weir
 publishDate: 14 OCT 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: A space expedition goes horribly wrong...
 img: https://covers.openlibrary.org/b/id/11446888-L.jpg
 tags: Sci-fi, Comedy, Charming, Is-A-Movie

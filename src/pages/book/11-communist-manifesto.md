@@ -6,7 +6,6 @@ title: Communist Manifesto by Karl Marx
 publishDate: 18 JUL 2022
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: 
 img: https://images-na.ssl-images-amazon.com/images/I/51vHCno0a4L._SX330_BO1,204,203,200_.jpg
 tags: Politics, Dystopic, World View, Communist, 

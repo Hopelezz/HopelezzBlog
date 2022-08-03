@@ -6,8 +6,7 @@ title: Slapstick by Kurt Vonnegut
 publishDate: 12 OCT 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
-description: 
+description: Depicts Vonnegut's views of loneliness, both on an individual and social scale.
 img: https://covers.openlibrary.org/b/id/6632174-L.jpg
 tags: Presidents, Fiction, American fiction
 ---

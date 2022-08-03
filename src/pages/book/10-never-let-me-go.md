@@ -6,7 +6,6 @@ title: Never Let Me Go by Kazuo Ishiguro
 publishDate: 20 APR 2020
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: 
 img: https://covers.openlibrary.org/b/id/6425427-L.jpg
 tags: dystopic, Melancholy, Fiction, Organ donors, Cloning, Donation of organs, tissues, Women, Literature, New York Times bestseller, Human cloning, Science fiction, psychological, science fiction, general, England, School, children, Reminiscing, Friendship, English literature

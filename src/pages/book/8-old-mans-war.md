@@ -6,7 +6,6 @@ title: Old Man's War by John Scalzi
 publishDate: 2 MAR 2019
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: Hitchhickers guide to the Galaxy meets Stormship troopers!
 img: https://covers.openlibrary.org/b/id/3365280-L.jpg
 tags: Sci-fi, Comedy, Charming, Is-A-Movie

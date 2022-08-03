@@ -6,7 +6,6 @@ title: Supermarket by Bobby Hall
 publishDate: 23 NOV 2019
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: 
 img: https://covers.openlibrary.org/b/isbn/9781982127138-L.jpg
 tags: Fiction, psychological, Fiction, suspense

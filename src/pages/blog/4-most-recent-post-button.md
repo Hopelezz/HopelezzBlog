@@ -59,9 +59,11 @@ I decided to name the href property `mostRecentPost` because inside the LeftSide
 
 making the href property more concise.
 
-> Update: I have since modified this by moving the fetch command inside a function of an api.astro file and split my blog into a blog and bookreview folders. This is to make it easier to manage the blog and bookreview posts seperately. When I need the props for my posts I import the function from the utils file and pass it the `blogPosts` array.
+> Update: I have since modified this by moving the fetch command inside a function of an api.astro file and split my blog into blog and bookreview folders. This is to make it easier to manage the blog and bookreview posts seperately. When I need the props for my posts I import the function from the utils file and pass it the `blogPosts` object.
+
 ```js
   import { getBlogPosts } from '../utils/api.astro';
   const blogPosts = await getBlogPosts(blogPosts);
 ```
+
 > This has to be in an async function because it is a promise. It also has to be housed inside a .astro file since it's using astro props to fetch the post routes.

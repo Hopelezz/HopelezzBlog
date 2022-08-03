@@ -45,44 +45,11 @@
 	--color-raisin-black: #1e1f25;
 }
 
-/* :root {
-	color-scheme: light;
-	--theme-accent: var(--color-orange);
-	--theme-accent-rgb: var(--color-orange-rgb);
-	--theme-accent-opacity: 0.1;
-	--theme-divider: var(--color-gray-100);
-	--theme-text: var(--color-gray-800);
-	--theme-text-light: var(--color-gray-600);
-	--theme-text-lighter: var(--color-gray-400);
-	--theme-bg: var(--color-white);
-	--theme-bg-offset: var(--color-gray-100);
-	--theme-bg-accent: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
-	--theme-code-inline-bg: var(--color-gray-100);
-	--theme-code-text: var(--color-gray-100);
-	--theme-code-bg: var(--color-gray-700);
-} */
-/* 
-:root {
-	color-scheme: light;
-	--theme-accent: var(--color-sea-green-crayola);
-	--theme-accent-rgb: var(--color-sea-green-crayola-rgb);
-	--theme-accent-opacity: 0.1;
-	--theme-divider: var(--color-gray-100);
-	--theme-text: var(--color-gray-800);
-	--theme-text-light: var(--color-gray-600);
-	--theme-text-lighter: var(--color-gray-400);
-	--theme-bg: var(--color-lavender-blush);
-	--theme-bg-offset: var(--color-gray-100);
-	--theme-bg-accent: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
-	--theme-code-inline-bg: var(--color-gray-100);
-	--theme-code-text: var(--color-gray-100);
-	--theme-code-bg: var(--color-gray-700);
-} */
-
 
 body {
 	background: var(--theme-bg);
 	color: var(--theme-text);
+	z-index: -1;
 }
 
 :root.theme-dark {

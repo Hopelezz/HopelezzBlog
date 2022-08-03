@@ -1,6 +1,7 @@
 ---
 import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
+import Cursor from '../components/CursorEffect/Cursor.astro';
 import BlogPost from '../components/blog/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Footer from '../components/Footer/Footer.astro';
@@ -10,8 +11,6 @@ import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
-
-
 ---
 
 <html lang={content.lang || 'en'}>
@@ -20,6 +19,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 	</head>
 
 	<body>
+		<Cursor />
 		<div class="body">
 			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 		<main class="home_content">

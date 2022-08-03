@@ -6,7 +6,6 @@ title: Lord of the Flies by William Golding
 publishDate: 8 OCT 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: 
 img: https://covers.openlibrary.org/b/id/12723924-L.jpg
 tags: Sci-fi, Comedy, Charming, Is-A-Movie

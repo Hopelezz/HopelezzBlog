@@ -4,7 +4,7 @@ import { createSignal, For, Show } from "solid-js";
 
 //Inside the posts we are looking at the frontmatter object for Title, Description, Tags, and URL
 //Note: tags is a string separated by commas.
-interface Props {
+interface Props { 
   posts: Array<{
       frontmatter: {
         title: string;
@@ -18,27 +18,27 @@ interface Props {
 }
 
 export default function Search(props: Props) {
-  const [search, setSearch] = createSignal("");
-  const [filteredPosts, setFilteredPosts] = createSignal(props.posts);
+  const [search, setSearch] = createSignal(""); //create a signal for the search input
+  const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
   
   function handleInput(e: any) {
-    const { value } = e.currentTarget;
-    setSearch(value.toLowerCase());
+    const { value } = e.currentTarget;  //get the value of the input
+    setSearch(value.toLowerCase()); //set the search signal to the value of the input
     
     const filteredPosts = props.posts.filter(post => {
-      const { title, description, tags } = post.frontmatter;
-      //tags is a string separated by commas. Split it into an array of trimmed &lowercase words
+      const { title, description, tags } = post.frontmatter;  //get the frontmatter of the post
+      
       return (
         title?.toLowerCase().includes(value) ||
         description?.toLowerCase().includes(value) ||
         tags?.toLowerCase().includes(value)
       );
     });
-    setFilteredPosts(filteredPosts);
+    setFilteredPosts(filteredPosts);  //set the filtered posts signal to the filtered posts
   }
 
   return (
-    <div class="searchContainer">
+    <div class="searchContainer"> 
       <input
         type="text"
         placeholder="Search..."

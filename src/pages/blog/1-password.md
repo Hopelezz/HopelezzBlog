@@ -6,7 +6,6 @@ title: Password
 publishDate: 05 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
-value: 128
 description: What is a Password vault?
 tags: passwords, vault, hash, recall
 ---

@@ -6,10 +6,8 @@ title: Most Recent Post Button... A Start
 publishDate: 16 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
-value: 128
 description: A simple button, to navigate to the most recent post.
 tags: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
-draft: true
 ---
 
 # The Concept
@@ -18,7 +16,21 @@ So I had a navigation bar but nothing really posted to it aside from what I was 
 
 ## How it works
 
-As soon as you press the `Most Recent` button on the Nav bar its linked to the latest published dates of all the posts. This is done by using the `publishDate` propert field in the frontmatter of the `.md` file. This is a date in the format `DD MM YYYY`. 
+As soon as you press the `Most Recent` button on the Nav bar its linked to the latest posts published dates of all the posts. This is done by using the `publishDate` propert field in the frontmatter of the `.md` file. This is a date in the format `DD MM YYYY`. 
+
+```astro
+---
+layout: ../../layouts/BlogPost.astro
+setup: |
+  import Author from '../../components/Author.astro'
+title: Most Recent Post Button... A Start
+publishDate: 16 JUL 2022   <-- //This is the date of the post of this post. 
+name: Mark Spratt
+href: https://twitter.com/_Hopelezz
+description: A simple button, to navigate to the most recent post.
+tags: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
+---
+```
 
 This `publishDate` field is already used to sort all the posts by date to show the users the most recent post first on the fronpage. This bit of code was already supplied with the Basic Blog template provided by the Astro community. 
 
@@ -33,6 +45,19 @@ I then use:
   let mostRecentPost = allPosts[0];
 ```
 To get all the information about the most recent post. With this I can return the url route to the button.
+
+Now that I have a variable with just a single post object I can pass it's url property to the components `href` property. This will then link the button to the most recent post.
+
+```js
+<LeftSidebar mostRecentBlogPost={mostRecentBlogPost} />
+```
+
+I decided to name the href property `mostRecentPost` because inside the LeftSidebar component I have an anchor that will read:
+```html
+    <a href={mostRecentPost.url}>Most Recent Post</a>
+```
+
+making the href property more concise.
 
 > Update: I have since modified this by moving the fetch command inside a function of an api.astro file and split my blog into a blog and bookreview folders. This is to make it easier to manage the blog and bookreview posts seperately. When I need the props for my posts I import the function from the utils file and pass it the `blogPosts` array.
 ```js

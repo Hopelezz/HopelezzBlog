@@ -14,6 +14,6 @@ let { post } = Astro.props;
 		<a href={post.url}><h1 id="title">{post.frontmatter.title}</h1></a>
 	</header>
 	<p>{post.frontmatter.description}</p>
-	<a href={post.url}>Read more</a>
+	<a href={post.url} aria-label="Read more about the post">Read more</a>
 </article>
 

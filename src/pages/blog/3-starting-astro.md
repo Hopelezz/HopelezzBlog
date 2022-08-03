@@ -6,7 +6,6 @@ title: Part 1 - Starting an Astro Blog
 publishDate: 10 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
-value: 128
 description: Documenting my journey in creating this website.
 tags: framework, astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla
 

@@ -6,7 +6,6 @@ title: Ready Player One by Ernest Cline
 publishDate: 02 OCT 2017
 href: https://twitter.com/_Hopelezz
 name: Mark Spratt
-value: 128
 description: The story, set in a dystopia in 2045, follows protagonist Wade Watts on his search for an Easter egg in a worldwide virtual reality game
 img: https://covers.openlibrary.org/b/id/8750149-L.jpg
 tags: cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic

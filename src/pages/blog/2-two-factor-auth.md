@@ -6,7 +6,6 @@ title: Two Factor Authentication
 publishDate: 09 JUL 2022
 name: Mark Spratt
 href: https://twitter.com/_Hopelezz
-value: 128
 description: How does Two Factor Authentication protect your account?
 tags: template page
 ---

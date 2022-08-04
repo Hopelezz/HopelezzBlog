@@ -3,7 +3,6 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import Cursor from '../components/CursorEffect/Cursor.astro';
 import BlogPost from '../components/blog/Post.astro';
-import Author from '../components/Author.astro'
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Footer from '../components/Footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
@@ -27,7 +26,6 @@ const { title, description, publishDate, author, heroImage, permalink, alt, href
 			<Header />
 			<div class="wrapper">
 				<BlogPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={} >
-					<Author name={author} href={href}/>
 					<slot />
 				</BlogPost>
 			</div>

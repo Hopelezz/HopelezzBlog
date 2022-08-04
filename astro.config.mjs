@@ -8,5 +8,8 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   integrations: [solid(), mdx()],
   output: 'server',
-  adapter: vercel()
+  adapter: vercel(),
+  markdown: {
+    draft: true,
+  }
 });

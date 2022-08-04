@@ -7,11 +7,9 @@ import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Search from '../components/Search/Search';
 import { getBlogPosts, getBookPosts, getPosts } from '../utils/api.astro';
-
-const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
-const { mostRecentBookPost } = await getBookPosts();
-const { allPosts } = await getPosts();
-
+	const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
+	const { mostRecentBookPost } = await getBookPosts();
+	const { allPosts } = await getPosts();
 
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
@@ -40,7 +38,7 @@ const permalink = '#';
 						<Search client:load posts={allPosts} />
 					</section>
 					<section aria-label="Blog post list">
-						{allBlogPosts.map((p: any) => <BlogPostPreview post={p} />)}
+						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

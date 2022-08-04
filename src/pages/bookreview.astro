@@ -4,7 +4,6 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-
 import { getBookPosts, getBlogPosts  } from '../utils/api.astro';
 	const { allBookPosts, mostRecentBookPost } = await getBookPosts();
 	const { mostRecentBlogPost } = await getBlogPosts();

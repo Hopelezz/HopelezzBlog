@@ -3,6 +3,7 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import Cursor from '../components/CursorEffect/Cursor.astro';
 import BlogPost from '../components/blog/Post.astro';
+import Author from '../components/Author.astro'
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Footer from '../components/Footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
@@ -10,12 +11,12 @@ import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 	const { mostRecentBookPost } = await getBookPosts();
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title, description, publishDate, author, heroImage, permalink, alt, href } = content;
 ---
 
 <html lang={content.lang || 'en'}>
 	<head>
-		<Meta {title} {description} {permalink} />
+		<Meta title={title} description={description} permalink={permalink} />
 	</head>
 
 	<body>
@@ -25,7 +26,8 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 		<main class="home_content">
 			<Header />
 			<div class="wrapper">
-				<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+				<BlogPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={} >
+					<Author name={author} href={href}/>
 					<slot />
 				</BlogPost>
 			</div>

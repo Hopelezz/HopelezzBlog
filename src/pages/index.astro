@@ -1,11 +1,11 @@
 ---
 // Component Imports
 import Meta from '../components/MetaTags.astro';
-import Cursor from '../components/CursorEffect/Cursor.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
 import BlogHeader from '../components/Header.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import Search from '../components/Search/Search';
+import Search from '../components/search/Search';
 import { getBlogPosts, getBookPosts, getPosts } from '../utils/api.astro';
 	const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
 	const { mostRecentBookPost } = await getBookPosts();
@@ -40,10 +40,7 @@ const permalink = '#';
 						<Search client:load posts={allPosts} />
 
 					</section>
-					<section aria-label="Blog post list">
-
-						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
-						
+					<section aria-label="Blog post list">{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
 					</section>
 				</main>
 			</div>

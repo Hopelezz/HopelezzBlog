@@ -1,9 +1,10 @@
 ---
 import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
 import BookPost from '../components/bookShelf/Post.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import Footer from '../components/Footer/Footer.astro';
+import Footer from '../components/footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
 const { mostRecentBlogPost } = await getBlogPosts(); // Fetch most recent blog post
@@ -20,6 +21,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt, img}
 	</head>
 
 		<body>
+			<Cursor />
 			<div class="body">
 
 				<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />

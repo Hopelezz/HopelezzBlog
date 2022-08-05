@@ -14,10 +14,10 @@
     "@astrojs/solid-js": "^0.4.1",
     "@astrojs/vercel": "^0.4.0",
     "astro": "^1.0.0-rc.6",
-
     "solid-js": "^1.4.8"
   },
   "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.9",
     "preact": "^10.7.3"
   }
 }

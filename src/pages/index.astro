@@ -24,21 +24,26 @@ const permalink = '#';
 	<body>
 		<Cursor />
 		<div class="body">
-			<LeftSidebar 
-				mostRecentBlogPost={mostRecentBlogPost} 
-				mostRecentBookPost={mostRecentBookPost} />
+
+			<LeftSidebar mostRecentBlogPost={mostRecentBlogPost} mostRecentBookPost={mostRecentBookPost} />
 
 			<div class="home_content">
+
 				<BlogHeader />
+
 				<main class="content">
 					<section class="intro">
 						<h1 class="latest">{title}</h1>
 						<p>"If you're afraid of something then do things in fear."</p>
 						<p>{ description }</p>
+
 						<Search client:load posts={allPosts} />
+
 					</section>
 					<section aria-label="Blog post list">
+
 						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
+						
 					</section>
 				</main>
 			</div>

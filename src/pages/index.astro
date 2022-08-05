@@ -7,11 +7,9 @@ import BlogPostPreview from '../components/blog/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Search from '../components/Search/Search';
 import { getBlogPosts, getBookPosts, getPosts } from '../utils/api.astro';
-
-const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
-const { mostRecentBookPost } = await getBookPosts();
-const { allPosts } = await getPosts();
-
+	const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
+	const { mostRecentBookPost } = await getBookPosts();
+	const { allPosts } = await getPosts();
 
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
@@ -26,21 +24,26 @@ const permalink = '#';
 	<body>
 		<Cursor />
 		<div class="body">
-			<LeftSidebar 
-				mostRecentBlogPost={mostRecentBlogPost} 
-				mostRecentBookPost={mostRecentBookPost} />
+
+			<LeftSidebar mostRecentBlogPost={mostRecentBlogPost} mostRecentBookPost={mostRecentBookPost} />
 
 			<div class="home_content">
+
 				<BlogHeader />
+
 				<main class="content">
 					<section class="intro">
-						<h1 class="latest">{ title }</h1>
+						<h1 class="latest">{title}</h1>
 						<p>"If you're afraid of something then do things in fear."</p>
 						<p>{ description }</p>
+
 						<Search client:load posts={allPosts} />
+
 					</section>
 					<section aria-label="Blog post list">
-						{allBlogPosts.map((p: any) => <BlogPostPreview post={p} />)}
+
+						{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}
+						
 					</section>
 				</main>
 			</div>

@@ -4,7 +4,6 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-
 import { getBookPosts, getBlogPosts  } from '../utils/api.astro';
 	const { allBookPosts, mostRecentBookPost } = await getBookPosts();
 	const { mostRecentBlogPost } = await getBlogPosts();
@@ -18,7 +17,7 @@ let permalink = '#';
 <html lang="en">
 	
 	<head>
-		<Meta title= {title} description={description} permalink={permalink} />
+		<Meta title={title} description={description} permalink={permalink} />
 
 		<style>
 			header {
@@ -58,9 +57,7 @@ let permalink = '#';
 	
 	<body>
 		<div class="body">
-			<LeftSidebar  
-				mostRecentBlogPost = {mostRecentBlogPost}
-				mostRecentBookPost = {mostRecentBookPost} />
+			<LeftSidebar  mostRecentBlogPost={mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 			
 			<div class="home_content">
 				<Header />

@@ -14,23 +14,33 @@ const { title, description, publishDate, author, heroImage, permalink, alt, img}
 
 <html lang={content.lang || 'en'}>
 	<head>
-		<Meta {title} {description} {permalink} />
+
+		<Meta title={title} description={description} permalink={permalink} />
+
 	</head>
 
 		<body>
 			<div class="body">
+
 				<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
+
 				<main class="home_content">
+
 					<Header />
+
 					<div class="wrapper">
-						<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
+
+						<BookPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={img} >
 							<slot />
 						</BookPost>
+
 					</div>
 				</main>
 			</div>
 		</body>
+
 	<Footer />
+	
 </html>
 
 <style>

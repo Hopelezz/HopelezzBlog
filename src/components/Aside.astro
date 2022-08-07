@@ -1,0 +1,107 @@
+---
+import Author from '../data/author.json';
+
+//if key matches in author deconstruct the value and assign it to the variable
+const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = Author.Mark;
+
+---
+
+<aside class="aside">
+    <div class="image">
+        <img src={photo} alt="Writter's Photo" height="120">
+    </div>
+
+    <div class="text">
+        <p>Writter: {name}</p>
+
+        <hr style="width: 80%;">
+
+        <h5>Bio:</h5>
+        <p>{bio}</p>
+        
+        <hr style="width: 80%;">
+
+        <!--Social Icons-->
+        <div class="social-icons">
+            <a href={twitter}><i class="fab fa-twitter">{twitterHandle}</i></a>
+            <a href={linkedin}><i class="fab fa-linkedin">{name}</i></a>
+            <a href={github}><i class="fab fa-github">{githubHandle}</i></a>
+        </div>
+    </div>
+</aside>
+
+<style>
+/*------------------Aside------------------*/
+.aside{
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    height: 480px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 25px 0 0 25px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------Image------------------*/
+.image{
+    padding:20px 40px;
+}
+
+.image img{
+    border-radius: 50%;
+}
+
+/*--------------------Text------------------*/
+.text{
+    padding: 0 6%;
+}
+.text p:nth-child(1){
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.text h5 {
+    padding-top: 10px;
+}
+.text p{
+    
+    padding-bottom: 10px;
+}
+
+.text p:nth-child(4){
+    font-size: 1rem;
+    color: #858585;
+}
+
+.text p:nth-child(5){
+    font-size: 1rem;
+    color: #858585;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*------Social Icons-------*/
+.social-icons{
+    font-size: 1.2rem;
+    padding-top: 10px;
+}
+
+.social-icons a{
+    color: #4b4949;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.text span{
+    font-size: 1rem;
+    color: #858585;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+</style>

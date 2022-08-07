@@ -1,9 +1,10 @@
 ---
+import '../styles/root.css';
+
 // Component Imports
 import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
-import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import { getBookPosts, getBlogPosts  } from '../utils/api.astro';
 	const { allBookPosts, mostRecentBookPost } = await getBookPosts();
 	const { mostRecentBlogPost } = await getBlogPosts();
@@ -56,9 +57,7 @@ let permalink = '#';
 	</head>
 	
 	<body>
-		<div class="body">
-			<LeftSidebar  mostRecentBlogPost={mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
-			
+		<div class="body">			
 			<div class="home_content">
 				<Header />
 				<main class="content">
@@ -68,7 +67,7 @@ let permalink = '#';
 						<br/>
 						<p>{ description }</p>
 					</section>
-					<section aria-label="Book post list">
+					<section aria-label="Book post list" class='container'>
 						{allBookPosts.map((p) => <BookPostPreview post={p} />)}
 					</section>
 				</main>

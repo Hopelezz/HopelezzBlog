@@ -3,14 +3,13 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
 import BlogPost from '../components/blog/Post.astro';
-import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Footer from '../components/footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 	const { mostRecentBlogPost } = await getBlogPosts();
 	const { mostRecentBookPost } = await getBookPosts();
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt, href } = content;
+const { title, author, year, publishDate, name, href, description, img, alt,permalink } = content;
 ---
 
 <html lang={content.lang || 'en'}>
@@ -24,18 +23,16 @@ const { title, description, publishDate, author, heroImage, permalink, alt, href
 		<Cursor />
 		<div class="body">
 
-			<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
-
 			<main class="home_content">
 
 				<Header />				
 
-				<div class="wrapper">
-
-					<BlogPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={} href={} >
-						<slot />
-					</BlogPost>
-
+				<div class="container">
+					<div class="grid">
+						<BlogPost title={title} publishDate={publishDate} name={name} href={href} img={img} description={description} alt={alt}  >
+							<slot />
+						</BlogPost>
+					</div>
 				</div>
 			</main>
 		</div>
@@ -46,12 +43,4 @@ const { title, description, publishDate, author, heroImage, permalink, alt, href
 </html>
 
 <style>
-	.wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 65em;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	width: 100%;
-}
 </style>

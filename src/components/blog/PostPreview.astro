@@ -1,19 +1,117 @@
 ---
-import "../../styles/frontPage.css";
+import "../../styles/root.css";
 
 export interface Props {
-	post: any;
+	post: {
+        frontmatter: {
+            title: string;
+            date: string;
+            description: string;
+            img: string;
+        };
+    }[];
+}
+const { post } = Astro.props;
+const { title, publishDate, name, href, description, img, alt, tags } = post.frontmatter;
+// tags is an string of comma separated tags. return the first tag.
+const tag = tags.split(",")[0];
+
+---
+<!--Start Article 1-->
+
+    <div class="article">
+    
+        <article>
+            <div class="coffee">
+                <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
+            </div>
+
+            <div class="details">
+                <a href={post.url}><h1>{title}</h3></a>
+                <span>{publishDate}  |  {tag}</span>
+                
+                <p>{description}</p>
+                <a href={post.url}> Read more.</a>
+            </div>
+        </article>
+    </div>
+
+
+
+<style>
+    
+/*----------------Section--------------*/
+article{
+    width: 600px;
+    height: 190px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 30px;
+    padding: 15px;
+    display: flex;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    
 }
 
-let { post } = Astro.props;
----
+a{
+    text-decoration: none;
+}
 
-<article class="post-preview">
-	<header>
-		<p class="publish-date">{post.frontmatter.publishDate}</p>
-		<a href={post.url}><h1 id="title">{post.frontmatter.title}</h1></a>
-	</header>
-	<p>{post.frontmatter.description}</p>
-	<a href={post.url} aria-label="Read more about the post">Read more</a>
-</article>
+/*------------Coffee Image-------------*/
+.coffee{
+    width: 170px;
+}
+.coffee > img{
+    border-radius: 5px;
+}
 
+.center-cropped {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+/*--------Article Details-------------*/
+.details{
+    width: 470px;
+    padding-left: 5px;
+}
+
+.details span{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #858585;
+}
+
+.details p{
+    font-size: 12.5px;
+    margin-top: 5px;
+    padding-top: 20px;
+    color: #777777;
+}
+
+/* remove link decoration */
+.details a{
+    color: #303030;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/*----------------------------------------*/
+
+</style>
+    

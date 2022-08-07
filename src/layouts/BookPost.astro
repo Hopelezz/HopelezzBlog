@@ -3,7 +3,6 @@ import Meta from '../components/MetaTags.astro';
 import Header from '../components/Header.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
 import BookPost from '../components/bookShelf/Post.astro';
-import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
 import Footer from '../components/footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
@@ -24,7 +23,6 @@ const { title, description, publishDate, author, heroImage, permalink, alt, img}
 			<Cursor />
 			<div class="body">
 
-				<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
 
 				<main class="home_content">
 

@@ -1,35 +1,51 @@
 ---
-
+import Search from '../components/Search/Search';
+import { getPosts } from '../utils/api.astro';
+const allPosts = await getPosts();
 ---
 
-<header>
+<header class="nav">
     <div class="logo">
         <h2><a href="/">&lt;BLACKSKIES &#47;&gt;</a></h2>
     </div>
     <div class="menu">
         <ul>
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="home"><a href="/">Home</a></li>
+          
+            <div class="leftcontainer">
+                <li><Search posts={allPosts} /></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Hire Me</a></li>
+            </div>
         </ul>
     </div>
 </header>
 
 <style>
 /*-------------------Start Header-------------------*/
+
 header{
     width: 100%;
     height:60px;
-    padding: 0 200px;
+    padding: 0 10px;
     background-color: #f1f1f1;
-    box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* sticky */
+    position: sticky;
 }
 
 /*--------------Logo----------------*/
 .logo{
-    width: 50%;
     line-height: 60px;
-    float: left;
 }
 
 h2 a{
@@ -38,15 +54,24 @@ h2 a{
 }
 
 /*----------------Menu---------------*/
+/* menu top and stretch length of window */
+
+/* align all items horizontally */
 .menu{
-    width: 50%;
-    float: left;
+    float: right;
+    line-height: 60px;
 }
 
+/* menu ul line-style:none vertical: middle using flex */
 .menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    
     line-height: 60px;
-    padding-left: 35%;
 }
 
 .menu ul li{

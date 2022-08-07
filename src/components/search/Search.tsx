@@ -1,22 +1,20 @@
 /** @jsxImportSource solid-js */
 import { createSignal, For, Show } from "solid-js";
-
+import { Post } from '../../utils/types';
 //Inside the posts we are looking at the frontmatter object for Title, Description, Tags, and URL
 //Note: tags is a string separated by commas.
 interface Props { 
-  posts: Array<{
-      frontmatter: {
-        title: string;
-        publishDate: string;
-        name: string;
-        description: string;
-        tags: string;
-      }
+  posts: {
+      frontmatter: Post,
       url: string;
-  }>;
+  }[];
 }
 
+
 export default function Search(props: Props) {
+  /*! takes an object and returns a filter object */
+  
+
   const [search, setSearch] = createSignal(""); //create a signal for the search input
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
   
@@ -38,13 +36,14 @@ export default function Search(props: Props) {
 
   return (
     <div class="searchContainer"> 
+      <i class="fa-solid fa-magnifying-glass">
       <input
         type="text"
         placeholder="Search..."
         onInput={handleInput}
         value={search()}
         class="searchBar"
-      />
+      /></i>
 
       <Show when={search()}>
         <div class="listContainer">

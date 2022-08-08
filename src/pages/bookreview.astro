@@ -3,7 +3,7 @@ import '../styles/root.css';
 
 // Component Imports
 import Meta from '../components/MetaTags.astro';
-import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
 import BookPostPreview from '../components/bookShelf/PostPreview.astro';
 import { getBookPosts, getBlogPosts  } from '../utils/api.astro';
 	const { allBookPosts, mostRecentBookPost } = await getBookPosts();
@@ -59,7 +59,7 @@ let permalink = '#';
 	<body>
 		<div class="body">			
 			<div class="home_content">
-				<Header />
+				<Navbar />
 				<main class="content">
 					<section class="intro">
 						<h1 class="latest">{ title }</h1>

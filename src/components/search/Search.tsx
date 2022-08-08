@@ -5,15 +5,13 @@ import { Post } from '../../utils/types';
 //Note: tags is a string separated by commas.
 interface Props { 
   posts: {
-      frontmatter: Post,
+      frontmatter: Post
       url: string;
   }[];
 }
 
-
 export default function Search(props: Props) {
-  /*! takes an object and returns a filter object */
-  
+  /* takes an object and returns a filter object */
 
   const [search, setSearch] = createSignal(""); //create a signal for the search input
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
@@ -24,7 +22,7 @@ export default function Search(props: Props) {
     
     const filteredPosts = props.posts.filter(post => {
       const { title, description, tags } = post.frontmatter;  //get the frontmatter of the post
-      
+
       return (
         title?.toLowerCase().includes(value) ||
         description?.toLowerCase().includes(value) ||
@@ -36,22 +34,22 @@ export default function Search(props: Props) {
 
   return (
     <div class="searchContainer"> 
-      <i class="fa-solid fa-magnifying-glass">
+      <i class="fa-solid fa-magnifying-glass"></i>
       <input
         type="text"
         placeholder="Search..."
         onInput={handleInput}
         value={search()}
         class="searchBar"
-      /></i>
+      />
 
       <Show when={search()}>
         <div class="listContainer">
-          <For each={filteredPosts()} fallback={<div>No results found</div>}>
+          <For each={filteredPosts()} fallback={<div class="searchlist">No results found</div>}>
             {(post, i) => 
               <div class="searchlist" data-index={i() + 1}>
                 <a href={post.url}>{post.frontmatter.title}</a>
-              </div>              
+              </div>
             }
           </For>
         </div>

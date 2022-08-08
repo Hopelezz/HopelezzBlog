@@ -30,18 +30,22 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     </div>
 </aside>
 
+<script>
+    
+</script>
+
 <style>
 /*------------------Aside------------------*/
 .aside{
     top: 0;
     left: 0;
-    height: 100vh;
     width: 200px;
     height: 480px;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255, 0.5);
     border-radius: 5px;
-    margin: 25px 0 0 25px;
+    margin: 0px 0 0 25px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 5.5rem;
 }
 
 /*-------------------Image------------------*/
@@ -67,7 +71,6 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     padding-top: 10px;
 }
 .text p{
-    
     padding-bottom: 10px;
 }
 
@@ -81,6 +84,13 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     color: #858585;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+/* styled hr */
+.text hr{
+    width: 80%;
+    border: 1px solid #858585;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /*------Social Icons-------*/
@@ -103,5 +113,12 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     color: #858585;
     padding-top: 5px;
     text-transform: uppercase;
+}
+
+/*-------------Media --------------------*/
+@media (max-width: 768px) {
+    .aside{
+        display: none;
+    }
 }
 </style>

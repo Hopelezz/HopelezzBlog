@@ -1,4 +1,13 @@
 
+:root {
+	color-scheme: light;
+}
+
+.active {
+	color-scheme: dark;
+}
+
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -18,23 +27,22 @@ body{
 
 
 code {
-	--border-radius: 3px;
-	--padding-block: 0.2rem;
-	--padding-inline: 0.33rem;
 	font-weight: 600;
-	
 	font-size: 0.90em;
 	color: inherit;
-	background-color: var(--th-inline-bg);
-	padding: var(--padding-block) var(--padding-inline);
-	margin: calc(var(--padding-block) * -1) -0.125em;
-	border-radius: var(--border-radius);
 	word-break: break-word;
 }
 
 pre.shiki {
-	background-color: rgb(43, 43, 43) !important;
-	color: var(--th-glow) !important;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.90em;
+	line-height: 1.5;
+	color: #333;
+	background-color: #fafafa;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1em;
+	overflow: auto;
 }
 
 pre {

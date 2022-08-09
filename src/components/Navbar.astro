@@ -1,9 +1,8 @@
 ---
 import Search from '../components/Search/Search';
-import { getPosts } from '../utils/api.astro';
-const allPosts = await getPosts();
+import {getSearchData} from '../utils/api.astro';
 
-const posts = Astro.props;
+const posts = await getSearchData();
 ---
 
 <header class="nav">
@@ -12,12 +11,13 @@ const posts = Astro.props;
     </div>
     <div class="menu">
         <ul>
-            <li ><a href="/">Home</a></li>
-            <li><Search client:load posts={allPosts} /></li>
-            <div class="hamburger">
+            
+            <Search client:load posts={posts} />
+            <ul class="hamburger">
+                <li><a href="/">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Hire Me</a></li>
-            </div>
+            </ul>
         </ul>
     </div>
 </header>
@@ -109,6 +109,17 @@ h2 a{
     .hamburger{
         display: none;
     }
+}
+
+input .searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(181, 6, 6);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 

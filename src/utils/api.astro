@@ -1,4 +1,7 @@
 ---
+/*
+*
+*/
 export async function getBlogPosts(){
     // Data Fetching: List all Markdown Blog posts in the repo.
     let allBlogPosts = await Astro.glob('../pages/blog/*.mdx');
@@ -29,4 +32,21 @@ export async function getPosts(){
 
     return { allPosts };
 }
+
+export async function getSearchData(){
+    // Data Fetching: List all Markdown Blog posts in the repo.
+    let allPosts = await getPosts();
+    let allPostsData = allPosts.allPosts.map(post => {
+        return {
+            title: post.frontmatter.title,
+            writer: post.frontmatter.writer,
+            description: post.frontmatter.description,
+            tags: post.frontmatter.tags,
+            url: post.url,
+        }
+    }
+    )
+    return allPostsData;
+}
+
 ---

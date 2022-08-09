@@ -13,7 +13,6 @@ interface Props {
   }>;
 }
 
-
 /**
  * The Search component is responsible for rendering the search bar and the
  * results of the search.

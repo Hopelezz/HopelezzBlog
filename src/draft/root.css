@@ -3,107 +3,6 @@
 --c = Color
 --th = theme
 */
-
-:root {
-	--font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-		Apple Color Emoji, Segoe UI Emoji;
-	--font-body: 'IBM Plex Sans', var(--font-fallback);
-	--font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-		'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
-		'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
-
-	--c-wh: #fff;
-	--c-bk: #000014;
-
-	--c-gy-50: #f9fafb;
-	--c-gy-100: #f3f4f6;
-	--c-gy-200: #e5e7eb;
-	--c-gy-300: #d1d5db;
-	--c-gy-400: #9ca3af;
-	--c-gy-500: #6b7280;
-	--c-gy-600: #4b5563;
-	--c-gy-700: #374151;
-	--c-gy-800: #1f2937;
-	--c-gy-900: #111827;
-
-    /* primary colors */
-	--c-bu: #3894ff;
-	--c-bu-rgb: 56, 148, 255;
-	--c-gnn: #17c083;
-	--c-gn-rgb: 23, 192, 131;
-	--c-og: #ff5d01;
-	--c-og-rgb: 255, 93, 1;
-	--c-pr: #a50ab9;
-	--c-pr-rgb: 136, 45, 231;
-	--c-rd: rgb(255, 20, 56);
-	--c-rd-rgb: 255, 22, 57;
-	--c-ye: #ffbe2d;
-	--c-ye-rgb: 255, 190, 45;
-
-	/* Theme Colors */
-    --c-light-cyan: #dbeeee;
-	--c-sea-green-crayola: #00ffd4;
-    --c-sea-green-crayola-rgb: 0, 250, 182;
-    --c-raisin-black: #1F1D20;
-    --c-raisin-black-rgb: 31, 29, 32;
-    --c-royal-purple: #7E52A0;
-    --c-royal-purple-rgb: 126, 82, 160;
-    --c-pacific-blue: #23B5D3;
-    --c-pacific-blue-rgb: 34, 181, 211;
-}
-
-:root {
-    color-scheme: light;
-    /* theme specified */
-    --th-primary: var(--c-royal-purple);
-    --th-primary-rgb: var(--c-royal-purple);
-
-    --th-accent: var(--c-pacific-blue);
-    --th-accent-rgb: var(--c-pacific-blue-rgb);
-
-    --th-glow: var(--c-sea-green-crayola);
-	--th-glow-rgb: rgba(0, 250, 182, 0.3);
-
-    --th-opacity-light: 0.2;
-    --th-opacity-dark: 0.8;
-
-    --th-background: var(--c-light-cyan);
-	--th-background-hsl: hsl(var(--h, 180), var(--s, 44%), var(--l, 90%));
-    --th-background-darker: rgba(var(--c-light-cyan-rgb), 1);
-
-    --th-text: var(--c-raisin-black);
-    --th-text-light: rgba(var(--c-raisin-black-rgb), 0.4);
-    --th-text-dark: rgba(var(--c-raisin-black-rgb), 0.8);
-
-    --th-inline-bg: rgba(var(--c-pacific-blue-rgb), 0.2);
-}
-
-body {
-	--l: 55%;
-	background: var(--th-background);
-	color: var(--th-text-dark);
-}
-
-/* :root.theme-dark {
-	color-scheme: dark;
-	--theme-accent-opacity: 0.3;
-	--theme-divider: var(--color-gray-900);
-	--theme-text: var(--color-gray-200);
-	--theme-text-light: var(--color-gray-400);
-	--theme-text-lighter: var(--color-gray-600);
-	--theme-bg: var(--color-black);
-	--theme-bg-offset: var(--color-gray-900);
-	--theme-code-inline-bg: var(--color-gray-800);
-	--theme-code-text: var(--color-gray-200);
-	--theme-code-bg: var(--color-gray-900);
-} */
-
-::selection {
-	color: var(--th-primary);
-	background-color: var(--th-glow-rgb);
-	/* background-color: rgba(var(--th-accent-rgb), var(--th-opacity-light)); */
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -122,7 +21,7 @@ body {
 
 /* Typography */
 :is(h1, h2, h3, h4, h5, h6) {
-	margin-bottom: 1.38rem;
+	/* margin-bottom: 1.38rem; */
 	font-weight: 400;
 	line-height: 1.3;
 }
@@ -175,8 +74,6 @@ a {
 	transition: all 0.5s ease;
 }
 
-
-
 a > code {
 	position: relative;
 	color: var(--th-primary);
@@ -224,7 +121,6 @@ code {
 
 	font-family: var(--font-mono);
 	font-weight: 600;
-	
 	font-size: 0.90em;
 	color: inherit;
 	background-color: var(--th-inline-bg);
@@ -258,18 +154,11 @@ pre {
 	overflow-x: auto;
 }
 
-
-
 @media (min-width: 37.75em) {
 	pre {
 		--padding-inline: 1.25rem;
 		border-radius: 8px;
 	}
-}
-
-.flex {
-	display: flex;
-	align-items: center;
 }
 
 img.cover {
@@ -283,14 +172,11 @@ blockquote {
 	--padding-block: 1rem;
 	--padding-inline: 1.25rem;
 	--color: var(--th-primary);
-
 	display: flex;
 	flex-direction: column;
-
 	padding: var(--padding-block) var(--padding-inline);
 	margin-left: calc(var(--padding-inline) * -1);
 	margin-right: calc(var(--padding-inline) * -1);
-
 	background: transparent;
 	border-left: calc(var(--padding-inline) / 2) solid var(--color);
 	border-radius: 0;
@@ -303,20 +189,6 @@ blockquote .source {
 }
 
 
-/* 
-:root.theme-dark {
-	color-scheme: dark;
-	--th-accent-opacity: 0.3;
-	--th-divider: var(--color-gray-900);
-	--th-text: var(--color-gray-200);
-	--th-text-light: var(--color-gray-400);
-	--th-text-lighter: var(--color-gray-600);
-	--th-bg: var(--color-black);
-	--th-bg-offset: var(--color-gray-900);
-	--th-code-inline-bg: var(--color-gray-800);
-	--th-code-text: var(--color-gray-200);
-	--th-code-bg: var(--color-gray-900);
-} */
 
 
 @media only screen and (max-width: 1441px) and (min-width: 1025px) {

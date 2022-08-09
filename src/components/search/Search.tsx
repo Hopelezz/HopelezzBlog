@@ -1,6 +1,6 @@
 /** @jsxImportSource solid-js */
 import { createSignal, For, Show } from "solid-js";
-import { Post } from '../../utils/types';
+import '../../styles/search.css'
 
 
 interface Props { 
@@ -41,7 +41,7 @@ export default function Search(props: Props) {
 
   return (
     <div class="searchContainer"> 
-      <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="search-input">
       <input
         type="text"
         placeholder="Search..."
@@ -49,17 +49,30 @@ export default function Search(props: Props) {
         value={search()}
         class="searchBar"
       />
+      <div class="autocom-box">
+            <For each={props.posts}>
+              {(post, i) => 
+                <li class="searchResult">
+                  {post.title}
+                </li>
+              }
+            </For>
+      </div>
+      <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
 
       <Show when={search()}>
-        <ul class="listContainer">
-          <For each={filteredPosts()} fallback={<div class="searchlist">No results found</div>}>
-            {(post, i) => 
-              <li class="searchlist">
-                <a href={post.url}>{post.title}</a>
-              </li>
-            }
-          </For>
-        </ul>
+        <div class="searchResults">
+          <ul role="list">
+            <For each={filteredPosts()} fallback={<li>No results found</li>}>
+              {(post, i) => 
+                <li class="searchResult">
+                  <a href={post.url}>{post.title}</a>
+                </li>
+              }
+            </For>
+          </ul>
+        </div>
       </Show>
     </div>
   );           

@@ -3,9 +3,22 @@
         "name": "Mark Spratt",
         "born": "09-29-1987",
         "twitter": "http://twitter.com",
-        "github": "http://github.com",
-        "photo": "#",
-        "bio": "I am a web developer and I love to code.",
-        "location": "#"
+        "twitterHandle": "@_Hopelezz",
+        "linkedin": "https://www.linkedin.com/in/mark-spratt/",
+        "github": "https://github.com/Hopelezz",
+        "githubHandle": "@Hopelezz",
+        "photo": "/assets/authors/Mark.avif",
+        "bio": "I am a web developer and I love to code."
+    },
+    "John": {
+        "name": "John Spratt",
+        "born": "09-29-1987",
+        "twitter": "http://twitter.com",
+        "twitterHandle": "@_Hopelezz",
+        "linkedin": "https://www.linkedin.com/in/mark-spratt/",
+        "github": "https://github.com/Hopelezz",
+        "githubHandle": "@Hopelezz",
+        "photo": "/assets/authors/John.avif",
+        "bio": "I am a web developer and I love to code."
     }
 }

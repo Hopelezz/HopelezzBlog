@@ -3,6 +3,7 @@ import { createSignal, For, Show } from "solid-js";
 import '../../styles/search.css'
 
 
+
 interface Props { 
   posts: Array<{
         title: string;
@@ -23,19 +24,42 @@ export default function Search(props: Props) {
    const [search, setSearch] = createSignal(""); //create a signal for the search input
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
   
+  //TODO: Add Auto complete to search 
+  // function autoComplete(){
+  //   const searchWrapper = document.querySelector('.search-wrapper');
+  //   const inputBox = document.querySelector('.search-input');
+  //   const suggBox = searchWrapper.querySelector('.search-input');
+  //   inputBox.onkeyup = (e) => {
+  //       let userData = e.target.value;  // getting the value of the input
+  //       let emptyArray = [];
+  //       if(userData){
+  //           emptyArray = suggestion.filter(data => {
+  //               // filtering the suggestion array
+  //               return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+  //           }); // filtering the suggestion array
+  //           emptyArray = emptyArray.map((data) => {
+  //               return { 
+  //                 `<li>`{data}`</li>` 
+  //               };
+  //           })
+  //       }
+  //   }
+  // }
+
   function handleInput(e: any) {
     const { value } = e.currentTarget;  //get the value of the input
     setSearch(value.toLowerCase()); //set the search signal to the value of the input
-    
+    console.log(value);
     const fPosts = props.posts.filter(post => { //filter the posts
       const { title, description, tags } = post;  //get the frontmatter of the post
       return (
         title?.toLowerCase().includes(value) ||
         description?.toLowerCase().includes(value) ||
         tags?.toLowerCase().includes(value)
-      );
-    });
-    setFilteredPosts(fPosts);  //set the filtered posts signal to the filtered posts
+      )
+    }); //slice the array to the first 10
+
+    setFilteredPosts(fPosts).slice(0.10);  //set the filtered posts signal to the filtered posts
   }
 
   return (
@@ -48,6 +72,7 @@ export default function Search(props: Props) {
         value={search()}
         class="searchBar"
       />
+      {/* //TODO: Add Auto complete to search 
       <div class="autocom-box">
             <For each={props.posts}>
               {(post, i) => 
@@ -56,14 +81,15 @@ export default function Search(props: Props) {
                 </li>
               }
             </For>
-      </div>
+      </div>   
+      */}
       <div class="icon"><i class="fas fa-search"></i></div>
       </div>
 
       <Show when={search()}>
         <div class="searchResults">
           <ul role="list">
-            <For each={filteredPosts()} fallback={<li>No results found</li>}>
+            <For each={filteredPosts()} fallback={<li class="searchResult">No results found</li>}>
               {(post, i) => 
                 <li class="searchResult">
                   <a href={post.url}>{post.title}</a>

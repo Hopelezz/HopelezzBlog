@@ -25,5 +25,5 @@ Things you'll need to complete the following steps:
     ```
 
 - Author Image
-    - You need a photo in a avif format.
+    - You need a photo in a `avif` format.
     - An aspect ratio 1:1 is recommended.

@@ -1,5 +1,6 @@
 ---
 import "../../styles/root.css";
+import Author from '../../data/author.json';
 
 export interface Props {
 	post: {
@@ -12,9 +13,9 @@ export interface Props {
     }[];
 }
 const { post } = Astro.props;
-const { title, publishDate, name, href, description, img, alt, tags } = post.frontmatter;
-// tags is an string of comma separated tags. return the first tag.
-const tag = tags.split(",")[0];
+const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;
+
+const tag = tags.split(",")[0]; // returns the first tag
 
 ---
 <!--Article-->
@@ -29,6 +30,8 @@ const tag = tags.split(",")[0];
             <div class="details">
                 <a href={post.url}><h1>{title}</h1></a>
                 <span>{publishDate}  |  {tag}</span>
+                <br/>
+                <span>{writer}</span>
                 
                 <p>{description}</p>
                 <a href={post.url}> Read more.</a>
@@ -47,8 +50,7 @@ article{
     height: 190px;
     background-color: rgb(255, 255, 255, 0.5);
     border-radius: 5px;
-    margin-top: 25px;
-    margin-left: 30px;
+    margin: 25px;
     padding: 15px;
     display: flex;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
-    "target": "ESNext",
+    // "target": "ESNext",
+    "target": "ES6",
     "module": "ESNext",
     // Enable node-style module resolution, for things like npm package imports.
     "moduleResolution": "node",

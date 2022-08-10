@@ -1,8 +1,9 @@
 ---
-import Author from '../data/author.json';
+import json from '../data/author.json';
 
-//if key matches in author deconstruct the value and assign it to the variable
-const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = Author.Mark;
+
+// I want to take the page url and return a writer aside
+const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = json.Mark;  // <-- Find the writer;
 
 ---
 
@@ -29,10 +30,6 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
         </div>
     </div>
 </aside>
-
-<script>
-    
-</script>
 
 <style>
 /*---------Aside----------*/
@@ -62,7 +59,7 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 /*---------Text-----------*/
 .text{
     padding: 0 6%;
-    
+
 }
 
 .text p:nth-child(1){

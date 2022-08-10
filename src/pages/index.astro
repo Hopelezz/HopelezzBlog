@@ -7,8 +7,9 @@ import Cursor from '../components/cursorEffect/Cursor.astro';
 import Navbar from '../components/Navbar.astro';
 import Aside from '../components/Aside.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
-import { getBlogPosts } from '../utils/api.astro';
+import { getBlogPosts, getPosts } from '../utils/api.astro';
 	const { allBlogPosts } = await getBlogPosts();
+	const { allPosts } = await getPosts();
 
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
@@ -24,7 +25,7 @@ const permalink = '#';
 		<Cursor />
 		<Navbar />
 		<div class="container">
-			<Aside />
+			<Aside post={allPosts}/>
 			<main>{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}</main>
 		</div>		
 	</body>

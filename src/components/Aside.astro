@@ -1,8 +1,9 @@
 ---
-import Author from '../data/author.json';
+import json from '../data/author.json';
 
-//if key matches in author deconstruct the value and assign it to the variable
-const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = Author.Mark;
+
+// I want to take the page url and return a writer aside
+const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = json.Mark;  // <-- Find the writer;
 
 ---
 
@@ -30,12 +31,8 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     </div>
 </aside>
 
-<script>
-    
-</script>
-
 <style>
-/*------------------Aside------------------*/
+/*---------Aside----------*/
 .aside{
     top: 0;
     left: 0;
@@ -48,19 +45,23 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     margin-top: 5.5rem;
 }
 
-/*-------------------Image------------------*/
+/*----------Image--------*/
+/* Center image */
 .image{
-    padding:20px 40px;
+    text-align: center;
+    padding:20px;
 }
 
 .image img{
     border-radius: 50%;
 }
 
-/*--------------------Text------------------*/
+/*---------Text-----------*/
 .text{
     padding: 0 6%;
+
 }
+
 .text p:nth-child(1){
     font-size: 12px;
     font-weight: 600;
@@ -70,6 +71,7 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 .text h5 {
     padding-top: 10px;
 }
+
 .text p{
     padding-bottom: 10px;
 }
@@ -85,7 +87,8 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     padding-top: 10px;
     padding-bottom: 10px;
 }
-/* styled hr */
+
+/*---------Styled HR----------*/
 .text hr{
     width: 80%;
     border: 1px solid #858585;
@@ -104,7 +107,8 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     display: flex;
     align-items: center;
     padding-left: 6px;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: none;
 }
 
@@ -115,7 +119,7 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     text-transform: uppercase;
 }
 
-/*-------------Media --------------------*/
+/*---------Media-----------*/
 @media (max-width: 768px) {
     .aside{
         display: none;

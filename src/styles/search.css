@@ -1,7 +1,7 @@
 .searchContainer{
     position: relative;
     max-width: 450px;
-    margin: 150px auto;
+    margin: auto;
 }
 
 .searchContainer .search-input{
@@ -13,7 +13,7 @@
 }
 
 .search-input input{
-    height: 55px;
+    height: 40px;
     width: 100%;
     outline: none;
     border: none;
@@ -26,7 +26,7 @@
 .search-input .icon{
     height: 55px;
     width: 55px;
-    line-height: 55px;
+    line-height: 40px;
     position: absolute;
     top: 0;
     right: 0;
@@ -55,4 +55,30 @@
 
 .autocom-box li:hover{
     background-color: #efefef;
+}
+
+.searchResult{
+    width: 313px;
+    height: auto;
+    background-color: rgb(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    list-style: none;
+    text-decoration: none;
+    /* align text center */
+    justify-content: center;
+}
+
+.searchResult a{
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+/* SearchResult hover add padding */
+.searchResult:hover a{
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
 }

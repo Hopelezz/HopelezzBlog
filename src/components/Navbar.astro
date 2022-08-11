@@ -1,6 +1,7 @@
 ---
 import Search from '../components/search/Search';
 import {getSearchData} from '../utils/api.astro';
+import Dark from '../components/darkmode.astro';
 
 const posts = await getSearchData();
 ---
@@ -16,9 +17,7 @@ const posts = await getSearchData();
             <li><a href="#">About</a></li>
             <li><a href="#">Hire Me</a></li>
             <li>
-                <div id='toggle'>
-                    <i class='indicator'></i>
-                </div>
+                <Dark />
             </li>
         </ul>
     </div>
@@ -71,11 +70,6 @@ h2 a{
 .menu ul li a{
     text-decoration: none;
     color: #4b4949;
-}
-
-.menu ul .active{
-    color: #000000;
-    font-weight: 600;
 }
 
 /* .hamburger creates a nav menu when windows size is smaller than 850 wide */

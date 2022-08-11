@@ -2,82 +2,88 @@
 --th = theme
 --c = color
 --txt = text
+--bg = background
+-p = primary
+-s = secondary
+--hsla = hue saturation lightness alpha
+-h = hue
+-s = saturation
+-l = lightness
+-a = alpha
+
 */
 
 :root {
-	/* fonts */
-	--font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-		Apple Color Emoji, Segoe UI Emoji;
-	--font-body: system-ui, var(--font-fallback);
-	--font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-		'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
-		'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+	--hex-light-grey: hsl(330, 3%, 77%);
+	--pri-color-h: 33;
+	--pri-color-s: 3%;
+	--pri-color-l: 77%;
+	--pri-color: hsl(var(--pri-color-h), var(--pri-color-s), var(--pri-color-l));
+	--pri-color-light-a: hsla(var(--pri-color-h), var(--pri-color-s), calc(var(--pri-color-l) + var(--lighten)), 0.5);	/* this is taking the hue saturation and then calc lightness by adding 15 to the number. Then adding an alpha of 0.5 */
+	--pri-color-dark-a: hsla(var(--pri-color-h), var(--pri-color-s), calc(var(--pri-color-l) + var(--darken)), 0.5);	/* this is taking the hue saturation and then calc lightness by subtracting 15 to the number. Then adding an alpha of 0.5 */
+
+	--black-coffee: hsl(0, 0%, 7%);
+	--sec-color-h: 0;
+	--sec-color-s: 0%;
+	--sec-color-l: 7%;
+	--sec-color: hsl(var(--sec-color-h), var(--sec-color-s), var(--sec-color-l));
+	--sec-color-light-a: hsla(var(--sec-color-h), var(--sec-color-s), calc(var(--sec-color-l) + var(--lighten)), 0.5);	/* this is taking the hue saturation and then calc lightness by adding 15 to the number. Then adding an alpha of 0.5 */
+	--sec-color-dark-a: hsla(var(--sec-color-h), var(--sec-color-s), calc(var(--sec-color-l) + var(--darken)), 0.5);	/* this is taking the hue saturation and then calc lightness by subtracting 15 to the number. Then adding an alpha of 0.5 */
+
+	--steel-teal: #61929e;
+	--acc-p-color-h: 192;
+	--acc-p-color-s: 24%;
+	--acc-p-color-l: 50%;
+	--acc-p-color: hsl(var(--acc-p-color-h), var(--acc-p-color-s), var(--acc-p-color-l));
+	--acc-p-color-light-a: hsla(var(--acc-p-color-h), var(--acc-p-color-s), calc(var(--acc-p-color-l) + var(--lighten)), 0.5);	/* this is taking the hue saturation and then calc lightness by adding 15 to the number. Then adding an alpha of 0.5 */
+	--acc-p-color-dark-a: hsla(var(--acc-p-color-h), var(--acc-p-color-s), calc(var(--acc-p-color-l) + var(--darken)), 0.5);	/* this is taking the hue saturation and then calc lightness by subtracting 15 to the number. Then adding an alpha of 0.5 */
+
+
+	--myrtle-grey: #32766f;
+	--acc-s-color-h: 174;
+	--acc-s-color-s: 40%;
+	--acc-s-color-l: 33%;
+	--acc-s-color: hsl(var(--acc-s-color-h), var(--acc-s-color-s), var(--acc-s-color-l));
+	--acc-s-color-light-a: hsla(var(--acc-s-color-h), var(--acc-s-color-s), calc(var(--acc-s-color-l) + var(--lighten)), 0.5);	/* this is taking the hue saturation and then calc lightness by adding 15 to the number. Then adding an alpha of 0.5 */
+	--acc-s-color-dark-a: hsla(var(--acc-s-color-h), var(--acc-s-color-s), calc(var(--acc-s-color-l) + var(--darken)), 0.5);	/* this is taking the hue saturation and then calc lightness by subtracting 15 to the number. Then adding an alpha of 0.5 */
+
+	--mint-green: #85ff9d;
+	--acc-t-color-h: 132;
+	--acc-t-color-s: 100%;
+	--acc-t-color-l: 76%;
+	--acc-t-color: hsl(var(--acc-t-color-h), var(--acc-t-color-s), var(--acc-t-color-l));
+	--acc-t-color-light-a: hsla(var(--acc-t-color-h), var(--acc-t-color-s), calc(var(--acc-t-color-l) + var(--lighten)), 0.5);	/* this is taking the hue saturation and then calc lightness by adding 15 to the number. Then adding an alpha of 0.5 */
+	--acc-t-color-dark-a: hsla(var(--acc-t-color-h), var(--acc-t-color-s), calc(var(--acc-t-color-l) + var(--darken)), 0.5);	/* this is taking the hue saturation and then calc lightness by subtracting 15 to the number. Then adding an alpha of 0.5 */
+
+
+	--lighten: 15%;
+	--lighten-2: 30%;
+	--lighten-3: 45%;
+	--lighten-4: 60%;
+	--darken: -15%;
+	--darken-2: -30%;
+	--darken-3: -45%;
+	--darken-4: -60%;
 }
 
-:root {
+:root{
 	color-scheme: light;
-	--theme-accent: hsla(var(--color-blue), 1);
-	--theme-text-accent: hsla(var(--color-blue), 1);
-	--theme-accent-opacity: 0.15;
-	--theme-divider: hsla(var(--color-gray-95), 1);
-	--theme-text: hsla(var(--color-gray-10), 1);
-	--theme-text-light: hsla(var(--color-gray-40), 1);
-	/* @@@: not used anywhere */
-	--theme-text-lighter: hsla(var(--color-gray-80), 1);
-	--theme-bg: hsla(var(--color-base-white), 100%, 1);
-	--theme-bg-hover: hsla(var(--color-gray-95), 1);
-	--theme-bg-offset: hsla(var(--color-gray-90), 1);
-	--theme-bg-accent: hsla(var(--color-blue), var(--theme-accent-opacity));
-	--theme-code-inline-bg: hsla(var(--color-gray-95), 1);
-	--theme-code-inline-text: var(--theme-text);
-	--theme-code-bg: hsla(217, 19%, 27%, 1);
-	--theme-code-text: hsla(var(--color-gray-95), 1);
-	--theme-navbar-bg: hsla(var(--color-base-white), 100%, 1);
-	--theme-navbar-height: 6rem;
-	--theme-selection-color: hsla(var(--color-blue), 1);
-	--theme-selection-bg: hsla(var(--color-blue), var(--theme-accent-opacity));
+	--bg-color: var(--pri-color-light);
+	--txt-color: var(--sec-color-light);
+}
+:root {
+	--bg-color: var(--sec-color-dark);
+	--txt-color: var(--pri-color-dark);
 }
 
-body {
-	background: var(--theme-bg);
-	color: var(--theme-text);
+body{
+	background-color: var(--bg-color);
+	color: var(--txt-color);
 }
 
-:root.theme-dark {
-	color-scheme: dark;
-	--theme-accent-opacity: 0.15;
-	--theme-accent: hsla(var(--color-blue), 1);
-	--theme-text-accent: hsla(var(--color-blue), 1);
-	--theme-divider: hsla(var(--color-gray-10), 1);
-	--theme-text: hsla(var(--color-gray-90), 1);
-	--theme-text-light: hsla(var(--color-gray-80), 1);
-
-	/* @@@: not used anywhere */
-	--theme-text-lighter: hsla(var(--color-gray-40), 1);
-	--theme-bg: hsla(215, 28%, 17%, 1);
-	--theme-bg-hover: hsla(var(--color-gray-40), 1);
-	--theme-bg-offset: hsla(var(--color-gray-5), 1);
-	--theme-code-inline-bg: hsla(var(--color-gray-10), 1);
-	--theme-code-inline-text: hsla(var(--color-base-white), 100%, 1);
-	--theme-code-bg: hsla(var(--color-gray-5), 1);
-	--theme-code-text: hsla(var(--color-base-white), 100%, 1);
-	--theme-navbar-bg: hsla(215, 28%, 17%, 1);
-	--theme-selection-color: hsla(var(--color-base-white), 100%, 1);
-	--theme-selection-bg: hsla(var(--color-purple), var(--theme-accent-opacity));
-
-	/* DocSearch [Algolia] */
-	--docsearch-modal-background: var(--theme-bg);
-	--docsearch-searchbox-focus-background: var(--theme-divider);
-	--docsearch-footer-background: var(--theme-divider);
-	--docsearch-text-color: var(--theme-text);
-	--docsearch-hit-background: var(--theme-divider);
-	--docsearch-hit-shadow: none;
-	--docsearch-hit-color: var(--theme-text);
-	--docsearch-footer-shadow: inset 0 2px 10px #000;
-	--docsearch-modal-shadow: inset 0 0 8px #000;
-}
-
-::selection {
-	color: var(--theme-selection-color);
-	background-color: var(--theme-selection-bg);
+h1 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--txt-dark);
+	margin-bottom: 1rem;
 }

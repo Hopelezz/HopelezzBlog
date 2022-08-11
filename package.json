@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.9",
+    "open-props": "^1.4.10",
     "preact": "^10.7.3",
     "scss": "^0.2.4",
     "vanilla-tilt": "^1.7.2"

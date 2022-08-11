@@ -1,6 +1,6 @@
 ---
 // https://codepen.io/ali-jasim/pen/rNeGKOR
-import '../styles/root.css';
+import '../styles/theme.postcss';
 // Component Imports
 import Meta from '../components/MetaTags.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
@@ -25,7 +25,7 @@ const permalink = '#';
 		<Navbar />
 		<div class="container">
 			<Aside post={allPosts}/>
-			<main>{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}</main>
+			<div class='articlelist'>{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}</div>
 		</div>
 	</body>
 </html>
@@ -44,7 +44,7 @@ const permalink = '#';
 	justify-content: center;
 }
 
-main {
+articlelist {
 	overflow-y: scroll;
 	height: 100vh;
 	width: 100vw;

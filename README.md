@@ -7,6 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Astro][astro-shield]][astro-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -188,4 +189,6 @@ Project Link: []()
 [license-url]: https://github.com/Hopelezz/HopelezzBlog/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
+[astro-shield]: https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=fff&style=for-the-badge
+[astro-url]: https://astro.build/
 [product-screenshot]: images/screenshot.png

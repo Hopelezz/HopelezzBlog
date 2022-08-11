@@ -3,7 +3,7 @@ import Aside from '../Aside.astro';
 
 export interface Props {
 	title: string;
-	writter: string;
+	writer: string;
 	publishDate: string;
 	heroImage: string;
 	alt: string;
@@ -11,23 +11,21 @@ export interface Props {
 	tags: string;
 }
 
-const { title, writter, publishDate, alt, img, tags } = Astro.props;
+const { title, writer, publishDate, alt, img, tags } = Astro.props;
 
 // tags is a string seported by comma return first tag
 
 ---
 <div class="page-container">
-	<Aside writter={writter} />
-	<article class="article">	
-			
+	<Aside writter={writer} />
+	<article class="article">
 		<div>
 			<div class="coffee">
 				<img class="center-cropped" src={img} alt={alt} height="100%"/>
 			</div>
-
 			<div class="details">
 				<h1>{title}</h1>
-				<p>{writter}</p>
+				<p>{writer}</p>
 				<span>{publishDate}  |  {tags}</span>
 			</div>
 			</div>
@@ -45,7 +43,7 @@ const { title, writter, publishDate, alt, img, tags } = Astro.props;
 	flex-direction: row;
 	justify-content: center;
 }
-	
+
 .article {
 	display: flex;
 	flex-direction: column;
@@ -151,6 +149,6 @@ a:hover {
 }
 
 
-/*----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
 
 </style>

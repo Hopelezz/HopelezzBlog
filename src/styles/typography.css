@@ -1,0 +1,7 @@
+body  {
+    text-rendering: optimizeLegibility;
+}
+
+.foo  {
+    text-rendering: optimizeSpeed;
+}

@@ -4,10 +4,11 @@ import '../../styles/search.css'
 
 
 
-interface Props { 
+interface Props {
   posts: Array<{
         title: string;
-        writter: string;
+        author: string;
+        writer: string;
         description: string;
         tags: string;
         url: string;
@@ -23,8 +24,8 @@ interface Props {
 export default function Search(props: Props) {
    const [search, setSearch] = createSignal(""); //create a signal for the search input
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
-  
-  //TODO: Add Auto complete to search 
+
+  //TODO: Add Auto complete to search
   // function autoComplete(){
   //   const searchWrapper = document.querySelector('.search-wrapper');
   //   const inputBox = document.querySelector('.search-input');
@@ -38,8 +39,8 @@ export default function Search(props: Props) {
   //               return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
   //           }); // filtering the suggestion array
   //           emptyArray = emptyArray.map((data) => {
-  //               return { 
-  //                 `<li>`{data}`</li>` 
+  //               return {
+  //                 <li>{data}</li>
   //               };
   //           })
   //       }
@@ -51,10 +52,11 @@ export default function Search(props: Props) {
     setSearch(value.toLowerCase()); //set the search signal to the value of the input
     console.log(value);
     const fPosts = props.posts.filter(post => { //filter the posts
-      const { title, description, tags } = post;  //get the frontmatter of the post
+      const { title, description, tags, author } = post;  //get the frontmatter of the post
       return (
         title?.toLowerCase().includes(value) ||
         description?.toLowerCase().includes(value) ||
+        author?.toLowerCase().includes(value) ||
         tags?.toLowerCase().includes(value)
       )
     }); //slice the array to the first 10
@@ -63,7 +65,7 @@ export default function Search(props: Props) {
   }
 
   return (
-    <div class="searchContainer"> 
+    <div class="searchContainer">
     <div class="search-input">
       <input
         type="text"
@@ -72,16 +74,16 @@ export default function Search(props: Props) {
         value={search()}
         class="searchBar"
       />
-      {/* //TODO: Add Auto complete to search 
+      {/* //TODO: Add Auto complete to search
       <div class="autocom-box">
             <For each={props.posts}>
-              {(post, i) => 
+              {(post, i) =>
                 <li class="searchResult">
                   {post.title}
                 </li>
               }
             </For>
-      </div>   
+      </div>
       */}
       <div class="icon"><i class="fas fa-search"></i></div>
       </div>
@@ -90,7 +92,7 @@ export default function Search(props: Props) {
         <div class="searchResults">
           <ul role="list">
             <For each={filteredPosts()} fallback={<li class="searchResult">No results found</li>}>
-              {(post, i) => 
+              {(post, i) =>
                 <li class="searchResult">
                   <a href={post.url}>{post.title}</a>
                 </li>
@@ -100,5 +102,5 @@ export default function Search(props: Props) {
         </div>
       </Show>
     </div>
-  );           
+  );
 }

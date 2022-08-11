@@ -10,14 +10,20 @@ const posts = await getSearchData();
         <h2><a href="/">&lt;BLACKSKIES &#47;&gt;</a></h2>
     </div>
     <Search client:load posts={posts} />
-    <div class="menu">   
+    <div class="menu">
         <ul class="hamburger">
             <li><a href="/">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Hire Me</a></li>
-        </ul>  
+            <li>
+                <div id='toggle'>
+                    <i class='indicator'></i>
+                </div>
+            </li>
+        </ul>
     </div>
 </header>
+
 
 <style>
 /*-------------------Start Navbar-------------------*/
@@ -35,7 +41,7 @@ header{
     height: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     z-index: 1;
 }
 

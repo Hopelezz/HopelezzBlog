@@ -13,7 +13,7 @@
     "@astrojs/preact": "^0.3.1",
     "@astrojs/solid-js": "^0.4.1",
     "@astrojs/vercel": "^0.4.0",
-    "astro": "^1.0.1",
+    "astro": "^1.0.2",
     "sass": "^1.54.3",
     "solid-js": "^1.4.8"
   },

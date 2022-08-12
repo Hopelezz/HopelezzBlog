@@ -26,9 +26,9 @@ const tag = tags.split(",")[0]; // returns the first tag
 
         <div class="details">
             <a href={post.url}><h2 class='brand text3'>{title}</h2></a>
-            <span class='text2'>{publishDate}  |  {tag}</span>
+            <span class='text'>{publishDate}  |  {tag}</span>
             <br/>
-            <span class='text2'>{writer}</span>
+            <span class='text'>{writer}</span>
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>
@@ -95,13 +95,13 @@ li {
 }
 .details span {
     text-transform: capitalize;
-    font-size: var(--size-fluid-1);
+    font-size: var(--size-3);
     font-weight: 300;
     /* color: #303030; */
 }
 
 .details p {
-    font-size: var(--size-2);
+    font-size: var(--size-3);
     margin-top: 5px;
     padding-top: var(--gap-3);
 }

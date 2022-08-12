@@ -1,5 +1,6 @@
 ---
 import json from '../data/author.json';
+import { Image } from '@astrojs/image/components';
 
 
 // I want to take the page url and return a writer aside
@@ -9,18 +10,18 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 
 <aside class="surface3 card">
     <div class="image">
-        <img src={photo} alt="Writer's Photo" height="120">
+        <Image src={photo} aspectRatio="1:1" format="avif" height={120} />
     </div>
 
     <div class="text">
         <p class='text1'>Writer: {name}</p>
 
-        <!-- <hr /> -->
+        <hr style="width: 80%;">
 
         <h5 class='text'>Bio:</h5>
         <p class='text2'>{bio}</p>
 
-        <!-- <hr style="width: 80%;"> -->
+        <hr style="width: 80%;">
 
         <!--Social Icons-->
         <div class="social-icons">
@@ -82,7 +83,7 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 /*---------Styled HR----------*/
 .text hr{
     width: 80%;
-    border: 1px solid #858585;
+    /* border: 1px solid #858585; */
     margin-top: 10px;
     margin-bottom: 10px;
 }

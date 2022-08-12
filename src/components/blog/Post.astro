@@ -1,6 +1,7 @@
 ---
 import '../../styles/theme.postcss';
 import Aside from '../Aside.astro';
+import { Image } from '@astrojs/image/components';
 
 export interface Props {
 	title: string;
@@ -22,7 +23,7 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 	<article class="article">
 		<div>
 			<div class="coffee">
-				<img class="center-cropped" src={img} alt={alt} height="100%"/>
+				<Image class="center-cropped" src={img} alt={alt} aspectRatio='1:1' height={200} format='avif' />
 			</div>
 			<div class="details">
 				<h1>{title}</h1>

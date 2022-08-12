@@ -13,11 +13,12 @@
     "@astrojs/preact": "^0.3.1",
     "@astrojs/solid-js": "^0.4.1",
     "@astrojs/vercel": "^0.4.0",
-    "astro": "^1.0.2",
+    "astro": "^1.0.3",
     "sass": "^1.54.3",
     "solid-js": "^1.4.8"
   },
   "dependencies": {
+    "@astrojs/image": "^0.3.4",
     "@mapbox/node-pre-gyp": "^1.0.9",
     "open-props": "^1.4.10",
     "preact": "^10.7.3",

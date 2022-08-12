@@ -25,28 +25,6 @@ export default function Search(props: Props) {
    const [search, setSearch] = createSignal(""); //create a signal for the search input
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
 
-  //TODO: Add Auto complete to search
-  // function autoComplete(){
-  //   const searchWrapper = document.querySelector('.search-wrapper');
-  //   const inputBox = document.querySelector('.search-input');
-  //   const suggBox = searchWrapper.querySelector('.search-input');
-  //   inputBox.onkeyup = (e) => {
-  //       let userData = e.target.value;  // getting the value of the input
-  //       let emptyArray = [];
-  //       if(userData){
-  //           emptyArray = suggestion.filter(data => {
-  //               // filtering the suggestion array
-  //               return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-  //           }); // filtering the suggestion array
-  //           emptyArray = emptyArray.map((data) => {
-  //               return {
-  //                 <li>{data}</li>
-  //               };
-  //           })
-  //       }
-  //   }
-  // }
-
   function handleInput(e: any) {
     const { value } = e.currentTarget;  //get the value of the input
     setSearch(value.toLowerCase()); //set the search signal to the value of the input
@@ -66,32 +44,21 @@ export default function Search(props: Props) {
 
   return (
     <div class="searchContainer">
-    <div class="search-input">
-      <input
-        type="text"
-        placeholder="Search..."
-        onInput={handleInput}
-        value={search()}
-        class="searchBar"
-      />
-      {/* //TODO: Add Auto complete to search
-      <div class="autocom-box">
-            <For each={props.posts}>
-              {(post, i) =>
-                <li class="searchResult">
-                  {post.title}
-                </li>
-              }
-            </For>
-      </div>
-      */}
-      <div class="icon"><i class="fas fa-search"></i></div>
+      <div class="search-input">
+        <input
+          type="text"
+          placeholder="Search..."
+          onInput={handleInput}
+          value={search()}
+          class="surface4 searchBar"
+        />
+        <i class="icon fas fa-search"></i>
       </div>
 
       <Show when={search()}>
-        <div class="searchResults">
+        <div class="resultContainer">
           <ul role="list">
-            <For each={filteredPosts()} fallback={<li class="searchResult">No results found</li>}>
+            <For each={filteredPosts()} fallback={<li class="surface4 searchResult">No results found</li>}>
               {(post, i) =>
                 <li class="searchResult">
                   <a href={post.url}>{post.title}</a>

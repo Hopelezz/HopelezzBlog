@@ -21,6 +21,10 @@ import '../styles/theme.postcss';
         <label for="dim">Dim</label>
     </div>
     <div>
+        <input type="radio" id="teal" name="theme" value="teal">
+        <label for="teal">Teal</label>
+    </div>
+    <div>
         <input type="radio" id="grape" name="theme" value="grape">
         <label for="grape">Grape</label>
     </div>
@@ -30,6 +34,8 @@ import '../styles/theme.postcss';
 </div> -->
 
 <script>
+
+
     const switcher = document.querySelector('#theme-switcher')
 const doc = document.firstElementChild
 
@@ -38,6 +44,14 @@ switcher.addEventListener('input', e =>
 
 const setTheme = theme =>
   doc.setAttribute('color-scheme', theme)
+
+//   setTheme.addEventListener('change', function() {
+//     if (this.checked) {
+//         document.body.classList.add('dark');
+//     } else {
+//         document.body.classList.remove('dark');
+//     }
+// }
 
 </script>
 

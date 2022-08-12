@@ -1,6 +1,4 @@
 ---
-import '../styles/theme.css';
-import '../styles/index.css';
 import Meta from '../components/MetaTags.astro';
 import Navbar from '../components/Navbar.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
@@ -19,15 +17,12 @@ const { title, author, year, publishDate, writer, href, description, img, alt,pe
 
 	<body>
 		<Cursor />
-		<div class="body">
-
-			<main class="home_content">
-
-				<Navbar />
-
+		<Navbar />
+		<div class="container">
+			<main class="body home_content">
 				<div class="container">
 					<div class="grid">
-						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt}  >
+						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt}>
 							<slot />
 						</BlogPost>
 					</div>
@@ -41,4 +36,7 @@ const { title, author, year, publishDate, writer, href, description, img, alt,pe
 </html>
 
 <style>
+.container {
+	margin-top: 2rem;
+}
 </style>

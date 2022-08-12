@@ -7,18 +7,18 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 
 ---
 
-<aside class="surface3 aside">
+<aside class="surface3 card">
     <div class="image">
         <img src={photo} alt="Writer's Photo" height="120">
     </div>
 
     <div class="text">
-        <p>Writer: {name}</p>
+        <p class='text1'>Writer: {name}</p>
 
         <hr style="width: 80%;">
 
-        <h5>Bio:</h5>
-        <p>{bio}</p>
+        <h5 class='text1'>Bio:</h5>
+        <p class='text2'>{bio}</p>
 
         <hr style="width: 80%;">
 
@@ -33,16 +33,26 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 
 <style>
 /*---------Aside----------*/
-.aside{
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 480px;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 5px;
-    margin: 0px 0 0 25px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 5.5rem;
+.card {
+  flex-basis: var(--size-content-1);
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  gap: var(--size-2);
+  background: var(--surface-2);
+  border: 1px solid var(--surface-1);
+  padding: var(--size-4);
+  border: 1px solid var(--brand);
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-3);
+  margin: var(--size-4);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-3);
+  transition: transform 0.3s ease-in-out;
 }
 
 /*----------Image--------*/
@@ -59,34 +69,8 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 /*---------Text-----------*/
 .text{
     padding: 0 6%;
-
 }
 
-.text p:nth-child(1){
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 15px;
-}
-
-.text h5 {
-    padding-top: 10px;
-}
-
-.text p{
-    padding-bottom: 10px;
-}
-
-.text p:nth-child(4){
-    font-size: 1rem;
-    color: #858585;
-}
-
-.text p:nth-child(5){
-    font-size: 1rem;
-    color: #858585;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
 /*---------Styled HR----------*/
 .text hr{
@@ -103,17 +87,17 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 }
 
 .social-icons a{
-    color: #4b4949;
-    display: flex;
+    color: var(--brand);
+    /* display: flex;
     align-items: center;
     padding-left: 6px;
     margin-top: 10px;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none; */
 }
 
 .text span{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     color: #858585;
     padding-top: 5px;
     text-transform: uppercase;

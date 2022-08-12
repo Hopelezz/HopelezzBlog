@@ -1,6 +1,5 @@
 ---
-import "../../styles/root.css";
-import Author from '../../data/author.json';
+import "../../styles/theme.postcss";
 
 export interface Props {
 	post: {
@@ -19,36 +18,47 @@ const tag = tags.split(",")[0]; // returns the first tag
 
 ---
 <!--Article-->
+<li class="details">
+    <article class='card surface3'>
+        <div class="coffee">
+            <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
+        </div>
 
-    <li class="article">
-        <article class='surface3 rad-shadow'>
-            <div class="coffee">
-                <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
-            </div>
-
-            <div class="details">
-                <a class='text1' href={post.url}><h1>{title}</h1></a>
-                <span class='text2'>{publishDate}  |  {tag}</span>
-                <br/>
-                <span class='text2'>{writer}</span>
-                <p class='text3'>{description}</p>
-            </div>
-        </article>
-    </li>
+        <div class="details">
+            <a href={post.url}><h2 class='brand text3'>{title}</h2></a>
+            <span class='text2'>{publishDate}  |  {tag}</span>
+            <br/>
+            <span class='text2'>{writer}</span>
+            <p class='text3 truncate'>{description}</p>
+        </div>
+    </article>
+</li>
 
 <style>
 /*----------------Section--------------*/
-
+/* defines card size */
 article{
-    width: 600px;
-    height: 190px;
-    /* background-color: rgb(255, 255, 255, 0.5); */
-    border-radius: 5px;
+    width: 500px;
+    height: 200px;
     margin: 25px;
-    padding: 15px;
+    padding: 20px;
     display: flex;
-    /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
     transition: all 0.3s ease-in-out;
+}
+
+/* defines card style */
+.card {
+  flex-basis: var(--size-content-1);
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-4);
+  background: var(--surface-2);
+  border: 20px solid var(--surface-1);
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  margin: var(--size-5);
+  border: 1px solid var(--brand);
 }
 
 article:hover {
@@ -79,27 +89,24 @@ li {
 }
 
 /*--------Article Details-------------*/
-.details{
-    width: auto;
-    padding-left: 5px;
-}
-
-.details span{
+.details h2{
     text-transform: uppercase;
-    font-size: 12px;
+}
+.details span{
+    text-transform: capitalize;
+    font-size: var(--size-fluid-1);
+    font-weight: 300;
     /* color: #303030; */
 }
 
 .details p{
-    font-size: 12.5px;
+    font-size: var(--size-fluid-1);
     margin-top: 5px;
-    padding-top: 20px;
-    /* color: #303030; */
+    padding-top: var(--gap-3);
 }
 
 /* remove link decoration */
 .details a{
-    /* color: #303030; */
     font-size: 12px;
     text-decoration: none;
 }
@@ -115,6 +122,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.truncate {
+  width: var(--size-fluid-8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /*-------------Media --------------------*/
 /* make media verticle cards width fit screen with small margin-left and margin-right*/

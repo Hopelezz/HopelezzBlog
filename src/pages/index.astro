@@ -20,7 +20,7 @@ const permalink = '#';
 	<head>
 		<Meta title={title} description={description} permalink={permalink} />
 	</head>
-	<body>
+	<body id="top" class="page" class='surface1'>
 		<Cursor />
 		<Navbar />
 		<div class="container">
@@ -42,14 +42,12 @@ const permalink = '#';
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin-top: 4rem;
 }
 
-articlelist {
+.articlelist {
 	overflow-y: scroll;
-	height: 100vh;
-	width: 100vw;
 	padding: 0;
-	margin-top: 4rem;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

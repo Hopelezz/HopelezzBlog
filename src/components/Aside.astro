@@ -15,12 +15,12 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     <div class="text">
         <p class='text1'>Writer: {name}</p>
 
-        <hr style="width: 80%;">
+        <!-- <hr /> -->
 
-        <h5 class='text1'>Bio:</h5>
+        <h5 class='text'>Bio:</h5>
         <p class='text2'>{bio}</p>
 
-        <hr style="width: 80%;">
+        <!-- <hr style="width: 80%;"> -->
 
         <!--Social Icons-->
         <div class="social-icons">
@@ -39,7 +39,7 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
   flex-direction: column;
   height: 600px;
   gap: var(--size-2);
-  background: var(--surface-2);
+  background: var(--surface2);
   border: 1px solid var(--surface-1);
   padding: var(--size-4);
   border: 1px solid var(--brand);
@@ -49,8 +49,15 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
   transition: all 0.3s ease-in-out;
 }
 
+.card {
+    &:hover {
+        box-shadow: var(--shadow-3);
+    }
+}
+
 .card:hover {
   transform: scale(1.05);
+  background: var(--surface3);
   box-shadow: var(--shadow-3);
   transition: transform 0.3s ease-in-out;
 }
@@ -98,15 +105,28 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 
 .text span{
     /* font-size: 1rem; */
-    color: #858585;
+    /* color: #858585; */
     padding-top: 5px;
     text-transform: uppercase;
 }
 
 /*---------Media-----------*/
 @media (max-width: 768px) {
-    .aside{
+    .card{
         display: none;
     }
 }
+
+@media (min-width: 768px) {
+    .card{
+    }
+}
+
+/* media reduce the size of the card */
+@media (max-width: 768px) {
+    .card{
+        display: none;
+    }
+}
+
 </style>

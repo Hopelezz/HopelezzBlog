@@ -13,7 +13,7 @@ Things you'll need to complete the following steps:
     ,
     "John": {
         "name": "",
-        "born": "00-00-0000",
+        "born": "DD-MMM-YYYY",
         "twitter": "#",
         "twitterHandle": "@#",
         "linkedin": "#",

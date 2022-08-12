@@ -37,7 +37,7 @@ const tag = tags.split(",")[0]; // returns the first tag
 <style>
 /*----------------Section--------------*/
 /* defines card size */
-article{
+article {
     width: 500px;
     height: 200px;
     margin: 25px;
@@ -52,20 +52,21 @@ article{
   display: flex;
   flex-direction: row;
   gap: var(--size-4);
-  background: var(--surface-2);
-  border: 20px solid var(--surface-1);
+  background: var(--surface2);
   padding: var(--size-4);
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
   margin: var(--size-5);
   border: 1px solid var(--brand);
 }
-
-article:hover {
-    transform: translateY(-5px);
+.card:hover {
+  box-shadow: var(--shadow-4);
+  background: var(--surface3);
+  transform: translateY(-5px);
 }
 
-a{
+
+a {
     text-decoration: none;
 }
 li {
@@ -89,24 +90,24 @@ li {
 }
 
 /*--------Article Details-------------*/
-.details h2{
+.details h2 {
     text-transform: uppercase;
 }
-.details span{
+.details span {
     text-transform: capitalize;
     font-size: var(--size-fluid-1);
     font-weight: 300;
     /* color: #303030; */
 }
 
-.details p{
-    font-size: var(--size-fluid-1);
+.details p {
+    font-size: var(--size-2);
     margin-top: 5px;
     padding-top: var(--gap-3);
 }
 
 /* remove link decoration */
-.details a{
+.details a {
     font-size: 12px;
     text-decoration: none;
 }
@@ -130,16 +131,16 @@ a:hover {
 }
 
 /*-------------Media --------------------*/
-/* make media verticle cards width fit screen with small margin-left and margin-right*/
-@media (max-width: 600px) {
-    article{
-        width: 100%;
+@media (max-width: 768px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 460px;
     }
-    .coffee{
-        width: 100%;
-    }
-    .details{
-        width: 100%;
+    .card:pointer {
+        box-shadow: var(--shadow-4);
+        background: var(--surface3);
+        transform: translateY(-5px);
     }
 }
 

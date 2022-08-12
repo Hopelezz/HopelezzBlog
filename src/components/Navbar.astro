@@ -84,5 +84,13 @@ h2 a{
     }
 }
 
+/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
+@media (pointer:coarse) {
+    input[type="checkbox"], input[type="radio"] {
+        min-width:30px;
+        min-height:40px;
+        background:transparent;
+    }
+}
 
 </style>

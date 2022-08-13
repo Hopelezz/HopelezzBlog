@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 import image from '@astrojs/image';
 
 import solidJs from "@astrojs/solid-js";
+import vercel from '@astrojs/vercel/serverless';
 // import preact from '@astrojs/preact';
 
 // https://astro.build/config
@@ -21,4 +22,6 @@ export default defineConfig({
       langs: [],
     },
   },
+  output: 'server',
+  adapter: vercel()
 });

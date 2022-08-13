@@ -1571,7 +1571,7 @@ var __defProp$2 = Object.defineProperty;
 var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(raw || cooked.slice()) }));
 var _a$2;
 const $$metadata$d = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$f = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$f = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$MetaTags = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$MetaTags;
@@ -1679,7 +1679,7 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
     animate();
     
 ` }] });
-const $$Astro$e = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/cursorEffect/Cursor.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$e = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/cursorEffect/Cursor.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Cursor = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$Cursor;
@@ -1702,7 +1702,7 @@ const $$module3$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 	url: $$url$c
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const _tmpl$ = ["<div", ' class="resultContainer"><ul role="list">', "</ul></div>"], _tmpl$2 = ["<div", ' class="searchContainer"><div class="search-input"><input type="text" placeholder="<Search... />"', ' class="surface3 searchBar"><i class="icon fas fa-search"></i></div><!--#-->', "<!--/--></div>"], _tmpl$3 = ["<li", ' class="surface4 searchResult">No results found</li>'], _tmpl$4 = ["<li", ' class="searchResult"><a', ">", "</a></li>"];
+const _tmpl$ = ["<ul", ' class="list">', "</ul>"], _tmpl$2 = ["<div", ' class="searchContainer"><div class="search-input"><input type="text" placeholder="<Search... />"', ' class="surface3 searchBar" role="search"><i class="icon fas fa-search"></i></div><!--#-->', "<!--/--></div>"], _tmpl$3 = ["<li", ' class=" searchResult">No results found</li>'], _tmpl$4 = ["<li", ' class="searchResult"><a', ">", "</a></li>"];
 function Search(props) {
   const [search, setSearch] = createSignal("");
   const [filteredPosts, setFilteredPosts] = createSignal(props.posts);
@@ -1731,7 +1731,7 @@ const $$module1$4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$b = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/utils/api.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$d = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/utils/api.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$d = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/utils/api.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const Astro = $$Astro$d;
 async function getBlogPosts() {
   let allBlogPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../pages/blog/1-password.mdx": () => Promise.resolve().then(() => _page6),"../pages/blog/2-two-factor-auth.mdx": () => Promise.resolve().then(() => _page4),"../pages/blog/3-starting-astro.mdx": () => Promise.resolve().then(() => _page5),"../pages/blog/4-most-recent-post-button.mdx": () => Promise.resolve().then(() => _page3)}), () => "../pages/blog/*.mdx");
@@ -1802,7 +1802,7 @@ const $$metadata$a = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
     // set the theme on load
     setTheme(localStorage.getItem('color-scheme') || 'auto');
 ` }] });
-const $$Astro$c = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/darkmode.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$c = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/darkmode.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Darkmode = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Darkmode;
@@ -1833,7 +1833,7 @@ const $$module3$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$9 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", { modules: [{ module: $$module1$4, specifier: "../components/search/Search", assert: {} }, { module: $$module6, specifier: "../utils/api.astro", assert: {} }, { module: $$module3$1, specifier: "../components/darkmode.astro", assert: {} }], hydratedComponents: [Search], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set(["load"]), hoisted: [] });
-const $$Astro$b = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$b = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$Navbar;
@@ -2355,7 +2355,7 @@ const $$module1$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 }, Symbol.toStringTag, { value: 'Module' }));
 
 createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Image.astro", { modules: [{ module: $$module1$2, specifier: "../dist/index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$a = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Image.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$a = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Image.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$Image;
@@ -2370,7 +2370,7 @@ const $$Image = createComponent(async ($$result, $$props, $$slots) => {
 });
 
 createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Picture.astro", { modules: [{ module: $$module1$2, specifier: "../dist/index.js", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$9 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Picture.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$9 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/node_modules/@astrojs/image/components/Picture.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Picture = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$Picture;
@@ -2404,7 +2404,7 @@ const $$module2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$8 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Aside.astro", { modules: [{ module: $$module1$3, specifier: "../data/author.json", assert: {} }, { module: $$module2, specifier: "@astrojs/image/components", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$8 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Aside.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$8 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Aside.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Aside = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$Aside;
@@ -2412,25 +2412,26 @@ const $$Aside = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<aside class="card astro-VHSQS37A">
-    <div class="image astro-VHSQS37A">
-        <img${addAttribute(photo, "src")}${addAttribute(120, "width")}${addAttribute(120, "height")} alt="Author Photo"${addAttribute(120, "height")} class="astro-VHSQS37A">
+  return renderTemplate`${maybeRenderHead($$result)}<aside class="card astro-S4IG4HIU">
+    <div class="image astro-S4IG4HIU">
+        <img${addAttribute(photo, "src")}${addAttribute(120, "width")}${addAttribute(120, "height")} alt="Author Photo"${addAttribute(120, "height")} class="astro-S4IG4HIU">
     </div>
 
-    <div class="text astro-VHSQS37A">
-        <h3 class="writterHeader astro-VHSQS37A">Writer: </h3>
-            <p class="astro-VHSQS37A">${name}</p>
-
-        <section class="bio astro-VHSQS37A">
-            <h3 class="bioHeader astro-VHSQS37A">Bio:</h3>
-            <p class="astro-VHSQS37A">${bio}</p>
-        </section>
+    <div class="text astro-S4IG4HIU">
+        <div class="writer astro-S4IG4HIU">
+            <h3 class="writerHeader astro-S4IG4HIU">Writer: </h3>
+            <span class="astro-S4IG4HIU">${name}</span>
+        </div>
+        <div class="bio astro-S4IG4HIU">
+            <h3 class="bioHeader astro-S4IG4HIU">Bio:</h3>
+            <span class="astro-S4IG4HIU">${bio}</span>
+        </div>
 
         <!--Social Icons-->
-        <div class="social-icons astro-VHSQS37A">
-            <a${addAttribute(twitter, "href")} aria-label="Authors Twitter" class="astro-VHSQS37A"><i class="fab fa-twitter astro-VHSQS37A">${twitterHandle}</i></a>
-            <a${addAttribute(linkedin, "href")} aria-label="Authors LinkedIn" class="astro-VHSQS37A"><i class="fab fa-linkedin astro-VHSQS37A">${name}</i></a>
-            <a${addAttribute(github, "href")} aria-label="Authors Github" class="astro-VHSQS37A"><i class="fab fa-github astro-VHSQS37A">${githubHandle}</i></a>
+        <div class="social-icons astro-S4IG4HIU">
+            <a${addAttribute(twitter, "href")} aria-label="Authors Twitter" class="astro-S4IG4HIU"><i class="fab fa-twitter astro-S4IG4HIU">${twitterHandle}</i></a>
+            <a${addAttribute(linkedin, "href")} aria-label="Authors LinkedIn" class="astro-S4IG4HIU"><i class="fab fa-linkedin astro-S4IG4HIU">${name}</i></a>
+            <a${addAttribute(github, "href")} aria-label="Authors Github" class="astro-S4IG4HIU"><i class="fab fa-github astro-S4IG4HIU">${githubHandle}</i></a>
         </div>
     </div>
 </aside>`;
@@ -2448,7 +2449,7 @@ const $$module1$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$7 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$7 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$7 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$PostPreview$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$PostPreview$1;
@@ -2458,21 +2459,21 @@ const $$PostPreview$1 = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<li class="details astro-YQGC72MD">
-    <article class="card surface3 astro-YQGC72MD">
-        <div class="coffee astro-YQGC72MD">
-            <img class="center-cropped astro-YQGC72MD"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
+  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<div class="details astro-2EXMCJX5">
+    <article class="card surface3 astro-2EXMCJX5">
+        <div class="coffee astro-2EXMCJX5">
+            <img class="center-cropped astro-2EXMCJX5"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
         </div>
 
-        <div class="details astro-YQGC72MD">
-            <a${addAttribute(post.url, "href")} class="astro-YQGC72MD"><h2 class="brand text3 astro-YQGC72MD">${title}</h2></a>
-            <span class="text astro-YQGC72MD">${publishDate}  |  ${tag}</span>
-            <br class="astro-YQGC72MD">
-            <span class="text astro-YQGC72MD">${writer}</span>
-            <p class="text3 truncate astro-YQGC72MD">${description}</p>
+        <div class="details astro-2EXMCJX5">
+            <a${addAttribute(post.url, "href")} class="astro-2EXMCJX5"><h2 class="brand text3 astro-2EXMCJX5">${title}</h2></a>
+            <span class="text astro-2EXMCJX5">${publishDate}  |  ${tag}</span>
+            <br class="astro-2EXMCJX5">
+            <span class="text astro-2EXMCJX5">${writer}</span>
+            <p class="text3 truncate astro-2EXMCJX5">${description}</p>
         </div>
     </article>
-</li>
+</div>
 
 `;
 });
@@ -2491,7 +2492,7 @@ const $$module5$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 const $$metadata$6 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", { modules: [{ module: $$module1$5, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module1$1, specifier: "../components/Aside.astro", assert: {} }, { module: $$module5$1, specifier: "../components/blog/PostPreview.astro", assert: {} }, { module: $$module6, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
 
 ` }] });
-const $$Astro$6 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$6 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$Index;
@@ -2534,7 +2535,7 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$5 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/PostPreview.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$5 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/PostPreview.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$5 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/PostPreview.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$PostPreview = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$PostPreview;
@@ -2562,7 +2563,7 @@ const $$module3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$4 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", { modules: [{ module: $$module1$5, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3, specifier: "../components/bookShelf/PostPreview.astro", assert: {} }, { module: $$module6, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$4 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$4 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Bookreview = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$Bookreview;
@@ -2639,7 +2640,7 @@ const frontmatter$f = {
 const MDXLayout$e = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.2b49571a.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.2b0227ad.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Most Recent Post Button... A Start",
@@ -3360,7 +3361,7 @@ const frontmatter$e = {
 const MDXLayout$d = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.2b49571a.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.2b0227ad.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Two Factor Authentication",
@@ -3486,7 +3487,7 @@ const frontmatter$d = {
 const MDXLayout$c = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.2b49571a.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.2b0227ad.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Part 1 - Starting an Astro Blog",
@@ -3862,7 +3863,7 @@ const frontmatter$c = {
 const MDXLayout$b = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.2b49571a.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.2b0227ad.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Password",
@@ -4513,7 +4514,7 @@ const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$3 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro", { modules: [{ module: $$module1$1, specifier: "../Aside.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$3 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$3 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Post = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Post;
@@ -4556,7 +4557,7 @@ const $$module4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$2 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$2 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$2 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Social = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Social;
@@ -4610,7 +4611,7 @@ var __defProp$1 = Object.defineProperty;
 var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
 var _a$1;
 const $$metadata$1 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", { modules: [{ module: $$module1, specifier: "./Social.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" }] });
-const $$Astro$1 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro$1 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Footer;
@@ -4636,7 +4637,7 @@ var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
 var _a;
 const $$metadata = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro", { modules: [{ module: $$module1$5, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module4, specifier: "../components/bookShelf/Post.astro", assert: {} }, { module: $$module5, specifier: "../components/footer/Footer.astro", assert: {} }, { module: $$module6, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro", "", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Astro = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$BookPost = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$BookPost;
@@ -4661,9 +4662,9 @@ const BookPost = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const html = "<h1 id=\"rating--910\">Rating : 9/10</h1>\n<h3 id=\"cyberpunk-scifi-action-adventure-dystopic-puzzles-virtual-reality-future-fiction\"><em>Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction</em></h3>\n<p>I was hooked from the moment I started the book. Barely putting it down!</p>\n<blockquote>\n<p>\"Going outside is highly overrated\"</p>\n</blockquote>\n<p>Ready Player One is set in a depraved world of the future, where people are desperate to 'escape' reality. Set in the future 2044, a boy named Wade Watts grows up learning everything he knows through a game called OASIS. OASIS is a Virtual Reality (VR) immersion platform free for anyone. OASIS is jammed packed with every literature, movie, game, song, ever created. All you have to do is access it. While the world is crumbling around them in despair at least everyone has the OASIS to forget their troubles. Wade in reality and virtually has no money to his name. Both mother and father died when he was younger and is in the custody of his aunt who treats him miserably. His aunt lives in the stacks which are futuristic trailer parks. (Trailers are stacked on top of one another held together by scaffolding and prayers.) Wade grows up forced to survive on his one for the most part, but thankfully there's OASIS. The creator of OASIS known in the game as Anorak. When the creator died, he gave the world of OASIS a VR treasure hunt that will set you back in your seats for a page-turning warp speed of a ride.\r\nOne of the reviews called it a Willy Wonka Meets the Matrix. Possibly the most app description to describe the book. The book is brimming with 80's nostalgia! While I'm more of a 90's kid I grew up with a lot of the pop references mentioned in RPO. It covers all the basis Movies, Books, Music, TV Shows, Games along with some other pop references to the 80's.\r\nJust to give you an idea.</p>\n<h5 id=\"movies\">Movies:</h5>\n<ul>\n<li>Montey Python</li>\n<li>Blade Runner</li>\n<li>Ghost Busters</li>\n<li>Back to the Future</li>\n<li>Ferris Buller's Day Off</li>\n<li>Weird Science</li>\n<li>WarGames</li>\n<li>Pretty in Pink</li>\n<li>Breakfast Club</li>\n</ul>\n<h5 id=\"books-all-amazing-authors\">Books: (All Amazing Authors!)</h5>\n<ul>\n<li>Vonnegut</li>\n<li>Orson Scott Card</li>\n<li>Stephen King</li>\n<li>Terry Pratchett</li>\n<li>J.R.R. Tolkien</li>\n<li>Douglas Adams</li>\n</ul>\n<h5 id=\"music\">Music:</h5>\n<ul>\n<li>SchoolHouse Rock</li>\n<li>Pat Benatar</li>\n<li>They Might Be Giants</li>\n<li>Rush</li>\n</ul>\n<h5 id=\"tv-shows\">TV Shows:</h5>\n<ul>\n<li>A-Team</li>\n<li>Twilight Zone</li>\n<li>Gundam</li>\n<li>Spider-Man</li>\n<li>Ultraman</li>\n<li>Cowboy Bebop</li>\n<li>Kikaida</li>\n<li>Voltron</li>\n<li>Max Headroom</li>\n<li>Family Ties</li>\n<li>Star Trek</li>\n<li>Dr.Who</li>\n<li>The Cosmos</li>\n</ul>\n<h5 id=\"games\">GAMES:</h5>\n<ul>\n<li>PacMan</li>\n<li>Dig Dug</li>\n<li>Joust</li>\n<li>Black Tiger</li>\n<li>Adventure</li>\n<li>and many others</li>\n</ul>\n<blockquote>\n<p>\"As Terrifying and painful as reality can be, it's also the only place where you can find true happiness.\"</p>\n</blockquote>";
+const html = "<h1 id=\"rating--910\">Rating : 9/10</h1>\n<h3 id=\"cyberpunk-scifi-action-adventure-dystopic-puzzles-virtual-reality-future-fiction\"><em>Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction</em></h3>\n<p>I was hooked from the moment I started the book. Barely putting it down!</p>\n<blockquote>\n<p>“Going outside is highly overrated”</p>\n</blockquote>\n<p>Ready Player One is set in a depraved world of the future, where people are desperate to ‘escape’ reality. Set in the future 2044, a boy named Wade Watts grows up learning everything he knows through a game called OASIS. OASIS is a Virtual Reality (VR) immersion platform free for anyone. OASIS is jammed packed with every literature, movie, game, song, ever created. All you have to do is access it. While the world is crumbling around them in despair at least everyone has the OASIS to forget their troubles. Wade in reality and virtually has no money to his name. Both mother and father died when he was younger and is in the custody of his aunt who treats him miserably. His aunt lives in the stacks which are futuristic trailer parks. (Trailers are stacked on top of one another held together by scaffolding and prayers.) Wade grows up forced to survive on his one for the most part, but thankfully there’s OASIS. The creator of OASIS known in the game as Anorak. When the creator died, he gave the world of OASIS a VR treasure hunt that will set you back in your seats for a page-turning warp speed of a ride.\r\nOne of the reviews called it a Willy Wonka Meets the Matrix. Possibly the most app description to describe the book. The book is brimming with 80’s nostalgia! While I’m more of a 90’s kid I grew up with a lot of the pop references mentioned in RPO. It covers all the basis Movies, Books, Music, TV Shows, Games along with some other pop references to the 80’s.\r\nJust to give you an idea.</p>\n<h5 id=\"movies\">Movies:</h5>\n<ul>\n<li>Montey Python</li>\n<li>Blade Runner</li>\n<li>Ghost Busters</li>\n<li>Back to the Future</li>\n<li>Ferris Buller’s Day Off</li>\n<li>Weird Science</li>\n<li>WarGames</li>\n<li>Pretty in Pink</li>\n<li>Breakfast Club</li>\n</ul>\n<h5 id=\"books-all-amazing-authors\">Books: (All Amazing Authors!)</h5>\n<ul>\n<li>Vonnegut</li>\n<li>Orson Scott Card</li>\n<li>Stephen King</li>\n<li>Terry Pratchett</li>\n<li>J.R.R. Tolkien</li>\n<li>Douglas Adams</li>\n</ul>\n<h5 id=\"music\">Music:</h5>\n<ul>\n<li>SchoolHouse Rock</li>\n<li>Pat Benatar</li>\n<li>They Might Be Giants</li>\n<li>Rush</li>\n</ul>\n<h5 id=\"tv-shows\">TV Shows:</h5>\n<ul>\n<li>A-Team</li>\n<li>Twilight Zone</li>\n<li>Gundam</li>\n<li>Spider-Man</li>\n<li>Ultraman</li>\n<li>Cowboy Bebop</li>\n<li>Kikaida</li>\n<li>Voltron</li>\n<li>Max Headroom</li>\n<li>Family Ties</li>\n<li>Star Trek</li>\n<li>Dr.Who</li>\n<li>The Cosmos</li>\n</ul>\n<h5 id=\"games\">GAMES:</h5>\n<ul>\n<li>PacMan</li>\n<li>Dig Dug</li>\n<li>Joust</li>\n<li>Black Tiger</li>\n<li>Adventure</li>\n<li>and many others</li>\n</ul>\n<blockquote>\n<p>“As Terrifying and painful as reality can be, it’s also the only place where you can find true happiness.”</p>\n</blockquote>";
 
-				const frontmatter$7 = {"minutesRead":"2 min read","layout":"../../layouts/BookPost.astro","setup":"import Author from '../../components/Author.astro'\n","title":"Ready Player One by Ernest Cline","publishDate":"02 OCT 2017","href":"https://twitter.com/_Hopelezz","name":"Mark Spratt","description":"The story, set in a dystopia in 2045, follows protagonist Wade Watts on his search for an Easter egg in a worldwide virtual reality game","img":"https://covers.openlibrary.org/b/id/8750149-L.jpg","tags":"cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic"};
+				const frontmatter$7 = {"layout":"../../layouts/BookPost.astro","setup":"import Author from '../../components/Author.astro'\n","title":"Ready Player One by Ernest Cline","publishDate":"02 OCT 2017","href":"https://twitter.com/_Hopelezz","name":"Mark Spratt","description":"The story, set in a dystopia in 2045, follows protagonist Wade Watts on his search for an Easter egg in a worldwide virtual reality game","img":"https://covers.openlibrary.org/b/id/8750149-L.jpg","tags":"cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic"};
 				const file$7 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/2-ready-player-one.md";
 				const url$7 = "/book/2-ready-player-one";
 				function rawContent() {
@@ -5612,7 +5613,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/vercel/serverless","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.cc7961ba.css","assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-most-recent-post-button","type":"page","pattern":"^\\/blog\\/4-most-recent-post-button\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-most-recent-post-button","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-most-recent-post-button.mdx","pathname":"/blog/4-most-recent-post-button","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.md","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.0ffc073e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[null],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.js","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.2b49571a.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.d09bc944.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/9dad50dd.256302b4.css","/assets/index.cc7961ba.css","/assets/7f648411.0ffc073e.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/Search.d09bc944.js","/site.webmanifest","/social.jpg","/social.png","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/LOGO.html","/assets/LOGO.svg","/assets/search.59f78946.css","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg","/assets/blog/introducing-astro.jpg","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg","/assets/styles/variables.css"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/vercel/serverless","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f40f6732.css","assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-most-recent-post-button","type":"page","pattern":"^\\/blog\\/4-most-recent-post-button\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-most-recent-post-button","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-most-recent-post-button.mdx","pathname":"/blog/4-most-recent-post-button","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.md","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.256302b4.css","assets/7f648411.76a79a5e.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blackskies.vercel.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.js","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.2b0227ad.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.a2bc2bf5.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/9dad50dd.256302b4.css","/assets/index.f40f6732.css","/assets/7f648411.76a79a5e.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/robots.txt","/Search.a2bc2bf5.js","/site.webmanifest","/social.jpg","/social.png","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/LOGO.html","/assets/LOGO.svg","/assets/search.534732cb.css","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/blog/introducing-astro.jpg","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

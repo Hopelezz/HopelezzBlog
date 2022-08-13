@@ -56,7 +56,6 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 	align-items: center;
 }
 .article {
-	/* width: 100%; */
 	gap: var(--size-4);
 	background: var(--surface2);
 	border: 20px solid var(--surface2);
@@ -70,7 +69,7 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 .coffee{
     width: 170px;
 }
-.coffee > img{
+.coffee > img {
     border-radius: 5px;
 }
 
@@ -84,8 +83,6 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 	margin-bottom: var(--size-4);
 }
 
-
-
 /*--------Article Details-------------*/
 .details {
 	display: flex;
@@ -97,20 +94,20 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 }
 
 .details > h1 {
-	font-size: var(--size-8);
-	font-weight: var(--size-4);
+	font-size: var(--size-7);
+	font-weight: var(--size-5);
 	margin-bottom: var(--size-2);
-	color: var(--teal-9);
+	color: var(--brand);
 }
 
-.details p{
+.details p {
     font-size: var(--size-6);
     margin-top: 5px;
     color: var(--text3);
 	font-weight: var(--size-3);
 }
 
-.details span{
+.details span {
     text-transform: uppercase;
     font-size: var(--size-5);
     color: var(--text3);

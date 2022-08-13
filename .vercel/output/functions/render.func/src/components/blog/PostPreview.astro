@@ -18,7 +18,7 @@ const tag = tags.split(",")[0]; // returns the first tag
 
 ---
 <!--Article-->
-<li class="details">
+<div class="details">
     <article class='card surface3'>
         <div class="coffee">
             <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
@@ -32,7 +32,7 @@ const tag = tags.split(",")[0]; // returns the first tag
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>
-</li>
+</div>
 
 <style>
 /*----------------Section--------------*/
@@ -68,10 +68,6 @@ article {
 
 a {
     text-decoration: none;
-}
-
-li {
-    list-style: none;
 }
 
 /*------------Coffee Image-------------*/
@@ -113,7 +109,7 @@ li {
     text-decoration: none;
 }
 
-a:link {
+/* a:link {
   text-decoration: none;
 }
 
@@ -123,7 +119,7 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
-}
+} */
 
 .truncate {
   width: var(--size-fluid-8);

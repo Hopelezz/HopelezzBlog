@@ -2,8 +2,6 @@
 import json from '../data/author.json';
 import { Image } from '@astrojs/image/components';
 
-
-
 // I want to take the page url and return a writer aside
 const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = json.Mark;  // <-- Find the writer;
 
@@ -95,7 +93,6 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     font-size: var(--size-4);
     padding-top: var(--size-4);
 }
-
 
 i.fab {
     margin-top: 5px;

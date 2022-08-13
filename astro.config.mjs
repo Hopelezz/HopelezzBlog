@@ -3,18 +3,18 @@ import { remarkReadingTime } from './remark-reading-time.mjs';
 
 import mdx from "@astrojs/mdx";
 import image from '@astrojs/image';
-import solidJs from "@astrojs/solid-js";
+import solid from "@astrojs/solid-js";
 import vercel from '@astrojs/vercel/serverless';
 import preact from '@astrojs/preact';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact(), mdx(), image(), solidJs()],
+  integrations: [solid(), preact(), mdx(), image()],
   output: 'server',
   adapter: vercel(),
   markdown: {
-    remarkPlugins: [remarkReadingTime],
     draft: true,
+    remarkPlugins: [remarkReadingTime],
     syntaxHighlight: 'shiki',
     shikiConfig: {
       theme: 'dracula',

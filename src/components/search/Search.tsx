@@ -47,10 +47,10 @@ export default function Search(props: Props) {
       <div class="search-input">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="&lt;Search... &#47;&gt;"
           onInput={handleInput}
           value={search()}
-          class="surface4 searchBar"
+          class="surface3 searchBar"
         />
         <i class="icon fas fa-search"></i>
       </div>

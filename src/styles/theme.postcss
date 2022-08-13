@@ -7,7 +7,7 @@
   features: {
     "logical-properties-and-values": false
   }
-} 
+}
 
 html {
 
@@ -225,26 +225,48 @@ body {
 
 main {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   align-items: center;
   align-content: center;
   justify-content: center;
   gap: var(--size-1);
 }
 
-section {
-  display: grid;
-  gap: var(--size-6);
+h1 {
+  font-weight: var(--font-weight-9);
 }
 
-h1 {
-  font-weight: var(--font-weight-1);
+h2 {
+  font-weight: var(--font-weight-7);
+}
+
+h3 {
+  font-weight: var(--font-weight-5);
+}
+
+h4 {
+  font-weight: var(--font-weight-4);
+}
+
+h5 {
+  font-weight: var(--font-weight-3);
+}
+
+h6 {
+  font-weight: var(--font-weight-6);
 }
 
 p {
-  max-inline-size: var(--size-content-2);
+  font-size: var(--font-size-5);
+}
+
+
+p {
+  max-inline-size: var(--size-content-3);
   font-size: var(--font-size-4);
   line-height: var(--font-lineheight-3);
+  margin-top: var(--size-5);
+  margin-bottom: var(--size-5);
 }
 
 header {
@@ -280,18 +302,6 @@ form {
     place-content: center;
     font-size: var(--font-size-8);
     font-weight: var(--font-weight-2);
-  }
-}
-
-.text-samples {
-  display: grid;
-  gap: var(--size-4);
-
-  & > h1 {
-    font-size: var(--font-size-6);
-    display: inline-flex;
-    align-items: center;
-    gap: var(--size-3);
   }
 }
 
@@ -344,17 +354,4 @@ form {
 ::selection {
   background: var(--brand);
   color: var(--selection-text);
-}
-
-.rad-shadow {
-  border: 1px solid hsl(var(--brand-hue) 10% 50% / 15%);
-  box-shadow: 0 1rem .5rem -.5rem;
-  box-shadow:
-    0 2.8px 2.2px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
-    0 6.7px 5.3px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
-    0 12.5px 10px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
-    0 22.3px 17.9px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
-    0 41.8px 33.4px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
-    0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength))
-  ;
 }

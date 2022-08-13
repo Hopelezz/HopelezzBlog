@@ -24,6 +24,11 @@
     /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); */
 }
 
+::placeholder{
+    color: var(--text4);
+    opacity: 1;
+ }
+
 .search-input .icon{
     position: absolute;
     top: 0;

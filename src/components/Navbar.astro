@@ -7,8 +7,11 @@ const posts = await getSearchData();
 ---
 
 <nav class="brand surface2 nav">
-    <div class="brandlogo">
-        <h2 class="text2"><a href="/">&lt;BLACKSKIES &#47;&gt;</a></h2>
+    <div class="logoContainer">
+        <a href="/" class="logo">
+            <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
+            <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
+        </a>
     </div>
     <Search client:load posts={posts} />
     <div class="menu">
@@ -47,6 +50,7 @@ nav{
 .logo{
     line-height: 60px;
 }
+
 h2 a{
     text-decoration: none;
     color: var(--brand);
@@ -72,17 +76,18 @@ h2 a{
     /* color: #000000; */
     font-weight: 600;
 }
-/* .hamburger creates a nav menu when windows size is smaller than 850 wide */
-@media (max-width: 850px){
-    .hamburger{
-        display: none;
-    }
-}
-@media (max-width: 700px){
+@media (max-width: 930px) {
     .menu{
         display: none;
     }
 }
+@media (max-width:560px) {
+    .logoContainer{
+        display: none;
+    }
+}
+
+
 
 /* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
 @media (pointer:coarse) {

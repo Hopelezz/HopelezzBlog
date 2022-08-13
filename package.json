@@ -1,6 +1,6 @@
 {
   "name": "@example/blog",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -24,8 +24,7 @@
     "open-props": "^1.4.10",
     "preact": "^10.7.3",
     "reading-time": "^1.5.0",
-    "scss": "^0.2.4",
-    "vanilla-tilt": "^1.7.2"
+    "scss": "^0.2.4"
   },
   "engines": {
       "node": ">=14"

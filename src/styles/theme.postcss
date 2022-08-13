@@ -54,11 +54,11 @@ html {
   --selection-text-dim: var(--gray-9);
 
   /* teal */
-  --brand-teal: var(--teal-5);
+  --brand-teal: var(--grape-5);
   --text1-teal: var(--teal-9);
   --text2-teal: var(--teal-7);
-  --text1-brand-teal: var(--teal-5);
-  --text2-brand-teal: var(--teal-3);
+  --text1-brand-teal: var(--grape-5);
+  --text2-brand-teal: var(--grape-3);
   --surface1-teal: var(--teal-0);
   --surface2-teal: var(--teal-1);
   --surface3-teal: var(--teal-2);
@@ -68,11 +68,11 @@ html {
   --selection-text-teal: var(--teal-1);
 
   /* grape */
-  --brand-grape: var(--grape-5);
+  --brand-grape: var(--teal-5);
   --text1-grape: var(--grape-9);
   --text2-grape: var(--grape-7);
-  --text1-brand-grape: var(--grape-5);
-  --text2-brand-grape: var(--grape-3);
+  --text1-brand-grape: var(--teal-5);
+  --text2-brand-grape: var(--teal-3);
   --surface1-grape: var(--grape-0);
   --surface2-grape: var(--grape-1);
   --surface3-grape: var(--grape-2);
@@ -219,7 +219,6 @@ body {
   min-block-size: 100%;
   font-family: system-ui, sans-serif;
   display: grid;
-  /* gap: var(--size-6); */
   line-height: var(--font-line-height-4);
 }
 
@@ -232,6 +231,7 @@ main {
   gap: var(--size-1);
 }
 
+/* -------Typography------- */
 h1 {
   font-weight: var(--font-weight-9);
 }
@@ -260,13 +260,23 @@ p {
   font-size: var(--font-size-5);
 }
 
-
 p {
   max-inline-size: var(--size-content-3);
   font-size: var(--font-size-4);
   line-height: var(--font-lineheight-3);
   margin-top: var(--size-5);
   margin-bottom: var(--size-5);
+}
+
+a {
+  text-shadow: 0 0 0 hsla(204, 19%, 26%, 1);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0px 5px 5px black;
+  transition: all 0.3s ease-in-out;
 }
 
 header {
@@ -358,13 +368,3 @@ form {
 
 
 
-/* List style display */
-li{
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  gap: var(--size-3);
-  
-}

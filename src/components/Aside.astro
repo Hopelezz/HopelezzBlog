@@ -15,13 +15,14 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
     </div>
 
     <div class="text">
-        <h3 class='writterHeader'>Writer: </h3>
-            <p>{name}</p>
-
-        <section class="bio">
+        <div class="writer">
+            <h3 class='writerHeader'>Writer: </h3>
+            <span >{name}</span>
+        </div>
+        <div class="bio">
             <h3 class='bioHeader'>Bio:</h3>
-            <p>{bio}</p>
-        </section>
+            <span>{bio}</span>
+        </div>
 
         <!--Social Icons-->
         <div class="social-icons">
@@ -38,13 +39,13 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
   flex-basis: var(--size-content-1);
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: fit-content;
   gap: var(--size-2);
   background: var(--surface2);
   border: 1px solid var(--surface-1);
   padding: var(--size-4);
   border: 1px solid var(--brand);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-3);
   border-radius: var(--radius-3);
   margin: var(--size-4);
   transition: all 0.3s ease-in-out;
@@ -53,42 +54,52 @@ const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle
 .card:hover {
   transform: scale(1.05);
   background: var(--surface3);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-4);
   transition: transform 0.3s ease-in-out;
 }
 
 /*----------Image--------*/
 /* Center image */
 .image {
-    text-align: center;
-    padding:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image img{
     border-radius: 50%;
 }
 
-.bio{
-    padding: 5px;
-    margin-top: var(--size-2);
+.bio, .writer {
     border-top: 2px solid var(--brand);
+    padding-top: var(--size-2);
+    padding-bottom: var(--size-3);
 }
 /*---------Text-----------*/
-.bioHeader, .writterHeader{
-    font-size: var(--size-5);
+.bioHeader, .writerHeader, .social-icons{
+    font-size: var(--size-4);
     font-weight: bold;
     color: var(--brand);
+    display: inline-block;
+}
+
+.text span {
+    font-size: var(--size-3);
+    color: var(--text2);
+    margin-bottom: 5px;
 }
 
 /*------Social Icons-------*/
 .social-icons{
     border-top: 2px solid var(--brand);
-    font-size: 1.2rem;
-    padding-top: 10px;
+    font-size: var(--size-4);
+    padding-top: var(--size-4);
 }
 
-.social-icons a{
-    color: var(--brand);
+
+i.fab {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .text span{

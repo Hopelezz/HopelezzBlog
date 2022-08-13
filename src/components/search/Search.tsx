@@ -51,14 +51,14 @@ export default function Search(props: Props) {
           onInput={handleInput}
           value={search()}
           class="surface3 searchBar"
+          role="search"
         />
         <i class="icon fas fa-search"></i>
       </div>
 
       <Show when={search()}>
-        <div class="resultContainer">
-          <ul role="list">
-            <For each={filteredPosts()} fallback={<li class="surface4 searchResult">No results found</li>}>
+          <ul class="list">
+            <For each={filteredPosts()} fallback={<li class=" searchResult">No results found</li>}>
               {(post, i) =>
                 <li class="searchResult">
                   <a href={post.url}>{post.title}</a>
@@ -66,7 +66,6 @@ export default function Search(props: Props) {
               }
             </For>
           </ul>
-        </div>
       </Show>
     </div>
   );

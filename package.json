@@ -26,5 +26,8 @@
     "reading-time": "^1.5.0",
     "scss": "^0.2.4",
     "vanilla-tilt": "^1.7.2"
+  },
+  "engines": {
+      "node": ">=14"
   }
 }

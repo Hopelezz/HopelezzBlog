@@ -12,6 +12,8 @@ import vercel from '@astrojs/vercel/serverless';
 // https://astro.build/config
 export default defineConfig({
   integrations: [solid(), mdx(), image(), solidJs()],
+  output: 'server',
+  adapter: vercel(),
   markdown: {
     remarkPlugins: [remarkReadingTime],
     draft: true,
@@ -22,6 +24,4 @@ export default defineConfig({
       langs: [],
     },
   },
-  output: 'server',
-  adapter: vercel()
 });

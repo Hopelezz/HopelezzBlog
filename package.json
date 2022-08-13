@@ -25,8 +25,5 @@
     "preact": "^10.7.3",
     "reading-time": "^1.5.0",
     "scss": "^0.2.4"
-  },
-  "engines": {
-    "node": ">=18"
   }
 }

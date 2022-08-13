@@ -1,88 +1,118 @@
 ---
-import Author from '../Author.astro';
+// import '../../styles/theme.postcss';
+import Aside from '../Aside.astro';
+
 
 export interface Props {
 	title: string;
-	author: string;
+	writer: string;
 	publishDate: string;
-	heroImage: string;
 	alt: string;
-	img: string
+	img: string;
+	tags: string;
 }
 
-const { title, author, publishDate, heroImage, alt } = Astro.props;
----
+const {minutesRead} = Astro.props;
+const { title, writer, publishDate, alt, img, tags } = Astro.props;
 
-<div class="layout">
-	<article class="content">
+
+// tags is a string seported by comma return first tag
+
+---
+<div class="page-container">
+	<Aside writter={writer} />
+	<article class="article">
+		<img class="center-cropped" src={img} alt={alt} height={200} />
 		<div>
-			<header>
-				{heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
-				<p class="publish-date">{publishDate}</p>
-				<h1 class="title">{title}</h1>
-				<Author name="Mark Spratt" href="https://twitter.com/_Hopelezz" />
-			</header>
-			<main>
-				<slot />
-			</main>
+			<div class="coffee">
+			</div>
+			<div class="details">
+				<h1>{title}</h1>
+				<p>{writer}</p>
+				<span>{publishDate}  |  {tags}</span>
+			</div>
 		</div>
+		<main>
+			<p>{minutesRead} min read</p>
+			<slot />
+		</main>
 	</article>
 </div>
 
+
 <style>
-	.hero-image {
-		width: 100vw;
-		object-fit: cover;
-		object-position: center;
-		margin-top: 2rem;
-		margin-bottom: 4rem;
-		max-width: 1280px;
-	}
 
-	@media (max-width: 50em) {
-		.hero-image {
-			height: 260px;
-			margin-top: 0;
-			margin-bottom: 2rem;
-		}
-	}
+.page-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+/* make article strech to the window */
+.article {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.article {
+	/* width: 100%; */
+	gap: var(--size-4);
+	background: var(--surface2);
+	border: 20px solid var(--surface2);
+	padding: var(--size-4);
+	border-radius: var(--radius-3);
+	box-shadow: var(--shadow-4);
+	border: 1px solid var(--brand);
+	margin: var(--size-5);
+}
 
-	.content {
-		margin-bottom: 8rem;
-	}
+.coffee{
+    width: 170px;
+}
+.coffee > img{
+    border-radius: 5px;
+}
 
-	.content :global(main > * + *) {
-		margin-top: 1rem;
-	}
+/* image golden ratio */
+.center-cropped {
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+	max-height: 200px;
+	margin-top: var(--size-4);
+	margin-bottom: var(--size-4);
+}
 
-	.content :global(h2) {
-		margin-top: 4rem;
-	}
 
-	header {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-		padding-bottom: 2rem;
-		margin-bottom: 2rem;
-		border-bottom: 4px solid var(--th-primary);
-	}
 
-	.title,
-	.author,
-	.publish-date {
-		margin: 0;
-	}
+/*--------Article Details-------------*/
+.details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 1rem;
+	color: var(--text2);
+	align-items: center;
+}
 
-	.publish-date,
-	.author {
-		color: var(--th-text-light);
-	}
+.details > h1 {
+	font-size: var(--size-8);
+	font-weight: var(--size-4);
+	margin-bottom: var(--size-2);
+	color: var(--teal-9);
+}
 
-	.title {
-		font-size: 2.25rem;
-		font-weight: 700;
-	}
+.details p{
+    font-size: var(--size-6);
+    margin-top: 5px;
+    color: var(--text3);
+	font-weight: var(--size-3);
+}
+
+.details span{
+    text-transform: uppercase;
+    font-size: var(--size-5);
+    color: var(--text3);
+}
 </style>

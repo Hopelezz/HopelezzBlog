@@ -1,36 +1,47 @@
 ---
+
 import Meta from '../components/MetaTags.astro';
-import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
 import BookPost from '../components/bookShelf/Post.astro';
-import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import Footer from '../components/Footer/Footer.astro';
+import Footer from '../components/footer/Footer.astro';
 import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 
 const { mostRecentBlogPost } = await getBlogPosts(); // Fetch most recent blog post
 const { mostRecentBookPost } = await getBookPosts(); // Fetch most recent book post
 const { content } = Astro.props; // Get content from props
-const { title, description, publishDate, author, heroImage, permalink, alt, img} = content; 
+const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
 ---
 
 <html lang={content.lang || 'en'}>
 	<head>
-		<Meta {title} {description} {permalink} />
+
+		<Meta title={title} description={description} permalink={permalink} />
+		<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"></script>
 	</head>
 
 		<body>
+			<Cursor />
 			<div class="body">
-				<LeftSidebar  mostRecentBlogPost = {mostRecentBlogPost} mostRecentBookPost = {mostRecentBookPost} />
+
+
 				<main class="home_content">
-					<Header />
+
+					<Navbar />
+
 					<div class="wrapper">
-						<BookPost {title} {author} {heroImage} {publishDate} {alt} {img}>
+
+						<BookPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={img} >
 							<slot />
 						</BookPost>
+
 					</div>
 				</main>
 			</div>
 		</body>
+
 	<Footer />
+	
 </html>
 
 <style>

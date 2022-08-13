@@ -1,17 +1,15 @@
 ---
+// https://codepen.io/ali-jasim/pen/rNeGKOR
+import '../styles/theme.postcss';
 // Component Imports
 import Meta from '../components/MetaTags.astro';
-import Cursor from '../components/CursorEffect/Cursor.astro';
-import BlogHeader from '../components/Header.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
+import Navbar from '../components/Navbar.astro';
+import Aside from '../components/Aside.astro';
 import BlogPostPreview from '../components/blog/PostPreview.astro';
-import LeftSidebar from '../components/sidebar/LeftSidebar.astro';
-import Search from '../components/Search/Search';
-import { getBlogPosts, getBookPosts, getPosts } from '../utils/api.astro';
-
-const { allBlogPosts, mostRecentBlogPost } = await getBlogPosts(); 
-const { mostRecentBookPost } = await getBookPosts();
-const { allPosts } = await getPosts();
-
+import { getBlogPosts, getPosts } from '../utils/api.astro';
+	const { allBlogPosts } = await getBlogPosts();
+	const { allPosts } = await getPosts();
 
 const title = '<BLOG />';
 const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
@@ -19,67 +17,41 @@ const permalink = '#';
 ---
 
 <html lang="en">
-	
 	<head>
 		<Meta title={title} description={description} permalink={permalink} />
 	</head>
-	<body>
+	<body id="top" class="page" class='surface1'>
 		<Cursor />
-		<div class="body">
-			<LeftSidebar 
-				mostRecentBlogPost={mostRecentBlogPost} 
-				mostRecentBookPost={mostRecentBookPost} />
-
-			<div class="home_content">
-				<BlogHeader />
-				<main class="content">
-					<section class="intro">
-						<h1 class="latest">{ title }</h1>
-						<p>"If you're afraid of something then do things in fear."</p>
-						<p>{ description }</p>
-						<Search client:load posts={allPosts} />
-					</section>
-					<section aria-label="Blog post list">
-						{allBlogPosts.map((p: any) => <BlogPostPreview post={p} />)}
-					</section>
-				</main>
-			</div>
+		<Navbar />
+		<div class="container">
+			<Aside post={allPosts}/>
+			<div class='articlelist'>{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}</div>
 		</div>
 	</body>
 </html>
 
+<script>
+
+</script>
+
 <style>
-	header {
-		width: 100%;
-		height: 100%;
-		background-color: var(--th-background);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 
-	.content {
-		margin-top: 4rem;
-		margin-bottom: 8rem;
-	}
+/*----------------Start Body----------------*/
 
-	.content :global(main > * + *) {
-		margin-top: 1rem;
-	}
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 4rem;
+}
 
-	.intro {
-		padding-bottom: 4rem;
-		margin-bottom: 2rem;
-		border-bottom: 4px solid var(--th-accent);
-	}
+.articlelist {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
 
-	.intro > * {
-		margin: 0;
-	}
-
-	.latest {
-		font-size: 2.5rem;
-		font-weight: 700;
-	}
 </style>
 

@@ -96,7 +96,7 @@ a {
 .details p {
     font-size: var(--size-3);
     margin-top: 5px;
-    padding-top: var(--gap-3);
+    /* padding-top: var(--gap-1); */
 }
 
 /* remove link decoration */
@@ -105,13 +105,13 @@ a {
     text-decoration: none;
 }
 
-/* truncate 2 lines */
-
 .truncate {
-  width: var(--size-fluid-8);
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
 }
 
 /*-------------Media --------------------*/

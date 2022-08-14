@@ -1,15 +1,10 @@
 ---
+import { MDXInstance } from "astro";
 import "../../styles/theme.postcss";
+import { Post } from "../../utils/types";
 
 export interface Props {
-	post: {
-        frontmatter: {
-            title: string;
-            date: string;
-            description: string;
-            img: string;
-        };
-    }[];
+	post: MDXInstance<Post>
 }
 const { post } = Astro.props;
 const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;
@@ -29,6 +24,7 @@ const tag = tags.split(",")[0]; // returns the first tag
             <span class='text'>{publishDate}  |  {tag}</span>
             <br/>
             <span class='text'>{writer}</span>
+            <span class="readingTime">{post.frontmatter.minutesRead}</span>
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>

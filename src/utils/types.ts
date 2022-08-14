@@ -9,4 +9,5 @@ export interface Post{
     img?: string;
     alt?: string;
     tags?: string;
+    minutesRead?: number;
 }

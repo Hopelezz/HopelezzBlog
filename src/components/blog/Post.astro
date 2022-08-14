@@ -2,7 +2,6 @@
 // import '../../styles/theme.postcss';
 import Aside from '../Aside.astro';
 
-
 export interface Props {
 	title: string;
 	writer: string;
@@ -12,8 +11,7 @@ export interface Props {
 	tags: string;
 }
 
-const {minutesRead} = Astro.props;
-const { title, writer, publishDate, alt, img, tags } = Astro.props;
+const { title, writer, publishDate, alt, img, tags } = Astro.props as Props;
 
 
 // tags is a string seported by comma return first tag
@@ -30,10 +28,10 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 				<h1>{title}</h1>
 				<p>{writer}</p>
 				<span>{publishDate}  |  {tags}</span>
+				<p class="reading">📖</p>
 			</div>
 		</div>
 		<main>
-			<p>{minutesRead} min read</p>
 			<slot />
 		</main>
 	</article>
@@ -47,6 +45,7 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 	flex-direction: row;
 	justify-content: center;
 }
+
 /* make article strech to the window */
 .article {
 	flex: 1;
@@ -55,6 +54,7 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 	justify-content: center;
 	align-items: center;
 }
+
 .article {
 	gap: var(--size-4);
 	background: var(--surface2);

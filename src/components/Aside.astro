@@ -1,128 +1,126 @@
 ---
 import json from '../data/author.json';
-
+import { Image } from '@astrojs/image/components';
 
 // I want to take the page url and return a writer aside
 const { name, bio, photo, twitter, twitterHandle, linkedin, github, githubHandle} = json.Mark;  // <-- Find the writer;
 
 ---
 
-<aside class="aside">
+<aside class="card">
     <div class="image">
-        <img src={photo} alt="Writer's Photo" height="120">
+        <img src={photo} width={120} height={120} alt='Author Photo' height={120} />
     </div>
 
     <div class="text">
-        <p>Writer: {name}</p>
-
-        <hr style="width: 80%;">
-
-        <h5>Bio:</h5>
-        <p>{bio}</p>
-        
-        <hr style="width: 80%;">
+        <div class="writer">
+            <h3 class='writerHeader'>Writer: </h3>
+            <span >{name}</span>
+        </div>
+        <div class="bio">
+            <h3 class='bioHeader'>Bio:</h3>
+            <span>{bio}</span>
+        </div>
 
         <!--Social Icons-->
         <div class="social-icons">
-            <a href={twitter}><i class="fab fa-twitter">{twitterHandle}</i></a>
-            <a href={linkedin}><i class="fab fa-linkedin">{name}</i></a>
-            <a href={github}><i class="fab fa-github">{githubHandle}</i></a>
+            <a href={twitter} aria-label="Authors Twitter"><i class="fab fa-twitter">{twitterHandle}</i></a>
+            <a href={linkedin} aria-label="Authors LinkedIn"><i class="fab fa-linkedin">{name}</i></a>
+            <a href={github} aria-label="Authors Github"><i class="fab fa-github">{githubHandle}</i></a>
         </div>
     </div>
 </aside>
 
 <style>
 /*---------Aside----------*/
-.aside{
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 480px;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 5px;
-    margin: 0px 0 0 25px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 5.5rem;
+.card {
+  flex-basis: var(--size-content-1);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: var(--size-2);
+  background: var(--surface2);
+  border: 1px solid var(--surface-1);
+  padding: var(--size-4);
+  border: 1px solid var(--brand);
+  box-shadow: var(--shadow-3);
+  border-radius: var(--radius-3);
+  margin: var(--size-4);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: var(--surface3);
+  box-shadow: var(--shadow-4);
+  transition: transform 0.3s ease-in-out;
 }
 
 /*----------Image--------*/
 /* Center image */
-.image{
-    text-align: center;
-    padding:20px;
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image img{
     border-radius: 50%;
 }
 
+.bio, .writer {
+    border-top: 2px solid var(--brand);
+    padding-top: var(--size-2);
+    padding-bottom: var(--size-3);
+}
 /*---------Text-----------*/
-.text{
-    padding: 0 6%;
-
+.bioHeader, .writerHeader, .social-icons{
+    font-size: var(--size-4);
+    font-weight: bold;
+    color: var(--brand);
+    display: inline-block;
 }
 
-.text p:nth-child(1){
-    font-size: 12px;
-    font-weight: 600;
-    padding-bottom: 15px;
-}
-
-.text h5 {
-    padding-top: 10px;
-}
-
-.text p{
-    padding-bottom: 10px;
-}
-
-.text p:nth-child(4){
-    font-size: 1rem;
-    color: #858585;
-}
-
-.text p:nth-child(5){
-    font-size: 1rem;
-    color: #858585;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/*---------Styled HR----------*/
-.text hr{
-    width: 80%;
-    border: 1px solid #858585;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.text span {
+    font-size: var(--size-3);
+    color: var(--text2);
+    margin-bottom: 5px;
 }
 
 /*------Social Icons-------*/
 .social-icons{
-    font-size: 1.2rem;
-    padding-top: 10px;
+    border-top: 2px solid var(--brand);
+    font-size: var(--size-4);
+    padding-top: var(--size-4);
 }
 
-.social-icons a{
-    color: #4b4949;
-    display: flex;
-    align-items: center;
-    padding-left: 6px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-decoration: none;
+i.fab {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .text span{
-    font-size: 1rem;
-    color: #858585;
     padding-top: 5px;
     text-transform: uppercase;
 }
 
 /*---------Media-----------*/
 @media (max-width: 768px) {
-    .aside{
+    .card{
         display: none;
     }
 }
+
+@media (min-width: 768px) {
+    .card{
+    }
+}
+
+/* media reduce the size of the card */
+@media (max-width: 768px) {
+    .card{
+        display: none;
+    }
+}
+
 </style>

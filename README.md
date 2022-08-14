@@ -19,7 +19,7 @@
 <h3 align="center">&#60;BlackSkies &#47;&#62;</h3>
 
   <p align="center">
-    This is a personal Blog and Bookreview website. My intentions is to document my journey for creating the website and its features.
+    This is a personal Blog and Bookreview website. I intend to document my journey in creating the website and its features. Maybe use it as a showcase for other people to see what I am capable of.
     <br />
     <br />
 <!--     <a href="https://github.com/Hopelezz/HopelezzBlog">View Demo</a> 
@@ -65,6 +65,7 @@
 
 * [Astro](https://astro.build/)
 * [Solid-js](https://www.solidjs.com/)
+* [OpenProps](https://open-props.style/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -99,23 +100,22 @@ To run the projects you will need to follow the instructions below. This will ru
 
 - [x] Create a section for Book Reviews
   - [x] Add images to Post Preview.
-- [ ] Add a `About Me` page
+- [ ] Add an `About`` Me` page
 - [ ] Add a `Hire Me` page
 - [ ] Add a `404` page
 - [x] Add a Search Feature to query the posts for keywords
   - _Solved on https://github.com/Hopelezz/HopelezzBlog/issues/6_
-  - [ ] Decide either to search just the blog posts or all posts...
-- [x] Fix the `Most Recent Posts` button on the LeftSideBar
-- [ ] Make the Page More accessible
+- [x] Fix the `Most Recent Posts` button on the LeftSideBar (_Deprecated_)
+- [ ] Make the Page More Accessible
+- [x] Rebuild the default component system.
 
 ### Style
 
-- [ ] Add a Dark Theme.
-  - Invert the colors and make everything `Glow`.
+- [ ] Add a Dark Theme. (ALMOST GOT IT!)
 - [ ] Turn the Logo into an SVG version
 - [ ] Change the way `Lists` look
 - [ ] Change the way `Check Boxes` look
-- [ ] Make the Page More responsive to Mobile..
+- [ ] Make the Page More responsive to Mobile. (Coming soon with Themes)
 - [ ] Add a RightSideBar that shows the `Post headers`.
 
 ### End Goal
@@ -159,7 +159,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Mark Spratt - [@_hopelezz](https://twitter.com/_hopelezz)
 
-Project Link: []()
+Project Link: [BlackSkies](https://blackskies.vercel.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

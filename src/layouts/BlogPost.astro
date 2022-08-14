@@ -1,35 +1,39 @@
 ---
+import '../styles/shiki.css';
 import Meta from '../components/MetaTags.astro';
 import Navbar from '../components/Navbar.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
 import BlogPost from '../components/blog/Post.astro';
 import Footer from '../components/footer/Footer.astro';
-import { getBlogPosts, getBookPosts } from '../utils/api.astro';
-	const { mostRecentBlogPost } = await getBlogPosts();
-	const { mostRecentBookPost } = await getBookPosts();
+import type { MDXInstance } from 'astro';
+import { Post } from '../utils/types';
 
+export interface Props {
+    post: MDXInstance<Post>
+}
+
+// const { minutesRead } = Astro.props.frontmatter;
 const { content } = Astro.props;
-const { title, author, year, publishDate, name, href, description, img, alt,permalink } = content;
+const { title, publishDate, writer, href, description, img, alt, permalink } = content;
+const { minutesRead } = Astro.props.content;
+
+// console.log(minutesRead);
 ---
 
 <html lang={content.lang || 'en'}>
 	<head>
-
 		<Meta title={title} description={description} permalink={permalink} />
-		<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
 		<Cursor />
-		<div class="body">
-
-			<main class="home_content">
-
-				<Navbar />				
-
+		<Navbar />
+		<div class="container">
+			<main class="body home_content">
 				<div class="container">
 					<div class="grid">
-						<BlogPost title={title} publishDate={publishDate} name={name} href={href} img={img} description={description} alt={alt}  >
+						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
+							<p>{minutesRead}</p>
 							<slot />
 						</BlogPost>
 					</div>
@@ -43,4 +47,7 @@ const { title, author, year, publishDate, name, href, description, img, alt,perm
 </html>
 
 <style>
+.container {
+	margin-top: 2rem;
+}
 </style>

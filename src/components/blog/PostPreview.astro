@@ -1,16 +1,10 @@
 ---
-import "../../styles/root.css";
-import Author from '../../data/author.json';
+import { MDXInstance } from "astro";
+import "../../styles/theme.postcss";
+import { Post } from "../../utils/types";
 
 export interface Props {
-	post: {
-        frontmatter: {
-            title: string;
-            date: string;
-            description: string;
-            img: string;
-        };
-    }[];
+	post: MDXInstance<Post>
 }
 const { post } = Astro.props;
 const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;
@@ -19,56 +13,58 @@ const tag = tags.split(",")[0]; // returns the first tag
 
 ---
 <!--Article-->
+<div class="details">
+    <article class='card surface3'>
+        <div class="coffee">
+            <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
+        </div>
 
-    <li class="article">
-    
-        <article>
-            <div class="coffee">
-                <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
-            </div>
-
-            <div class="details">
-                <a href={post.url}><h1>{title}</h1></a>
-                <span>{publishDate}  |  {tag}</span>
-                <br/>
-                <span>{writer}</span>
-                
-                <p>{description}</p>
-                <a href={post.url}> Read more.</a>
-            </div>
-        </article>
-    </li>
-
-
+        <div class="details">
+            <a href={post.url}><h2 class='brand text3'>{title}</h2></a>
+            <span class='text'>{publishDate}  |  {tag}</span>
+            <br/>
+            <span class='text'>{writer}</span>
+            <span class="readingTime">{post.frontmatter.minutesRead}</span>
+            <p class='text3 truncate'>{description}</p>
+        </div>
+    </article>
+</div>
 
 <style>
-    
 /*----------------Section--------------*/
-
-article{
-    width: 600px;
-    height: 190px;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 5px;
+article {
+    width: 500px;
+    height: 200px;
     margin: 25px;
-    padding: 15px;
+    padding: 20px;
     display: flex;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    
 }
 
-article:hover {
-    transform: translateY(-5px);
+/* defines card style */
+.card {
+  flex-basis: var(--size-content-1);
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-4);
+  background: var(--surface2);
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  margin: var(--size-5);
+  border: 1px solid var(--brand);
 }
 
-a{
+.card:hover {
+  background: var(--surface3);
+  box-shadow: var(--shadow-4);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+a {
     text-decoration: none;
 }
-li {
-    list-style: none;
-}
-
 
 /*------------Coffee Image-------------*/
 .coffee{
@@ -86,57 +82,50 @@ li {
 }
 
 /*--------Article Details-------------*/
-.details{
-    width: auto;
-    padding-left: 5px;
-}
-
-.details span{
+.details h2 {
     text-transform: uppercase;
-    font-size: 12px;
-    color: #303030;
 }
 
-.details p{
-    font-size: 12.5px;
+.details span {
+    text-transform: capitalize;
+    font-size: var(--size-3);
+    font-weight: 300;
+    /* color: #303030; */
+}
+
+.details p {
+    font-size: var(--size-3);
     margin-top: 5px;
-    padding-top: 20px;
-    color: #303030;
+    padding-top: var(--gap-3);
 }
 
 /* remove link decoration */
-.details a{
-    color: #303030;
+.details a {
     font-size: 12px;
     text-decoration: none;
 }
-a:link {
-  text-decoration: none;
-}
 
-a:visited {
-  text-decoration: none;
-}
+/* truncate 2 lines */
 
-a:hover {
-  text-decoration: underline;
+.truncate {
+  width: var(--size-fluid-8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
 
 /*-------------Media --------------------*/
-/* make media verticle cards width fit screen with small margin-left and margin-right*/
-@media (max-width: 600px) {
-    article{
-        width: 100%;
-        
+@media (max-width: 768px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 460px;
     }
-    .coffee{
-        width: 100%;
-    }
-    .details{
-        width: 100%;
+    .card:pointer {
+        box-shadow: var(--shadow-4);
+        background: var(--surface3);
+        transform: translateY(-5px);
     }
 }
 
 </style>
-    

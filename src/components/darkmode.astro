@@ -1,0 +1,155 @@
+---
+import '../styles/theme.postcss';
+
+---
+<select id="theme-switcher">
+    <option value='auto' id='auto'>Auto</option>
+    <option value='light' id='light'>Light</option>
+    <option value='dark' id='dark'>Dark</option>
+    <option value='dim' id='dim'>Dim</option>
+    <option value='teal' id='teal'>Teal</option>
+    <option value='grape' id='grape'>Grape</option>
+</select>
+
+<script>
+    const switcher = document.querySelector('#theme-switcher'); // select the switcher
+
+    switcher.addEventListener('input', e =>
+    setTheme(e.target.value))
+    // set the theme on input and save to local storage
+
+    const setTheme = theme => {
+        document.documentElement.setAttribute('color-scheme', theme);
+        localStorage.setItem('color-scheme', theme);
+    }
+    // set the theme on load
+    setTheme(localStorage.getItem('color-scheme') || 'auto');
+</script>
+
+<style lang="scss">
+
+.select {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    width: 330px;
+    height: 100%;
+    border-bottom: 0px;
+    border-radius: 3px;
+    font-size: 12px;
+    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+    >i.toggle {
+        position: absolute;
+        z-index: 4;
+        right: 1.5em;
+        top: 1.6em;
+        color: #ccc
+    }
+    .title,
+    .placeholder {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1.5em 2em;
+        background: rgba(255, 255, 255, 1);
+        border-top: 1px solid rgba(0, 0, 0, .05);
+        cursor: pointer;
+    }
+    &>input {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        cursor: pointer;
+        &:checked {
+            ~i.toggle.bxs-chevron-down {
+                display: none;
+            }
+            ~i.toggle.bxs-chevron-up {
+                display: block;
+            }
+            div.options label.option .title {
+                display: none!important;
+            }
+        }
+        &:not(:checked) {
+            z-index: 4;
+            ~label.option {
+                >span.title {
+                    display: none;
+                }
+            }
+            ~i.toggle.bxs-chevron-up {
+                display: none;
+            }
+            ~i.toggle.bxs-chevron-down {
+                display: block;
+            }
+        }
+        &:disabled {
+            cursor: no-drop;
+        }
+    }
+    &>span.placeholder {
+        position: relative;
+        z-index: 0;
+        display: inline-block;
+        width: 100%;
+        color: #999;
+        border-top: 0px;
+    }
+    label.option {
+        display: block;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+        transition: all 1s ease-out;
+        span.title {
+            position: relative;
+            z-index: 2;
+            transition: background .3s ease-out;
+            i.bx {
+                padding-right: 8px;
+                color: rgba(146, 168, 209, 1);
+            }
+            &:hover {
+                color: #fff;
+                background: rgba(255, 255, 255, .3);
+                box-shadow: inset 0px 1px 0px rgba(0, 0, 0, .1);
+            }
+        }
+        input {
+            display: none;
+            &:checked~span.title {
+                position: absolute;
+                display: block;
+                z-index: 3;
+                top: 0px;
+                font-size: 12px;
+                background: #fff;
+                border-top: 0px;
+                box-shadow: none;
+                color: inherit;
+                width: 100%;
+            }
+            &:disabled {
+                &~span.title {
+                    background: #f9f9f9!important;
+                    color: #aaa;
+                    &:hover {
+                        color: #aaa;
+                        background: none;
+                        cursor: no-drop;
+                    }
+                }
+            }
+        }
+    }
+}
+</style>

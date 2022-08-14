@@ -1,7 +1,5 @@
 ---
-/*
-*
-*/
+
 export async function getBlogPosts(){
     // Data Fetching: List all Markdown Blog posts in the repo.
     let allBlogPosts = await Astro.glob('../pages/blog/*.mdx');
@@ -13,7 +11,7 @@ export async function getBlogPosts(){
     return { allBlogPosts, mostRecentBlogPost }
 }
 
-export async function getBookPosts(){    
+export async function getBookPosts(){
     // Data Fetching: List all Markdown Book posts in the repo.
     let allBookPosts = await Astro.glob('../pages/book/*.mdx');
     // sorts the book posts by publishedDate
@@ -25,7 +23,7 @@ export async function getBookPosts(){
 }
 
 //an export async function that returns an array of all posts. concat all the blog posts and book posts.
-export async function getPosts(){ 
+export async function getPosts(){
     let blogPosts = await getBlogPosts();
     let bookPosts = await getBookPosts();
     let allPosts = blogPosts.allBlogPosts.concat(bookPosts.allBookPosts);
@@ -39,6 +37,7 @@ export async function getSearchData(){
     let allPostsData = allPosts.allPosts.map(post => {
         return {
             title: post.frontmatter.title,
+            author: post.frontmatter.author,
             writer: post.frontmatter.writer,
             description: post.frontmatter.description,
             tags: post.frontmatter.tags,

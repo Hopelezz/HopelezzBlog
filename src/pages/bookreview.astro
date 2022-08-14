@@ -1,5 +1,5 @@
 ---
-import '../styles/root.css';
+import '../styles/theme.postcss';
 
 // Component Imports
 import Meta from '../components/MetaTags.astro';
@@ -16,12 +16,11 @@ let permalink = '#';
 ---
 
 <html lang="en">
-	
 	<head>
 		<Meta title={title} description={description} permalink={permalink} />
 
 		<style>
-			header {
+			/* header {
 				width: 100%;
 				height: 100%;
 				background-color: var(--th-background);
@@ -52,12 +51,12 @@ let permalink = '#';
 			.latest {
 				font-size: 2.5rem;
 				font-weight: 700;
-			}
+			} */
 		</style>
 	</head>
-	
+
 	<body>
-		<div class="body">			
+		<div class="body">
 			<div class="home_content">
 				<Navbar />
 				<main class="content">

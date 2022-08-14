@@ -1,31 +1,39 @@
 ---
 import Search from '../components/search/Search';
 import {getSearchData} from '../utils/api.astro';
+import Dark from '../components/darkmode.astro';
 
 const posts = await getSearchData();
 ---
 
-<header class="nav">
-    <div class="logo">
-        <h2><a href="/">&lt;BLACKSKIES &#47;&gt;</a></h2>
+<nav class="brand surface2 nav">
+    <div class="logoContainer">
+        <a href="/" class="logo">
+            <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
+            <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
+        </a>
     </div>
     <Search client:load posts={posts} />
-    <div class="menu">   
+    <div class="menu">
         <ul class="hamburger">
             <li><a href="/">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Hire Me</a></li>
-        </ul>  
+            <li>
+                <Dark />
+            </li>
+        </ul>
     </div>
-</header>
+</nav>
+
 
 <style>
 /*-------------------Start Navbar-------------------*/
-header{
+nav{
     width: 100%;
     padding: 0 20px;
-    background-color: rgb(255, 255, 255, 0.9);
-    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--surface3);
+    box-shadow: var(--shadow-2);
     z-index: 1;
 }
 
@@ -35,19 +43,19 @@ header{
     height: 60px;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     z-index: 1;
 }
 
-/*--------------Logo----------------*/
 .logo{
     line-height: 60px;
 }
 
 h2 a{
     text-decoration: none;
-    color: #252525;
+    color: var(--brand);
 }
+
 
 /*----------------Menu---------------*/
 .menu{
@@ -56,32 +64,35 @@ h2 a{
     align-items: center;
     line-height: 60px;
 }
-
 .menu ul li{
     display: inline-block;
     padding-left: 30px;
 }
-
 .menu ul li a{
     text-decoration: none;
-    color: #4b4949;
 }
-
 .menu ul .active{
-    color: #000000;
     font-weight: 600;
 }
-
-/* .hamburger creates a nav menu when windows size is smaller than 850 wide */
-@media (max-width: 850px){
-    .hamburger{
+@media (max-width: 930px) {
+    .menu{
+        display: none;
+    }
+}
+@media (max-width:560px) {
+    .logoContainer{
         display: none;
     }
 }
 
-@media (max-width: 700px){
-    .menu{
-        display: none;
+
+
+/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
+@media (pointer:coarse) {
+    input[type="checkbox"], input[type="radio"] {
+        min-width:30px;
+        min-height:40px;
+        background:transparent;
     }
 }
 

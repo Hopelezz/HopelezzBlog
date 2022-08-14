@@ -1,0 +1,13 @@
+@import "theme.postcss";
+
+:where(html) {
+  --scrollthumb-color: var(--gray-6);
+
+  scrollbar-color: var(--scrollthumb-color) transparent;
+  accent-color: var(--link);
+  caret-color: var(--link);
+
+  @media (--OSlight) {
+    --scrollthumb-color: var(--gray-7);
+  }
+}

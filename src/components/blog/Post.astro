@@ -1,36 +1,36 @@
 ---
+// import '../../styles/theme.postcss';
 import Aside from '../Aside.astro';
 
 export interface Props {
 	title: string;
-	writter: string;
+	writer: string;
 	publishDate: string;
-	heroImage: string;
 	alt: string;
 	img: string;
 	tags: string;
 }
 
-const { title, writter, publishDate, alt, img, tags } = Astro.props;
+const { title, writer, publishDate, alt, img, tags } = Astro.props as Props;
+
 
 // tags is a string seported by comma return first tag
 
 ---
 <div class="page-container">
-	<Aside writter={writter} />
-	<article class="article">	
-			
+	<Aside writter={writer} />
+	<article class="article">
+		<img class="center-cropped" src={img} alt={alt} height={200} />
 		<div>
 			<div class="coffee">
-				<img class="center-cropped" src={img} alt={alt} height="100%"/>
 			</div>
-
 			<div class="details">
 				<h1>{title}</h1>
-				<p>{writter}</p>
+				<p>{writer}</p>
 				<span>{publishDate}  |  {tags}</span>
+				<p class="reading">📖</p>
 			</div>
-			</div>
+		</div>
 		<main>
 			<slot />
 		</main>
@@ -45,68 +45,42 @@ const { title, writter, publishDate, alt, img, tags } = Astro.props;
 	flex-direction: row;
 	justify-content: center;
 }
-	
+
+/* make article strech to the window */
 .article {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-    width: 100vh;
-	height: auto;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 5px;
-    margin-top: 5.5rem;
-    margin-left: 30px;
-    padding: 15px;
-    display: flex;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+	align-items: center;
+}
+
+.article {
+	gap: var(--size-4);
+	background: var(--surface2);
+	border: 20px solid var(--surface2);
+	padding: var(--size-4);
+	border-radius: var(--radius-3);
+	box-shadow: var(--shadow-4);
+	border: 1px solid var(--brand);
+	margin: var(--size-5);
 }
 
 .coffee{
     width: 170px;
 }
-.coffee > img{
+.coffee > img {
     border-radius: 5px;
 }
 
+/* image golden ratio */
 .center-cropped {
-  width: 200%;
-  height: 200%;
-  object-fit: cover;
-}
-
-/*--------Typography-------------*/
-p {
-    margin-bottom: 1.7em;
-}
-h1 {
- font-family: Lato, sans-serif;
- font-size: 36px;
- margin-bottom: 30px;
- line-height: 1.2;
-}
-h2{
-	font-family: Lato, sans-serif;
-	font-size: 30px;
-	margin-bottom: 30px;
-	line-height: 1.2;
-}
-h3{
-	font-family: Lato, sans-serif;
-	font-size: 24px;
-	margin-bottom: 30px;
-	line-height: 1.2;
-}
-h4{
-	font-family: Lato, sans-serif;
-	font-size: 18px;
-	margin-bottom: 30px;
-	line-height: 1.2;
-}
-h5{
-	font-family: Lato, sans-serif;
-	font-size: 16px;
-	margin-bottom: 30px;
-	line-height: 1.2;
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+	max-height: 200px;
+	margin-top: var(--size-4);
+	margin-bottom: var(--size-4);
 }
 
 /*--------Article Details-------------*/
@@ -114,43 +88,28 @@ h5{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 	margin-top: 1rem;
+	color: var(--text2);
+	align-items: center;
 }
 
-.details span{
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #858585;
+.details > h1 {
+	font-size: var(--size-7);
+	font-weight: var(--size-5);
+	margin-bottom: var(--size-2);
+	color: var(--brand);
 }
 
-.details p{
-    font-size: 12.5px;
+.details p {
+    font-size: var(--size-6);
     margin-top: 5px;
-    padding-top: 20px;
-    color: #777777;
+    color: var(--text3);
+	font-weight: var(--size-3);
 }
 
-
-/* remove link decoration */
-.details a{
-    color: #303030;
-    font-size: 12px;
-    text-decoration: none;
+.details span {
+    text-transform: uppercase;
+    font-size: var(--size-5);
+    color: var(--text3);
 }
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-
-/*----------------------------------------*/
-
 </style>

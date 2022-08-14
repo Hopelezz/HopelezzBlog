@@ -1,4 +1,5 @@
 ---
+
 import Meta from '../components/MetaTags.astro';
 import Navbar from '../components/Navbar.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
@@ -9,7 +10,7 @@ import { getBlogPosts, getBookPosts } from '../utils/api.astro';
 const { mostRecentBlogPost } = await getBlogPosts(); // Fetch most recent blog post
 const { mostRecentBookPost } = await getBookPosts(); // Fetch most recent book post
 const { content } = Astro.props; // Get content from props
-const { title, description, publishDate, author, heroImage, permalink, alt, img} = content; 
+const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
 ---
 
 <html lang={content.lang || 'en'}>

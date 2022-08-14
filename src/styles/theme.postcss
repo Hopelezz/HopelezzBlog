@@ -1,0 +1,370 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/buttons.min.css";
+
+@use postcss-preset-env;
+{
+  stage: 0;
+  features: {
+    "logical-properties-and-values": false
+  }
+}
+
+html {
+
+  /* light */
+  --brand-light: var(--teal-6);
+  --text1-light: var(--gray-8);
+  --text2-light: var(--gray-7);
+  --text1-brand-light: var(--teal-6);
+  --text2-brand-light: var(--teal-5);
+  --surface1-light: var(--gray-5);
+  --surface2-light: var(--gray-3);
+  --surface3-light: var(--gray-2);
+  --surface4-light: var(--gray-1);
+  --surface-shadow-light: 200 10% 20%;
+  --shadow-strength-light: 20%;
+  --selection-text-light: var(--gray-1);
+
+  /* dark */
+  --brand-dark: var(--teal-3);
+  --text1-dark: var(--gray-1);
+  --text2-dark: var(--gray-3);
+  --text1-brand-dark: var(--teal-3);
+  --text2-brand-dark: var(--teal-2);
+  --surface1-dark: var(--gray-9);
+  --surface2-dark: var(--gray-8);
+  --surface3-dark: var(--gray-7);
+  --surface4-dark: var(--gray-6);
+  --surface-shadow-dark: 200 50% 3%;
+  --shadow-strength-dark: 80%;
+  --selection-text-dark: var(--gray-8);
+
+  /* dim */
+  --brand-dim: var(--teal-4);
+  --text1-dim: var(--gray-1);
+  --text2-dim: var(--gray-2);
+  --text1-brand-dim: var(--teal-4);
+  --text2-brand-dim: var(--teal-3);
+  --surface1-dim: var(--gray-8);
+  --surface2-dim: var(--gray-7);
+  --surface3-dim: var(--gray-6);
+  --surface4-dim: var(--gray-5);
+  --surface-shadow-dim: 200 10% 13%;
+  --shadow-strength-dim: 20%;
+  --selection-text-dim: var(--gray-9);
+
+  /* teal */
+  --brand-teal: var(--grape-5);
+  --text1-teal: var(--teal-9);
+  --text2-teal: var(--teal-7);
+  --text1-brand-teal: var(--grape-5);
+  --text2-brand-teal: var(--grape-3);
+  --surface1-teal: var(--teal-0);
+  --surface2-teal: var(--teal-1);
+  --surface3-teal: var(--teal-2);
+  --surface4-teal: var(--teal-3);
+  --surface-shadow-teal: 288 30% 20%;
+  --shadow-strength-teal: 2%;
+  --selection-text-teal: var(--teal-1);
+
+  /* grape */
+  --brand-grape: var(--teal-5);
+  --text1-grape: var(--grape-9);
+  --text2-grape: var(--grape-7);
+  --text1-brand-grape: var(--teal-5);
+  --text2-brand-grape: var(--teal-3);
+  --surface1-grape: var(--grape-0);
+  --surface2-grape: var(--grape-1);
+  --surface3-grape: var(--grape-2);
+  --surface4-grape: var(--grape-3);
+  --surface-shadow-grape: 288 30% 20%;
+  --shadow-strength-grape: 2%;
+  --selection-text-grape: var(--grape-1);
+}
+
+:root {
+  color-scheme: light;
+
+  /* set defaults */
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --text3: var(--text1-brand-light);
+  --text4: var(--text2-brand-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+  --surface3: var(--surface3-light);
+  --surface4: var(--surface4-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+  --selection-text: var(--selection-text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --brand: var(--brand-dark);
+    --text1: var(--text1-dark);
+    --text2: var(--text2-dark);
+    --text3: var(--text1-brand-dark);
+    --text4: var(--text2-brand-dark);
+    --surface1: var(--surface1-dark);
+    --surface2: var(--surface2-dark);
+    --surface3: var(--surface3-dark);
+    --surface4: var(--surface4-dark);
+    --surface-shadow: var(--surface-shadow-dark);
+    --shadow-strength: var(--shadow-strength-dark);
+  }
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --brand: var(--brand-light);
+  --text1: var(--text1-light);
+  --text2: var(--text2-light);
+  --text3: var(--text1-brand-light);
+  --text4: var(--text2-brand-light);
+  --surface1: var(--surface1-light);
+  --surface2: var(--surface2-light);
+  --surface3: var(--surface3-light);
+  --surface4: var(--surface4-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+  --selection-text: var(--selection-text-light);
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+
+  --brand: var(--brand-dark);
+  --text1: var(--text1-dark);
+  --text2: var(--text2-dark);
+  --text3: var(--text1-brand-dark);
+  --text4: var(--text2-brand-dark);
+  --surface1: var(--surface1-dark);
+  --surface2: var(--surface2-dark);
+  --surface3: var(--surface3-dark);
+  --surface4: var(--surface4-dark);
+  --surface-shadow: var(--surface-shadow-dark);
+  --shadow-strength: var(--shadow-strength-dark);
+  --selection-text: var(--selection-text-dark);
+}
+
+[color-scheme="dim"] {
+  color-scheme: dark;
+
+  --brand: var(--brand-dim);
+  --text1: var(--text1-dim);
+  --text2: var(--text2-dim);
+  --text3: var(--text1-brand-dim);
+  --text4: var(--text2-brand-dim);
+  --surface1: var(--surface1-dim);
+  --surface2: var(--surface2-dim);
+  --surface3: var(--surface3-dim);
+  --surface4: var(--surface4-dim);
+  --surface-shadow: var(--surface-shadow-dim);
+  --shadow-strength: var(--shadow-strength-dim);
+  --selection-text: var(--selection-text-dim);
+}
+
+[color-scheme="teal"] {
+  color-scheme: light;
+
+  --brand: var(--brand-teal);
+  --text1: var(--text1-teal);
+  --text2: var(--text2-teal);
+  --text3: var(--text1-brand-teal);
+  --text4: var(--text2-brand-teal);
+  --surface1: var(--surface1-teal);
+  --surface2: var(--surface2-teal);
+  --surface3: var(--surface3-teal);
+  --surface4: var(--surface4-teal);
+  --surface-shadow: var(--surface-shadow-teal);
+  --shadow-strength: var(--shadow-strength-teal);
+  --selection-text: var(--selection-text-teal);
+}
+
+[color-scheme="grape"] {
+  color-scheme: light;
+
+  --brand: var(--brand-grape);
+  --text1: var(--text1-grape);
+  --text2: var(--text2-grape);
+  --text3: var(--text1-brand-grape);
+  --text4: var(--text2-brand-grape);
+  --surface1: var(--surface1-grape);
+  --surface2: var(--surface2-grape);
+  --surface3: var(--surface3-grape);
+  --surface4: var(--surface4-grape);
+  --surface-shadow: var(--surface-shadow-grape);
+  --shadow-strength: var(--shadow-strength-grape);
+  --selection-text: var(--selection-text-grape);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  block-size: 100%;
+  background-color: var(--surface1);
+  color: var(--text1);
+  accent-color: var(--brand);
+}
+
+body {
+  min-block-size: 100%;
+  font-family: system-ui, sans-serif;
+  display: grid;
+  line-height: var(--font-line-height-4);
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: var(--size-1);
+}
+
+/* -------Typography------- */
+h1 {
+  font-weight: var(--font-weight-9);
+}
+
+h2 {
+  font-weight: var(--font-weight-7);
+}
+
+h3 {
+  font-weight: var(--font-weight-5);
+}
+
+h4 {
+  font-weight: var(--font-weight-4);
+}
+
+h5 {
+  font-weight: var(--font-weight-3);
+}
+
+h6 {
+  font-weight: var(--font-weight-6);
+}
+
+p {
+  font-size: var(--font-size-5);
+}
+
+p {
+  max-inline-size: var(--size-content-3);
+  font-size: var(--font-size-4);
+  line-height: var(--font-lineheight-3);
+  margin-top: var(--size-5);
+  margin-bottom: var(--size-5);
+}
+
+a {
+  text-shadow: 0 0 0 hsla(204, 19%, 26%, 1);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--text2);
+}
+a:hover {
+  text-shadow: 0px 5px 5px black;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  display: inline-grid;
+  gap: var(--size-3);
+}
+
+form {
+  display: flex;
+  gap: var(--size-5);
+
+  & > div {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-2);
+  }
+}
+
+.card {
+  display: grid;
+  --size: var(--size-content-1);
+  grid-template-columns: var(--size) var(--size);
+  grid-auto-rows: var(--size);
+  gap: var(--size-4);
+
+  @media (width <= 480px) { & {
+    --size: 40vw;
+  }}
+
+  & > * {
+    border-radius: var(--radius-3);
+    display: grid;
+    place-content: center;
+    font-size: var(--font-size-8);
+    font-weight: var(--font-weight-2);
+  }
+}
+
+.brand {
+  color: var(--brand);
+}
+
+.surface1 {
+  background-color: var(--surface1);
+  color: var(--text2);
+}
+
+.surface2 {
+  background-color: var(--surface2);
+  color: var(--text2);
+}
+
+.surface3 {
+  background-color: var(--surface3);
+  color: var(--text1);
+}
+
+.surface4 {
+  background-color: var(--surface4);
+  color: var(--text1);
+}
+
+.text1 {
+  color: var(--text1);
+  @nest p& {
+    font-weight: var(--font-weight-2);
+  }
+}
+
+.text2 {
+  color: var(--text2);
+}
+
+.swatch {
+  display: inline-block;
+  flex-shrink: 0;
+  inline-size: var(--size-8);
+  block-size: var(--size-8);
+  border-radius: var(--radius-round);
+
+  &.text1 { background-color: var(--text1); }
+  &.text2 { background-color: var(--text2); }
+}
+
+::selection {
+  background: var(--brand);
+  color: var(--selection-text);
+}

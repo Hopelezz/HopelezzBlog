@@ -220,7 +220,6 @@ html {
 body {
   min-block-size: 100%;
   font-family: system-ui, sans-serif;
-  display: grid;
   line-height: var(--font-line-height-4);
 }
 
@@ -286,26 +285,6 @@ form {
     display: inline-flex;
     align-items: center;
     gap: var(--size-2);
-  }
-}
-
-.card {
-  display: grid;
-  --size: var(--size-content-1);
-  grid-template-columns: var(--size) var(--size);
-  grid-auto-rows: var(--size);
-  gap: var(--size-4);
-
-  @media (width <= 480px) { & {
-    --size: 40vw;
-  }}
-
-  & > * {
-    border-radius: var(--radius-3);
-    display: grid;
-    place-content: center;
-    font-size: var(--font-size-8);
-    font-weight: var(--font-weight-2);
   }
 }
 

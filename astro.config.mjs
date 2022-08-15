@@ -8,6 +8,7 @@ import compress from "astro-compress";
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import netlify from '@astrojs/netlify/functions';
+import autolinkHeadings from 'remark-autolink-headings';
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
       langs: []
     },
     remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [[autolinkHeadings, { behavior: 'prepend' }]],
   },
   output: 'server',
   adapter: netlify(),

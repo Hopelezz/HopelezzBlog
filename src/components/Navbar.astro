@@ -13,12 +13,14 @@ const posts = await getSearchData();
             <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
         </a>
     </div>
-    <Search client:load posts={posts} />
+    <div class="searchContainer">
+    <Search  client:load posts={posts} />
+    </div>
     <div class="menu">
         <ul class="hamburger">
             <li><a href="/">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Hire Me</a></li>
+            <li><a href="/HireMe">Hire Me</a></li>
             <li>
                 <Dark />
             </li>
@@ -47,8 +49,15 @@ nav{
     z-index: 1;
 }
 
+
 .logo{
     line-height: 60px;
+    white-space: nowrap;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
 }
 
 h2 a{
@@ -58,7 +67,7 @@ h2 a{
 
 
 /*----------------Menu---------------*/
-.menu{
+.menu, .hamburger{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +85,10 @@ h2 a{
 }
 @media (max-width: 930px) {
     .menu{
+        height: 100%;
+        width: 100%;
+    }
+    .hamburger{
         display: none;
     }
 }

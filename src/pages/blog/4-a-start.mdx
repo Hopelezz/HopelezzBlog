@@ -10,18 +10,18 @@ alt: mailboxes
 tags: A New Start
 ---
 
-Here I am with a freshly minted Blog using the Astro template. It's rather plain and doesn't have any content fetures. This is still pre-release Astro and things are bound to change.
+Here I am with a freshly minted Blog using the Astro template. It's rather plain and doesn't have any content features. This is still pre-release Astro and things are bound to change.
 
-I have just created a simple navigation bar. Nothing over the top. I have what I'm  referring to as Dashboard that takes you to the front page and links to my social sites. I want something I can modify just to get my head around the way Astros framework works.
+I have just created a simple navigation bar. Nothing over the top. I have what I'm referring to as Dashboard that takes you to the front page and links to my social sites. I want something I can modify just to get my head around the way Astros framework works.
 
 ## The Concept
 
-To create a button that takes the user to the most recent post. I'll call it `Most Recent` for now. 
-As soon as you press the button it'll take the array of post map them by publishDate and return from the array the first item.
+To create a button that takes the user to the most recent post. I'll call it `Most Recent` for now.
+As soon as you press the button it'll take the array of posts map them by publishDate and return from the array the first item.
 
-Astro is a framework that blurs the lines between HTML, CSS and JavaScript. They do this by creating a .astro file format that places all thre languages in the same file. In my opinon this seems extreamly intuitve and easy to keep track of everything component, page, and layout related. In addition built into .astro files it has what the developers are calling frontmatter. This is a way of running serverside code that is run before the page is rendered. Allowing you to pass details from file to file. More on that in a moment.
+Astro is a framework that blurs the lines between HTML, CSS and JavaScript. They do this by creating a .astro file format that places all three languages in the same file. In my opinion, this seems extremely intuitive and easy to keep track of everything component, page, and layout related. In addition, built into .astro files it has what the developers are calling frontmatter. This is a way of running serverside code that is run before the page is rendered. Allowing you to pass details from file to file. More on that in a moment.
 
-To start I have a plain markdown file with a bit of frontmatter giving us basic details about the page. What layout and component it's using, the title, publishDate, etc. 
+To start I have a plain markdown file with a bit of frontmatter giving us basic details about the page. What layout and component it's using, the title, publishDate, etc.
 
 Like so:
 ```
@@ -44,9 +44,9 @@ This `publishDate` field is already used to sort all the posts by date to sort t
   allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ```
 
-This means the allPosts variable is an array of all posts objects (including frontmatter) that's already sorted. Making my job that much easier!
+This means the `allPosts` variable is an array of all post objects (including frontmatter) that's already sorted. Making my job that much easier!
 
-With a simple JavaScript I can call up the first item in the array.
+With a bit of JavaScript, I can specify which item in the array I want to pull out.
 ```js
   let mostRecent = allPosts[0];
 ```
@@ -55,25 +55,32 @@ Now I have the data for the post just need to figure out how to link it.
 
 Because the SideBar is a component in the index.html file I'll need to pass this property to the component.
 
-I can do this by either passing in the whole post object or just single bits of information. 
+I can do this by either passing in the whole post object or just single properties of information.
 
 ```js
   <Sidebar mostRecent={mostRecent} />
 ```
 
-In the component folder I have my SideBar with a unordered list of links to my social sites and the homepage. Lets copy one of those...
+For now, I've decided to pass in the whole post object.
 
-and here we are!
+In the component folder, I have my SideBar with an unordered list of links to my social sites and the homepage. For this blog post, I'll just specify the link and the frontmatter specific to the component.
 
-<!-- TODO: Fix the remainder of this post! -->
-```html
+Let's copy one of those...and here we are!
+
+```astro
+---
+const {mostRecent}  = Astro.props;
+---
+
+<div>
   <a href={mostRecent.url}>Most Recent</a>
+</div>
+
 ```
 
+Making the `href` property more concise.
 
-making the href property more concise.
-
-> Update: I have since modified this by moving the fetch command inside a function of an api.astro file and splitting my blog into blog and book review folders. This is to make it easier to manage the blog and bookreview posts separately. When I need the props for my posts I import the function from the utils file and pass it to the `blogPosts` object.
+> Update: I have since modified this by moving the fetch command inside a function of an `api.astro` file and splitting my blog into blog and book review folders. This is to make it easier to manage the blog and book review posts separately. When I need the props for my posts I import the function from the utils file and pass it to the `blogPosts` object.
 
 ```js
   import { getBlogPosts } from '../utils/api.astro';

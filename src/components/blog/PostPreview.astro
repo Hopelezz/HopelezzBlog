@@ -14,20 +14,21 @@ const tag = tags.split(",")[0]; // returns the first tag
 ---
 <!--Article-->
 <div class="details">
+    <a href={post.url}>
     <article class='card'>
         <div class="coffee">
             <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
         </div>
 
         <div class="details">
-            <a href={post.url}><h2 class='brand text3'>{title}</h2></a>
+            <h2 class='brand text3'>{title}</h2>
             <span class='text'>{publishDate}  |  {tag}</span>
             <br/>
             <span class='text'>{writer}</span>
-            <span class="readingTime">{post.frontmatter.minutesRead}</span>
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>
+</a>
 </div>
 
 <style>
@@ -70,6 +71,7 @@ a {
 .coffee{
     width: 170px;
 }
+
 .coffee > img{
     border-radius: 5px;
 }

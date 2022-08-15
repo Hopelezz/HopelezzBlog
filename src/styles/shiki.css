@@ -19,11 +19,18 @@ pre .language-id{
 }
 
 /* Code highlighting */
-p > code{
-    font-size: var(--size-3);
+p > code, li > code {
+    font-size: var(--size-4);
     color: var(--text1);
     background: var(--surface4) !important;
-    padding: var(--size-1);
+    padding-inline: var(--size-1);
     border-radius: var(--size-1);
 }
 
+/* Checkbox lists */
+.task-list-item {
+    list-style-type: none;
+    padding: var(--size-1);
+    font-size: var(--size-4);
+    background: var(--surface3) !important;
+}

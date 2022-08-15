@@ -6,7 +6,7 @@ import Dark from '../components/darkmode.astro';
 const posts = await getSearchData();
 ---
 
-<div class="brand nav">
+<div class="nav">
     <div class="logoContainer">
         <a href="/" class="logo">
             <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
@@ -75,9 +75,11 @@ h2 a{
 .menu ul li a{
     text-decoration: none;
 }
+
 .menu ul .active{
     font-weight: 600;
 }
+
 @media (max-width: 930px) {
     .menu{
         height: 100%;
@@ -85,6 +87,10 @@ h2 a{
     }
     .hamburger{
         display: none;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
     }
 }
 @media (max-width:560px) {

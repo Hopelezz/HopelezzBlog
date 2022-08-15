@@ -16,7 +16,7 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 const { minutesRead } = Astro.props;
 console.log(minutesRead);
 ---
-<div class="page-container">
+<div class="postContainer">
 	<Aside writter={writer} />
 	<article class="article">
 		<!-- <img class="center-cropped" src={img} alt={alt} height={200} /> -->
@@ -39,30 +39,28 @@ console.log(minutesRead);
 
 <style>
 
-.page-container {
+.postContainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
 
-/* make article strech to the window */
 .article {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 5rem;
 }
 
 .article {
-	gap: var(--size-4);
 	background: var(--surface2);
 	border: 20px solid var(--surface2);
 	padding: var(--size-4);
 	border-radius: var(--radius-3);
 	box-shadow: var(--shadow-4);
 	border: 1px solid var(--brand);
-	margin: var(--size-5);
 }
 
 .coffee{

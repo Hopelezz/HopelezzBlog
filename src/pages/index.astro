@@ -20,10 +20,10 @@ const permalink = '#';
 	<head>
 		<Meta title={title} description={description} permalink={permalink} />
 	</head>
-	<body id="top" class="page" class='surface1'>
+	<body id="top" class="indexPage">
 		<Cursor />
 		<Navbar />
-		<div class="container">
+		<div class="indexContainer">
 			<Aside post={allPosts}/>
 			<div class='articlelist'>{allBlogPosts.map((p) => <BlogPostPreview post={p} />)}</div>
 		</div>
@@ -38,11 +38,11 @@ const permalink = '#';
 
 /*----------------Start Body----------------*/
 
-.container {
+.indexContainer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 4rem;
+	/* margin-top: 4rem; */
 }
 
 .articlelist {
@@ -51,6 +51,7 @@ const permalink = '#';
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-content: flex-start;
+	margin-top: 3.5rem;
 }
 
 </style>

@@ -28,10 +28,10 @@ const { minutesRead } = Astro.props.content;
 	<body>
 		<Cursor />
 		<Navbar />
-		<div class="container">
+		<div class="">
 			<main class="body home_content">
 				<div class="container">
-					<div class="grid">
+					<div class="">
 						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
 							<p>{minutesRead}</p>
 							<slot />
@@ -47,7 +47,4 @@ const { minutesRead } = Astro.props.content;
 </html>
 
 <style>
-.container {
-	margin-top: 2rem;
-}
 </style>

@@ -1,0 +1,54 @@
+---
+import '../styles/theme.postcss';
+
+import Meta from '../components/MetaTags.astro';
+import Navbar from '../components/Navbar.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
+import Aside from '../components/Aside.astro';
+import Footer from '../components/footer/Footer.astro';
+import Form from '../components/HireMe/Form.astro';
+
+const title = '<BLOG />';
+const description = 'Hi! My name is Mark Spratt. I am a software engineer who started a blog!';
+const permalink = '#';
+---
+
+<html lang={'en'}>
+	<head>
+		<Meta title={title} description={description} permalink={permalink} />
+	</head>
+
+	<body>
+		<Cursor />
+		<Navbar />
+		<div class="">
+			<main class="hireContainer">
+				<Aside />
+				<div class="">
+					<Form />
+				</div>
+			</main>
+		</div>
+	</body>
+
+	<Footer />
+
+</html>
+
+<style>
+.hireContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	/* margin-top: 2rem; */
+}
+
+.articlelist {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+</style>

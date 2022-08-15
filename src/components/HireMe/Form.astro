@@ -1,0 +1,130 @@
+---
+
+---
+
+<div class="ContactContainer">
+    <form name="contact" method="POST" data-netlify="true" class="hireform">
+
+        <label for="name">Name</label>
+        <input class="name" type="text" name="name" id="name" />
+
+        <label for="email">Email</label>
+        <input class="email" type="email" name="email" id="email" />
+
+        <label for="phone">Phone</label>
+        <input class="phone" type="phone" name="phone" id="phone" />
+
+        <label for="message">Message</label>
+        <textarea class="message" name="message" id="message"></textarea>
+
+        <input class="submit" type="submit" value="Send" />
+    </form>
+</div>
+
+<style>
+
+.ContactContainer {
+    flex-basis: var(--size-content-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    margin-top: 4rem;
+}
+
+.hireform {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4);
+  background: var(--surface2);
+  padding: var(--size-4);
+  border-radius: var(--radius-3);
+  box-shadow: var(--shadow-3);
+  margin: var(--size-5);
+  border: 1px solid var(--brand);
+}
+
+textarea {
+    flex-basis: var(--size-content-1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4);
+    width: var(--size-content-2);
+    height: var(--size-content-1);
+}
+
+/* center labele */
+label, submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-5) !important;
+    font-weight: var(--font-weight-5);
+    color: var(--brand);
+}
+
+input, textarea {
+    height: var(--size-6);
+    background: var(--surface1);
+    border-radius: var(--radius-2);
+    padding: var(--size-3);
+    font-size: var(--size-4);
+}
+
+input:focus, textarea:focus {
+    outline: none !important;
+    border: 1px solid var(--brand);
+    box-shadow: var(--inner-shadow-3);
+}
+
+.submit {
+    background: var(--teal-6);
+    color: var(--surface2);
+    font-weight: bold;
+    border: none;
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-3);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+}
+
+.submit:hover {
+    /* transform: scale(1.05); */
+    background: var(--brand);
+    box-shadow: var(--shadow-4);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 460px;
+    }
+    .hireform:pointer {
+        box-shadow: var(--shadow-4);
+        background: var(--surface2);
+        transform: translateY(-5px);
+    }
+    /* make input higher */
+    input {
+        height: var(--size-7);
+    }
+
+    textarea {
+        width: var(--size-content-2);
+        height: var(--size-content-1);
+    }
+
+    label, submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-5);
+    }
+}
+</style>

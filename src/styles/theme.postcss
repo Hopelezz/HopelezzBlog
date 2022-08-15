@@ -13,6 +13,7 @@ html {
 
   /* light */
   --brand-light: var(--teal-6);
+  --brand-light-alt: var(--grape-6);
   --text1-light: var(--gray-8);
   --text2-light: var(--gray-7);
   --text1-brand-light: var(--teal-6);
@@ -87,6 +88,7 @@ html {
 
   /* set defaults */
   --brand: var(--brand-light);
+  --brand-alt: var(--brand-light-alt);
   --text1: var(--text1-light);
   --text2: var(--text2-light);
   --text3: var(--text1-brand-light);
@@ -218,7 +220,6 @@ html {
 body {
   min-block-size: 100%;
   font-family: system-ui, sans-serif;
-  display: grid;
   line-height: var(--font-line-height-4);
 }
 
@@ -227,8 +228,6 @@ main {
   flex-flow: column;
   align-items: center;
   align-content: center;
-  justify-content: center;
-  gap: var(--size-1);
 }
 
 /* -------Typography------- */
@@ -268,19 +267,10 @@ p {
   margin-bottom: var(--size-5);
 }
 
-a {
-  text-shadow: 0 0 0 hsla(204, 19%, 26%, 1);
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
 a:visited {
   color: var(--text2);
 }
-a:hover {
-  text-shadow: 0px 5px 5px black;
-  transition: all 0.3s ease-in-out;
-}
+
 
 header {
   display: inline-grid;
@@ -295,26 +285,6 @@ form {
     display: inline-flex;
     align-items: center;
     gap: var(--size-2);
-  }
-}
-
-.card {
-  display: grid;
-  --size: var(--size-content-1);
-  grid-template-columns: var(--size) var(--size);
-  grid-auto-rows: var(--size);
-  gap: var(--size-4);
-
-  @media (width <= 480px) { & {
-    --size: 40vw;
-  }}
-
-  & > * {
-    border-radius: var(--radius-3);
-    display: grid;
-    place-content: center;
-    font-size: var(--font-size-8);
-    font-weight: var(--font-weight-2);
   }
 }
 

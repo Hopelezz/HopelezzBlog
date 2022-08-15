@@ -13,53 +13,56 @@ const tag = tags.split(",")[0]; // returns the first tag
 
 ---
 <!--Article-->
-<div class="details">
-    <article class='card'>
+<div class="postContainer">
+    <a href={post.url}>
+    <article class='postCard'>
         <div class="coffee">
             <img class="center-cropped" src={post.frontmatter.img} alt={alt} >
         </div>
 
         <div class="details">
-            <a href={post.url}><h2 class='brand text3'>{title}</h2></a>
+            <h2 class='brand text3'>{title}</h2>
             <span class='text'>{publishDate}  |  {tag}</span>
             <br/>
             <span class='text'>{writer}</span>
-            <span class="readingTime">{post.frontmatter.minutesRead}</span>
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>
+</a>
 </div>
 
 <style>
 /*----------------Section--------------*/
-article {
+.postContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0     auto; */
+    /* width: 100%; */
+    /* height: 25% */
+}
+.postCard {
+    flex-basis: var(--size-content-1);
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-4);
+    background: var(--surface2);
+    padding: var(--size-4);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-3);
+    margin: var(--size-3);
+    border: 1px solid var(--brand);
     width: 500px;
     height: 200px;
-    margin: 25px;
-    padding: 20px;
-    display: flex;
     transition: all 0.3s ease-in-out;
 }
 
-/* defines card style */
-.card {
-  flex-basis: var(--size-content-1);
-  display: flex;
-  flex-direction: row;
-  gap: var(--size-4);
-  background: var(--surface2);
-  padding: var(--size-4);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-3);
-  margin: var(--size-5);
-  border: 1px solid var(--brand);
-}
-
-.card:hover {
-  background: var(--surface3);
-  box-shadow: var(--shadow-4);
-  transform: translateY(-5px);
-  transition: transform 0.3s ease-in-out;
+.postCard:hover {
+    background: var(--surface3);
+    box-shadow: var(--shadow-4);
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
 }
 
 a {
@@ -70,6 +73,7 @@ a {
 .coffee{
     width: 170px;
 }
+
 .coffee > img{
     border-radius: 5px;
 }
@@ -90,13 +94,11 @@ a {
     text-transform: capitalize;
     font-size: var(--size-3);
     font-weight: 300;
-    /* color: #303030; */
 }
 
 .details p {
     font-size: var(--size-3);
     margin-top: 5px;
-    padding-top: var(--gap-3);
 }
 
 /* remove link decoration */
@@ -105,23 +107,24 @@ a {
     text-decoration: none;
 }
 
-/* truncate 2 lines */
-
 .truncate {
-  width: var(--size-fluid-8);
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
 }
 
 /*-------------Media --------------------*/
 @media (max-width: 768px) {
-    article {
+    .postCard {
         display: flex;
-        flex-direction: column;
-        width: 460px;
+        /* flex-direction: column; */
+        /* width: 100%; */
+        margin-left: 10%;
     }
-    .card:pointer {
+    .postCard:pointer {
         box-shadow: var(--shadow-4);
         background: var(--surface3);
         transform: translateY(-5px);

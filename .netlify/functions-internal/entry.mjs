@@ -7,14 +7,14 @@ import etag from 'etag';
 import { lookup } from 'mrmime';
 import sharp$1 from 'sharp';
 import fs from 'node:fs/promises';
-/* empty css                        *//* empty css                           */import { createSignal, Show, For } from 'solid-js';
+/* empty css                        *//* empty css                           *//* empty css                           */import { createSignal, Show, For } from 'solid-js';
 import path, { extname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import fs$1 from 'node:fs';
 import glob from 'tiny-glob';
 import slash from 'slash';
 import sizeOf from 'image-size';
-/* empty css                           */import 'mime';
+/* empty css                         */import 'mime';
 import 'kleur/colors';
 import 'string-width';
 import 'path-browserify';
@@ -1528,7 +1528,7 @@ const sharp = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	default: sharp_default
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const get = async ({ request }) => {
+const get$1 = async ({ request }) => {
   try {
     const url = new URL(request.url);
     const transform = sharp_default.parseTransform(url.searchParams);
@@ -1563,20 +1563,20 @@ const get = async ({ request }) => {
 
 const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
-	get
+	get: get$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-var __freeze$2 = Object.freeze;
-var __defProp$2 = Object.defineProperty;
-var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(raw || cooked.slice()) }));
-var _a$2;
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
+var _a$1;
 const $$metadata$d = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
 const $$Astro$f = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$MetaTags = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$MetaTags;
   const { title, description, permalink } = Astro2.props;
-  return renderTemplate(_a$2 || (_a$2 = __template$2(['<!-- Global Metadata --><meta charset="utf-8">\n<meta name="viewport" content="width=device-width">\n<link rel="icon" type="image/x-icon" href="/favicon.ico">\n\n<!-- Primary Meta Tags -->\n<title>', '</title>\n<meta name="title"', '>\n<meta name="description"', '>\n\n<!-- Open Graph / Facebook -->\n<meta property="og:type" content="website">\n<meta property="og:url"', '>\n<meta property="og:title"', '>\n<meta property="og:description"', '>\n<meta property="og:image" content="https://astro.build/social.png?v=1">\n\n<!-- Twitter -->\n<meta property="twitter:card" content="summary_large_image">\n<meta property="twitter:url"', '>\n<meta property="twitter:title"', '>\n<meta property="twitter:description"', '>\n<meta property="twitter:image" content="https://astro.build/social.png?v=1">\n\n<!-- Fonts -->\n<link rel="preconnect" href="https://fonts.gstatic.com">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">\n\n<!-- "Boxicons CDN" Link -->\n<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">\n\n<!-- FontAwesome -->\n<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"><\/script>'])), title, addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(permalink, "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(permalink, "content"), addAttribute(title, "content"), addAttribute(description, "content"));
+  return renderTemplate(_a$1 || (_a$1 = __template$1(['<!-- Global Metadata --><meta charset="utf-8">\n<meta name="viewport" content="width=device-width">\n<link rel="icon" type="image/x-icon" href="/favicon.ico">\n\n<!-- Primary Meta Tags -->\n<title>', '</title>\n<meta name="title"', '>\n<meta name="description"', '>\n\n<!-- Open Graph / Facebook -->\n<meta property="og:type" content="website">\n<meta property="og:url"', '>\n<meta property="og:title"', '>\n<meta property="og:description"', '>\n<meta property="og:image" content="https://astro.build/social.png?v=1">\n\n<!-- Twitter -->\n<meta property="twitter:card" content="summary_large_image">\n<meta property="twitter:url"', '>\n<meta property="twitter:title"', '>\n<meta property="twitter:description"', '>\n<meta property="twitter:image" content="https://astro.build/social.png?v=1">\n\n<!-- Fonts -->\n<link rel="preconnect" href="https://fonts.gstatic.com">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;700&display=swap">\n\n<!-- "Boxicons CDN" Link -->\n<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">\n\n<!-- FontAwesome -->\n<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"><\/script>'])), title, addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(permalink, "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(permalink, "content"), addAttribute(title, "content"), addAttribute(description, "content"));
 });
 
 const $$file$d = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/MetaTags.astro";
@@ -1597,8 +1597,8 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
     const ctx = canvas.getContext('2d');    // 2d context
     let spots = []; // creates an array of spots
     let hue = 274;    // Sets the color of the particles
-    
-    const mouse = {  
+
+    const mouse = {
         x: undefined,   // mouse position
         y: undefined    // mouse position
     }
@@ -1615,8 +1615,8 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
         constructor() {
             this.x = mouse.x;
             this.y = mouse.y;
-            this.size = Math.random() * 2 + 0.1;    
-            this.speedX = Math.random() * 2 - 1;    
+            this.size = Math.random() * 2 + 0.1;
+            this.speedX = Math.random() * 2 - 1;
             this.speedY = Math.random() * 2 - 1;
             this.color = \`hsl(170, 100%, 50%)\`;
         }
@@ -1634,7 +1634,7 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
     }
 
     function handleParticle(){
-        for (let i = 0; i < spots.length; i++) {    
+        for (let i = 0; i < spots.length; i++) {
             spots[i].update();  // update position
             spots[i].draw();    // draw the particle
             for (let j = i; j< spots.length; j++) { // check for collisions
@@ -1661,7 +1661,7 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
         handleParticle();
         //change hue between #7E52A0 and #FFF8E1
         // hue += 0.1;
-        // if (hue >= 360) hue = 0;        
+        // if (hue >= 360) hue = 0;
         requestAnimationFrame(animate); // call animate again
     }
 
@@ -1677,7 +1677,6 @@ const $$metadata$c = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
     });
 
     animate();
-    
 ` }] });
 const $$Astro$e = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/cursorEffect/Cursor.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Cursor = createComponent(async ($$result, $$props, $$slots) => {
@@ -1686,7 +1685,7 @@ const $$Cursor = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<canvas id="canvas" class="astro-NXUPEEDQ"></canvas>
+  return renderTemplate`${maybeRenderHead($$result)}<canvas id="canvas" class="astro-XAXKDKKH"></canvas>
 
 `;
 });
@@ -1734,13 +1733,13 @@ const $$metadata$b = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitH
 const $$Astro$d = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/utils/api.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const Astro = $$Astro$d;
 async function getBlogPosts() {
-  let allBlogPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../pages/blog/1-password.mdx": () => Promise.resolve().then(() => _page6),"../pages/blog/2-two-factor-auth.mdx": () => Promise.resolve().then(() => _page4),"../pages/blog/3-starting-astro.mdx": () => Promise.resolve().then(() => _page5),"../pages/blog/4-most-recent-post-button.mdx": () => Promise.resolve().then(() => _page3)}), () => "../pages/blog/*.mdx");
+  let allBlogPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../pages/blog/1-password.mdx": () => Promise.resolve().then(() => _page7),"../pages/blog/2-two-factor-auth.mdx": () => Promise.resolve().then(() => _page5),"../pages/blog/3-starting-astro.mdx": () => Promise.resolve().then(() => _page6),"../pages/blog/4-a-start.mdx": () => Promise.resolve().then(() => _page8)}), () => "../pages/blog/*.mdx");
   allBlogPosts = allBlogPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
   let mostRecentBlogPost = allBlogPosts[0];
   return { allBlogPosts, mostRecentBlogPost };
 }
 async function getBookPosts() {
-  let allBookPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../pages/book/1-Slaughterhouse-Five.mdx": () => Promise.resolve().then(() => _page8),"../pages/book/10-never-let-me-go.mdx": () => Promise.resolve().then(() => _page10),"../pages/book/11-communist-manifesto.mdx": () => Promise.resolve().then(() => _page7),"../pages/book/2-ready-player-one.mdx": () => Promise.resolve().then(() => _page12),"../pages/book/3-armada.mdx": () => Promise.resolve().then(() => _page18),"../pages/book/4-the-bell-jar.mdx": () => Promise.resolve().then(() => _page13),"../pages/book/5-lord-of-the-flies.mdx": () => Promise.resolve().then(() => _page9),"../pages/book/6-slapstick.mdx": () => Promise.resolve().then(() => _page17),"../pages/book/7-the-martian.mdx": () => Promise.resolve().then(() => _page15),"../pages/book/8-old-mans-war.mdx": () => Promise.resolve().then(() => _page14),"../pages/book/9-supermarket.mdx": () => Promise.resolve().then(() => _page16)}), () => "../pages/book/*.mdx");
+  let allBookPosts = await Astro.glob(/* #__PURE__ */ Object.assign({"../pages/book/1-Slaughterhouse-Five.mdx": () => Promise.resolve().then(() => _page10),"../pages/book/10-never-let-me-go.mdx": () => Promise.resolve().then(() => _page12),"../pages/book/11-communist-manifesto.mdx": () => Promise.resolve().then(() => _page9),"../pages/book/12-alias-grace.mdx": () => Promise.resolve().then(() => _page14),"../pages/book/2-ready-player-one.mdx": () => Promise.resolve().then(() => _page13),"../pages/book/3-armada.mdx": () => Promise.resolve().then(() => _page20),"../pages/book/4-the-bell-jar.mdx": () => Promise.resolve().then(() => _page15),"../pages/book/5-lord-of-the-flies.mdx": () => Promise.resolve().then(() => _page11),"../pages/book/6-slapstick.mdx": () => Promise.resolve().then(() => _page19),"../pages/book/7-the-martian.mdx": () => Promise.resolve().then(() => _page17),"../pages/book/8-old-mans-war.mdx": () => Promise.resolve().then(() => _page16),"../pages/book/9-supermarket.mdx": () => Promise.resolve().then(() => _page18)}), () => "../pages/book/*.mdx");
   allBookPosts = allBookPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
   let mostRecentBookPost = allBookPosts[0];
   return { allBookPosts, mostRecentBookPost };
@@ -1776,7 +1775,7 @@ const $$Api = createComponent(async ($$result, $$props, $$slots) => {
 const $$file$b = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/utils/api.astro";
 const $$url$b = undefined;
 
-const $$module6$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	$$metadata: $$metadata$b,
 	getBlogPosts,
@@ -1832,7 +1831,7 @@ const $$module3$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 	url: $$url$a
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$9 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", { modules: [{ module: $$module1$5, specifier: "../components/search/Search", assert: {} }, { module: $$module6$1, specifier: "../utils/api.astro", assert: {} }, { module: $$module3$1, specifier: "../components/darkmode.astro", assert: {} }], hydratedComponents: [Search], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set(["load"]), hoisted: [] });
+const $$metadata$9 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", { modules: [{ module: $$module1$5, specifier: "../components/search/Search", assert: {} }, { module: $$module4, specifier: "../utils/api.astro", assert: {} }, { module: $$module3$1, specifier: "../components/darkmode.astro", assert: {} }], hydratedComponents: [Search], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set(["load"]), hoisted: [] });
 const $$Astro$b = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
@@ -1841,21 +1840,23 @@ const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<nav class="brand surface2 nav astro-LPDBPLPZ">
-    <div class="logoContainer astro-LPDBPLPZ">
-        <a href="/" class="logo astro-LPDBPLPZ">
+  return renderTemplate`${maybeRenderHead($$result)}<nav class="brand surface2 nav astro-MYOATM33">
+    <div class="logoContainer astro-MYOATM33">
+        <a href="/" class="logo astro-MYOATM33">
             <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-            <h2 class="brand astro-LPDBPLPZ">&lt;BLACKSKIES &#47;&gt;</h2>
+            <h2 class="brand astro-MYOATM33">&lt;BLACKSKIES &#47;&gt;</h2>
         </a>
     </div>
-    ${renderComponent($$result, "Search", Search, { "client:load": true, "posts": posts, "client:component-hydration": "load", "client:component-path": "/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search", "client:component-export": "default", "class": "astro-LPDBPLPZ" })}
-    <div class="menu astro-LPDBPLPZ">
-        <ul class="hamburger astro-LPDBPLPZ">
-            <li class="astro-LPDBPLPZ"><a href="/" class="astro-LPDBPLPZ">Home</a></li>
-            <li class="astro-LPDBPLPZ"><a href="#" class="astro-LPDBPLPZ">About</a></li>
-            <li class="astro-LPDBPLPZ"><a href="#" class="astro-LPDBPLPZ">Hire Me</a></li>
-            <li class="astro-LPDBPLPZ">
-                ${renderComponent($$result, "Dark", $$Darkmode, { "class": "astro-LPDBPLPZ" })}
+    <div class="searchContainer astro-MYOATM33">
+    ${renderComponent($$result, "Search", Search, { "client:load": true, "posts": posts, "client:component-hydration": "load", "client:component-path": "/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search", "client:component-export": "default", "class": "astro-MYOATM33" })}
+    </div>
+    <div class="menu astro-MYOATM33">
+        <ul class="hamburger astro-MYOATM33">
+            <li class="astro-MYOATM33"><a href="/" class="astro-MYOATM33">Home</a></li>
+            <li class="astro-MYOATM33"><a href="#" class="astro-MYOATM33">About</a></li>
+            <li class="astro-MYOATM33"><a href="/HireMe" class="astro-MYOATM33">Hire Me</a></li>
+            <li class="astro-MYOATM33">
+                ${renderComponent($$result, "Dark", $$Darkmode, { "class": "astro-MYOATM33" })}
             </li>
         </ul>
     </div>
@@ -2452,11 +2453,11 @@ const $$module1$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 	__proto__: null
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$module6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module6$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$7 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", { modules: [{ module: $$module1$1, specifier: "astro", assert: {} }, { module: $$module6, specifier: "../../utils/types", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$metadata$7 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", { modules: [{ module: $$module1$1, specifier: "astro", assert: {} }, { module: $$module6$1, specifier: "../../utils/types", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
 const $$Astro$7 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/blog/PostPreview.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$PostPreview$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
@@ -2467,21 +2468,22 @@ const $$PostPreview$1 = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<div class="details astro-WRHWL4RB">
-    <article class="card surface3 astro-WRHWL4RB">
-        <div class="coffee astro-WRHWL4RB">
-            <img class="center-cropped astro-WRHWL4RB"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
+  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<div class="details astro-H6F5BIEW">
+    <a${addAttribute(post.url, "href")} class="astro-H6F5BIEW">
+    <article class="card astro-H6F5BIEW">
+        <div class="coffee astro-H6F5BIEW">
+            <img class="center-cropped astro-H6F5BIEW"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
         </div>
 
-        <div class="details astro-WRHWL4RB">
-            <a${addAttribute(post.url, "href")} class="astro-WRHWL4RB"><h2 class="brand text3 astro-WRHWL4RB">${title}</h2></a>
-            <span class="text astro-WRHWL4RB">${publishDate}  |  ${tag}</span>
-            <br class="astro-WRHWL4RB">
-            <span class="text astro-WRHWL4RB">${writer}</span>
-            <span class="readingTime astro-WRHWL4RB">${post.frontmatter.minutesRead}</span>
-            <p class="text3 truncate astro-WRHWL4RB">${description}</p>
+        <div class="details astro-H6F5BIEW">
+            <h2 class="brand text3 astro-H6F5BIEW">${title}</h2>
+            <span class="text astro-H6F5BIEW">${publishDate}  |  ${tag}</span>
+            <br class="astro-H6F5BIEW">
+            <span class="text astro-H6F5BIEW">${writer}</span>
+            <p class="text3 truncate astro-H6F5BIEW">${description}</p>
         </div>
     </article>
+</a>
 </div>
 
 `;
@@ -2498,7 +2500,7 @@ const $$module5$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
 	url: $$url$7
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$6 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module1$2, specifier: "../components/Aside.astro", assert: {} }, { module: $$module5$1, specifier: "../components/blog/PostPreview.astro", assert: {} }, { module: $$module6$1, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
+const $$metadata$6 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module1$2, specifier: "../components/Aside.astro", assert: {} }, { module: $$module5$1, specifier: "../components/blog/PostPreview.astro", assert: {} }, { module: $$module4, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "inline", value: `
 
 ` }] });
 const $$Astro$6 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/index.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
@@ -2571,7 +2573,7 @@ const $$module3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 	url: $$url$5
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$4 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3, specifier: "../components/bookShelf/PostPreview.astro", assert: {} }, { module: $$module6$1, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$metadata$4 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3, specifier: "../components/bookShelf/PostPreview.astro", assert: {} }, { module: $$module4, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
 const $$Astro$4 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/bookreview.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
 const $$Bookreview = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
@@ -2623,20 +2625,968 @@ const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$4
 }, Symbol.toStringTag, { value: 'Module' }));
 
+const get = () => rss({
+    // `<title>` field in output xml
+    title: '<BlackSkies /> Blog',
+    // `<description>` field in output xml
+    description: 'A humble Astronaut’s guide to the stars',
+    // base URL for RSS <item> links
+    // SITE will use "site" from your project's astro.config.
+    site: 'https://blackskies.vercel.app/',
+    // list of `<item>`s in output xml
+    // simple example: generate items for every md file in /src/pages
+    // see "Generating items" section for required frontmatter and advanced use cases
+    items: /* #__PURE__ */ Object.assign({}),
+    // (optional) inject custom xml
+    customData: `<language>en-us</language>`,
+  });
+
+const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	get
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$3 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$3 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Social = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
+  Astro2.self = $$Social;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<div class="icons astro-ZGOG2GOQ">
+    <a href="https://twitter.com/_Hopelezz" class="ml-10 astro-ZGOG2GOQ" aria-label="Twitter" rel="noopener">
+      <i class="fa-brands fa-twitter astro-ZGOG2GOQ"></i>
+    </a>
+
+    <a href="https://www.youtube.com/user/panzerlink" class="ml-4 astro-ZGOG2GOQ" aria-label="YouTube" rel="noopener">
+      <i class="fa-brands fa-youtube astro-ZGOG2GOQ"></i>
+    </a>
+
+    <a href="https://github.com/Hopelezz" class="ml-4 astro-ZGOG2GOQ" aria-label="Github" rel="noopener">
+      <i class="fa-brands fa-github astro-ZGOG2GOQ"></i>
+    </a>
+
+    <a href="/HireMe" class="ml-4 astro-ZGOG2GOQ" aria-label="Email" rel="noopener">
+      <i class="fa-regular fa-at astro-ZGOG2GOQ"></i>
+    </a>
+
+    <a href="astro.build" class="ml-4 astro-ZGOG2GOQ" aria-label="Astro" rel="noopener">
+      <i class="fa-light fa-rocket-launch astro-ZGOG2GOQ"></i>
+    </a>
+</div>`;
+});
+
+const $$file$3 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro";
+const $$url$3 = undefined;
+
+const $$module1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	$$metadata: $$metadata$3,
+	default: $$Social,
+	file: $$file$3,
+	url: $$url$3
+}, Symbol.toStringTag, { value: 'Module' }));
+
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
+const $$metadata$2 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", { modules: [{ module: $$module1, specifier: "./Social.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" }] });
+const $$Astro$2 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$Footer;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate(_a || (_a = __template(["", '<footer class="center astro-3MDEZAKO">\n  <div class="text-sm astro-3MDEZAKO" data-test="footer-text">&copy;<script type="text/javascript"> document.write(new Date().getFullYear()); <\/script> &lt;BLACKSKIES &#47;&gt;</div>\n  ', "\n</footer>\n\n<!-- Prism JS -->\n\n\n\n"])), maybeRenderHead($$result), renderComponent($$result, "Social", $$Social, { "class": "astro-3MDEZAKO" }));
+});
+
+const $$file$2 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro";
+const $$url$2 = undefined;
+
+const $$module5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	$$metadata: $$metadata$2,
+	default: $$Footer,
+	file: $$file$2,
+	url: $$url$2
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$1 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/HireMe/Form.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$1 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/HireMe/Form.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$Form = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$Form;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<div class="ContactContainer astro-HZUL4RF4">
+    <form name="contact" method="POST" data-netlify="true" class="hireform astro-HZUL4RF4">
+
+        <label for="name" class="astro-HZUL4RF4">Name</label>
+        <input class="name astro-HZUL4RF4" type="text" name="name" id="name">
+
+        <label for="email" class="astro-HZUL4RF4">Email</label>
+        <input class="email astro-HZUL4RF4" type="email" name="email" id="email">
+
+        <label for="phone" class="astro-HZUL4RF4">Phone</label>
+        <input class="phone astro-HZUL4RF4" type="phone" name="phone" id="phone">
+
+        <label for="message" class="astro-HZUL4RF4">Message</label>
+        <textarea class="message astro-HZUL4RF4" name="message" id="message"></textarea>
+
+        <input class="submit astro-HZUL4RF4" type="submit" value="Send">
+    </form>
+</div>`;
+});
+
+const $$file$1 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/HireMe/Form.astro";
+const $$url$1 = undefined;
+
+const $$module6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	$$metadata: $$metadata$1,
+	default: $$Form,
+	file: $$file$1,
+	url: $$url$1
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/HireMe.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module1$2, specifier: "../components/Aside.astro", assert: {} }, { module: $$module5, specifier: "../components/footer/Footer.astro", assert: {} }, { module: $$module6, specifier: "../components/HireMe/Form.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/HireMe.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
+const $$HireMe = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$HireMe;
+  const title = "<BLOG />";
+  const description = "Hi! My name is Mark Spratt. I am a software engineer who started a blog!";
+  const permalink = "#";
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`<html${addAttribute("en", "lang")} class="astro-Z3LJFRLR">
+	<head>
+		${renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-Z3LJFRLR" })}
+	${renderHead($$result)}</head>
+
+	<body class="astro-Z3LJFRLR">
+		${renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-Z3LJFRLR" })}
+		${renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-Z3LJFRLR" })}
+		<div class="container astro-Z3LJFRLR">
+			<main class="container astro-Z3LJFRLR">
+				${renderComponent($$result, "Aside", $$Aside, { "class": "astro-Z3LJFRLR" })}
+				<div class=" astro-Z3LJFRLR">
+					${renderComponent($$result, "Form", $$Form, { "class": "astro-Z3LJFRLR" })}
+				</div>
+			</main>
+		</div>
+	${renderComponent($$result, "Footer", $$Footer, { "class": "astro-Z3LJFRLR" })}
+
+</body></html>`;
+});
+
+const $$file = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/HireMe.astro";
+const $$url = "/HireMe";
+
+const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	$$metadata,
+	default: $$HireMe,
+	file: $$file,
+	url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
 function getHeadings$f() {
   return [{
-    "depth": 2,
-    "slug": "the-concept",
-    "text": "The Concept"
+    "depth": 1,
+    "slug": "todo-create-post-on-two-factor-authentication-to-go-with-password",
+    "text": "TODO: Create Post on Two Factor Authentication to go With Password"
   }, {
     "depth": 2,
-    "slug": "how-it-works",
-    "text": "How it works"
+    "slug": "content",
+    "text": "Content"
+  }, {
+    "depth": 3,
+    "slug": "sub-content",
+    "text": "Sub Content"
   }];
 }
 const frontmatter$f = {
   "layout": "../../layouts/BlogPost.astro",
-  "title": "Most Recent Post Button... A Start",
+  "title": "Two Factor Authentication",
+  "publishDate": "09 JUL 2022",
+  "writer": "Mark",
+  "href": "https://twitter.com/_Hopelezz",
+  "description": "How does Two Factor Authentication protect your account?",
+  "img": "/assets/images/twofactorauth.jpg",
+  "alt": "Security",
+  "tags": "security"
+};
+
+const MDXLayout$f = async function ({
+  children
+}) {
+  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  return createVNode(Layout, {
+    content: {
+      "title": "Two Factor Authentication",
+      "publishDate": "09 JUL 2022",
+      "writer": "Mark",
+      "href": "https://twitter.com/_Hopelezz",
+      "description": "How does Two Factor Authentication protect your account?",
+      "img": "/assets/images/twofactorauth.jpg",
+      "alt": "Security",
+      "tags": "security"
+    },
+    children: children
+  });
+};
+
+function _createMdxContent$f(props) {
+  const _components = Object.assign({
+    h1: "h1",
+    p: "p",
+    h2: "h2",
+    h3: "h3",
+    ul: "ul",
+    li: "li"
+  }, props.components);
+
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h1, {
+      id: "todo-create-post-on-two-factor-authentication-to-go-with-password",
+      children: "TODO: Create Post on Two Factor Authentication to go With Password"
+    }), "\n", createVNode(_components.p, {
+      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offic"
+    }), "\n", createVNode(_components.h2, {
+      id: "content",
+      children: "Content"
+    }), "\n", createVNode(_components.p, {
+      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui"
+    }), "\n", createVNode(_components.h3, {
+      id: "sub-content",
+      children: "Sub Content"
+    }), "\n", createVNode(_components.p, {
+      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,"
+    }), "\n", createVNode(_components.p, {
+      children: "consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }), "\n", createVNode(_components.p, {
+      children: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui"
+    }), "\n", createVNode(_components.p, {
+      children: "List:"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "something,"
+      }), "\n", createVNode(_components.li, {
+        children: "something,"
+      }), "\n", createVNode(_components.li, {
+        children: "something"
+      }), "\n"]
+    })]
+  });
+}
+
+function MDXContent$f(props = {}) {
+  return createVNode(MDXLayout$f, { ...props,
+    children: createVNode(_createMdxContent$f, { ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$f, "astro:jsx");
+const url$f = "/blog/2-two-factor-auth";
+const file$f = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/2-two-factor-auth.mdx";
+
+const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	getHeadings: getHeadings$f,
+	frontmatter: frontmatter$f,
+	default: MDXContent$f,
+	url: url$f,
+	file: file$f
+}, Symbol.toStringTag, { value: 'Module' }));
+
+function getHeadings$e() {
+  return [{
+    "depth": 2,
+    "slug": "motivation",
+    "text": "Motivation"
+  }, {
+    "depth": 2,
+    "slug": "what-frameworks-does-this-site-use",
+    "text": "What Frameworks Does This Site Use?"
+  }, {
+    "depth": 2,
+    "slug": "the-start",
+    "text": "The Start"
+  }, {
+    "depth": 2,
+    "slug": "100devs",
+    "text": "100Devs"
+  }, {
+    "depth": 2,
+    "slug": "a-new-journey",
+    "text": "A New Journey"
+  }, {
+    "depth": 2,
+    "slug": "learn-how-to-learn",
+    "text": "Learn How To Learn"
+  }, {
+    "depth": 1,
+    "slug": "things-i-want-to-do",
+    "text": "Things I Want To Do:"
+  }];
+}
+const frontmatter$e = {
+  "layout": "../../layouts/BlogPost.astro",
+  "title": "Getting Started with Astro",
+  "publishDate": "10 JUL 2022",
+  "writer": "Mark",
+  "href": "https://twitter.com/_Hopelezz",
+  "description": "Documenting my journey in creating this website.",
+  "img": "/assets/images/Astronaut.avif",
+  "alt": "Astronaut",
+  "tags": "astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla, framework"
+};
+
+const MDXLayout$e = async function ({
+  children
+}) {
+  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  return createVNode(Layout, {
+    content: {
+      "title": "Getting Started with Astro",
+      "publishDate": "10 JUL 2022",
+      "writer": "Mark",
+      "href": "https://twitter.com/_Hopelezz",
+      "description": "Documenting my journey in creating this website.",
+      "img": "/assets/images/Astronaut.avif",
+      "alt": "Astronaut",
+      "tags": "astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla, framework"
+    },
+    children: children
+  });
+};
+
+function _createMdxContent$e(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    p: "p",
+    code: "code",
+    a: "a",
+    em: "em",
+    pre: "pre",
+    div: "div",
+    span: "span",
+    ul: "ul",
+    li: "li",
+    h1: "h1",
+    input: "input"
+  }, props.components);
+
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "motivation",
+      children: "Motivation"
+    }), "\n", createVNode(_components.p, {
+      children: ["At the time of writing this, I\u2019m 3 months into my ", createVNode(_components.code, {
+        children: "Web Development"
+      }), " journey. Details of what I\u2019m capable of can be found here in my ", createVNode(_components.a, {
+        href: "aboutMe",
+        children: "About Me"
+      }), ". If that link doesn\u2019t work I\u2019ve either not created the page or a custom 404 Page\u2026 they\u2019re still under construction. See ", createVNode(_components.a, {
+        href: "#things-i-want-to-do",
+        children: "Things I want to Do"
+      }), " for more details."]
+    }), "\n", createVNode(_components.p, {
+      children: createVNode(_components.em, {
+        children: "Not gonna lie, I just learned how to make this link to a different header on the page."
+      })
+    }), "\n", createVNode(_components.pre, {
+      className: "shiki dracula",
+      style: {
+        backgroundColor: "#282A36",
+        color: "#F8F8F2"
+      },
+      children: [createVNode(_components.div, {
+        className: "language-id",
+        children: "md"
+      }), createVNode(_components.div, {
+        className: "code-container",
+        children: createVNode(_components.code, {
+          children: createVNode(_components.div, {
+            className: "line",
+            children: [createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "["
+            }), createVNode(_components.span, {
+              style: {
+                color: "#FF79C6"
+              },
+              children: "Things I want to Do"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "]("
+            }), createVNode(_components.span, {
+              style: {
+                color: "#8BE9FD"
+              },
+              children: "#things-i-want-to-do"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: ")"
+            })]
+          })
+        })
+      })]
+    }), "\n", createVNode(_components.p, {
+      children: "A description plus in the URL part has to have #all-words-in-lower-case with hyphens between each word."
+    }), "\n", createVNode(_components.p, {
+      children: ["If you are struggling with the idea of ", createVNode(_components.code, {
+        children: "How To"
+      }), " for something like this I hope I can inspire you with this journey. Admittedly, I\u2019m winging it\u2026enjoying the process. If I break something I try to learn why it broke and how to fix it."]
+    }), "\n", createVNode(_components.h2, {
+      id: "what-frameworks-does-this-site-use",
+      children: "What Frameworks Does This Site Use?"
+    }), "\n", createVNode(_components.p, {
+      children: "This is Astro & Solidjs at the time of writing this post. However, Astro natively supports every popular framework."
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://reactjs.org/",
+          children: "React"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://svelte.dev/",
+          children: "Svelte"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://vuejs.org/",
+          children: "Vue"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://solidjs.com/",
+          children: "Solidjs"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://preactjs.com/",
+          children: "Preact"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://alpinejs.dev/",
+          children: "Alpine"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://lit.dev/",
+          children: "Lit"
+        })
+      }), "\n", createVNode(_components.li, {
+        children: createVNode(_components.a, {
+          href: "https://www.javascript.com/",
+          children: "Vanilla"
+        })
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "Meaning, that if I wanted to come back later and add anything specific I could with little to no issues!"
+    }), "\n", createVNode(_components.p, {
+      children: ["This site started out with a basic ", createVNode(_components.a, {
+        href: "https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog?file=README.md",
+        children: "Blog template"
+      }), ". By comparing the two I hope just how drastically this site has changed."]
+    }), "\n", createVNode(_components.h2, {
+      id: "the-start",
+      children: "The Start"
+    }), "\n", createVNode(_components.p, {
+      children: "At the time of writing this, I\u2019m an Electrical Engineer. I love the type of work I do, but I see a figurative wall for growth.\r\nWas listening one day to a Jordan Harbinger podcast on gaining wealth the discussion pertained to the idea of skill stacking. The idea is to take multiple disciplines and combine them to gain a unique set of skills."
+    }), "\n", createVNode(_components.p, {
+      children: "I started in Software Development with the idea that I could modify Eplan to boost my productivity. Eplan is an electrical CAD. It\u2019s designed to simplify the process of creating electrical schematics. Eplan can run scripts that use its Application Programming Interface (API). Knowing this I set out to learn C# the language of Eplan."
+    }), "\n", createVNode(_components.p, {
+      children: "Halfway through my course on C# my lead and coworker quit. Leaving me the last electrical engineer on the team for a multi-million dollar company. Taking over the department I had more on my plate than just a few scripts. I had been on the team for a little over a year and had been struggling to use the templates that had been created by my previous team. Just a month prior I had given a presentation for a new development process. Management approved!"
+    }), "\n", createVNode(_components.p, {
+      children: "Their departure gave me the clean slate to archive all the deprecated templates, clean up the parts library, and create bring forward my new templates design scheme. This took roughly 3 months to complete along with the massive workload I had just been given. That sounds like a lot of time, but I had effectively shaved off a week\u2019s worth of time per project, increasing the accuracy, and readability of the schematics. Half a year later my company finally hired new replacements. I was able to for the most part keep up with the pace of the company."
+    }), "\n", createVNode(_components.p, {
+      children: "Towards the end of 2020, I was still spending my weekends slowly learning C#. Along the way, I had my coworker telling me I should be looking into python. Took the bait to try and learn it. I was hooked! I quickly flew through the Code Academy course. The language felt natural to me. The only downside was that I had no real discernable direction on how to use it in my work."
+    }), "\n", createVNode(_components.h2, {
+      id: "100devs",
+      children: "100Devs"
+    }), "\n", createVNode(_components.p, {
+      children: "I would from time to time watch this programmer on Twitch called MidnightSimon. One evening he wasn\u2019t on so I went looking for some other streamer to watch. I stumbled onto a streamer who went by LearnWithLeon. He was talking about how to network and market yourself. This seemed to be exactly what I was looking for\u2026 except something seemed off. Leon was teaching Web Development."
+    }), "\n", createVNode(_components.h2, {
+      id: "a-new-journey",
+      children: "A New Journey"
+    }), "\n", createVNode(_components.p, {
+      children: "Here I am, a newly minted Python programmer watching a course on how to get a job as a FullStack JavaScript Developer. A few classes later I finally caved in and started from class one on his youtube channel."
+    }), "\n", createVNode(_components.h2, {
+      id: "learn-how-to-learn",
+      children: "Learn How To Learn"
+    }), "\n", createVNode(_components.p, {
+      children: ["The first couple of classes were focused on ", createVNode(_components.code, {
+        children: "learning how to learn"
+      }), " and dealing with mental and physical health. This became pretty relevant when going through the course. It is set at a pretty decent pace, but the workload was heavy. I went into it knowing the basic software logic from my previous courses."]
+    }), "\n", createVNode(_components.h1, {
+      id: "things-i-want-to-do",
+      children: "Things I Want To Do:"
+    }), "\n", createVNode(_components.ul, {
+      className: "contains-task-list",
+      children: ["\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Turn the Logo into an SVG version"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Create a section for Book Reviews\n", createVNode(_components.ul, {
+          className: "contains-task-list",
+          children: ["\n", createVNode(_components.li, {
+            className: "task-list-item",
+            children: [createVNode(_components.input, {
+              type: "checkbox",
+              checked: true,
+              disabled: true
+            }), " Add images to Post Preview."]
+          }), "\n"]
+        }), "\n"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Add a ", createVNode(_components.code, {
+          children: "About Me"
+        }), " page"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Add a ", createVNode(_components.code, {
+          children: "Hire Me"
+        }), " page"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Add a ", createVNode(_components.code, {
+          children: "404"
+        }), " page"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Add a Dark Theme."]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Searchbar for posts."]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Add a Search Feature to query the posts for keywords"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " Fix the ", createVNode(_components.code, {
+          children: "Most Recent Posts"
+        }), " button on the LeftSideBar. ", createVNode("div", {
+          style: "color: red",
+          children: createVNode(_components.em, {
+            children: "Depricated"
+          })
+        })]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Change the way ", createVNode(_components.code, {
+          children: "Lists"
+        }), " look"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Change the way ", createVNode(_components.code, {
+          children: "Check Boxes"
+        }), " look"]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Make the Page More responsive to Mobile."]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Make the Page More accessible to everyone."]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Add a RightSideBar that shows the ", createVNode(_components.code, {
+          children: "In This Post"
+        }), " headers. ", createVNode("div", {
+          style: "color: orange",
+          children: createVNode(_components.em, {
+            children: "Might not do this with the current theme"
+          })
+        })]
+      }), "\n", createVNode(_components.li, {
+        className: "task-list-item",
+        children: [createVNode(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " Create a template for the Astro Framework based on what I\u2019ve learned here"]
+      }), "\n"]
+    })]
+  });
+}
+
+function MDXContent$e(props = {}) {
+  return createVNode(MDXLayout$e, { ...props,
+    children: createVNode(_createMdxContent$e, { ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$e, "astro:jsx");
+const url$e = "/blog/3-starting-astro";
+const file$e = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/3-starting-astro.mdx";
+
+const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	getHeadings: getHeadings$e,
+	frontmatter: frontmatter$e,
+	default: MDXContent$e,
+	url: url$e,
+	file: file$e
+}, Symbol.toStringTag, { value: 'Module' }));
+
+function getHeadings$d() {
+  return [{
+    "depth": 2,
+    "slug": "early-morning",
+    "text": "Early Morning\u2026"
+  }, {
+    "depth": 3,
+    "slug": "tldr",
+    "text": "TLDR:"
+  }, {
+    "depth": 3,
+    "slug": "long-version",
+    "text": "Long version:"
+  }, {
+    "depth": 2,
+    "slug": "story-time",
+    "text": "Story time"
+  }, {
+    "depth": 2,
+    "slug": "hashing",
+    "text": "Hashing"
+  }, {
+    "depth": 2,
+    "slug": "the-fix",
+    "text": "The Fix"
+  }, {
+    "depth": 2,
+    "slug": "suggestion",
+    "text": "Suggestion"
+  }];
+}
+const frontmatter$d = {
+  "layout": "../../layouts/BlogPost.astro",
+  "title": "Password",
+  "publishDate": "05 JUL 2022",
+  "writer": "Mark",
+  "href": "https://twitter.com/_Hopelezz",
+  "description": "What is a Password vault?",
+  "img": "/assets/images/password.jpg",
+  "alt": "Password",
+  "tags": "passwords, vault, hash, recall, security"
+};
+
+const MDXLayout$d = async function ({
+  children
+}) {
+  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  return createVNode(Layout, {
+    content: {
+      "title": "Password",
+      "publishDate": "05 JUL 2022",
+      "writer": "Mark",
+      "href": "https://twitter.com/_Hopelezz",
+      "description": "What is a Password vault?",
+      "img": "/assets/images/password.jpg",
+      "alt": "Password",
+      "tags": "passwords, vault, hash, recall, security"
+    },
+    children: children
+  });
+};
+
+function _createMdxContent$d(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    p: "p",
+    h3: "h3",
+    strong: "strong",
+    blockquote: "blockquote",
+    pre: "pre",
+    div: "div",
+    code: "code",
+    span: "span",
+    a: "a",
+    em: "em"
+  }, props.components);
+
+  return createVNode(Fragment, {
+    children: [createVNode("img", {
+      src: "https://imgs.xkcd.com/comics/password_strength.png",
+      width: "80%",
+      alt: "Astro"
+    }), "\n", createVNode(_components.h2, {
+      id: "early-morning",
+      children: "Early Morning\u2026"
+    }), "\n", createVNode(_components.p, {
+      children: "My mom messaged me one morning asking, \u201CWhat is a  Password vault?\u201D"
+    }), "\n", createVNode(_components.h3, {
+      id: "tldr",
+      children: createVNode(_components.strong, {
+        children: "TLDR:"
+      })
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: ["A Password vault is a collection of passwords that you can use to log into a website. ", createVNode("br", {}), " But you came here for something a bit more\u2026 complicated."]
+      }), "\n"]
+    }), "\n", createVNode(_components.h3, {
+      id: "long-version",
+      children: createVNode(_components.strong, {
+        children: "Long version:"
+      })
+    }), "\n", createVNode(_components.p, {
+      children: "To start off we first need to break down what a password is. According to Webster:"
+    }), "\n", createVNode(_components.pre, {
+      className: "shiki dracula",
+      style: {
+        backgroundColor: "#282A36",
+        color: "#F8F8F2"
+      },
+      children: [createVNode(_components.div, {
+        className: "language-id",
+        children: "markdown"
+      }), createVNode(_components.div, {
+        className: "code-container",
+        children: createVNode(_components.code, {
+          children: [createVNode(_components.div, {
+            className: "line",
+            children: createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "Definition of password"
+            })
+          }), createVNode(_components.div, {
+            className: "line"
+          }), createVNode(_components.div, {
+            className: "line",
+            children: createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "1: something that enables one to pass or gain admission:"
+            })
+          }), createVNode(_components.div, {
+            className: "line",
+            children: createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "such as a spoken word or phrase required to pass by a guard"
+            })
+          })]
+        })
+      })]
+    }), "\n", createVNode(_components.p, {
+      children: "Passwords are these things we\u2019re all plagued with within this new age of tech. Having to remember every unique password can be a pain. Yet, using one of them for all your accounts isn\u2019t recommended. What\u2019s the fix?"
+    }), "\n", createVNode(_components.p, {
+      children: ["We know currently, that passwords aren\u2019t supposed to be simple. Oh, and they should contain numbers, symbols, and letters. ", createVNode(_components.code, {
+        children: "but why?"
+      }), " I hear you say. Hold on, let\u2019s rewind a bit. Like everything, there\u2019s a history to it, right? Well, passwords, don\u2019t have a definitive date. Some speculate it was MIT  when they created the first time-sharing system."]
+    }), "\n", createVNode(_components.h2, {
+      id: "story-time",
+      children: "Story time"
+    }), "\n", createVNode(_components.p, {
+      children: ["Emerging onto the stage a wizard performing magic goes by the name of Robert Morris. To set the stage there is a realm called Unix, an operating system that was first developed in the 1960s. Morris conjured a process known as ", createVNode(_components.code, {
+        children: "Hashing"
+      }), ". Not the same thing used for getting stoned; although they may have been at the time. His son later created the ", createVNode(_components.a, {
+        href: "https://wikipedia.org/wiki/Morris_worm",
+        children: "Morris Worm"
+      }), " on November 2, 1988, with the hashing concept. This infected large groups of systems. Its intended use was to see the size of the internet by exploiting loopholes in the codebase of machines. Doesn\u2019t sound like a bad idea, but it didn\u2019t work quite as expected\u2026 leading to the first felony conviction of its kind."]
+    }), "\n", createVNode(_components.p, {
+      children: ["Skipping a few years we get to the serious concerns for Password\u2026 theft. Such as Email accounts, MSN messengers, Geocities, Myspace, Blogger, Xanga, AIM, Yahoo, Hotmail, AOL\u2026 Remembers these? These all came with the advent of the internet created by Al Gore\u2026 Whoa\u2026 ", createVNode(_components.em, {
+        children: "looks at script"
+      }), ", wait one sec checking sources. Never mind, he horribly misquoted. Sources believe XEROX stumbled upon the concept of the internet without knowing what size it would become. So we have the internet and passwords are being encrypted by hashes\u2026"]
+    }), "\n", createVNode(_components.h2, {
+      id: "hashing",
+      children: "Hashing"
+    }), "\n", createVNode(_components.p, {
+      children: "What even are hashes? Don\u2019t freak out\u2026Breath. You\u2019re about to see a long string of letters and numbers. This is intentional! You don\u2019t have to memorize this or even read it. Just know it\u2019s a random string of characters."
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: ["Word 1: ", createVNode("br", {}), "\r\nhash(\u201Chello\u201D) = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"]
+      }), "\n"]
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: ["Word 2: ", createVNode("br", {}), "\r\nhash(\u201Chbllo\u201D) = 58756879c05c68dfac9866712fad6a93f8146f337a69afe7dd238f3364946366"]
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: ["You probably went \u201Cwait\u2026 if someone else uses the same password then they have the encryption code too.\u201D CORRECT! They were until companies banded together and started a process called ", createVNode(_components.code, {
+        children: "SALT"
+      }), ". By adding a header (like multiplying it or double encrypting it) to the password it varies the hash like so:"]
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: "Remember this?\r\nhash(\u201Chello\u201D) = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "Let\u2019s sprinkle it with SALT. The SALT is a random string of letters and numbers added to the word"
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: "Hash example 1:\r\nhash(\u201Chello\u201D + \u201CQxLUF1bgIAdeQX\u201D) = 9e209040c863f84a31e719795b2577523954739fe5ed3b58a75cff2127075ed1"
+      }), "\n"]
+    }), "\n", createVNode("br", {}), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: "Hash example 2:\r\n(\u201Chello\u201D + \u201Cbv5PehSMfV11Cd\u201D) = d1d3ec2e6f20fd420d50e2642992841d8338a314b8ea157c9e18477aaef226ab"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: ["This prevented hackers from using banks of passwords like ", createVNode(_components.a, {
+        href: "https://en.wikipedia.org/wiki/Dictionary_attack",
+        children: "dictionary attacks"
+      }), ", which use lookup tables\u2026 ", createVNode(_components.em, {
+        children: "Those perverts"
+      }), "!"]
+    }), "\n", createVNode(_components.p, {
+      children: ["There have since been many other alternatives to the hashing system. For example: Password-Based Key Derivation Function 1 and 2 or ", createVNode(_components.a, {
+        href: "https://en.wikipedia.org/wiki/PBKDF2",
+        children: "PBKDF2"
+      }), " for short."]
+    }), "\n", createVNode(_components.blockquote, {
+      children: ["\n", createVNode(_components.p, {
+        children: "Wiki: PBKDF2 applies a pseudorandom function, such as hash-based message authentication code (HMAC), to the input password or passphrase along with a salt value and repeats the process many times to produce a derived key, which can then be used as a cryptographic key in subsequent operations."
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "In short, the SALT is repeated many times to create a key."
+    }), "\n", createVNode(_components.h2, {
+      id: "the-fix",
+      children: "The Fix"
+    }), "\n", createVNode(_components.p, {
+      children: "We have a lot of passwords, but we don\u2019t want to recall all them. On top of that each should be unique. In comes the advent of Password Managers a.k.a. vaults."
+    }), "\n", createVNode(_components.p, {
+      children: "The majority of vaults encrypt passwords along with other information such as Credit Cards, addresses, and so on. Some even generate strong passwords for you to use and recalls them so you don\u2019t have to remember what they were. Assuming you are on the same device or have linked your device to the vault."
+    }), "\n", createVNode(_components.p, {
+      children: ["\u201CBut this still doesn\u2019t tell me what app to use!?!\u201D ", createVNode(_components.em, {
+        children: "I hear you mom"
+      })]
+    }), "\n", createVNode(_components.p, {
+      children: "There is a lot to choose from, but these are the ones used the most."
+    }), "\n", createVNode(_components.p, {
+      children: "Truth is if you\u2019ve been using Google Chrome for any period of time you\u2019re most likely already using one. Google Password Manager is a website password manage. This feature is baked into the Google Chrome web browser. Includes generated unique, secure passwords for each website you visit as well as. check if any of the passwords you\u2019re using online have been compromised in a data security breach."
+    }), "\n", createVNode(_components.p, {
+      children: "LastPass is a cloud-based manager. Allowing you to access your passwords regardless of the device you\u2019re on."
+    }), "\n", createVNode(_components.p, {
+      children: "KeePass is a locally stored manager. Meaning you need the device you\u2019re on to log into the account."
+    }), "\n", createVNode(_components.p, {
+      children: "Some apps has the ability refence Google, Facebook, Twitter, etc accounts. To help reduce the total number passwords."
+    }), "\n", createVNode(_components.h2, {
+      id: "suggestion",
+      children: "Suggestion"
+    }), "\n", createVNode(_components.p, {
+      children: "Recall the comic strip in the beginning?"
+    }), "\n", createVNode(_components.p, {
+      children: "This one:"
+    }), "\n", createVNode("img", {
+      src: "https://imgs.xkcd.com/comics/password_strength.png",
+      width: "80%",
+      alt: "Astro"
+    }), "\n", createVNode(_components.p, {
+      children: ["It memes on the idea that ", createVNode(_components.code, {
+        children: "Tr0ub4dor&3"
+      }), " is far harder to recall than ", createVNode(_components.code, {
+        children: "correcthorsebatterystaple"
+      }), ". This is true!"]
+    }), "\n", createVNode(_components.p, {
+      children: [createVNode(_components.code, {
+        children: "1MillionBabyParrots!"
+      }), " is still a viable password, readable, and provides a higher level of security than something like ", createVNode(_components.code, {
+        children: "Tr0ub4dor&3"
+      }), "."]
+    })]
+  });
+}
+
+function MDXContent$d(props = {}) {
+  return createVNode(MDXLayout$d, { ...props,
+    children: createVNode(_createMdxContent$d, { ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$d, "astro:jsx");
+const url$d = "/blog/1-password";
+const file$d = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/1-password.mdx";
+
+const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	getHeadings: getHeadings$d,
+	frontmatter: frontmatter$d,
+	default: MDXContent$d,
+	url: url$d,
+	file: file$d
+}, Symbol.toStringTag, { value: 'Module' }));
+
+function getHeadings$c() {
+  return [{
+    "depth": 2,
+    "slug": "the-concept",
+    "text": "The Concept"
+  }];
+}
+const frontmatter$c = {
+  "layout": "../../layouts/BlogPost.astro",
+  "title": "A Start",
   "publishDate": "16 JUL 2022",
   "writer": "John",
   "href": "https://twitter.com/_Hopelezz",
@@ -2646,13 +3596,13 @@ const frontmatter$f = {
   "tags": "A New Start"
 };
 
-const MDXLayout$e = async function ({
+const MDXLayout$c = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.4818ac13.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
   return createVNode(Layout, {
     content: {
-      "title": "Most Recent Post Button... A Start",
+      "title": "A Start",
       "publishDate": "16 JUL 2022",
       "writer": "John",
       "href": "https://twitter.com/_Hopelezz",
@@ -2665,10 +3615,10 @@ const MDXLayout$e = async function ({
   });
 };
 
-function _createMdxContent$e(props) {
+function _createMdxContent$c(props) {
   const _components = Object.assign({
-    h2: "h2",
     p: "p",
+    h2: "h2",
     code: "code",
     pre: "pre",
     div: "div",
@@ -2677,24 +3627,23 @@ function _createMdxContent$e(props) {
   }, props.components);
 
   return createVNode(Fragment, {
-    children: [createVNode(_components.h2, {
+    children: [createVNode(_components.p, {
+      children: "Here I am with a freshly minted Blog using the Astro template. It\u2019s rather plain and doesn\u2019t have any content features. This is still pre-release Astro and things are bound to change."
+    }), "\n", createVNode(_components.p, {
+      children: "I have just created a simple navigation bar. Nothing over the top. I have what I\u2019m referring to as Dashboard that takes you to the front page and links to my social sites. I want something I can modify just to get my head around the way Astros framework works."
+    }), "\n", createVNode(_components.h2, {
       id: "the-concept",
       children: "The Concept"
     }), "\n", createVNode(_components.p, {
-      children: "I had a navigation bar but nothing posted to it aside from what I was referring to as Dashboard that took you to the front page and links to my social sites. I wanted to add a bit of complexity and decided on something fairly simple just to get my head around the way Astros framework works."
-    }), "\n", createVNode(_components.h2, {
-      id: "how-it-works",
-      children: "How it works"
-    }), "\n", createVNode(_components.p, {
-      children: ["As soon as you press the ", createVNode(_components.code, {
+      children: ["To create a button that takes the user to the most recent post. I\u2019ll call it ", createVNode(_components.code, {
         children: "Most Recent"
-      }), " button on the Nav bar it\u2019s linked to the latest posts and published dates of all the posts. This is done by using the ", createVNode(_components.code, {
-        children: "publishDate"
-      }), " property field in the frontmatter of the ", createVNode(_components.code, {
-        children: ".md"
-      }), " file. This is a date in the format ", createVNode(_components.code, {
-        children: "DD MM YYYY"
-      }), "."]
+      }), " for now.\r\nAs soon as you press the button it\u2019ll take the array of posts map them by publishDate and return from the array the first item."]
+    }), "\n", createVNode(_components.p, {
+      children: "Astro is a framework that blurs the lines between HTML, CSS and JavaScript. They do this by creating a .astro file format that places all three languages in the same file. In my opinion, this seems extremely intuitive and easy to keep track of everything component, page, and layout related. In addition, built into .astro files it has what the developers are calling frontmatter. This is a way of running serverside code that is run before the page is rendered. Allowing you to pass details from file to file. More on that in a moment."
+    }), "\n", createVNode(_components.p, {
+      children: "To start I have a plain markdown file with a bit of frontmatter giving us basic details about the page. What layout and component it\u2019s using, the title, publishDate, etc."
+    }), "\n", createVNode(_components.p, {
+      children: "Like so:"
     }), "\n", createVNode(_components.pre, {
       className: "shiki dracula",
       style: {
@@ -2782,7 +3731,7 @@ function _createMdxContent$e(props) {
     }), "\n", createVNode(_components.p, {
       children: ["This ", createVNode(_components.code, {
         children: "publishDate"
-      }), " field is already used to sort all the posts by date to show the users the most recent post first on the front page. This bit of code was already supplied with the Basic Blog template provided by the Astro community."]
+      }), " field is already used to sort all the posts by date to sort the posts. This bit of code was already supplied with the Blog template."]
     }), "\n", createVNode(_components.pre, {
       className: "shiki dracula",
       style: {
@@ -3008,7 +3957,11 @@ function _createMdxContent$e(props) {
         })
       })]
     }), "\n", createVNode(_components.p, {
-      children: "I then use:"
+      children: ["This means the ", createVNode(_components.code, {
+        children: "allPosts"
+      }), " variable is an array of all post objects (including frontmatter) that\u2019s already sorted. Making my job that much easier!"]
+    }), "\n", createVNode(_components.p, {
+      children: "With a bit of JavaScript, I can specify which item in the array I want to pull out."
     }), "\n", createVNode(_components.pre, {
       className: "shiki dracula",
       style: {
@@ -3037,7 +3990,7 @@ function _createMdxContent$e(props) {
               style: {
                 color: "#F8F8F2"
               },
-              children: " mostRecentPost "
+              children: " mostRecent "
             }), createVNode(_components.span, {
               style: {
                 color: "#FF79C6"
@@ -3063,11 +4016,11 @@ function _createMdxContent$e(props) {
         })
       })]
     }), "\n", createVNode(_components.p, {
-      children: "To get all the information about the most recent post. With this, I can return the URL route to the button."
+      children: "Now I have the data for the post just need to figure out how to link it."
     }), "\n", createVNode(_components.p, {
-      children: ["Now that I have a variable with just a single post object I can pass its URL property to the components ", createVNode(_components.code, {
-        children: "href"
-      }), " property. This will then link the button to the most recent post."]
+      children: "Because the SideBar is a component in the index.html file I\u2019ll need to pass this property to the component."
+    }), "\n", createVNode(_components.p, {
+      children: "I can do this by either passing in the whole post object or just single properties of information."
     }), "\n", createVNode(_components.pre, {
       className: "shiki dracula",
       style: {
@@ -3091,7 +4044,7 @@ function _createMdxContent$e(props) {
               style: {
                 color: "#8BE9FD"
               },
-              children: "LeftSidebar"
+              children: "Sidebar"
             }), createVNode(_components.span, {
               style: {
                 color: "#F8F8F2"
@@ -3101,7 +4054,7 @@ function _createMdxContent$e(props) {
               style: {
                 color: "#50FA7B"
               },
-              children: "mostRecentBlogPost"
+              children: "mostRecent"
             }), createVNode(_components.span, {
               style: {
                 color: "#FF79C6"
@@ -3111,7 +4064,7 @@ function _createMdxContent$e(props) {
               style: {
                 color: "#F8F8F2"
               },
-              children: "mostRecentBlogPost"
+              children: "mostRecent"
             }), createVNode(_components.span, {
               style: {
                 color: "#FF79C6"
@@ -3127,9 +4080,11 @@ function _createMdxContent$e(props) {
         })
       })]
     }), "\n", createVNode(_components.p, {
-      children: ["I decided to name the href property ", createVNode(_components.code, {
-        children: "mostRecentPost"
-      }), " because inside the LeftSidebar component I have an anchor that will read:"]
+      children: "For now, I\u2019ve decided to pass in the whole post object."
+    }), "\n", createVNode(_components.p, {
+      children: "In the component folder, I have my SideBar with an unordered list of links to my social sites and the homepage. For this blog post, I\u2019ll just specify the link and the frontmatter specific to the component."
+    }), "\n", createVNode(_components.p, {
+      children: "Let\u2019s copy one of those\u2026and here we are!"
     }), "\n", createVNode(_components.pre, {
       className: "shiki dracula",
       style: {
@@ -3138,11 +4093,70 @@ function _createMdxContent$e(props) {
       },
       children: [createVNode(_components.div, {
         className: "language-id",
-        children: "html"
+        children: "astro"
       }), createVNode(_components.div, {
         className: "code-container",
         children: createVNode(_components.code, {
-          children: createVNode(_components.div, {
+          children: [createVNode(_components.div, {
+            className: "line",
+            children: createVNode(_components.span, {
+              style: {
+                color: "#6272A4"
+              },
+              children: "---"
+            })
+          }), createVNode(_components.div, {
+            className: "line",
+            children: [createVNode(_components.span, {
+              style: {
+                color: "#FF79C6"
+              },
+              children: "const"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: " {mostRecent}  "
+            }), createVNode(_components.span, {
+              style: {
+                color: "#FF79C6"
+              },
+              children: "="
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: " Astro.props;"
+            })]
+          }), createVNode(_components.div, {
+            className: "line",
+            children: createVNode(_components.span, {
+              style: {
+                color: "#6272A4"
+              },
+              children: "---"
+            })
+          }), createVNode(_components.div, {
+            className: "line"
+          }), createVNode(_components.div, {
+            className: "line",
+            children: [createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "<"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#FF79C6"
+              },
+              children: "div"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: ">"
+            })]
+          }), createVNode(_components.div, {
             className: "line",
             children: [createVNode(_components.span, {
               style: {
@@ -3171,14 +4185,9 @@ function _createMdxContent$e(props) {
               children: "="
             }), createVNode(_components.span, {
               style: {
-                color: "#F1FA8C"
-              },
-              children: "{mostRecentPost.url}"
-            }), createVNode(_components.span, {
-              style: {
                 color: "#F8F8F2"
               },
-              children: ">Most Recent Post</"
+              children: "{mostRecent.url}>Most Recent</"
             }), createVNode(_components.span, {
               style: {
                 color: "#FF79C6"
@@ -3190,14 +4199,38 @@ function _createMdxContent$e(props) {
               },
               children: ">"
             })]
-          })
+          }), createVNode(_components.div, {
+            className: "line",
+            children: [createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: "</"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#FF79C6"
+              },
+              children: "div"
+            }), createVNode(_components.span, {
+              style: {
+                color: "#F8F8F2"
+              },
+              children: ">"
+            })]
+          }), createVNode(_components.div, {
+            className: "line"
+          })]
         })
       })]
     }), "\n", createVNode(_components.p, {
-      children: "making the href property more concise."
+      children: ["Making the ", createVNode(_components.code, {
+        children: "href"
+      }), " property more concise."]
     }), "\n", createVNode(_components.blockquote, {
       children: ["\n", createVNode(_components.p, {
-        children: ["Update: I have since modified this by moving the fetch command inside a function of an api.astro file and splitting my blog into blog and book review folders. This is to make it easier to manage the blog and bookreview posts separately. When I need the props for my posts I import the function from the utils file and pass it to the ", createVNode(_components.code, {
+        children: ["Update: I have since modified this by moving the fetch command inside a function of an ", createVNode(_components.code, {
+          children: "api.astro"
+        }), " file and splitting my blog into blog and book review folders. This is to make it easier to manage the blog and book review posts separately. When I need the props for my posts I import the function from the utils file and pass it to the ", createVNode(_components.code, {
           children: "blogPosts"
         }), " object."]
       }), "\n"]
@@ -3320,492 +4353,6 @@ function _createMdxContent$e(props) {
   });
 }
 
-function MDXContent$e(props = {}) {
-  return createVNode(MDXLayout$e, { ...props,
-    children: createVNode(_createMdxContent$e, { ...props
-    })
-  });
-}
-
-__astro_tag_component__(getHeadings$f, "astro:jsx");
-const url$f = "/blog/4-most-recent-post-button";
-const file$f = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/4-most-recent-post-button.mdx";
-
-const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	getHeadings: getHeadings$f,
-	frontmatter: frontmatter$f,
-	default: MDXContent$e,
-	url: url$f,
-	file: file$f
-}, Symbol.toStringTag, { value: 'Module' }));
-
-function getHeadings$e() {
-  return [{
-    "depth": 1,
-    "slug": "todo-create-post-on-two-factor-authentication-to-go-with-password",
-    "text": "TODO: Create Post on Two Factor Authentication to go With Password"
-  }, {
-    "depth": 2,
-    "slug": "content",
-    "text": "Content"
-  }, {
-    "depth": 3,
-    "slug": "sub-content",
-    "text": "Sub Content"
-  }];
-}
-const frontmatter$e = {
-  "layout": "../../layouts/BlogPost.astro",
-  "title": "Two Factor Authentication",
-  "publishDate": "09 JUL 2022",
-  "writer": "Mark",
-  "href": "https://twitter.com/_Hopelezz",
-  "description": "How does Two Factor Authentication protect your account?",
-  "img": "/assets/images/twofactorauth.jpg",
-  "alt": "Security",
-  "tags": "security"
-};
-
-const MDXLayout$d = async function ({
-  children
-}) {
-  const Layout = (await import('./chunks/BlogPost.4818ac13.mjs')).default;
-  return createVNode(Layout, {
-    content: {
-      "title": "Two Factor Authentication",
-      "publishDate": "09 JUL 2022",
-      "writer": "Mark",
-      "href": "https://twitter.com/_Hopelezz",
-      "description": "How does Two Factor Authentication protect your account?",
-      "img": "/assets/images/twofactorauth.jpg",
-      "alt": "Security",
-      "tags": "security"
-    },
-    children: children
-  });
-};
-
-function _createMdxContent$d(props) {
-  const _components = Object.assign({
-    h1: "h1",
-    p: "p",
-    h2: "h2",
-    h3: "h3",
-    ul: "ul",
-    li: "li"
-  }, props.components);
-
-  return createVNode(Fragment, {
-    children: [createVNode(_components.h1, {
-      id: "todo-create-post-on-two-factor-authentication-to-go-with-password",
-      children: "TODO: Create Post on Two Factor Authentication to go With Password"
-    }), "\n", createVNode(_components.p, {
-      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offic"
-    }), "\n", createVNode(_components.h2, {
-      id: "content",
-      children: "Content"
-    }), "\n", createVNode(_components.p, {
-      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui"
-    }), "\n", createVNode(_components.h3, {
-      id: "sub-content",
-      children: "Sub Content"
-    }), "\n", createVNode(_components.p, {
-      children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,"
-    }), "\n", createVNode(_components.p, {
-      children: "consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    }), "\n", createVNode(_components.p, {
-      children: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui"
-    }), "\n", createVNode(_components.p, {
-      children: "List:"
-    }), "\n", createVNode(_components.ul, {
-      children: ["\n", createVNode(_components.li, {
-        children: "something,"
-      }), "\n", createVNode(_components.li, {
-        children: "something,"
-      }), "\n", createVNode(_components.li, {
-        children: "something"
-      }), "\n"]
-    })]
-  });
-}
-
-function MDXContent$d(props = {}) {
-  return createVNode(MDXLayout$d, { ...props,
-    children: createVNode(_createMdxContent$d, { ...props
-    })
-  });
-}
-
-__astro_tag_component__(getHeadings$e, "astro:jsx");
-const url$e = "/blog/2-two-factor-auth";
-const file$e = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/2-two-factor-auth.mdx";
-
-const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	getHeadings: getHeadings$e,
-	frontmatter: frontmatter$e,
-	default: MDXContent$d,
-	url: url$e,
-	file: file$e
-}, Symbol.toStringTag, { value: 'Module' }));
-
-function getHeadings$d() {
-  return [{
-    "depth": 2,
-    "slug": "motivation",
-    "text": "Motivation"
-  }, {
-    "depth": 2,
-    "slug": "what-frameworks-does-this-site-use",
-    "text": "What Frameworks Does This Site Use?"
-  }, {
-    "depth": 2,
-    "slug": "the-start",
-    "text": "The Start"
-  }, {
-    "depth": 2,
-    "slug": "100devs",
-    "text": "100Devs"
-  }, {
-    "depth": 2,
-    "slug": "a-new-journey",
-    "text": "A New Journey"
-  }, {
-    "depth": 2,
-    "slug": "learn-how-to-learn",
-    "text": "Learn How To Learn"
-  }, {
-    "depth": 1,
-    "slug": "things-i-want-to-do",
-    "text": "Things I Want To Do:"
-  }];
-}
-const frontmatter$d = {
-  "layout": "../../layouts/BlogPost.astro",
-  "title": "Part 1 - Starting an Astro Blog",
-  "publishDate": "10 JUL 2022",
-  "writer": "Mark",
-  "href": "https://twitter.com/_Hopelezz",
-  "description": "Documenting my journey in creating this website.",
-  "img": "/assets/images/Astronaut.avif",
-  "alt": "Astronaut",
-  "tags": "astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla, framework"
-};
-
-const MDXLayout$c = async function ({
-  children
-}) {
-  const Layout = (await import('./chunks/BlogPost.4818ac13.mjs')).default;
-  return createVNode(Layout, {
-    content: {
-      "title": "Part 1 - Starting an Astro Blog",
-      "publishDate": "10 JUL 2022",
-      "writer": "Mark",
-      "href": "https://twitter.com/_Hopelezz",
-      "description": "Documenting my journey in creating this website.",
-      "img": "/assets/images/Astronaut.avif",
-      "alt": "Astronaut",
-      "tags": "astro, react, svelte, vue, solidjs, preact, alpine, lit, vanilla, framework"
-    },
-    children: children
-  });
-};
-
-function _createMdxContent$c(props) {
-  const _components = Object.assign({
-    h2: "h2",
-    p: "p",
-    code: "code",
-    a: "a",
-    em: "em",
-    pre: "pre",
-    div: "div",
-    span: "span",
-    ul: "ul",
-    li: "li",
-    h1: "h1",
-    input: "input"
-  }, props.components);
-
-  return createVNode(Fragment, {
-    children: [createVNode(_components.h2, {
-      id: "motivation",
-      children: "Motivation"
-    }), "\n", createVNode(_components.p, {
-      children: ["At the time of writing this I\u2019m 3 month into my ", createVNode(_components.code, {
-        children: "Web Development"
-      }), " journey. Details of what I\u2019m capable of can be found here in my ", createVNode(_components.a, {
-        href: "aboutMe",
-        children: "About Me"
-      }), ". If that link doesn\u2019t work I\u2019ve either not created the page or a custom 404 Page\u2026 they\u2019re still under construction. See ", createVNode(_components.a, {
-        href: "#things-i-want-to-do",
-        children: "Things I want to Do"
-      }), " for more details."]
-    }), "\n", createVNode(_components.p, {
-      children: createVNode(_components.em, {
-        children: "Not gonna lie, I just learned how to make this link to a different header on the page."
-      })
-    }), "\n", createVNode(_components.pre, {
-      className: "shiki dracula",
-      style: {
-        backgroundColor: "#282A36",
-        color: "#F8F8F2"
-      },
-      children: [createVNode(_components.div, {
-        className: "language-id",
-        children: "md"
-      }), createVNode(_components.div, {
-        className: "code-container",
-        children: createVNode(_components.code, {
-          children: createVNode(_components.div, {
-            className: "line",
-            children: [createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: "["
-            }), createVNode(_components.span, {
-              style: {
-                color: "#FF79C6"
-              },
-              children: "Things I want to Do"
-            }), createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: "]("
-            }), createVNode(_components.span, {
-              style: {
-                color: "#8BE9FD"
-              },
-              children: "#things-i-want-to-do"
-            }), createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: ")"
-            })]
-          })
-        })
-      })]
-    }), "\n", createVNode(_components.p, {
-      children: "A description plus in the url part has to have #all-words-in-lower-case with hiphens between each words."
-    }), "\n", createVNode(_components.p, {
-      children: ["If you are struggling with the idea of ", createVNode(_components.code, {
-        children: "How To"
-      }), " for something like this I hope I can inspires you with this journey. Admittedly, I\u2019m winging it\u2026enjoying the process. If I break something I try to learn why it broke and how to fix it."]
-    }), "\n", createVNode(_components.h2, {
-      id: "what-frameworks-does-this-site-use",
-      children: "What Frameworks Does This Site Use?"
-    }), "\n", createVNode(_components.p, {
-      children: "This is Astro & Solidjs at the time of writting this post. However, Astro natively supports every popular framework."
-    }), "\n", createVNode(_components.ul, {
-      children: ["\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://reactjs.org/",
-          children: "React"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://svelte.dev/",
-          children: "Svelte"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://vuejs.org/",
-          children: "Vue"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://solidjs.com/",
-          children: "Solidjs"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://preactjs.com/",
-          children: "Preact"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://alpinejs.dev/",
-          children: "Alpine"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://lit.dev/",
-          children: "Lit"
-        })
-      }), "\n", createVNode(_components.li, {
-        children: createVNode(_components.a, {
-          href: "https://www.javascript.com/",
-          children: "Vanilla"
-        })
-      }), "\n"]
-    }), "\n", createVNode(_components.p, {
-      children: "Meaning, if I wanted to come back later and add anything specific I could with little to no issues!"
-    }), "\n", createVNode(_components.p, {
-      children: ["This site started out with a basic ", createVNode(_components.a, {
-        href: "https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog?file=README.md",
-        children: "Blog template"
-      }), ". By comparing the two I hope just how drastically this site has changed."]
-    }), "\n", createVNode(_components.h2, {
-      id: "the-start",
-      children: "The Start"
-    }), "\n", createVNode(_components.p, {
-      children: "At the time of writing this I\u2019m an Electrical Engineer. I love the type of work I do, but I see a figurative wall for growth.\r\nWas listening one day to a Jordan Harbringer podcast on gaining wealth the discussion pertained to the idea of skill stacking. The idea is to take multiple disciplins and combine them to gain a unquie set of skills."
-    }), "\n", createVNode(_components.p, {
-      children: "I started into Software Development with the idea that I could modify Eplan to boost my personal productivity. Eplan is an electrical CAD. It\u2019s designed to simplify the process for creating electrical schematics. Eplan has the ability to run scripts that uses its Application Programming Interface (API). Knowing this I set out to learn C# the language of Eplan."
-    }), "\n", createVNode(_components.p, {
-      children: "Half way through my course on C# my lead and coworker quit. Leaving me the last electrical engineer on the team for a multi million dollar company. Taking over the department I had more on my plate than just a few scripts. I had been on the team for a little over a year and had been strugling to use the templates that had been created by my previous team. Just a month prior I had given a presentation for a new development process. Management approved!"
-    }), "\n", createVNode(_components.p, {
-      children: "Their departure gave me the clean slate to archive all the depricated templates, clean up the parts library, and create bring forward my new templates design scheme. This took roughly 3 months to complete along with the massive workload I had just been given. That sounds like a lot of time, but I had effectively shaved off a weeks worth of time per project, increase accuracy, and readability of the schematics. Half a year later my company finally hired new replacements. I was able to for the most part keep up with the pace of the company."
-    }), "\n", createVNode(_components.p, {
-      children: "Towards the end of 2020, I was still spending my weekends slowly learning C#. Along the way I had my coworker telling me I should be looking into python. Took the bait to try and learn it. I was hooked! I quickly flew through the Code Academy course. The language felt natural to me. The only downside was that I had no real decernable direction on how to use it in my work."
-    }), "\n", createVNode(_components.h2, {
-      id: "100devs",
-      children: "100Devs"
-    }), "\n", createVNode(_components.p, {
-      children: "I would from time to time watch this programmer on Twitch called MidnightSimon. One evening he wasn\u2019t on so I went looking for some other streamer to watch. I stumbled onto a streamer who went by LearnWithLeon. He was talking about how to network and market yourself. This seemed to be exactly what I was looking for\u2026 except something seemed off. Leon was teaching Web Development."
-    }), "\n", createVNode(_components.h2, {
-      id: "a-new-journey",
-      children: "A New Journey"
-    }), "\n", createVNode(_components.p, {
-      children: "Here I am, a newly minted Python programmer watching a course on how to get a job as a FullStack JavaScript Developer. A few classes later I finally caved in and started from class one on his youtube channel."
-    }), "\n", createVNode(_components.h2, {
-      id: "learn-how-to-learn",
-      children: "Learn How To Learn"
-    }), "\n", createVNode(_components.p, {
-      children: "The first couple of classes were focused on learning how to learn and dealing with mental and physical health. This became pretty relavent when going through the course. Its set at a pretty decent pace, but the workload was heavy. I went into it knowing the basic software logics from my previous courses."
-    }), "\n", createVNode(_components.h1, {
-      id: "things-i-want-to-do",
-      children: "Things I Want To Do:"
-    }), "\n", createVNode(_components.ul, {
-      className: "contains-task-list",
-      children: ["\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Turn the Logo into an SVG version"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          checked: true,
-          disabled: true
-        }), " Create a section for Book Reviews\n", createVNode(_components.ul, {
-          className: "contains-task-list",
-          children: ["\n", createVNode(_components.li, {
-            className: "task-list-item",
-            children: [createVNode(_components.input, {
-              type: "checkbox",
-              disabled: true
-            }), " Add images to Post Preview."]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a ", createVNode(_components.code, {
-          children: "About Me"
-        }), " page"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a ", createVNode(_components.code, {
-          children: "Hire Me"
-        }), " page"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a ", createVNode(_components.code, {
-          children: "404"
-        }), " page"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a Dark Theme."]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Searchbar for posts.\n", createVNode(_components.ul, {
-          children: ["\n", createVNode(_components.li, {
-            children: "Invert the colors and make everything Glow."
-          }), "\n"]
-        }), "\n"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          checked: true,
-          disabled: true
-        }), " Fix the ", createVNode(_components.code, {
-          children: "Most Recent Posts"
-        }), " button on the LeftSideBar"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a Search Feature to query the posts for keywords"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Change the way ", createVNode(_components.code, {
-          children: "Lists"
-        }), " look"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Change the way ", createVNode(_components.code, {
-          children: "Check Boxes"
-        }), " look"]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Make the Page More responsive to Mobile."]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Make the Page More accessible to everyone."]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Add a RightSideBar that shows the ", createVNode(_components.code, {
-          children: "In This Post"
-        }), " headers."]
-      }), "\n", createVNode(_components.li, {
-        className: "task-list-item",
-        children: [createVNode(_components.input, {
-          type: "checkbox",
-          disabled: true
-        }), " Create a template for the Astro Framework based on what I\u2019ve learned here"]
-      }), "\n"]
-    })]
-  });
-}
-
 function MDXContent$c(props = {}) {
   return createVNode(MDXLayout$c, { ...props,
     children: createVNode(_createMdxContent$c, { ...props
@@ -3813,296 +4360,15 @@ function MDXContent$c(props = {}) {
   });
 }
 
-__astro_tag_component__(getHeadings$d, "astro:jsx");
-const url$d = "/blog/3-starting-astro";
-const file$d = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/3-starting-astro.mdx";
-
-const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	getHeadings: getHeadings$d,
-	frontmatter: frontmatter$d,
-	default: MDXContent$c,
-	url: url$d,
-	file: file$d
-}, Symbol.toStringTag, { value: 'Module' }));
-
-function getHeadings$c() {
-  return [{
-    "depth": 2,
-    "slug": "early-morning",
-    "text": "Early Morning\u2026"
-  }, {
-    "depth": 3,
-    "slug": "tldr",
-    "text": "TLDR:"
-  }, {
-    "depth": 3,
-    "slug": "long-version",
-    "text": "Long version:"
-  }, {
-    "depth": 2,
-    "slug": "story-time",
-    "text": "Story time"
-  }, {
-    "depth": 2,
-    "slug": "hashing",
-    "text": "Hashing"
-  }, {
-    "depth": 2,
-    "slug": "the-fix",
-    "text": "The Fix"
-  }, {
-    "depth": 2,
-    "slug": "suggestion",
-    "text": "Suggestion"
-  }];
-}
-const frontmatter$c = {
-  "layout": "../../layouts/BlogPost.astro",
-  "title": "Password",
-  "publishDate": "05 JUL 2022",
-  "writer": "Mark",
-  "href": "https://twitter.com/_Hopelezz",
-  "description": "What is a Password vault?",
-  "img": "/assets/images/password.jpg",
-  "alt": "Password",
-  "tags": "passwords, vault, hash, recall, security"
-};
-
-const MDXLayout$b = async function ({
-  children
-}) {
-  const Layout = (await import('./chunks/BlogPost.4818ac13.mjs')).default;
-  return createVNode(Layout, {
-    content: {
-      "title": "Password",
-      "publishDate": "05 JUL 2022",
-      "writer": "Mark",
-      "href": "https://twitter.com/_Hopelezz",
-      "description": "What is a Password vault?",
-      "img": "/assets/images/password.jpg",
-      "alt": "Password",
-      "tags": "passwords, vault, hash, recall, security"
-    },
-    children: children
-  });
-};
-
-function _createMdxContent$b(props) {
-  const _components = Object.assign({
-    h2: "h2",
-    p: "p",
-    h3: "h3",
-    strong: "strong",
-    blockquote: "blockquote",
-    pre: "pre",
-    div: "div",
-    code: "code",
-    span: "span",
-    a: "a",
-    em: "em"
-  }, props.components);
-
-  return createVNode(Fragment, {
-    children: [createVNode("img", {
-      src: "https://imgs.xkcd.com/comics/password_strength.png",
-      width: "80%",
-      alt: "Astro"
-    }), "\n", createVNode(_components.h2, {
-      id: "early-morning",
-      children: "Early Morning\u2026"
-    }), "\n", createVNode(_components.p, {
-      children: "My mom messaged me one morning asking, \u201CWhat is a  Password vault?\u201D"
-    }), "\n", createVNode(_components.h3, {
-      id: "tldr",
-      children: createVNode(_components.strong, {
-        children: "TLDR:"
-      })
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: ["A Password vault is a collection of passwords that you can use to log into a website. ", createVNode("br", {}), " But you came here for something a bit more\u2026 complicated."]
-      }), "\n"]
-    }), "\n", createVNode(_components.h3, {
-      id: "long-version",
-      children: createVNode(_components.strong, {
-        children: "Long version:"
-      })
-    }), "\n", createVNode(_components.p, {
-      children: "To start off we first need to break down what a password is. According to Webster:"
-    }), "\n", createVNode(_components.pre, {
-      className: "shiki dracula",
-      style: {
-        backgroundColor: "#282A36",
-        color: "#F8F8F2"
-      },
-      children: [createVNode(_components.div, {
-        className: "language-id",
-        children: "markdown"
-      }), createVNode(_components.div, {
-        className: "code-container",
-        children: createVNode(_components.code, {
-          children: [createVNode(_components.div, {
-            className: "line",
-            children: createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: "Definition of password"
-            })
-          }), createVNode(_components.div, {
-            className: "line"
-          }), createVNode(_components.div, {
-            className: "line",
-            children: createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: "1: something that enables one to pass or gain admission:"
-            })
-          }), createVNode(_components.div, {
-            className: "line",
-            children: createVNode(_components.span, {
-              style: {
-                color: "#F8F8F2"
-              },
-              children: "such as a spoken word or phrase required to pass by a guard"
-            })
-          })]
-        })
-      })]
-    }), "\n", createVNode(_components.p, {
-      children: "Passwords are these things we\u2019re all plagued with within this new age of tech. Having to remember every unique password can be a pain. Yet, using one of them for all your accounts isn\u2019t recommended. What\u2019s the fix?"
-    }), "\n", createVNode(_components.p, {
-      children: ["We know currently, that passwords aren\u2019t supposed to be simple. Oh, and they should contain numbers, symbols, and letters. ", createVNode(_components.code, {
-        children: "but why?"
-      }), " I hear you say. Hold on, let\u2019s rewind a bit. Like everything, there\u2019s a history to it, right? Well, passwords, don\u2019t have a definitive date. Some speculate it was MIT  when they created the first time-sharing system."]
-    }), "\n", createVNode(_components.h2, {
-      id: "story-time",
-      children: "Story time"
-    }), "\n", createVNode(_components.p, {
-      children: ["Emerging onto the stage a wizard performing magic goes by the name of Robert Morris. To set the stage there is a realm called Unix, an operating system that was first developed in the 1960s. Morris conjured a process known as ", createVNode(_components.code, {
-        children: "Hashing"
-      }), ". Not the same thing used for getting stoned; although they may have been at the time. His son later created the ", createVNode(_components.a, {
-        href: "https://wikipedia.org/wiki/Morris_worm",
-        children: "Morris Worm"
-      }), " on November 2, 1988, with the hashing concept. This infected large groups of systems. Its intended use was to see the size of the internet by exploiting loopholes in the codebase of machines. Doesn\u2019t sound like a bad idea, but it didn\u2019t work quite as expected\u2026 leading to the first felony conviction of its kind."]
-    }), "\n", createVNode(_components.p, {
-      children: ["Skipping a few years we get to the serious concerns for Password\u2026 theft. Such as Email accounts, MSN messengers, Geocities, Myspace, Blogger, Xanga, AIM, Yahoo, Hotmail, AOL\u2026 Remembers these? These all came with the advent of the internet created by Al Gore\u2026 Whoa\u2026 ", createVNode(_components.em, {
-        children: "looks at script"
-      }), ", wait one sec checking sources. Never mind, he horribly misquoted. Sources believe XEROX stumbled upon the concept of the internet without knowing what size it would become. So we have the internet and passwords are being encrypted by hashes\u2026"]
-    }), "\n", createVNode(_components.h2, {
-      id: "hashing",
-      children: "Hashing"
-    }), "\n", createVNode(_components.p, {
-      children: "What even are hashes? Don\u2019t freak out\u2026Breath. You\u2019re about to see a long string of letters and numbers. This is intentional! You don\u2019t have to memorize this or even read it. Just know it\u2019s a random string of characters."
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: ["Word 1: ", createVNode("br", {}), "\r\nhash(\u201Chello\u201D) = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"]
-      }), "\n"]
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: ["Word 2: ", createVNode("br", {}), "\r\nhash(\u201Chbllo\u201D) = 58756879c05c68dfac9866712fad6a93f8146f337a69afe7dd238f3364946366"]
-      }), "\n"]
-    }), "\n", createVNode(_components.p, {
-      children: ["You probably went \u201Cwait\u2026 if someone else uses the same password then they have the encryption code too.\u201D CORRECT! They were until companies banded together and started a process called ", createVNode(_components.code, {
-        children: "SALT"
-      }), ". By adding a header (like multiplying it or double encrypting it) to the password it varies the hash like so:"]
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: "Remember this?\r\nhash(\u201Chello\u201D) = 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
-      }), "\n"]
-    }), "\n", createVNode(_components.p, {
-      children: "Let\u2019s sprinkle it with SALT. The SALT is a random string of letters and numbers added to the word"
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: "Hash example 1:\r\nhash(\u201Chello\u201D + \u201CQxLUF1bgIAdeQX\u201D) = 9e209040c863f84a31e719795b2577523954739fe5ed3b58a75cff2127075ed1"
-      }), "\n"]
-    }), "\n", createVNode("br", {}), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: "Hash example 2:\r\n(\u201Chello\u201D + \u201Cbv5PehSMfV11Cd\u201D) = d1d3ec2e6f20fd420d50e2642992841d8338a314b8ea157c9e18477aaef226ab"
-      }), "\n"]
-    }), "\n", createVNode(_components.p, {
-      children: ["This prevented hackers from using banks of passwords like ", createVNode(_components.a, {
-        href: "https://en.wikipedia.org/wiki/Dictionary_attack",
-        children: "dictionary attacks"
-      }), ", which use lookup tables\u2026 ", createVNode(_components.em, {
-        children: "Those perverts"
-      }), "!"]
-    }), "\n", createVNode(_components.p, {
-      children: ["There have since been many other alternatives to the hashing system. For example: Password-Based Key Derivation Function 1 and 2 or ", createVNode(_components.a, {
-        href: "https://en.wikipedia.org/wiki/PBKDF2",
-        children: "PBKDF2"
-      }), " for short."]
-    }), "\n", createVNode(_components.blockquote, {
-      children: ["\n", createVNode(_components.p, {
-        children: "Wiki: PBKDF2 applies a pseudorandom function, such as hash-based message authentication code (HMAC), to the input password or passphrase along with a salt value and repeats the process many times to produce a derived key, which can then be used as a cryptographic key in subsequent operations."
-      }), "\n"]
-    }), "\n", createVNode(_components.p, {
-      children: "In short, the SALT is repeated many times to create a key."
-    }), "\n", createVNode(_components.h2, {
-      id: "the-fix",
-      children: "The Fix"
-    }), "\n", createVNode(_components.p, {
-      children: "We have a lot of passwords, but we don\u2019t want to recall all them. On top of that each should be unique. In comes the advent of Password Managers a.k.a. vaults."
-    }), "\n", createVNode(_components.p, {
-      children: "The majority of vaults encrypt passwords along with other information such as Credit Cards, addresses, and so on. Some even generate strong passwords for you to use and recalls them so you don\u2019t have to remember what they were. Assuming you are on the same device or have linked your device to the vault."
-    }), "\n", createVNode(_components.p, {
-      children: ["\u201CBut this still doesn\u2019t tell me what app to use!?!\u201D ", createVNode(_components.em, {
-        children: "I hear you mom"
-      })]
-    }), "\n", createVNode(_components.p, {
-      children: "There is a lot to choose from, but these are the ones used the most."
-    }), "\n", createVNode(_components.p, {
-      children: "Truth is if you\u2019ve been using Google Chrome for any period of time you\u2019re most likely already using one. Google Password Manager is a website password manage. This feature is baked into the Google Chrome web browser. Includes generated unique, secure passwords for each website you visit as well as. check if any of the passwords you\u2019re using online have been compromised in a data security breach."
-    }), "\n", createVNode(_components.p, {
-      children: "LastPass is a cloud-based manager. Allowing you to access your passwords regardless of the device you\u2019re on."
-    }), "\n", createVNode(_components.p, {
-      children: "KeePass is a locally stored manager. Meaning you need the device you\u2019re on to log into the account."
-    }), "\n", createVNode(_components.p, {
-      children: "Some apps has the ability refence Google, Facebook, Twitter, etc accounts. To help reduce the total number passwords."
-    }), "\n", createVNode(_components.h2, {
-      id: "suggestion",
-      children: "Suggestion"
-    }), "\n", createVNode(_components.p, {
-      children: "Recall the comic strip in the beginning?"
-    }), "\n", createVNode(_components.p, {
-      children: "This one:"
-    }), "\n", createVNode("img", {
-      src: "https://imgs.xkcd.com/comics/password_strength.png",
-      width: "80%",
-      alt: "Astro"
-    }), "\n", createVNode(_components.p, {
-      children: ["It memes on the idea that ", createVNode(_components.code, {
-        children: "Tr0ub4dor&3"
-      }), " is far harder to recall than ", createVNode(_components.code, {
-        children: "correcthorsebatterystaple"
-      }), ". This is true!"]
-    }), "\n", createVNode(_components.p, {
-      children: [createVNode(_components.code, {
-        children: "1MillionBabyParrots!"
-      }), " is still a viable password, readable, and provides a higher level of security than something like ", createVNode(_components.code, {
-        children: "Tr0ub4dor&3"
-      }), "."]
-    })]
-  });
-}
-
-function MDXContent$b(props = {}) {
-  return createVNode(MDXLayout$b, { ...props,
-    children: createVNode(_createMdxContent$b, { ...props
-    })
-  });
-}
-
 __astro_tag_component__(getHeadings$c, "astro:jsx");
-const url$c = "/blog/1-password";
-const file$c = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/1-password.mdx";
+const url$c = "/blog/4-a-start";
+const file$c = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/blog/4-a-start.mdx";
 
-const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$c,
 	frontmatter: frontmatter$c,
-	default: MDXContent$b,
+	default: MDXContent$c,
 	url: url$c,
 	file: file$c
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -4135,10 +4401,10 @@ const frontmatter$b = {
   "tags": "Politics, Dystopic, World View, Communist,"
 };
 
-const MDXLayout$a = async function ({
+const MDXLayout$b = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Communist Manifesto",
@@ -4155,7 +4421,7 @@ const MDXLayout$a = async function ({
   });
 };
 
-function _createMdxContent$a(props) {
+function _createMdxContent$b(props) {
   const _components = Object.assign({
     h1: "h1",
     h3: "h3",
@@ -4202,9 +4468,9 @@ function _createMdxContent$a(props) {
   });
 }
 
-function MDXContent$a(props = {}) {
-  return createVNode(MDXLayout$a, { ...props,
-    children: createVNode(_createMdxContent$a, { ...props
+function MDXContent$b(props = {}) {
+  return createVNode(MDXLayout$b, { ...props,
+    children: createVNode(_createMdxContent$b, { ...props
     })
   });
 }
@@ -4213,11 +4479,11 @@ __astro_tag_component__(getHeadings$b, "astro:jsx");
 const url$b = "/book/11-communist-manifesto";
 const file$b = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/11-communist-manifesto.mdx";
 
-const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$b,
 	frontmatter: frontmatter$b,
-	default: MDXContent$a,
+	default: MDXContent$b,
 	url: url$b,
 	file: file$b
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -4246,10 +4512,10 @@ const frontmatter$a = {
   "tags": "American science fiction, the bombing of Dresden, military fiction, war stories, World War II, World War, 1939-1945, literature and the war, war, free will and determinism, literary fiction, Fiction, Animals, Boats and boating, Juvenile fiction, Domestic animals, American fiction (fictional works by one author), Large type books, Fiction, General, Fiction, war & military, World war, 1939-1945, fiction, Classic Literature, Drama, Accessible book, Protected DAISY, library, Vonnegut, Kurt, 1922-2007, American literature, history and criticism, Destruction and pillage, Literature, American literature"
 };
 
-const MDXLayout$9 = async function ({
+const MDXLayout$a = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Slaughterhouse-Five",
@@ -4266,7 +4532,7 @@ const MDXLayout$9 = async function ({
   });
 };
 
-function _createMdxContent$9(props) {
+function _createMdxContent$a(props) {
   const _components = Object.assign({
     h1: "h1",
     h3: "h3",
@@ -4306,9 +4572,9 @@ function _createMdxContent$9(props) {
   });
 }
 
-function MDXContent$9(props = {}) {
-  return createVNode(MDXLayout$9, { ...props,
-    children: createVNode(_createMdxContent$9, { ...props
+function MDXContent$a(props = {}) {
+  return createVNode(MDXLayout$a, { ...props,
+    children: createVNode(_createMdxContent$a, { ...props
     })
   });
 }
@@ -4317,11 +4583,11 @@ __astro_tag_component__(getHeadings$a, "astro:jsx");
 const url$a = "/book/1-Slaughterhouse-Five";
 const file$a = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/1-Slaughterhouse-Five.mdx";
 
-const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$a,
 	frontmatter: frontmatter$a,
-	default: MDXContent$9,
+	default: MDXContent$a,
 	url: url$a,
 	file: file$a
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -4350,10 +4616,10 @@ const frontmatter$9 = {
   "tags": "Sci-fi, Comedy, Charming, Is-A-Movie"
 };
 
-const MDXLayout$8 = async function ({
+const MDXLayout$9 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Lord of the Flies",
@@ -4370,7 +4636,7 @@ const MDXLayout$8 = async function ({
   });
 };
 
-function _createMdxContent$8(props) {
+function _createMdxContent$9(props) {
   const _components = Object.assign({
     h1: "h1",
     h3: "h3",
@@ -4406,9 +4672,9 @@ function _createMdxContent$8(props) {
   });
 }
 
-function MDXContent$8(props = {}) {
-  return createVNode(MDXLayout$8, { ...props,
-    children: createVNode(_createMdxContent$8, { ...props
+function MDXContent$9(props = {}) {
+  return createVNode(MDXLayout$9, { ...props,
+    children: createVNode(_createMdxContent$9, { ...props
     })
   });
 }
@@ -4417,11 +4683,11 @@ __astro_tag_component__(getHeadings$9, "astro:jsx");
 const url$9 = "/book/5-lord-of-the-flies";
 const file$9 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/5-lord-of-the-flies.mdx";
 
-const _page9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$9,
 	frontmatter: frontmatter$9,
-	default: MDXContent$8,
+	default: MDXContent$9,
 	url: url$9,
 	file: file$9
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -4441,6 +4707,7 @@ const frontmatter$8 = {
   "layout": "../../layouts/BookPost.astro",
   "title": "Never Let Me Go",
   "author": "Kazuo Ishiguro",
+  "year": 2020,
   "publishDate": "20 APR 2020",
   "writer": "Mark",
   "href": "https://twitter.com/_Hopelezz",
@@ -4449,14 +4716,15 @@ const frontmatter$8 = {
   "tags": "dystopic, Melancholy, Fiction, Organ donors, Cloning, Donation of organs, tissues, Women, Literature, New York Times bestseller, Human cloning, Science fiction, psychological, science fiction, general, England, School, children, Reminiscing, Friendship, English literature"
 };
 
-const MDXLayout$7 = async function ({
+const MDXLayout$8 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Never Let Me Go",
       "author": "Kazuo Ishiguro",
+      "year": 2020,
       "publishDate": "20 APR 2020",
       "writer": "Mark",
       "href": "https://twitter.com/_Hopelezz",
@@ -4468,7 +4736,7 @@ const MDXLayout$7 = async function ({
   });
 };
 
-function _createMdxContent$7(props) {
+function _createMdxContent$8(props) {
   const _components = Object.assign({
     h1: "h1",
     h3: "h3",
@@ -4502,9 +4770,9 @@ function _createMdxContent$7(props) {
   });
 }
 
-function MDXContent$7(props = {}) {
-  return createVNode(MDXLayout$7, { ...props,
-    children: createVNode(_createMdxContent$7, { ...props
+function MDXContent$8(props = {}) {
+  return createVNode(MDXLayout$8, { ...props,
+    children: createVNode(_createMdxContent$8, { ...props
     })
   });
 }
@@ -4513,227 +4781,16 @@ __astro_tag_component__(getHeadings$8, "astro:jsx");
 const url$8 = "/book/10-never-let-me-go";
 const file$8 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/10-never-let-me-go.mdx";
 
-const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page12 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$8,
 	frontmatter: frontmatter$8,
-	default: MDXContent$7,
+	default: MDXContent$8,
 	url: url$8,
 	file: file$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$3 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro", { modules: [{ module: $$module1$2, specifier: "../Aside.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$3 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
-const $$Post = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
-  Astro2.self = $$Post;
-  const { title, author, writer, publishDate, alt, img, tags } = Astro2.props;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="page-container astro-X5PBTH2B">
-	${renderComponent($$result, "Aside", $$Aside, { "writter": writer, "class": "astro-X5PBTH2B" })}
-	<article class="article astro-X5PBTH2B">
-		<div class="astro-X5PBTH2B">
-			<div class="coffee astro-X5PBTH2B">
-				<img class="center-cropped astro-X5PBTH2B"${addAttribute(img, "src")}${addAttribute(alt, "alt")} height="100%">
-			</div>
-			<div class="details astro-X5PBTH2B">
-				<h1 class="astro-X5PBTH2B">${title}</h1>
-				<p class="astro-X5PBTH2B">${writer}</p>
-				<span class="astro-X5PBTH2B">${publishDate}  |  ${tags}</span>
-			</div>
-		</div>
-		<main class="astro-X5PBTH2B">
-			${renderSlot($$result, $$slots["default"])}
-		</main>
-	</article>
-</div>
-
-
-`;
-});
-
-const $$file$3 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/bookShelf/Post.astro";
-const $$url$3 = undefined;
-
-const $$module4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	$$metadata: $$metadata$3,
-	default: $$Post,
-	file: $$file$3,
-	url: $$url$3
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const $$metadata$2 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$2 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
-const $$Social = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
-  Astro2.self = $$Social;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="icons astro-YO5YSBEC">
-    <a href="https://twitter.com/_Hopelezz" class="ml-4 astro-YO5YSBEC" aria-label="Twitter" rel="noopener">
-      <svg class="h-6 w-6 hover:text-hot-pink astro-YO5YSBEC" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 16 16" width="16" height="16">
-        <g transform="matrix(0.6666666666666666,0,0,0.6666666666666666,0,0)" class="astro-YO5YSBEC">
-          <path d="M23.32,6.44c0.212-0.177,0.241-0.492,0.065-0.704c-0.068-0.082-0.161-0.14-0.265-0.166l-0.79-0.2 c-0.268-0.067-0.431-0.339-0.364-0.606C21.974,4.731,21.986,4.7,22,4.67l0.44-0.89c0.12-0.249,0.015-0.548-0.233-0.668 C22.099,3.06,21.976,3.049,21.86,3.08l-2,0.56c-0.151,0.044-0.314,0.014-0.44-0.08c-0.865-0.649-1.918-1-3-1c-2.761,0-5,2.239-5,5 l0,0v0.36c0.001,0.127-0.094,0.235-0.22,0.25C8.39,8.5,5.7,7.07,2.8,3.73c-0.128-0.142-0.325-0.2-0.51-0.15 C2.124,3.656,2.013,3.817,2,4C1.599,5.645,1.761,7.377,2.46,8.92c0.062,0.123,0.013,0.274-0.11,0.336 C2.303,9.279,2.251,9.288,2.2,9.28L1.08,9.06C0.807,9.016,0.551,9.202,0.507,9.474C0.498,9.533,0.499,9.592,0.51,9.65 c0.175,1.555,1.047,2.945,2.37,3.78c0.124,0.06,0.176,0.21,0.116,0.334c-0.025,0.051-0.065,0.092-0.116,0.116l-0.53,0.21 c-0.256,0.103-0.381,0.394-0.278,0.65c0.005,0.014,0.011,0.027,0.018,0.04c0.595,1.302,1.791,2.229,3.2,2.48 c0.13,0.047,0.197,0.191,0.15,0.32c-0.025,0.07-0.08,0.124-0.15,0.15C3.93,18.292,2.471,18.575,1,18.56 c-0.276-0.055-0.545,0.124-0.6,0.4s0.124,0.545,0.4,0.6l0,0c2.548,1.208,5.321,1.866,8.14,1.93c2.479,0.038,4.915-0.658,7-2 c3.484-2.326,5.571-6.241,5.56-10.43V8.19c0.001-0.147,0.067-0.286,0.18-0.38L23.32,6.44z" stroke="none" fill="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-        </g>
-      </svg>
-    </a>
-    <a href="https://www.youtube.com/user/panzerlink" class="ml-4 astro-YO5YSBEC" aria-label="YouTube" rel="noopener">
-      <svg class="h-6 w-6 hover:text-hot-pink astro-YO5YSBEC" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 16 16" width="16" height="16">
-        <g transform="matrix(0.6666666666666666,0,0,0.6666666666666666,0,0)" class="astro-YO5YSBEC">
-          <path d="M20.06,3.5H3.94C1.764,3.5,0,5.264,0,7.44v9.12c0,2.176,1.764,3.94,3.94,3.94c0,0,0,0,0,0h16.12 c2.176,0,3.94-1.764,3.94-3.94l0,0V7.44C24,5.264,22.236,3.5,20.06,3.5L20.06,3.5z M16.54,12l-6.77,4.36 c-0.232,0.149-0.542,0.082-0.691-0.151C9.028,16.129,9,16.035,9,15.94V7.28c0-0.276,0.225-0.5,0.501-0.499 c0.095,0,0.189,0.028,0.269,0.079l6.77,4.33c0.232,0.15,0.299,0.459,0.149,0.691c-0.038,0.06-0.089,0.11-0.149,0.149V12z" stroke="none" fill="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-        </g>
-      </svg>
-    </a>
-    <a href="https://github.com/Hopelezz" class="ml-4 astro-YO5YSBEC" aria-label="Github" rel="noopener">
-      <svg class="h-6 w-6 hover:text-hot-pink astro-YO5YSBEC" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 16 16" width="16" height="16">&gt;<g transform="matrix(0.6666666666666666,0,0,0.6666666666666666,0,0)" class="astro-YO5YSBEC">
-          <path d="M12,0.28C5.373,0.278-0.002,5.649-0.004,12.276c-0.002,5.197,3.342,9.804,8.284,11.414h0.29 c0.551,0.034,1.026-0.385,1.06-0.936c0.003-0.041,0.003-0.083,0-0.124v-0.21c0-0.17,0-0.4,0-1.09c-0.02-0.132-0.092-0.251-0.2-0.33 c-0.118-0.095-0.272-0.132-0.42-0.1c-2.68,0.58-3.25-1.1-3.29-1.21C5.384,18.801,4.784,18.037,4,17.5 c-0.047-0.041-0.097-0.077-0.15-0.11c0.116-0.063,0.249-0.087,0.38-0.07c0.511,0.071,0.948,0.405,1.15,0.88 c0.804,1.4,2.572,1.913,4,1.16c0.15-0.065,0.258-0.2,0.29-0.36c0.038-0.463,0.236-0.897,0.56-1.23 c0.206-0.183,0.225-0.499,0.042-0.706c-0.081-0.091-0.191-0.149-0.312-0.164c-2.37-0.27-4.79-1.1-4.79-5.19 c-0.02-1.027,0.356-2.023,1.05-2.78C6.351,8.786,6.386,8.579,6.31,8.4C6.032,7.624,6.036,6.774,6.32,6 c0.924,0.164,1.791,0.559,2.52,1.15c0.122,0.086,0.277,0.112,0.42,0.07c0.893-0.242,1.814-0.367,2.74-0.37 c0.929,0.001,1.854,0.125,2.75,0.37c0.14,0.039,0.291,0.013,0.41-0.07c0.73-0.589,1.597-0.984,2.52-1.15 c0.272,0.77,0.272,1.61,0,2.38c-0.076,0.179-0.041,0.386,0.09,0.53c0.687,0.75,1.062,1.733,1.05,2.75c0,4.09-2.43,4.91-4.81,5.18 c-0.275,0.029-0.474,0.274-0.446,0.549c0.013,0.129,0.076,0.248,0.176,0.331c0.448,0.463,0.671,1.099,0.61,1.74v3.18 c-0.01,0.317,0.122,0.621,0.36,0.83c0.303,0.227,0.696,0.298,1.06,0.19c6.285-2.103,9.676-8.902,7.573-15.187 C21.71,3.592,17.147,0.296,12,0.28z" stroke="none" fill="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-        </g></svg>
-    </a>
-    <a href="#" class="ml-4 astro-YO5YSBEC" aria-label="Email" rel="noopener">
-      <svg class="h-6 w-6 astro-YO5YSBEC" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 16 16" width="16" height="16">&gt;<g transform="matrix(0.6666666666666666,0,0,0.6666666666666666,0,0)" class="astro-YO5YSBEC">
-          <path d="M 2.25,4.5h19.5c0.828,0,1.5,0.672,1.5,1.5v12c0,0.828-0.672,1.5-1.5,1.5H2.25c-0.828,0-1.5-0.672-1.5-1.5V6 C0.75,5.172,1.422,4.5,2.25,4.5z " stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-          <path d="M 15.687,9.975L19.5,13.5 " stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-          <path d="M 8.313,9.975L4.5,13.5 " stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-          <path d="M 22.88,5.014l-9.513,6.56 c-0.823,0.568-1.911,0.568-2.734,0L1.12,5.014" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="astro-YO5YSBEC"></path>
-        </g></svg>
-    </a>
-  </div>`;
-});
-
-const $$file$2 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Social.astro";
-const $$url$2 = undefined;
-
-const $$module1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	$$metadata: $$metadata$2,
-	default: $$Social,
-	file: $$file$2,
-	url: $$url$2
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var __freeze$1 = Object.freeze;
-var __defProp$1 = Object.defineProperty;
-var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
-var _a$1;
-const $$metadata$1 = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", { modules: [{ module: $$module1, specifier: "./Social.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [{ type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.js" }, { type: "external", src: "https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" }] });
-const $$Astro$1 = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
-const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
-  Astro2.self = $$Footer;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate(_a$1 || (_a$1 = __template$1(["", '<footer class="center astro-3MDEZAKO">\n  <div class="text-sm astro-3MDEZAKO" data-test="footer-text">&copy;<script type="text/javascript"> document.write(new Date().getFullYear()); <\/script> &lt;BLACKSKIES &#47;&gt;</div>\n  ', "\n</footer>\n\n<!-- Prism JS -->\n\n\n\n"])), maybeRenderHead($$result), renderComponent($$result, "Social", $$Social, { "class": "astro-3MDEZAKO" }));
-});
-
-const $$file$1 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/footer/Footer.astro";
-const $$url$1 = undefined;
-
-const $$module5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	$$metadata: $$metadata$1,
-	default: $$Footer,
-	file: $$file$1,
-	url: $$url$1
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
-var _a;
-const $$metadata = createMetadata("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaTags.astro", assert: {} }, { module: $$module2$1, specifier: "../components/Navbar.astro", assert: {} }, { module: $$module3$2, specifier: "../components/cursorEffect/Cursor.astro", assert: {} }, { module: $$module4, specifier: "../components/bookShelf/Post.astro", assert: {} }, { module: $$module5, specifier: "../components/footer/Footer.astro", assert: {} }, { module: $$module6$1, specifier: "../utils/api.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro = createAstro("/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro", "https://blackskies.vercel.app/", "file:///C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/");
-const $$BookPost = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$BookPost;
-  await getBlogPosts();
-  await getBookPosts();
-  const { content } = Astro2.props;
-  const { title, description, publishDate, author, heroImage, permalink, alt, img } = content;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate(_a || (_a = __template(["<html", ' class="astro-4AZ5JQEQ">\n	<head>\n\n		', '\n		<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"><\/script>\n	', '</head>\n\n		<body class="astro-4AZ5JQEQ">\n			', '\n			<div class="body astro-4AZ5JQEQ">\n\n\n				<main class="home_content astro-4AZ5JQEQ">\n\n					', '\n\n					<div class="wrapper astro-4AZ5JQEQ">\n\n						', "\n\n					</div>\n				</main>\n			</div>\n		", "\n	\n</body></html>"])), addAttribute(content.lang || "en", "lang"), renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-4AZ5JQEQ" }), renderHead($$result), renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-4AZ5JQEQ" }), renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-4AZ5JQEQ" }), renderComponent($$result, "BookPost", $$Post, { "title": title, "author": author, "publishDate": publishDate, "heroImage": heroImage, "alt": alt, "img": img, "class": "astro-4AZ5JQEQ" }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` }), renderComponent($$result, "Footer", $$Footer, { "class": "astro-4AZ5JQEQ" }));
-});
-
-const $$file = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro";
-const $$url = undefined;
-
-const BookPost = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	$$metadata,
-	default: $$BookPost,
-	file: $$file,
-	url: $$url
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const html = "<h1 id=\"rating--910\">Rating : 9/10</h1>\n<h3 id=\"cyberpunk-scifi-action-adventure-dystopic-puzzles-virtual-reality-future-fiction\"><em>Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction</em></h3>\n<p>I was hooked from the moment I started the book. Barely putting it down!</p>\n<blockquote>\n<p>\"Going outside is highly overrated\"</p>\n</blockquote>\n<p>Ready Player One is set in a depraved world of the future, where people are desperate to 'escape' reality. Set in the future 2044, a boy named Wade Watts grows up learning everything he knows through a game called OASIS. OASIS is a Virtual Reality (VR) immersion platform free for anyone. OASIS is jammed packed with every literature, movie, game, song, ever created. All you have to do is access it. While the world is crumbling around them in despair at least everyone has the OASIS to forget their troubles. Wade in reality and virtually has no money to his name. Both mother and father died when he was younger and is in the custody of his aunt who treats him miserably. His aunt lives in the stacks which are futuristic trailer parks. (Trailers are stacked on top of one another held together by scaffolding and prayers.) Wade grows up forced to survive on his one for the most part, but thankfully there's OASIS. The creator of OASIS known in the game as Anorak. When the creator died, he gave the world of OASIS a VR treasure hunt that will set you back in your seats for a page-turning warp speed of a ride.\r\nOne of the reviews called it a Willy Wonka Meets the Matrix. Possibly the most app description to describe the book. The book is brimming with 80's nostalgia! While I'm more of a 90's kid I grew up with a lot of the pop references mentioned in RPO. It covers all the basis Movies, Books, Music, TV Shows, Games along with some other pop references to the 80's.\r\nJust to give you an idea.</p>\n<h5 id=\"movies\">Movies:</h5>\n<ul>\n<li>Montey Python</li>\n<li>Blade Runner</li>\n<li>Ghost Busters</li>\n<li>Back to the Future</li>\n<li>Ferris Buller's Day Off</li>\n<li>Weird Science</li>\n<li>WarGames</li>\n<li>Pretty in Pink</li>\n<li>Breakfast Club</li>\n</ul>\n<h5 id=\"books-all-amazing-authors\">Books: (All Amazing Authors!)</h5>\n<ul>\n<li>Vonnegut</li>\n<li>Orson Scott Card</li>\n<li>Stephen King</li>\n<li>Terry Pratchett</li>\n<li>J.R.R. Tolkien</li>\n<li>Douglas Adams</li>\n</ul>\n<h5 id=\"music\">Music:</h5>\n<ul>\n<li>SchoolHouse Rock</li>\n<li>Pat Benatar</li>\n<li>They Might Be Giants</li>\n<li>Rush</li>\n</ul>\n<h5 id=\"tv-shows\">TV Shows:</h5>\n<ul>\n<li>A-Team</li>\n<li>Twilight Zone</li>\n<li>Gundam</li>\n<li>Spider-Man</li>\n<li>Ultraman</li>\n<li>Cowboy Bebop</li>\n<li>Kikaida</li>\n<li>Voltron</li>\n<li>Max Headroom</li>\n<li>Family Ties</li>\n<li>Star Trek</li>\n<li>Dr.Who</li>\n<li>The Cosmos</li>\n</ul>\n<h5 id=\"games\">GAMES:</h5>\n<ul>\n<li>PacMan</li>\n<li>Dig Dug</li>\n<li>Joust</li>\n<li>Black Tiger</li>\n<li>Adventure</li>\n<li>and many others</li>\n</ul>\n<blockquote>\n<p>\"As Terrifying and painful as reality can be, it's also the only place where you can find true happiness.\"</p>\n</blockquote>";
-
-				const frontmatter$7 = {"minutesRead":"2 min read","layout":"../../layouts/BookPost.astro","setup":"import Author from '../../components/Author.astro'\n","title":"Ready Player One by Ernest Cline","publishDate":"02 OCT 2017","href":"https://twitter.com/_Hopelezz","name":"Mark Spratt","description":"The story, set in a dystopia in 2045, follows protagonist Wade Watts on his search for an Easter egg in a worldwide virtual reality game","img":"https://covers.openlibrary.org/b/id/8750149-L.jpg","tags":"cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic"};
-				const file$7 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/2-ready-player-one.md";
-				const url$7 = "/book/2-ready-player-one";
-				function rawContent() {
-					return "\r\n# Rating : 9/10\r\n\r\n### _Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction_\r\n\r\n\r\nI was hooked from the moment I started the book. Barely putting it down!\r\n\r\n>\"Going outside is highly overrated\"\r\n\r\nReady Player One is set in a depraved world of the future, where people are desperate to 'escape' reality. Set in the future 2044, a boy named Wade Watts grows up learning everything he knows through a game called OASIS. OASIS is a Virtual Reality (VR) immersion platform free for anyone. OASIS is jammed packed with every literature, movie, game, song, ever created. All you have to do is access it. While the world is crumbling around them in despair at least everyone has the OASIS to forget their troubles. Wade in reality and virtually has no money to his name. Both mother and father died when he was younger and is in the custody of his aunt who treats him miserably. His aunt lives in the stacks which are futuristic trailer parks. (Trailers are stacked on top of one another held together by scaffolding and prayers.) Wade grows up forced to survive on his one for the most part, but thankfully there's OASIS. The creator of OASIS known in the game as Anorak. When the creator died, he gave the world of OASIS a VR treasure hunt that will set you back in your seats for a page-turning warp speed of a ride.\r\nOne of the reviews called it a Willy Wonka Meets the Matrix. Possibly the most app description to describe the book. The book is brimming with 80's nostalgia! While I'm more of a 90's kid I grew up with a lot of the pop references mentioned in RPO. It covers all the basis Movies, Books, Music, TV Shows, Games along with some other pop references to the 80's.\r\nJust to give you an idea.\r\n\r\n##### Movies: \r\n\r\n- Montey Python\r\n- Blade Runner\r\n- Ghost Busters\r\n- Back to the Future\r\n- Ferris Buller's Day Off\r\n- Weird Science\r\n- WarGames\r\n- Pretty in Pink\r\n- Breakfast Club\r\n\r\n##### Books: (All Amazing Authors!)\r\n- Vonnegut\r\n- Orson Scott Card\r\n- Stephen King\r\n- Terry Pratchett\r\n- J.R.R. Tolkien\r\n- Douglas Adams\r\n\r\n##### Music: \r\n\r\n- SchoolHouse Rock\r\n- Pat Benatar\r\n- They Might Be Giants\r\n- Rush\r\n\r\n##### TV Shows: \r\n- A-Team\r\n- Twilight Zone\r\n- Gundam\r\n- Spider-Man\r\n- Ultraman\r\n- Cowboy Bebop\r\n- Kikaida\r\n- Voltron\r\n- Max Headroom\r\n- Family Ties\r\n- Star Trek\r\n- Dr.Who\r\n- The Cosmos\r\n##### GAMES:\r\n- PacMan\r\n- Dig Dug\r\n- Joust\r\n- Black Tiger\r\n- Adventure\r\n- and many others\r\n\r\n>\"As Terrifying and painful as reality can be, it's also the only place where you can find true happiness.\"";
-				}
-				function compiledContent() {
-					return html;
-				}
-				function getHeadings$7() {
-					return [{"depth":1,"slug":"rating--910","text":"Rating : 9/10"},{"depth":3,"slug":"cyberpunk-scifi-action-adventure-dystopic-puzzles-virtual-reality-future-fiction","text":"Cyberpunk, SciFi, Action, Adventure, Dystopic, Puzzles, Virtual Reality, Future, Fiction"},{"depth":5,"slug":"movies","text":"Movies:"},{"depth":5,"slug":"books-all-amazing-authors","text":"Books: (All Amazing Authors!)"},{"depth":5,"slug":"music","text":"Music:"},{"depth":5,"slug":"tv-shows","text":"TV Shows:"},{"depth":5,"slug":"games","text":"GAMES:"}];
-				}
-				function getHeaders() {
-					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
-					return getHeadings$7();
-				}				async function Content() {
-					const { layout, ...content } = frontmatter$7;
-					content.file = file$7;
-					content.url = url$7;
-					content.astro = {};
-					Object.defineProperty(content.astro, 'headings', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
-						}
-					});
-					Object.defineProperty(content.astro, 'html', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
-						}
-					});
-					Object.defineProperty(content.astro, 'source', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
-						}
-					});
-					const contentFragment = createVNode(Fragment, { 'set:html': html });
-					return createVNode($$BookPost, {
-									content,
-									frontmatter: content,
-									headings: getHeadings$7(),
-									rawContent,
-									compiledContent,
-									'server:root': true,
-									children: contentFragment
-								});
-				}
-
-const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	frontmatter: frontmatter$7,
-	file: file$7,
-	url: url$7,
-	rawContent,
-	compiledContent,
-	getHeadings: getHeadings$7,
-	getHeaders,
-	Content,
-	default: Content
-}, Symbol.toStringTag, { value: 'Module' }));
-
-function getHeadings$6() {
+function getHeadings$7() {
   return [{
     "depth": 1,
     "slug": "rating--910",
@@ -4764,7 +4821,7 @@ function getHeadings$6() {
     "text": "GAMES:"
   }];
 }
-const frontmatter$6 = {
+const frontmatter$7 = {
   "layout": "../../layouts/BookPost.astro",
   "title": "Ready Player One",
   "author": "Ernest Cline",
@@ -4777,10 +4834,10 @@ const frontmatter$6 = {
   "tags": "cyberpunk, science fiction, action, adventure, dystopian, Puzzles, Virtual reality, Future, Fiction, science fiction, action & adventure, dystopic"
 };
 
-const MDXLayout$6 = async function ({
+const MDXLayout$7 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Ready Player One",
@@ -4797,7 +4854,7 @@ const MDXLayout$6 = async function ({
   });
 };
 
-function _createMdxContent$6(props) {
+function _createMdxContent$7(props) {
   const _components = Object.assign({
     h1: "h1",
     h3: "h3",
@@ -4935,6 +4992,95 @@ function _createMdxContent$6(props) {
   });
 }
 
+function MDXContent$7(props = {}) {
+  return createVNode(MDXLayout$7, { ...props,
+    children: createVNode(_createMdxContent$7, { ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$7, "astro:jsx");
+const url$7 = "/book/2-ready-player-one";
+const file$7 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/2-ready-player-one.mdx";
+
+const _page13 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+	__proto__: null,
+	getHeadings: getHeadings$7,
+	frontmatter: frontmatter$7,
+	default: MDXContent$7,
+	url: url$7,
+	file: file$7
+}, Symbol.toStringTag, { value: 'Module' }));
+
+function getHeadings$6() {
+  return [{
+    "depth": 1,
+    "slug": "rating--810",
+    "text": "Rating : 8/10"
+  }, {
+    "depth": 3,
+    "slug": "historical-fiction-murder-mystery",
+    "text": "Historical, Fiction, Murder Mystery"
+  }];
+}
+const frontmatter$6 = {
+  "layout": "../../layouts/BookPost.astro",
+  "title": "Alias Grace",
+  "author": "Margret Atwood",
+  "year": 1848,
+  "publishDate": "18 JUL 2022",
+  "writer": "Mark",
+  "href": "https://twitter.com/_Hopelezz",
+  "description": "In 1843, Grace Marks has been convicted for her involvement in the vicious murders of her employer and his housekeeper and mistress. Some believe Grace is innocent; others think her evil or insane.",
+  "img": "https://covers.openlibrary.org/b/id/12507654-L.jpg",
+  "tags": "Fiction, Trials, Women, Murder, History, Marks, Grace, historical, New York Times reviewed, Canada, Canadian fiction, mystery & detective, historical"
+};
+
+const MDXLayout$6 = async function ({
+  children
+}) {
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  return createVNode(Layout, {
+    content: {
+      "title": "Alias Grace",
+      "author": "Margret Atwood",
+      "year": 1848,
+      "publishDate": "18 JUL 2022",
+      "writer": "Mark",
+      "href": "https://twitter.com/_Hopelezz",
+      "description": "In 1843, Grace Marks has been convicted for her involvement in the vicious murders of her employer and his housekeeper and mistress. Some believe Grace is innocent; others think her evil or insane.",
+      "img": "https://covers.openlibrary.org/b/id/12507654-L.jpg",
+      "tags": "Fiction, Trials, Women, Murder, History, Marks, Grace, historical, New York Times reviewed, Canada, Canadian fiction, mystery & detective, historical"
+    },
+    children: children
+  });
+};
+
+function _createMdxContent$6(props) {
+  const _components = Object.assign({
+    h1: "h1",
+    h3: "h3",
+    em: "em",
+    p: "p"
+  }, props.components);
+
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h1, {
+      id: "rating--810",
+      children: "Rating : 8/10"
+    }), "\n", createVNode(_components.h3, {
+      id: "historical-fiction-murder-mystery",
+      children: createVNode(_components.em, {
+        children: "Historical, Fiction, Murder Mystery"
+      })
+    }), "\n", createVNode(_components.p, {
+      children: "Based on true historical events and real questions left unanswered Margaret Atwood seams together the missing pieces."
+    }), "\n", createVNode(_components.p, {
+      children: "A woman by the name of Grace Marks is accussed of murdering her Employer and his amstress. Based on cirumstancial evidence Marks is labeled mentally insane and sent to a mental ward. Doctor Simon Jordan an up and coming"
+    })]
+  });
+}
+
 function MDXContent$6(props = {}) {
   return createVNode(MDXLayout$6, { ...props,
     children: createVNode(_createMdxContent$6, { ...props
@@ -4943,10 +5089,10 @@ function MDXContent$6(props = {}) {
 }
 
 __astro_tag_component__(getHeadings$6, "astro:jsx");
-const url$6 = "/book/2-ready-player-one";
-const file$6 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/2-ready-player-one.mdx";
+const url$6 = "/book/12-alias-grace";
+const file$6 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/12-alias-grace.mdx";
 
-const _page12 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page14 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$6,
 	frontmatter: frontmatter$6,
@@ -4982,7 +5128,7 @@ const frontmatter$5 = {
 const MDXLayout$5 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "The Bell Jar",
@@ -5056,7 +5202,7 @@ __astro_tag_component__(getHeadings$5, "astro:jsx");
 const url$5 = "/book/4-the-bell-jar";
 const file$5 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/4-the-bell-jar.mdx";
 
-const _page13 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page15 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$5,
 	frontmatter: frontmatter$5,
@@ -5092,7 +5238,7 @@ const frontmatter$4 = {
 const MDXLayout$4 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Old Man's War",
@@ -5145,7 +5291,7 @@ __astro_tag_component__(getHeadings$4, "astro:jsx");
 const url$4 = "/book/8-old-mans-war";
 const file$4 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/8-old-mans-war.mdx";
 
-const _page14 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page16 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$4,
 	frontmatter: frontmatter$4,
@@ -5181,7 +5327,7 @@ const frontmatter$3 = {
 const MDXLayout$3 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "The Martian",
@@ -5243,7 +5389,7 @@ __astro_tag_component__(getHeadings$3, "astro:jsx");
 const url$3 = "/book/7-the-martian";
 const file$3 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/7-the-martian.mdx";
 
-const _page15 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page17 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$3,
 	frontmatter: frontmatter$3,
@@ -5279,7 +5425,7 @@ const frontmatter$2 = {
 const MDXLayout$2 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Supermarket",
@@ -5334,7 +5480,7 @@ __astro_tag_component__(getHeadings$2, "astro:jsx");
 const url$2 = "/book/9-supermarket";
 const file$2 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/9-supermarket.mdx";
 
-const _page16 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page18 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$2,
 	frontmatter: frontmatter$2,
@@ -5370,7 +5516,7 @@ const frontmatter$1 = {
 const MDXLayout$1 = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Slapstick",
@@ -5443,7 +5589,7 @@ __astro_tag_component__(getHeadings$1, "astro:jsx");
 const url$1 = "/book/6-slapstick";
 const file$1 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/6-slapstick.mdx";
 
-const _page17 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page19 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings: getHeadings$1,
 	frontmatter: frontmatter$1,
@@ -5479,7 +5625,7 @@ const frontmatter = {
 const MDXLayout = async function ({
   children
 }) {
-  const Layout = (await Promise.resolve().then(() => BookPost)).default;
+  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Armada",
@@ -5541,7 +5687,7 @@ __astro_tag_component__(getHeadings, "astro:jsx");
 const url = "/book/3-armada";
 const file = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/pages/book/3-armada.mdx";
 
-const _page18 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page20 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,
 	getHeadings,
 	frontmatter,
@@ -5550,7 +5696,7 @@ const _page18 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	file
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['node_modules/@astrojs/image/dist/endpoints/prod.js', _page0],['src/pages/index.astro', _page1],['src/pages/bookreview.astro', _page2],['src/pages/blog/4-most-recent-post-button.mdx', _page3],['src/pages/blog/2-two-factor-auth.mdx', _page4],['src/pages/blog/3-starting-astro.mdx', _page5],['src/pages/blog/1-password.mdx', _page6],['src/pages/book/11-communist-manifesto.mdx', _page7],['src/pages/book/1-Slaughterhouse-Five.mdx', _page8],['src/pages/book/5-lord-of-the-flies.mdx', _page9],['src/pages/book/10-never-let-me-go.mdx', _page10],['src/pages/book/2-ready-player-one.md', _page11],['src/pages/book/2-ready-player-one.mdx', _page12],['src/pages/book/4-the-bell-jar.mdx', _page13],['src/pages/book/8-old-mans-war.mdx', _page14],['src/pages/book/7-the-martian.mdx', _page15],['src/pages/book/9-supermarket.mdx', _page16],['src/pages/book/6-slapstick.mdx', _page17],['src/pages/book/3-armada.mdx', _page18],]);
+const pageMap = new Map([['node_modules/@astrojs/image/dist/endpoints/prod.js', _page0],['src/pages/index.astro', _page1],['src/pages/bookreview.astro', _page2],['src/pages/rss.xml.js', _page3],['src/pages/HireMe.astro', _page4],['src/pages/blog/2-two-factor-auth.mdx', _page5],['src/pages/blog/3-starting-astro.mdx', _page6],['src/pages/blog/1-password.mdx', _page7],['src/pages/blog/4-a-start.mdx', _page8],['src/pages/book/11-communist-manifesto.mdx', _page9],['src/pages/book/1-Slaughterhouse-Five.mdx', _page10],['src/pages/book/5-lord-of-the-flies.mdx', _page11],['src/pages/book/10-never-let-me-go.mdx', _page12],['src/pages/book/2-ready-player-one.mdx', _page13],['src/pages/book/12-alias-grace.mdx', _page14],['src/pages/book/4-the-bell-jar.mdx', _page15],['src/pages/book/8-old-mans-war.mdx', _page16],['src/pages/book/7-the-martian.mdx', _page17],['src/pages/book/9-supermarket.mdx', _page18],['src/pages/book/6-slapstick.mdx', _page19],['src/pages/book/3-armada.mdx', _page20],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),Object.assign({"name":"@astrojs/solid-js","clientEntrypoint":"@astrojs/solid-js/client.js","serverEntrypoint":"@astrojs/solid-js/server.js","jsxImportSource":"solid-js"}, { ssr: _renderer1 }),Object.assign({"name":"@astrojs/preact","clientEntrypoint":"@astrojs/preact/client.js","serverEntrypoint":"@astrojs/preact/server.js","jsxImportSource":"preact"}, { ssr: _renderer2 }),];
 
 if (typeof process !== "undefined") {
@@ -5622,7 +5768,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.c3a2f6da.css","assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-most-recent-post-button","type":"page","pattern":"^\\/blog\\/4-most-recent-post-button\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-most-recent-post-button","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-most-recent-post-button.mdx","pathname":"/blog/4-most-recent-post-button","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.md","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/9dad50dd.eb32fa19.css","assets/7f648411.5b9a7ecc.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blackskies.vercel.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[null],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.4818ac13.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.a2bc2bf5.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/9dad50dd.eb32fa19.css","/assets/index.c3a2f6da.css","/assets/7f648411.5b9a7ecc.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/robots.txt","/Search.a2bc2bf5.js","/site.webmanifest","/social.jpg","/social.png","/assets/LOGO.html","/assets/LOGO.svg","/assets/search.534732cb.css","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/blog/introducing-astro.jpg","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.feeca201.css","assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/HireMe.2bc09a85.css","assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/hireme","type":"page","pattern":"^\\/HireMe\\/?$","segments":[[{"content":"HireMe","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/HireMe.astro","pathname":"/HireMe","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-a-start","type":"page","pattern":"^\\/blog\\/4-a-start\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-a-start","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-a-start.mdx","pathname":"/blog/4-a-start","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/12-alias-grace","type":"page","pattern":"^\\/book\\/12-alias-grace\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"12-alias-grace","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/12-alias-grace.mdx","pathname":"/book/12-alias-grace","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blackskies.vercel.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[[null,{"behavior":"prepend"}]],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.ab157d51.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro":"chunks/BookPost.0e160b4a.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.a2bc2bf5.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/45786913.7783ccc1.css","/assets/0fd0f9e1.e63f884b.css","/assets/HireMe.2bc09a85.css","/assets/index.feeca201.css","/assets/8237d50a.aad2c762.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/robots.txt","/Search.a2bc2bf5.js","/site.webmanifest","/social.jpg","/social.png","/assets/LOGO.html","/assets/LOGO.svg","/assets/logomark-dark.svg","/assets/search.534732cb.css","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/blog/introducing-astro.jpg","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
@@ -5636,4 +5782,4 @@ if(_start in adapter) {
 	adapter[_start](_manifest, _args);
 }
 
-export { $$module1$2 as $, createAstro as a, createComponent as b, createMetadata as c, renderComponent as d, $$Aside as e, addAttribute as f, renderSlot as g, $$module1$6 as h, handler, $$module2$1 as i, $$module3$2 as j, $$module5 as k, $$module6 as l, maybeRenderHead as m, $$MetaTags as n, renderHead as o, $$Cursor as p, $$Navbar as q, renderTemplate as r, $$Footer as s };
+export { $$module1$6 as $, $$module2$1 as a, $$module3$2 as b, createMetadata as c, $$module5 as d, $$module6$1 as e, createAstro as f, createComponent as g, addAttribute as h, handler, renderComponent as i, $$MetaTags as j, renderHead as k, $$Cursor as l, $$Navbar as m, renderSlot as n, $$Footer as o, $$module1$2 as p, maybeRenderHead as q, renderTemplate as r, $$Aside as s };

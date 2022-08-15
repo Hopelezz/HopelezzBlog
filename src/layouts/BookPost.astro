@@ -1,56 +1,50 @@
 ---
-
+import '../styles/shiki.css';
 import Meta from '../components/MetaTags.astro';
 import Navbar from '../components/Navbar.astro';
 import Cursor from '../components/cursorEffect/Cursor.astro';
-import BookPost from '../components/bookShelf/Post.astro';
+import BlogPost from '../components/blog/Post.astro';
 import Footer from '../components/footer/Footer.astro';
-import { getBlogPosts, getBookPosts } from '../utils/api.astro';
+import type { MDXInstance } from 'astro';
+import { Post } from '../utils/types';
 
-const { mostRecentBlogPost } = await getBlogPosts(); // Fetch most recent blog post
-const { mostRecentBookPost } = await getBookPosts(); // Fetch most recent book post
-const { content } = Astro.props; // Get content from props
-const { title, description, publishDate, author, heroImage, permalink, alt, img} = content;
+export interface Props {
+    post: MDXInstance<Post>
+}
+
+// const { minutesRead } = Astro.props.frontmatter;
+const { content } = Astro.props;
+const { title, publishDate, writer, href, description, img, alt, permalink } = content;
+const { minutesRead } = Astro.props.content;
+
+// console.log(minutesRead);
 ---
 
 <html lang={content.lang || 'en'}>
 	<head>
-
 		<Meta title={title} description={description} permalink={permalink} />
-		<script src="https://kit.fontawesome.com/e2fcf864fc.js" crossorigin="anonymous"></script>
 	</head>
 
-		<body>
-			<Cursor />
-			<div class="body">
-
-
-				<main class="home_content">
-
-					<Navbar />
-
-					<div class="wrapper">
-
-						<BookPost title={title} author={author} publishDate={publishDate} heroImage={heroImage} alt={alt} img={img} >
+	<body>
+		<Cursor />
+		<Navbar />
+		<div class="">
+			<main class="body home_content">
+				<div class="container">
+					<div class="">
+						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
+							<p>{minutesRead}</p>
 							<slot />
-						</BookPost>
-
+						</BlogPost>
 					</div>
-				</main>
-			</div>
-		</body>
+				</div>
+			</main>
+		</div>
+	</body>
 
 	<Footer />
-	
+
 </html>
 
 <style>
-	.wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 65em;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	width: 100%;
-}
 </style>

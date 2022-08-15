@@ -21,14 +21,18 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.3.4",
+    "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "@mapbox/node-pre-gyp": "^1.0.9",
+    "add": "^2.0.6",
     "astro-robots-txt": "^0.3.7",
     "mdast-util-to-string": "^3.1.0",
     "open-props": "^1.4.10",
     "preact": "^10.7.3",
     "prettier": "^2.7.1",
     "reading-time": "^1.5.0",
+    "rehype": "^12.0.1",
+    "remark-autolink-headings": "^7.0.1",
     "scss": "^0.2.4"
   }
 }

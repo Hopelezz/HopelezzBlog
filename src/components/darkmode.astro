@@ -28,23 +28,26 @@ import '../styles/theme.postcss';
 
 <style lang="scss">
 
-.select {
+select {
     position: relative;
     overflow: hidden;
     display: block;
     margin: auto;
-    width: 330px;
+    max-width: 6rem;
     height: 100%;
     border-bottom: 0px;
     border-radius: 3px;
-    font-size: 12px;
-    box-shadow: 0px 1em 2em -1.5em rgba(0, 0, 0, .5);
+    font-size: 16px;
+    background: var(--surface2);
+    color: var(--text3);
+    box-shadow: var(--shadow-3);
+    outline: none;
     >i.toggle {
         position: absolute;
         z-index: 4;
         right: 1.5em;
         top: 1.6em;
-        color: #ccc
+        color: var(--text1);
     }
     .title,
     .placeholder {
@@ -53,7 +56,7 @@ import '../styles/theme.postcss';
         width: 100%;
         height: 100%;
         padding: 1.5em 2em;
-        background: rgba(255, 255, 255, 1);
+        background: var(--surface2);
         border-top: 1px solid rgba(0, 0, 0, .05);
         cursor: pointer;
     }

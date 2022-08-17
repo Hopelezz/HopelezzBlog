@@ -1840,27 +1840,27 @@ const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<nav class="brand surface2 nav astro-MYOATM33">
-    <div class="logoContainer astro-MYOATM33">
-        <a href="/" class="logo astro-MYOATM33">
+  return renderTemplate`${maybeRenderHead($$result)}<div class="nav astro-2QEEBTG6">
+    <div class="logoContainer astro-2QEEBTG6">
+        <a href="/" class="logo astro-2QEEBTG6">
             <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-            <h2 class="brand astro-MYOATM33">&lt;BLACKSKIES &#47;&gt;</h2>
+            <h2 class="brand astro-2QEEBTG6">&lt;BLACKSKIES &#47;&gt;</h2>
         </a>
     </div>
-    <div class="searchContainer astro-MYOATM33">
-    ${renderComponent($$result, "Search", Search, { "client:load": true, "posts": posts, "client:component-hydration": "load", "client:component-path": "/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search", "client:component-export": "default", "class": "astro-MYOATM33" })}
+    <div class="searchContainer astro-2QEEBTG6">
+        ${renderComponent($$result, "Search", Search, { "client:load": true, "posts": posts, "client:component-hydration": "load", "client:component-path": "/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search", "client:component-export": "default", "class": "astro-2QEEBTG6" })}
     </div>
-    <div class="menu astro-MYOATM33">
-        <ul class="hamburger astro-MYOATM33">
-            <li class="astro-MYOATM33"><a href="/" class="astro-MYOATM33">Home</a></li>
-            <li class="astro-MYOATM33"><a href="#" class="astro-MYOATM33">About</a></li>
-            <li class="astro-MYOATM33"><a href="/HireMe" class="astro-MYOATM33">Hire Me</a></li>
-            <li class="astro-MYOATM33">
-                ${renderComponent($$result, "Dark", $$Darkmode, { "class": "astro-MYOATM33" })}
+    <div class="menu astro-2QEEBTG6">
+        <ul class="hamburger astro-2QEEBTG6">
+            <li class="astro-2QEEBTG6"><a href="/" class="astro-2QEEBTG6">Home</a></li>
+            <li class="astro-2QEEBTG6"><a href="#" class="astro-2QEEBTG6">About</a></li>
+            <li class="astro-2QEEBTG6"><a href="/HireMe" class="astro-2QEEBTG6">Hire Me</a></li>
+            <li class="astro-2QEEBTG6">
+                ${renderComponent($$result, "Dark", $$Darkmode, { "class": "astro-2QEEBTG6" })}
             </li>
         </ul>
     </div>
-</nav>`;
+</div>`;
 });
 
 const $$file$9 = "C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/Navbar.astro";
@@ -2468,19 +2468,19 @@ const $$PostPreview$1 = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<div class="details astro-H6F5BIEW">
-    <a${addAttribute(post.url, "href")} class="astro-H6F5BIEW">
-    <article class="card astro-H6F5BIEW">
-        <div class="coffee astro-H6F5BIEW">
-            <img class="center-cropped astro-H6F5BIEW"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
+  return renderTemplate`<!--Article-->${maybeRenderHead($$result)}<div class="postContainer astro-G3DC22GV">
+    <a${addAttribute(post.url, "href")} class="astro-G3DC22GV">
+    <article class="postCard astro-G3DC22GV">
+        <div class="coffee astro-G3DC22GV">
+            <img class="center-cropped astro-G3DC22GV"${addAttribute(post.frontmatter.img, "src")}${addAttribute(alt, "alt")}>
         </div>
 
-        <div class="details astro-H6F5BIEW">
-            <h2 class="brand text3 astro-H6F5BIEW">${title}</h2>
-            <span class="text astro-H6F5BIEW">${publishDate}  |  ${tag}</span>
-            <br class="astro-H6F5BIEW">
-            <span class="text astro-H6F5BIEW">${writer}</span>
-            <p class="text3 truncate astro-H6F5BIEW">${description}</p>
+        <div class="details astro-G3DC22GV">
+            <h2 class="brand text3 astro-G3DC22GV">${title}</h2>
+            <span class="text astro-G3DC22GV">${publishDate}  |  ${tag}</span>
+            <br class="astro-G3DC22GV">
+            <span class="text astro-G3DC22GV">${writer}</span>
+            <p class="text3 truncate astro-G3DC22GV">${description}</p>
         </div>
     </article>
 </a>
@@ -2515,16 +2515,16 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<html lang="en" class="astro-QAYP4Q57">
+  return renderTemplate`<html lang="en" class="astro-KEPI6B5Y">
 	<head>
-		${renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-QAYP4Q57" })}
+		${renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-KEPI6B5Y" })}
 	${renderHead($$result)}</head>
-	<body id="top" class="page astro-QAYP4Q57" class="surface1">
-		${renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-QAYP4Q57" })}
-		${renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-QAYP4Q57" })}
-		<div class="container astro-QAYP4Q57">
-			${renderComponent($$result, "Aside", $$Aside, { "post": allPosts, "class": "astro-QAYP4Q57" })}
-			<div class="articlelist astro-QAYP4Q57">${allBlogPosts.map((p) => renderTemplate`${renderComponent($$result, "BlogPostPreview", $$PostPreview$1, { "post": p, "class": "astro-QAYP4Q57" })}`)}</div>
+	<body id="top" class="indexPage astro-KEPI6B5Y">
+		${renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-KEPI6B5Y" })}
+		${renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-KEPI6B5Y" })}
+		<div class="indexContainer astro-KEPI6B5Y">
+			${renderComponent($$result, "Aside", $$Aside, { "post": allPosts, "class": "astro-KEPI6B5Y" })}
+			<div class="articlelist astro-KEPI6B5Y">${allBlogPosts.map((p) => renderTemplate`${renderComponent($$result, "BlogPostPreview", $$PostPreview$1, { "post": p, "class": "astro-KEPI6B5Y" })}`)}</div>
 		</div>
 	</body>
 </html>
@@ -2764,23 +2764,23 @@ const $$HireMe = createComponent(async ($$result, $$props, $$slots) => {
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<html${addAttribute("en", "lang")} class="astro-Z3LJFRLR">
+  return renderTemplate`<html${addAttribute("en", "lang")} class="astro-3AADENW2">
 	<head>
-		${renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-Z3LJFRLR" })}
+		${renderComponent($$result, "Meta", $$MetaTags, { "title": title, "description": description, "permalink": permalink, "class": "astro-3AADENW2" })}
 	${renderHead($$result)}</head>
 
-	<body class="astro-Z3LJFRLR">
-		${renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-Z3LJFRLR" })}
-		${renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-Z3LJFRLR" })}
-		<div class="container astro-Z3LJFRLR">
-			<main class="container astro-Z3LJFRLR">
-				${renderComponent($$result, "Aside", $$Aside, { "class": "astro-Z3LJFRLR" })}
-				<div class=" astro-Z3LJFRLR">
-					${renderComponent($$result, "Form", $$Form, { "class": "astro-Z3LJFRLR" })}
+	<body class="astro-3AADENW2">
+		${renderComponent($$result, "Cursor", $$Cursor, { "class": "astro-3AADENW2" })}
+		${renderComponent($$result, "Navbar", $$Navbar, { "class": "astro-3AADENW2" })}
+		<div class=" astro-3AADENW2">
+			<main class="hireContainer astro-3AADENW2">
+				${renderComponent($$result, "Aside", $$Aside, { "class": "astro-3AADENW2" })}
+				<div class=" astro-3AADENW2">
+					${renderComponent($$result, "Form", $$Form, { "class": "astro-3AADENW2" })}
 				</div>
 			</main>
 		</div>
-	${renderComponent($$result, "Footer", $$Footer, { "class": "astro-Z3LJFRLR" })}
+	${renderComponent($$result, "Footer", $$Footer, { "class": "astro-3AADENW2" })}
 
 </body></html>`;
 });
@@ -2826,7 +2826,7 @@ const frontmatter$f = {
 const MDXLayout$f = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.5a4c4550.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Two Factor Authentication",
@@ -2952,7 +2952,7 @@ const frontmatter$e = {
 const MDXLayout$e = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.5a4c4550.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Getting Started with Astro",
@@ -3342,7 +3342,7 @@ const frontmatter$d = {
 const MDXLayout$d = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.5a4c4550.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Password",
@@ -3599,7 +3599,7 @@ const frontmatter$c = {
 const MDXLayout$c = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BlogPost.ab157d51.mjs')).default;
+  const Layout = (await import('./chunks/BlogPost.5a4c4550.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "A Start",
@@ -4398,13 +4398,14 @@ const frontmatter$b = {
   "href": "https://twitter.com/_Hopelezz",
   "description": "It formed the basis for the modern communist movement as we know it, arguing that capitalism would inevitably self-destruct, to be replaced by socialism and ultimately communism.",
   "img": "https://images-na.ssl-images-amazon.com/images/I/51vHCno0a4L._SX330_BO1,204,203,200_.jpg",
-  "tags": "Politics, Dystopic, World View, Communist,"
+  "tags": "Politics, Dystopic, World View, Communist,",
+  "draft": true
 };
 
 const MDXLayout$b = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Communist Manifesto",
@@ -4415,7 +4416,8 @@ const MDXLayout$b = async function ({
       "href": "https://twitter.com/_Hopelezz",
       "description": "It formed the basis for the modern communist movement as we know it, arguing that capitalism would inevitably self-destruct, to be replaced by socialism and ultimately communism.",
       "img": "https://images-na.ssl-images-amazon.com/images/I/51vHCno0a4L._SX330_BO1,204,203,200_.jpg",
-      "tags": "Politics, Dystopic, World View, Communist,"
+      "tags": "Politics, Dystopic, World View, Communist,",
+      "draft": true
     },
     children: children
   });
@@ -4445,24 +4447,24 @@ function _createMdxContent$b(props) {
       children: ["\n", createVNode(_components.p, {
         children: [createVNode(_components.strong, {
           children: "Disclaimer:"
-        }), " If you are going to judge something you should at least understand the intent. I doubt Marx or Engels had any ill intent upon the creation of this Manifesto. I do, however, believe they were wholly ignorant to the true nature of the thing in which they were creating."]
+        }), " If you are going to judge something you should at least understand the intent. I doubt Marx or Engels had any ill intent upon the creation of this Manifesto. I do, however, believe they were wholly ignorant of the true nature of the thing in which they were creating."]
       }), "\n", createVNode("br", {}), "\n", createVNode(_components.p, {
         children: "Another thing is the stigma that surrounds certain political pieces. Almost as if one were to touch them you\u2019d be tainted."
       }), "\n", createVNode("br", {}), "\n", createVNode(_components.p, {
-        children: "I once read an introduction to Mein Kampf by Abraham Foxman that said:\r\n\u201CWe preserve Mein Kampf in this spirit of remembering; we study it in the hope of securing a brighter future for humanity.\u201D"
+        children: "I once read an introduction to Mein Kompf by Abraham Foxman that said:\r\n\u201CWe preserve Mein Kompf in this spirit of remembering; we study it in the hope of securing a brighter future for humanity.\u201D"
       }), "\n"]
     }), "\n", createVNode(_components.p, {
-      children: "I came to this book out of sheer interest for Dystopics and those interests started with a book called \u201CBrave New World\u201D back in my late teens. Since then I have admired, probably out of grotesque interests, the concepts hidden within these stories. Due to this personal intrigue I have since read several pieces on the origin of the topic dating back to Utopia by Sir Thomas More. I say all this because I believe the very essence of Communism is one of utopic vision."
+      children: "I came to this book out of sheer interest for Dystopic and those interests started with a book called \u201CBrave New World\u201D back in my late teens. Since then I have admired, probably out of grotesque interests, the concepts hidden within these stories. Due to this personal intrigue, I have since read several pieces on the origin of the topic dating back to Utopia by Sir Thomas More. I say all this because I believe the very essence of Communism is one of utopic vision."
     }), "\n", createVNode(_components.h2, {
       id: "the-book",
       children: "The Book"
     }), "\n", createVNode(_components.p, {
-      children: "The Marx aims to explain the beliefs of the Communist party and its League. The first thing the reader is addressed with is a history of class struggles."
+      children: "Marx aims to explain the beliefs of the Communist party and its League. The first thing the reader is addressed with is a history of class struggles."
     }), "\n", createVNode(_components.p, {
       children: "I was discussing this with my friend after having read the book. He said:"
     }), "\n", createVNode(_components.blockquote, {
       children: ["\n", createVNode(_components.p, {
-        children: "\u201CCommunism is a concept that isn\u2019t inherant in humans, one that has to be forced.\u201D"
+        children: "\u201CCommunism is a concept that isn\u2019t inherent in humans, one that has to be forced.\u201D"
       }), "\n"]
     })]
   });
@@ -4515,7 +4517,7 @@ const frontmatter$a = {
 const MDXLayout$a = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Slaughterhouse-Five",
@@ -4619,7 +4621,7 @@ const frontmatter$9 = {
 const MDXLayout$9 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Lord of the Flies",
@@ -4695,8 +4697,8 @@ const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 function getHeadings$8() {
   return [{
     "depth": 1,
-    "slug": "rating--710",
-    "text": "Rating : 7/10"
+    "slug": "rating-710",
+    "text": "Rating: 7/10"
   }, {
     "depth": 3,
     "slug": "melancholy-fiction-dystopic",
@@ -4719,7 +4721,7 @@ const frontmatter$8 = {
 const MDXLayout$8 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Never Let Me Go",
@@ -4747,8 +4749,8 @@ function _createMdxContent$8(props) {
 
   return createVNode(Fragment, {
     children: [createVNode(_components.h1, {
-      id: "rating--710",
-      children: "Rating : 7/10"
+      id: "rating-710",
+      children: "Rating: 7/10"
     }), "\n", createVNode(_components.h3, {
       id: "melancholy-fiction-dystopic",
       children: createVNode(_components.em, {
@@ -4757,13 +4759,13 @@ function _createMdxContent$8(props) {
     }), "\n", createVNode(_components.p, {
       children: "I went into this novel with expectations but was left with a sense of loss but in that good kind of way.\r\nNever Let Me Go, is a novel of a woman telling her story; similar to an autobiography."
     }), "\n", createVNode(_components.p, {
-      children: "The book starts off:"
+      children: "The book starts:"
     }), "\n", createVNode(_components.blockquote, {
       children: ["\n", createVNode(_components.p, {
         children: "\u201CThere have been times over the years when I\u2019ve tried to leave Hailsham behind when I\u2019ve told myself I shouldn\u2019t look back so much. But then there came a point when I just stopped resisting. It had to do with this particular donor I had once, in my third year as a carer; it was his reaction when I mentioned I was from Hailsham.\u201D"
       }), "\n"]
     }), "\n", createVNode(_components.p, {
-      children: "Centered around a school called Hailsham for children similar to that of an orphanage with a tinge of a concentration camp. The school is removed from society, in fact, society wants as little to do with them. The school is a place where children are taught to be responsible and to be kind to each other. Trained in litterature and art."
+      children: "Centered around a school called Hailsham for children similar to that of an orphanage with a tinge of a concentration camp. The school is removed from society and wants as little to do with them. A school is a place where children are taught to be responsible and to be kind to each other. Trained in literature and art."
     }), "\n", createVNode(_components.p, {
       children: "In this retelling of Kathy\u2019s life, you get a sense of gloom and anxiety that pervades these children\u2019s lives even unbeknownst to them."
     })]
@@ -4837,7 +4839,7 @@ const frontmatter$7 = {
 const MDXLayout$7 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Ready Player One",
@@ -5015,8 +5017,8 @@ const _page13 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 function getHeadings$6() {
   return [{
     "depth": 1,
-    "slug": "rating--810",
-    "text": "Rating : 8/10"
+    "slug": "rating-810",
+    "text": "Rating: 8/10"
   }, {
     "depth": 3,
     "slug": "historical-fiction-murder-mystery",
@@ -5039,7 +5041,7 @@ const frontmatter$6 = {
 const MDXLayout$6 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Alias Grace",
@@ -5066,8 +5068,8 @@ function _createMdxContent$6(props) {
 
   return createVNode(Fragment, {
     children: [createVNode(_components.h1, {
-      id: "rating--810",
-      children: "Rating : 8/10"
+      id: "rating-810",
+      children: "Rating: 8/10"
     }), "\n", createVNode(_components.h3, {
       id: "historical-fiction-murder-mystery",
       children: createVNode(_components.em, {
@@ -5076,7 +5078,11 @@ function _createMdxContent$6(props) {
     }), "\n", createVNode(_components.p, {
       children: "Based on true historical events and real questions left unanswered Margaret Atwood seams together the missing pieces."
     }), "\n", createVNode(_components.p, {
-      children: "A woman by the name of Grace Marks is accussed of murdering her Employer and his amstress. Based on cirumstancial evidence Marks is labeled mentally insane and sent to a mental ward. Doctor Simon Jordan an up and coming"
+      children: "A woman by the name of Grace Marks is accused of murdering her Employer and his mistress. Based on circumstantial evidence Marks is labeled mentally insane and sent to a mental ward. Doctor Simon Jordan an up-and-coming practitioner sits and listens to Mark\u2019s tales as she seams quilt blocks."
+    }), "\n", createVNode(_components.p, {
+      children: "The story unfolds through details given in Mark\u2019s story. The stories told over several meetings only shed light on small key details. The stories are filled with color and life and create a compelling argument for her innocents."
+    }), "\n", createVNode(_components.p, {
+      children: "However, the story isn\u2019t just about Grace Marks, but also that of Dr. Simon Jordan. I believe it\u2019s meant to reflect the ease at which someone can get caught up in similar scandalous situations. To me, this felt distracting and a bit on the nose, howbeit still relevant to the case at hand. I do enjoy how Attwood uses real letters written on the matter to tie in truths to the story. These letters highlight the gross misunderstandings of mental health and science of the time."
     })]
   });
 }
@@ -5128,7 +5134,7 @@ const frontmatter$5 = {
 const MDXLayout$5 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "The Bell Jar",
@@ -5238,7 +5244,7 @@ const frontmatter$4 = {
 const MDXLayout$4 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Old Man's War",
@@ -5327,7 +5333,7 @@ const frontmatter$3 = {
 const MDXLayout$3 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "The Martian",
@@ -5401,8 +5407,8 @@ const _page17 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 function getHeadings$2() {
   return [{
     "depth": 1,
-    "slug": "rating--710",
-    "text": "Rating : 7/10"
+    "slug": "rating-710",
+    "text": "Rating: 7/10"
   }, {
     "depth": 3,
     "slug": "fiction-psychological-suspense",
@@ -5425,7 +5431,7 @@ const frontmatter$2 = {
 const MDXLayout$2 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Supermarket",
@@ -5452,8 +5458,8 @@ function _createMdxContent$2(props) {
 
   return createVNode(Fragment, {
     children: [createVNode(_components.h1, {
-      id: "rating--710",
-      children: "Rating : 7/10"
+      id: "rating-710",
+      children: "Rating: 7/10"
     }), "\n", createVNode(_components.h3, {
       id: "fiction-psychological-suspense",
       children: createVNode(_components.em, {
@@ -5516,7 +5522,7 @@ const frontmatter$1 = {
 const MDXLayout$1 = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Slapstick",
@@ -5625,7 +5631,7 @@ const frontmatter = {
 const MDXLayout = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/BookPost.0e160b4a.mjs')).default;
+  const Layout = (await import('./chunks/BookPost.9b345a72.mjs')).default;
   return createVNode(Layout, {
     content: {
       "title": "Armada",
@@ -5768,7 +5774,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.feeca201.css","assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/HireMe.2bc09a85.css","assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/hireme","type":"page","pattern":"^\\/HireMe\\/?$","segments":[[{"content":"HireMe","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/HireMe.astro","pathname":"/HireMe","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-a-start","type":"page","pattern":"^\\/blog\\/4-a-start\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-a-start","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-a-start.mdx","pathname":"/blog/4-a-start","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/12-alias-grace","type":"page","pattern":"^\\/book\\/12-alias-grace\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"12-alias-grace","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/12-alias-grace.mdx","pathname":"/book/12-alias-grace","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.aad2c762.css","assets/0fd0f9e1.e63f884b.css","assets/45786913.7783ccc1.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blackskies.vercel.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[[null,{"behavior":"prepend"}]],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.ab157d51.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro":"chunks/BookPost.0e160b4a.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.a2bc2bf5.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/45786913.7783ccc1.css","/assets/0fd0f9e1.e63f884b.css","/assets/HireMe.2bc09a85.css","/assets/index.feeca201.css","/assets/8237d50a.aad2c762.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/robots.txt","/Search.a2bc2bf5.js","/site.webmanifest","/social.jpg","/social.png","/assets/LOGO.html","/assets/LOGO.svg","/assets/logomark-dark.svg","/assets/search.534732cb.css","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/blog/introducing-astro.jpg","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoints/prod.js","pathname":"/_image","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.775e959a.css","assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced0.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/bookreview","type":"page","pattern":"^\\/bookreview\\/?$","segments":[[{"content":"bookreview","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/bookreview.astro","pathname":"/bookreview","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/HireMe.a4a45ec6.css","assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/hireme","type":"page","pattern":"^\\/HireMe\\/?$","segments":[[{"content":"HireMe","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/HireMe.astro","pathname":"/HireMe","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/2-two-factor-auth","type":"page","pattern":"^\\/blog\\/2-two-factor-auth\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"2-two-factor-auth","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/2-two-factor-auth.mdx","pathname":"/blog/2-two-factor-auth","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/3-starting-astro","type":"page","pattern":"^\\/blog\\/3-starting-astro\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"3-starting-astro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/3-starting-astro.mdx","pathname":"/blog/3-starting-astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/1-password","type":"page","pattern":"^\\/blog\\/1-password\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"1-password","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/1-password.mdx","pathname":"/blog/1-password","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/blog/4-a-start","type":"page","pattern":"^\\/blog\\/4-a-start\\/?$","segments":[[{"content":"blog","dynamic":false,"spread":false}],[{"content":"4-a-start","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/blog/4-a-start.mdx","pathname":"/blog/4-a-start","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/11-communist-manifesto","type":"page","pattern":"^\\/book\\/11-communist-manifesto\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"11-communist-manifesto","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/11-communist-manifesto.mdx","pathname":"/book/11-communist-manifesto","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/1-slaughterhouse-five","type":"page","pattern":"^\\/book\\/1-Slaughterhouse-Five\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"1-Slaughterhouse-Five","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/1-Slaughterhouse-Five.mdx","pathname":"/book/1-Slaughterhouse-Five","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/5-lord-of-the-flies","type":"page","pattern":"^\\/book\\/5-lord-of-the-flies\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"5-lord-of-the-flies","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/5-lord-of-the-flies.mdx","pathname":"/book/5-lord-of-the-flies","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/10-never-let-me-go","type":"page","pattern":"^\\/book\\/10-never-let-me-go\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"10-never-let-me-go","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/10-never-let-me-go.mdx","pathname":"/book/10-never-let-me-go","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/2-ready-player-one","type":"page","pattern":"^\\/book\\/2-ready-player-one\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"2-ready-player-one","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/2-ready-player-one.mdx","pathname":"/book/2-ready-player-one","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/12-alias-grace","type":"page","pattern":"^\\/book\\/12-alias-grace\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"12-alias-grace","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/12-alias-grace.mdx","pathname":"/book/12-alias-grace","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/4-the-bell-jar","type":"page","pattern":"^\\/book\\/4-the-bell-jar\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"4-the-bell-jar","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/4-the-bell-jar.mdx","pathname":"/book/4-the-bell-jar","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/8-old-mans-war","type":"page","pattern":"^\\/book\\/8-old-mans-war\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"8-old-mans-war","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/8-old-mans-war.mdx","pathname":"/book/8-old-mans-war","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/7-the-martian","type":"page","pattern":"^\\/book\\/7-the-martian\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"7-the-martian","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/7-the-martian.mdx","pathname":"/book/7-the-martian","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/9-supermarket","type":"page","pattern":"^\\/book\\/9-supermarket\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"9-supermarket","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/9-supermarket.mdx","pathname":"/book/9-supermarket","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/6-slapstick","type":"page","pattern":"^\\/book\\/6-slapstick\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"6-slapstick","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/6-slapstick.mdx","pathname":"/book/6-slapstick","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/8237d50a.4c3fb589.css","assets/0fd0f9e1.80c40d65.css"],"scripts":[{"type":"external","value":"hoisted.2af3ced02.js"}],"routeData":{"route":"/book/3-armada","type":"page","pattern":"^\\/book\\/3-armada\\/?$","segments":[[{"content":"book","dynamic":false,"spread":false}],[{"content":"3-armada","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/book/3-armada.mdx","pathname":"/book/3-armada","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blackskies.vercel.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"dracula","wrap":true},"remarkPlugins":[[null,{"behavior":"prepend"}]],"rehypePlugins":[],"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BlogPost.astro":"chunks/BlogPost.5a4c4550.mjs","C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/layouts/BookPost.astro":"chunks/BookPost.9b345a72.mjs","/@fs/C:/Users/panze/OneDrive/Documents/GitHub/HopelezzBlog/src/components/search/Search":"Search.a2bc2bf5.js","@astrojs/solid-js/client.js":"client.4067c78d.js","@astrojs/preact/client.js":"client.0cca1885.js","/astro/hoisted.js?q=0":"hoisted.2af3ced0.js","/astro/hoisted.js?q=1":"hoisted.2af3ced02.js","astro:scripts/before-hydration.js":"data:text/javascript;charset=utf-8,//[no before-hydration script]"},"assets":["/assets/0fd0f9e1.80c40d65.css","/assets/HireMe.a4a45ec6.css","/assets/index.775e959a.css","/assets/8237d50a.4c3fb589.css","/android-chrome-192x192.png","/android-chrome-512x512.png","/apple-touch-icon.png","/client.0cca1885.js","/client.4067c78d.js","/favicon-16x16.png","/favicon-32x32.png","/favicon.ico","/hoisted.2af3ced0.js","/hoisted.2af3ced02.js","/robots.txt","/Search.a2bc2bf5.js","/site.webmanifest","/social.jpg","/social.png","/assets/LOGO.html","/assets/LOGO.svg","/assets/logomark-dark.svg","/assets/search.534732cb.css","/chunks/darkmode.astro_astro_type_script_index_0_lang.0abd001b.js","/chunks/web.6f31aee9.js","/assets/authors/John.avif","/assets/authors/Mark.avif","/assets/blog/introducing-astro.jpg","/assets/bookreview/Armada.jpg","/assets/bookreview/OldMansWar.jpg","/assets/bookreview/TheMartian.jpg","/assets/images/Astronaut.avif","/assets/images/LOGO.png","/assets/images/mailboxes.avif","/assets/images/password.jpg","/assets/images/twofactorauth.jpg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

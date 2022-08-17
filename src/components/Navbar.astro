@@ -10,7 +10,7 @@ const posts = await getSearchData();
     <div class="logoContainer">
         <a href="/" class="logo">
             <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-            <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
+            <h2 id="blogTitle" class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
         </a>
     </div>
     <div class="searchContainer">
@@ -28,6 +28,24 @@ const posts = await getSearchData();
     </div>
 </div>
 
+<script>
+    class Comments {
+    blogTitle: HTMLHeadingElement;
+
+    constructor() {
+        this.blogTitle = document.querySelector('#blogTitle') as HTMLHeadingElement;
+
+        //run animations
+        this.animateHeader();
+    }
+
+    animateHeader() {
+        this.blogTitle.classList.add('fadeInDown');
+    }
+}
+
+new Comments();
+</script>
 
 <style>
 /*-------------------Start Navbar-------------------*/
@@ -93,15 +111,13 @@ h2 a{
         justify-content: space-between;
     }
 }
+
 @media (max-width:560px) {
     .logoContainer{
         display: none;
     }
 }
 
-
-
-/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
 @media (pointer:coarse) {
     input[type="checkbox"], input[type="radio"] {
         min-width:30px;

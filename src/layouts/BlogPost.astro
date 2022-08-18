@@ -7,6 +7,7 @@ import BlogPost from '../components/blog/Post.astro';
 import Footer from '../components/footer/Footer.astro';
 import type { MDXInstance } from 'astro';
 import { Post } from '../utils/types';
+import Comment from '../components/comment/comments.astro';
 
 export interface Props {
     post: MDXInstance<Post>
@@ -39,6 +40,8 @@ const { minutesRead } = Astro.props.content;
 					</div>
 				</div>
 			</main>
+
+			<Comment />
 		</div>
 	</body>
 

@@ -5,133 +5,144 @@ import Dark from '../components/darkmode.astro';
 
 const posts = await getSearchData();
 ---
-
-<div class="nav" id="nav">
-    <div class="logoContainer">
-        <a href="/" class="logo">
-            <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-            <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
-        </a>
-    </div>
-    <div class="searchContainer">
-        <Search  client:load posts={posts} />
-    </div>
-    <div class="menu">
-        <ul class="hamburger">
-            <i class="fa-duotone fa-angles-down"></i>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="/HireMe">Hire Me</a></li>
+<header>
+    <nav class="navbar" id="nav">
+            <a href="/" class="logo">
+                <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
+                <div class='brand'>&lt;Blackskies &#47;&gt;</div>
+            </a>
+        
+        <ul class="nav-menu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="/HireMe" class="nav-link">Hire Me</a></li>
             <li>
                 <Dark />
             </li>
         </ul>
-    </div>
-</div>
+        <div class="hamburger">
+            <i class="fa-duotone fa-angles-down"></i>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span> 
+        </div>
+    </nav>
+</header>
 
 <script>
     window.onscroll = function() {myFunction()};
 
-    var nav = document.getElementById("nav");
-    var sticky = nav.offsetTop;
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
 
     function myFunction() {
       if (window.pageYOffset >= sticky) {
-        nav.classList.add("sticky")
+        navbar.classList.add("sticky")
       } else {
-        nav.classList.remove("sticky");
+        navbar.classList.remove("sticky");
       }
     }
 </script>
 
 <style>
 /*-------------------Start Navbar-------------------*/
-.nav {
-    position: fixed;
-    width: 100%;
-    height: 60px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--surface3);
+    width:100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--text1);
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    alight-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    background-color: var(--surface3);
-    box-shadow: var(--shadow-2);
-    z-index: 1;
+    gap: var(--size-10);
 }
 
 .logo{
-    line-height: 60px;
+    font-size: 2rem;
+    padding-top: 0.5rem;
     white-space: nowrap;
 }
 
-.logoContainer {
-    display: flex;
-    align-items: center;
+.nav-link {
+    transition: 0.7s ease;
+    white-space: nowrap;
 }
 
-h2 a{
-    text-decoration: none;
-    color: var(--brand);
+.nav-link:hover {
+    color: var(--text3);
 }
 
-
-/*----------------Menu---------------*/
-/* Hidden till smaller window */
-.fa-angles-down{
+.hamburger {
     display: none;
+    cursor: pointer;
 }
 
-.menu, .hamburger{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 3rem;
+.bar {
+    display: block;
+    width: 25px;
+    width: 3px;
+    margin: 5px auto;
+    --webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--surface2);
 }
 
-.menu ul li{
-    display: inline-block;
-    padding-left: 1.5rem;
-}
-
-.menu ul li a{
-    text-decoration: none;
-}
-
-.menu ul .active{
-    font-weight: 600;
-}
-
-@media (max-width: 930px) {
-    .menu{
-        height: 100%;
-        /* width: 100%; */
+@media(max-width: 768px){
+    .hamburger {
+        display: block;
     }
-    .hamburger{
-        display: none;
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
     }
-    .nav{
-        display: flex;
-        justify-content: space-between;
+    
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg)
     }
-}
-@media (max-width:560px) {
-    .logoContainer{
-        display: none;
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg)
     }
-}
 
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+    }
 
-
-/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
-@media (pointer:coarse) {
-    input[type="checkbox"], input[type="radio"] {
-        min-width:30px;
-        min-height:40px;
-        background:transparent;
+    .nav-menu.active{
+        left: 0;
     }
 }
-
 </style>
+<!-- 
+<div class="searchContainer">
+    <Search  client:load posts={posts} />
+</div> -->

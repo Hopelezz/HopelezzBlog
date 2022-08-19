@@ -20,11 +20,15 @@ pre .language-id{
 
 /* Code highlighting */
 p > code, li > code {
-    font-size: var(--size-4);
+    font-size: var(--size-3);
     color: var(--text1);
     background: var(--surface4) !important;
     padding-inline: var(--size-1);
     border-radius: var(--size-1);
+}
+
+pre .code-container {
+    font-size: var(--size-4);
 }
 
 /* Checkbox lists */

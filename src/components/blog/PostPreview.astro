@@ -39,6 +39,7 @@ const tag = tags.split(",")[0]; // returns the first tag
     align-items: center;
     justify-content: center;
 }
+
 .postCard {
     flex-basis: var(--size-content-1);
     display: flex;
@@ -76,8 +77,8 @@ a {
 }
 
 .center-cropped {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   background-repeat: no-repeat;
 }
@@ -117,9 +118,6 @@ a {
 @media (max-width: 768px) {
     .postCard {
         display: flex;
-        /* flex-direction: column; */
-        /* width: 100%; */
-        /* margin-left: 10%; */
     }
     .postCard:pointer {
         box-shadow: var(--shadow-4);

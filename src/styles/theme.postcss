@@ -18,10 +18,10 @@ html {
   --text2-light: var(--gray-7);
   --text1-brand-light: var(--teal-6);
   --text2-brand-light: var(--teal-5);
-  --surface1-light: var(--gray-5);
-  --surface2-light: var(--gray-3);
-  --surface3-light: var(--gray-2);
-  --surface4-light: var(--gray-1);
+  --surface1-light: var(--gray-6);
+  --surface2-light: var(--gray-4);
+  --surface3-light: var(--gray-3);
+  --surface4-light: var(--gray-2);
   --surface-shadow-light: 200 10% 20%;
   --shadow-strength-light: 20%;
   --selection-text-light: var(--gray-1);
@@ -54,10 +54,24 @@ html {
   --shadow-strength-dim: 20%;
   --selection-text-dim: var(--gray-9);
 
+  /* red */
+  --brand-red: var(--red-9);
+  --text1-red: var(--red-8);
+  --text2-red: var(--red-5);
+  --text1-brand-teal: var(--teal-5);
+  --text2-brand-teal: var(--teal-3);
+  --surface1-red: var(--gray-9);
+  --surface2-red: var(--gray-8);
+  --surface3-red: var(--gray-7);
+  --surface4-red: var(--gray-6);
+  --surface-shadow-red: 200 50% 3%;
+  --shadow-strength-red: 2%;
+  --selection-text-red: var(--red-1);
+
   /* teal */
-  --brand-teal: var(--grape-5);
-  --text1-teal: var(--teal-9);
-  --text2-teal: var(--teal-7);
+  --brand-teal: var(--grape-7);
+  --text1-teal: var(--grape-9);
+  --text2-teal: var(--grape-7);
   --text1-brand-teal: var(--grape-5);
   --text2-brand-teal: var(--grape-3);
   --surface1-teal: var(--teal-0);
@@ -81,6 +95,20 @@ html {
   --surface-shadow-grape: 288 30% 20%;
   --shadow-strength-grape: 2%;
   --selection-text-grape: var(--grape-1);
+  
+  /* candy */
+  --brand-candy: var(--pink-5);
+  --text1-candy: var(--violet-9);
+  --text2-candy: var(--violet-7);
+  --text1-brand-candy: var(--pink-5);
+  --text2-brand-candy: var(--pink-3);
+  --surface1-candy: var(--cyan-1);
+  --surface2-candy: var(--cyan-2);
+  --surface3-candy: var(--cyan-3);
+  --surface4-candy: var(--gradient-22);
+  --surface-shadow-candy: var(var(--shadow-2));
+  --shadow-strength-candy: 2%;
+  --selection-text-candy: var(--grape-1);
 }
 
 :root {
@@ -171,6 +199,23 @@ html {
   --selection-text: var(--selection-text-dim);
 }
 
+[color-scheme="red"] {
+  color-scheme: dark;
+
+  --brand: var(--brand-red);
+  --text1: var(--text1-red);
+  --text2: var(--text2-red);
+  --text3: var(--text1-brand-red);
+  --text4: var(--text2-brand-red);
+  --surface1: var(--surface1-red);
+  --surface2: var(--surface2-red);
+  --surface3: var(--surface3-red);
+  --surface4: var(--surface4-red);
+  --surface-shadow: var(--surface-shadow-red);
+  --shadow-strength: var(--shadow-strength-red);
+  --selection-text: var(--selection-text-red);
+}
+
 [color-scheme="teal"] {
   color-scheme: light;
 
@@ -205,6 +250,22 @@ html {
   --selection-text: var(--selection-text-grape);
 }
 
+[color-scheme="candy"] {
+  color-scheme: light;
+
+  --brand: var(--brand-candy);
+  --text1: var(--text1-candy);
+  --text2: var(--text2-candy);
+  --text3: var(--text1-brand-candy);
+  --text4: var(--text2-brand-candy);
+  --surface1: var(--surface1-candy);
+  --surface2: var(--surface2-candy);
+  --surface3: var(--surface3-candy);
+  --surface4: var(--surface4-candy);
+  --surface-shadow: var(--surface-shadow-candy);
+  --shadow-strength: var(--shadow-strength-candy);
+  --selection-text: var(--selection-text-candy);
+}
 * {
   /* box-sizing: border-box; */
   margin: 0;
@@ -212,7 +273,7 @@ html {
 
 html {
   block-size: 100%;
-  background-color: var(--surface1);
+  background: var(--surface1);
   color: var(--text1);
   accent-color: var(--brand);
 }
@@ -329,7 +390,6 @@ form {
   inline-size: var(--size-8);
   block-size: var(--size-8);
   border-radius: var(--radius-round);
-
   &.text1 { background-color: var(--text1); }
   &.text2 { background-color: var(--text2); }
 }

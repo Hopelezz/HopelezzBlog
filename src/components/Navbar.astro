@@ -5,109 +5,194 @@ import Dark from '../components/darkmode.astro';
 
 const posts = await getSearchData();
 ---
-
-<div class="nav">
-    <div class="logoContainer">
-        <a href="/" class="logo">
-            <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-            <h2 class='brand'>&lt;BLACKSKIES &#47;&gt;</h2>
-        </a>
-    </div>
-    <div class="searchContainer">
-        <Search  client:load posts={posts} />
-    </div>
-    <div class="menu">
-        <ul class="hamburger">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="/HireMe">Hire Me</a></li>
+<header>
+    <nav class="navbar">
+        <a href="/" class="logo bigLogo">&lt;BlackSkies &#47;&gt;</a>
+        <a href="/" class="logo smallLogo">&lt;BS &#47;&gt;</a>
+        <div class="searchContainer">
+            <Search  client:load posts={posts} />
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="/HireMe" class="nav-link">Hire Me</a></li>
             <li>
                 <Dark />
             </li>
         </ul>
-    </div>
-</div>
+        <div class="hamburger">
+            <!-- <i class="fa-duotone fa-angles-down"></i> -->
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
 
+<script>
+
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
 
 <style>
 /*-------------------Start Navbar-------------------*/
-.nav {
-    /* removed Fixed due to issues with nav being effected by index page container */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
     position: fixed;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
     background-color: var(--surface3);
-    box-shadow: var(--shadow-2);
+    width: 100%;
+    box-shadow: var(--shadow-3);
+    top: 0;
     z-index: 1;
 }
 
-.logo{
-    line-height: 60px;
-    white-space: nowrap;
+li {
+    list-style: none;
 }
 
-.logoContainer {
-    display: flex;
-    align-items: center;
-}
-
-h2 a{
+a {
+    color: var(--text1);
     text-decoration: none;
-    color: var(--brand);
 }
 
+.navbar {
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    alight-items: center;
+    padding: 0 24px;
+}
 
-/*----------------Menu---------------*/
-.menu, .hamburger{
+.smallLogo {
+    display: none;
+    visibility: hidden;
+}
+
+.searchContainer {
+    position: relative;
+    max-width: 500px;
+}
+
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 60px;
-}
-.menu ul li{
-    display: inline-block;
-    padding-left: 30px;
-}
-.menu ul li a{
-    text-decoration: none;
+    gap: 60px;
 }
 
-.menu ul .active{
-    font-weight: 600;
+.logo{
+    font-size: 2rem;
+    padding-top: 0.5rem;
+    white-space: nowrap;
 }
 
-@media (max-width: 930px) {
-    .menu{
-        height: 100%;
+.nav-link {
+    transition: 0.7s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--text3);
+}
+
+.hamburger {
+    padding-top: 1rem;
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    --webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--surface1);
+}
+
+@media(max-width: 768px){
+    li {
+        min-height: 30px;
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    li:hover {
+        background-color: var(--surface1);
         width: 100%;
+        height: 100%;
     }
-    .hamburger{
+    .bigLogo {
         display: none;
+        visibility: hidden;
     }
-    .nav{
-        display: flex;
-        justify-content: space-between;
+    .smallLogo {
+        display: block;
+        visibility: visible;
+        font-weight: bold;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -50%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 20%;
+        background-color: var(--surface3);
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-link {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .logo {
+        content: ["BS"];
     }
 }
-@media (max-width:560px) {
-    .logoContainer{
-        display: none;
-    }
-}
-
-
-
-/* Make radio buttons and check boxes larger if we have an inaccurate pointing device */
-@media (pointer:coarse) {
-    input[type="checkbox"], input[type="radio"] {
-        min-width:30px;
-        min-height:40px;
-        background:transparent;
-    }
-}
-
 </style>
+<!--
+<div class="searchContainer">
+    <Search  client:load posts={posts} />
+</div> -->

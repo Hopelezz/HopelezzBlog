@@ -38,10 +38,8 @@ const tag = tags.split(",")[0]; // returns the first tag
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* margin: 0     auto; */
-    /* width: 100%; */
-    /* height: 25% */
 }
+
 .postCard {
     flex-basis: var(--size-content-1);
     display: flex;
@@ -53,8 +51,8 @@ const tag = tags.split(",")[0]; // returns the first tag
     box-shadow: var(--shadow-3);
     margin: var(--size-3);
     border: 1px solid var(--brand);
-    width: 500px;
-    height: 200px;
+    width: 32rem;
+    min-height: 11rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -79,8 +77,8 @@ a {
 }
 
 .center-cropped {
-  width: 160px;
-  height: 160px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   background-repeat: no-repeat;
 }
@@ -120,9 +118,6 @@ a {
 @media (max-width: 768px) {
     .postCard {
         display: flex;
-        /* flex-direction: column; */
-        /* width: 100%; */
-        margin-left: 10%;
     }
     .postCard:pointer {
         box-shadow: var(--shadow-4);

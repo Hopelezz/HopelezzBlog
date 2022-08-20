@@ -27,6 +27,10 @@ p > code, li > code {
     border-radius: var(--size-1);
 }
 
+pre .code-container {
+    font-size: var(--size-4);
+}
+
 /* Checkbox lists */
 .task-list-item {
     list-style-type: none;

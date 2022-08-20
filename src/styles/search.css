@@ -5,24 +5,22 @@
 }
 
 .search-input input {
-    max-width: auto;
+    /* max-width: auto; */
     height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0 10px 0;
     outline: none;
-    border: none;
     border-radius: var(--radius-3);
     padding: 0 40px 0 15px;
     font-size: var(--font-size-3);
     background: var(--surface2);
-    border: 1px solid var(--gray-1);
+    border: 1px solid var(--gray-8);
     box-shadow: var(--surface-shadow);
     transition: all 0.3s ease-in-out;
 }
 
 ::placeholder{
-    color: var(--text2);
-    opacity: 1;
+    color: var(--text1);
+    opacity: 0.5;
  }
 
 .search-input input:focus{
@@ -81,3 +79,4 @@
     padding: 10px;
     transition: all 0.3s ease-in-out;
 }
+

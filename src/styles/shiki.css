@@ -20,7 +20,7 @@ pre .language-id{
 
 /* Code highlighting */
 p > code, li > code {
-    font-size: var(--size-3);
+    font-size: var(--size-4);
     color: var(--text1);
     background: var(--surface4) !important;
     padding-inline: var(--size-1);

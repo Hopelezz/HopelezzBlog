@@ -6,12 +6,12 @@ import Dark from '../components/darkmode.astro';
 const posts = await getSearchData();
 ---
 <header>
-    <nav class="navbar" id="nav">
-            <a href="/" class="logo">
-                <!-- <img src='../assets/LOGO.svg' width={90} height={90} alt='Logo' /> -->
-                <div class='brand'>&lt;Blackskies &#47;&gt;</div>
-            </a>
-        
+    <nav class="navbar">
+        <a href="/" class="logo bigLogo">&lt;BlackSkies &#47;&gt;</a>
+        <a href="/" class="logo smallLogo">&lt;BS &#47;&gt;</a>
+        <div class="searchContainer">
+            <Search  client:load posts={posts} />
+        </div>
         <ul class="nav-menu">
             <li><a href="/" class="nav-link">Home</a></li>
             <li><a href="#" class="nav-link">About</a></li>
@@ -21,27 +21,30 @@ const posts = await getSearchData();
             </li>
         </ul>
         <div class="hamburger">
-            <i class="fa-duotone fa-angles-down"></i>
+            <!-- <i class="fa-duotone fa-angles-down"></i> -->
             <span class="bar"></span>
             <span class="bar"></span>
-            <span class="bar"></span> 
+            <span class="bar"></span>
         </div>
     </nav>
 </header>
 
 <script>
-    window.onscroll = function() {myFunction()};
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
 
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 </script>
 
 <style>
@@ -53,8 +56,12 @@ const posts = await getSearchData();
 }
 
 header {
+    position: fixed;
     background-color: var(--surface3);
-    width:100%;
+    width: 100%;
+    box-shadow: var(--shadow-3);
+    top: 0;
+    z-index: 1;
 }
 
 li {
@@ -66,19 +73,29 @@ a {
     text-decoration: none;
 }
 
-.navbar{
-    min-height: 70px;
+.navbar {
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
     alight-items: center;
     padding: 0 24px;
 }
 
+.smallLogo {
+    display: none;
+    visibility: hidden;
+}
+
+.searchContainer {
+    position: relative;
+    max-width: 500px;
+}
+
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: var(--size-10);
+    gap: 60px;
 }
 
 .logo{
@@ -97,6 +114,7 @@ a {
 }
 
 .hamburger {
+    padding-top: 1rem;
     display: none;
     cursor: pointer;
 }
@@ -104,21 +122,43 @@ a {
 .bar {
     display: block;
     width: 25px;
-    width: 3px;
+    height: 3px;
     margin: 5px auto;
     --webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: var(--surface2);
+    background-color: var(--surface1);
 }
 
 @media(max-width: 768px){
+    li {
+        min-height: 30px;
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    
+    li:hover {
+        background-color: var(--surface1);
+        width: 100%;
+        height: 100%;
+    }
+    .bigLogo {
+        display: none;
+        visibility: hidden;
+    }
+    .smallLogo {
+        display: block;
+        visibility: visible;
+        font-weight: bold;
+    }
     .hamburger {
         display: block;
     }
+
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
-    
+
     .hamburger.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg)
     }
@@ -129,20 +169,30 @@ a {
 
     .nav-menu {
         position: fixed;
-        left: -100%;
+        right: -50%;
         top: 70px;
         gap: 0;
         flex-direction: column;
+        width: 20%;
+        background-color: var(--surface3);
         text-align: center;
         transition: 0.3s;
     }
 
-    .nav-menu.active{
-        left: 0;
+    .nav-link {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .logo {
+        content: ["BS"];
     }
 }
 </style>
-<!-- 
+<!--
 <div class="searchContainer">
     <Search  client:load posts={posts} />
 </div> -->

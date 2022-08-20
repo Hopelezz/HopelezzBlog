@@ -78,7 +78,7 @@ a {
     display: flex;
     justify-content: space-between;
     alight-items: center;
-    padding: 0 24px;
+    padding-inline: 0 24px;
 }
 
 .smallLogo {
@@ -94,7 +94,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
 }
 
 .logo{
@@ -127,7 +127,17 @@ a {
     transition: all 0.3s ease-in-out;
     background-color: var(--surface1);
 }
-
+@media (max-width: 850PX){
+    .bigLogo {
+        display: none;
+        visibility: hidden;
+    }
+    .smallLogo {
+        display: block;
+        visibility: visible;
+        font-weight: bold;
+    }
+}
 @media(max-width: 768px){
     li {
         min-height: 30px;
@@ -141,15 +151,7 @@ a {
         width: 100%;
         height: 100%;
     }
-    .bigLogo {
-        display: none;
-        visibility: hidden;
-    }
-    .smallLogo {
-        display: block;
-        visibility: visible;
-        font-weight: bold;
-    }
+    
     .hamburger {
         display: block;
     }

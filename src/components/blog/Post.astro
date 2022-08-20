@@ -1,6 +1,6 @@
 ---
 // import '../../styles/theme.postcss';
-import Aside from '../Aside.astro';
+import Author from "../author.astro";
 
 export interface Props {
 	title: string;
@@ -14,10 +14,18 @@ export interface Props {
 const { title, writer, publishDate, alt, img, tags } = Astro.props;
 
 const { minutesRead } = Astro.props;
-console.log(minutesRead);
+
+export async function getAuthor(writer){
+	if (Author.hasOwnProperty(writer)) {
+	console.log("Key Found!!");
+}
+else {
+	console.log("Not Found.");
+}
+}
+getAuthor(writer);
 ---
 <div class="postContainer">
-	<Aside writter={writer} />
 	<article class="article">
 		<!-- <img class="center-cropped" src={img} alt={alt} height={200} /> -->
 		<div>
@@ -40,9 +48,11 @@ console.log(minutesRead);
 <style>
 
 .postContainer {
+	flex-basis: var(--size-content-4);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	padding: 1rem;
 }
 
 .article {

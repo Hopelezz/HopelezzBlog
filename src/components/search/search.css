@@ -1,11 +1,12 @@
+/* Places the Searchbar */
 .searchContainer {
     position: relative;
     max-width: 450px;
     margin: auto;
 }
 
+/* Styles the search bar */
 .search-input input {
-    /* max-width: auto; */
     height: 40px;
     margin: 10px 0 10px 0;
     outline: none;
@@ -41,11 +42,13 @@
     font-size: var(--font-size-2);
 }
 
+/* Styles the search list */
 .list{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 100%;
     height: 100%;
     padding: 0;
@@ -53,9 +56,10 @@
     list-style: none;
 }
 
-
 .searchResult{
+    /* position: absolute; */
     width: 100%;
+    overflow: ellipsis;
     background-color: var(--surface2);
     border-radius: 5px;
     padding: var(--size-2);

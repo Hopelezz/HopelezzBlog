@@ -1,6 +1,5 @@
 ---
-// import '../../styles/theme.postcss';
-import Author from "../author.astro";
+import {getAuthor} from '../../utils/api.astro';
 
 export interface Props {
 	title: string;
@@ -12,18 +11,9 @@ export interface Props {
 }
 
 const { title, writer, publishDate, alt, img, tags } = Astro.props;
-
 const { minutesRead } = Astro.props;
+const {author} = await getAuthor(writer);
 
-export async function getAuthor(writer){
-	if (Author.hasOwnProperty(writer)) {
-	console.log("Key Found!!");
-}
-else {
-	console.log("Not Found.");
-}
-}
-getAuthor(writer);
 ---
 <div class="postContainer">
 	<article class="article">
@@ -33,7 +23,8 @@ getAuthor(writer);
 			</div>
 			<div class="details">
 				<h1>{title}</h1>
-				<p>{writer}</p>
+				<!-- <p>{author.name}</p> -->
+				<!-- <a href={author.twitter}>{author.twitterHandle}</a> -->
 				<span>{publishDate}  |  {tags}</span>
 				<p class="reading">📖{minutesRead}</p>
 			</div>

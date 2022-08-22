@@ -48,4 +48,11 @@ export async function getSearchData(){
     return allPostsData;
 }
 
+import JSON from '../data/author.json';
+
+// return key of author and the value of the author
+export async function getAuthor(writer:string) {
+    let author = JSON[writer];
+    return author
+}
 ---

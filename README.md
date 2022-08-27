@@ -7,6 +7,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Astro][astro-shield]][astro-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -99,8 +100,9 @@ To run the projects you will need to follow the instructions below. This will ru
 
 - [x] Create a section for Book Reviews
   - [x] Add images to Post Preview.
+- [x] Add Author data via JSON
 - [ ] Add an `About`` Me` page
-- [ ] Add a `Hire Me` page
+- [x] Add a `Hire Me` page
 - [ ] Add a `404` page
 - [x] Add a Search Feature to query the posts for keywords
   - _Solved on https://github.com/Hopelezz/HopelezzBlog/issues/6_
@@ -110,11 +112,9 @@ To run the projects you will need to follow the instructions below. This will ru
 
 ### Style
 
-- [ ] Add a Dark Theme. (ALMOST GOT IT!)
+- [x] Add a Dark Theme.
 - [ ] Turn the Logo into an SVG version
-- [ ] Change the way `Lists` look
-- [ ] Change the way `Check Boxes` look
-- [ ] Make the Page More responsive to Mobile. (Coming soon with Themes)
+- [ ] Make the Page More responsive to Mobile. (Needs a bit more tweaking to get it just right)
 - [ ] Add a RightSideBar that shows the `Post headers`.
 
 ### End Goal
@@ -188,4 +188,6 @@ Project Link: [BlackSkies](https://blackskies.vercel.app/)
 [license-url]: https://github.com/Hopelezz/HopelezzBlog/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
+[astro-shield]: https://img.shields.io/badge/Astro-FF5D01?logo=astro&logoColor=fff&style=for-the-badge
+[astro-url]: https://astro.build/
 [product-screenshot]: images/screenshot.png

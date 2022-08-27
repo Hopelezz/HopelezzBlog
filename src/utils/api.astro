@@ -50,9 +50,10 @@ export async function getSearchData(){
 
 import JSON from '../data/author.json';
 
-// return key of author.json data and return the object
-export async function getAuthor(writer:string) {
+
+// Data Fetch an single writer data
+export async function getAuthor(writer: string){
     let author = JSON[writer];
-    return author
+    return author;
 }
 ---

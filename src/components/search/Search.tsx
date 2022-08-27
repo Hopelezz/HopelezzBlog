@@ -1,8 +1,6 @@
 /** @jsxImportSource solid-js */
 import { createSignal, For, Show } from "solid-js";
-import './search.css'
-
-
+import './search.css';
 
 interface Props {
   posts: Array<{

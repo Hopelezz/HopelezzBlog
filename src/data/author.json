@@ -1,35 +1,35 @@
 {
     "Mark": {
-        "NAME": "Mark Spratt",
-        "BORN": "09-29-1987",
-        "TWITTER": "http://twitter.com",
-        "TWITTER_HANDLE": "@_Hopelezz",
-        "LINKEDIN": "https://www.linkedin.com/in/mark-spratt/",
-        "GITHUB": "https://github.com/Hopelezz",
-        "GITHUB_HANDLE": "@Hopelezz",
-        "PHOTO": "/assets/authors/Mark.avif",
-        "BIO": "Electrical Engineer, Astro & Solid DocTeam!"
+        "name": "Mark Spratt",
+        "born": "09-29-1987",
+        "twitter": "http://twitter.com",
+        "twitterHandle": "@_Hopelezz",
+        "linkedin": "https://www.linkedin.com/in/mark-spratt/",
+        "github": "https://github.com/Hopelezz",
+        "githubHandle": "@Hopelezz",
+        "photo": "/assets/authors/Mark.avif",
+        "bio": "Playing at the intersection of science, art, and philosophy. Trying to be less wrong. — 8Zat Rana"
     },
     "John": {
-        "NAME": "John Spratt",
-        "BORN": "09-29-1987",
-        "TWITTER": "http://twitter.com",
-        "TWITTER_HANDLE": "@_Hopelezz",
-        "LINKEDIN": "https://www.linkedin.com/in/mark-spratt/",
-        "GITHUB": "https://github.com/Hopelezz",
-        "GITHUB_HANDLE": "@Hopelezz",
-        "PHOTO": "/assets/authors/John.avif",
-        "BIO": "I am a web developer and I love to code."
+        "name": "Mark Spratt",
+        "born": "09-29-1987",
+        "twitter": "http://twitter.com",
+        "twitterHandle": "@_Hopelezz",
+        "linkedin": "https://www.linkedin.com/in/mark-spratt/",
+        "github": "https://github.com/Hopelezz",
+        "githubHandle": "@Hopelezz",
+        "photo": "/assets/authors/John.avif",
+        "bio": "I am a web developer and I love to code."
     },
     "Thamie": {
-        "NAME": "Thamie Spratt",
-        "BORN": "09-29-1987",
-        "TWITTER": "http://twitter.com",
-        "TWITTER_HANDLE": "@_Hopelezz",
-        "LINKEDIN": "https://www.linkedin.com/in/mark-spratt/",
-        "GITHUB": "",
-        "GITHUB_HANDLE": "@Hopelezz",
-        "PHOTO": "/assets/authors/Jane.avif",
-        "BIO": "I am a web developer and I love to code."
+        "name": "Mark Spratt",
+        "born": "09-29-1987",
+        "twitter": "http://twitter.com",
+        "twitterHandle": "@_Hopelezz",
+        "linkedin": "https://www.linkedin.com/in/mark-spratt/",
+        "github": "",
+        "githubHandle": "@Hopelezz",
+        "photo": "/assets/authors/Jane.avif",
+        "bio": "I am a web developer and I love to code."
     }
 }

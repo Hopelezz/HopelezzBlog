@@ -101,7 +101,7 @@ To run the projects you will need to follow the instructions below. This will ru
 - [x] Create a section for Book Reviews
   - [x] Add images to Post Preview.
 - [x] Add Author data via JSON
-- [ ] Add an `About`` Me` page
+- [ ] Add an `About Me` page
 - [x] Add a `Hire Me` page
 - [ ] Add a `404` page
 - [x] Add a Search Feature to query the posts for keywords
@@ -113,7 +113,7 @@ To run the projects you will need to follow the instructions below. This will ru
 ### Style
 
 - [x] Add a Dark Theme.
-- [ ] Turn the Logo into an SVG version
+- [x] Turn the Logo into an SVG version
 - [ ] Make the Page More responsive to Mobile. (Needs a bit more tweaking to get it just right)
 - [ ] Add a RightSideBar that shows the `Post headers`.
 

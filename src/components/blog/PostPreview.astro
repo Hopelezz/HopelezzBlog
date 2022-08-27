@@ -7,6 +7,7 @@ export interface Props {
 	post: MDXInstance<Post>
 }
 const { post } = Astro.props;
+console.log(post.file);
 const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;
 
 const tag = tags.split(",")[0]; // returns the first tag

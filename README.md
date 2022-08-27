@@ -100,6 +100,7 @@ To run the projects you will need to follow the instructions below. This will ru
 
 - [x] Create a section for Book Reviews
   - [x] Add images to Post Preview.
+- [x] Add Author data via JSON
 - [ ] Add an `About`` Me` page
 - [x] Add a `Hire Me` page
 - [ ] Add a `404` page

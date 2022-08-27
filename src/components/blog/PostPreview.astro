@@ -2,7 +2,7 @@
 import { MDXInstance } from "astro";
 import "../../styles/theme.postcss";
 import { Post } from "../../utils/types";
-
+import {getAuthor} from '../../utils/api.astro';
 export interface Props {
 	post: MDXInstance<Post>
 }
@@ -12,6 +12,8 @@ const { title, publishDate, writer, href, description, img, alt, tags } = post.f
 
 const tag = tags.split(",")[0]; // returns the first tag
 
+const author = await getAuthor(writer);
+const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHandle, photo, bio } = author;
 ---
 <!--Article-->
 <div class="postContainer">
@@ -25,7 +27,7 @@ const tag = tags.split(",")[0]; // returns the first tag
             <h2 class='brand text3'>{title}</h2>
             <span class='text'>{publishDate}  |  {tag}</span>
             <br/>
-            <span class='text'>{writer}</span>
+            <span class='text'>{name}</span>
             <p class='text3 truncate'>{description}</p>
         </div>
     </article>

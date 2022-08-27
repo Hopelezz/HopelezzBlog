@@ -1,0 +1,38 @@
+---
+layout: ../../layouts/BlogPost.astro
+title: Searchbar Using Solidjs
+publishDate: 26 AUG 2022
+writer: Mark
+description: A simple button, to navigate to the most recent post. I had a navigation bar but nothing posted to it aside from what I was referring to as Dashboard that took you to the front page and links to my social sites. I wanted to add a bit of complexity and decided on something fairly simple just to get my head around the way Astros framework works.
+img: /assets/images/mailboxes.avif
+alt: mailboxes
+tags: A New Start
+draft: true
+---
+
+When I think of navigation I don't really think about links, buttons, or even dropdown menus. My first thoughts are of a searchbar. Using keywords to find relavent information instead of scouring for it. Not sure if this comes from my early days on the internet and the means of discovery one could have by typing random words. Currently none of Astros example templates have a search feature built into them. Lets set out fixing this for our blog.
+
+# The First Steps
+
+For this feature I've chosen Solid-JS. This is a framework built on the premise of being `reactive`. Oh, but what is reactivity you say? Instead of refreshing the whole page and redownloading the whole package we only need the component to update. When we trigger an event this will cause only the component to refresh.
+
+## The Breakdown
+
+We need to define some core primatives of our component. I want to make it so that when I type into search it will imediately return the results. Narrowing the search the more accurate the query becomes.
+
+# Setting Up The Envioroment
+
+```js title="Search.tsx"
+/** @jsxImportSource solid-js */
+import { createSignal, For, Show } from "solid-js";
+```
+
+
+```js
+export default function Search(props: Props) {
+    // our component will exist here.
+}
+```
+
+
+

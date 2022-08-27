@@ -1,5 +1,4 @@
 ---
-// import '../../styles/theme.postcss';
 import {getAuthor} from '../../utils/api.astro'
 
 export interface Props {
@@ -15,8 +14,8 @@ const { title, writer, publishDate, alt, img, tags } = Astro.props;
 
 const { minutesRead } = Astro.props;
 
+//gets the writers name and returns the author data from JSON. Then deconstructing the data into variables
 const author = await getAuthor(writer);
-console.log(author);
 const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHandle, photo, bio } = author;
 ---
 <div class="postContainer">
@@ -28,7 +27,7 @@ const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHa
 			<div class="details">
 				<h1>{title}</h1>
 				<p>{name}</p>
-				<span>Twitter: <a href={twitter}>{twitterHandle}</a></span>
+				<a href={twitter}><span>Twitter: {twitterHandle}</span></a>
 				<span>LinkedIn: <a href={linkedin}>{linkedinHandle}</a></span>
 				<span>Github: <a href={github}>{githubHandle}</a></span>
 				<span>{publishDate}  |  {tags}</span>

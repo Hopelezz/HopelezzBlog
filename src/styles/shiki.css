@@ -9,8 +9,12 @@ pre{
     flex-direction: column;
     justify-content: center;
     padding: var(--size-3);
-    border-radius: var(--size-2);
+    background: var(--surface2);
+    border-radius: var(--radius-3);
+    box-shadow: var(--inner-shadow-4);
     background: #36454F !important;
+    width: 60%;
+    min-width: 500px;
 }
 
 pre .language-id{

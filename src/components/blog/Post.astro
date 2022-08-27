@@ -13,6 +13,7 @@ export interface Props {
 const { title, writer, publishDate, alt, img, tags } = Astro.props;
 const { minutesRead } = Astro.props;
 const {author} = await getAuthor(writer);
+console.log(author);
 
 ---
 <div class="postContainer">
@@ -23,7 +24,7 @@ const {author} = await getAuthor(writer);
 			</div>
 			<div class="details">
 				<h1>{title}</h1>
-				<p>{}</p>
+				<!-- <p>{name}</p> -->
 				<a href={}>{}</a>
 				<span>{publishDate}  |  {tags}</span>
 				<p class="reading">📖{minutesRead}</p>
@@ -110,4 +111,5 @@ const {author} = await getAuthor(writer);
     font-size: var(--size-5);
     color: var(--text3);
 }
+
 </style>

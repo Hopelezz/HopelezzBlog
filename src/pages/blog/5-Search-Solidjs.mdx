@@ -67,7 +67,7 @@ import { createSignal, For, Show } from "solid-js";
 ### Solid API Properties: 
 
 - "The createSignal tracks a single value (which can be any JavaScript object) that changes over time."
-  - The createSignal function returns a pair of functions as a two-element array: a getter (or accessor) and a setter. In typical use, you would destructure this array into a named Signal. 
+    - The createSignal function returns a pair of functions as a two-element array: a getter (or accessor) and a setter. In typical use, you would destructure this array into a named Signal. 
 - "The FOR is a referentially keyed loop with efficient updating of only changed items."
     - This is an HTML element that is used to iterate over an array of items.
 - "The SHOW is a conditional rendering that only renders the content when the condition is true."
@@ -75,12 +75,54 @@ import { createSignal, For, Show } from "solid-js";
 
 <br/>
 
+We will start by defining our properties of the page frontmatter. Next we will be supplying the Search component with an array of posts. We want to check this array for keywords pertaining to these posts. We can do this by using the  Title, Description, and Tags properties.
+
+Currently my structure looks something like the following script shows. You will have to define this based on how you have yours setup.
+
+```tsx title="Search.tsx"
+interface Props {
+  posts: Array<{
+        title: string;
+        author: string;
+        writer: string;
+        description: string;
+        tags: string;
+        url: string;
+  }>;
+}
+``` 
+
+By the definition of API functions from solid we can use the For and Show components to iterate over the posts array and check if the keywords are in the title, description, or tags. We will need to set up a filtering system to compare the input to the existing list.
+
+To start with we need to set up a function that takes in the array of posts. 
+
 ```tsx title="Search.tsx"
 export default function Search(props: Props) {
-    // our component will exist here.
+  ...//our component will exist here.
 }
 ```
 
+Next we will define a getter and a setter in accoradance to the documentation. It is standard practice to name these functions `name` and `setName`. For our purpose we will call this search and setSearch. We will also want to setup a filteredPosts array to hold the posts that match our search. This will be initialized from an internal function.
+
 ```tsx
-    const [search, setSearch] = createSignal(""); //create a signal for the search input
+  const [search, setSearch] = createSignal(""); //create a signal for the search input
+  const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
+
+  function handleInput(e: any) {
+    const { value } = e.currentTarget;  //get the value of the input
+    setSearch(value.toLowerCase()); //set the search signal to the value of the input
+    const fPosts = props.posts.filter(post => { //filter the posts
+      const { title, description, tags, author } = post;  //get the frontmatter of the post
+      return (
+        title?.toLowerCase().includes(value) ||
+        description?.toLowerCase().includes(value) ||
+        author?.toLowerCase().includes(value) ||
+        tags?.toLowerCase().includes(value)
+      )
+    });
+
+    setFilteredPosts(fPosts) //set the filtered posts signal to the filtered posts
+  }
 ```
+
+

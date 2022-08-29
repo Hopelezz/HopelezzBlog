@@ -21,12 +21,11 @@ interface Props {
  */
 export default function Search(props: Props) {
    const [search, setSearch] = createSignal(""); //create a signal for the search input
-  const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
+   const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
 
   function handleInput(e: any) {
     const { value } = e.currentTarget;  //get the value of the input
     setSearch(value.toLowerCase()); //set the search signal to the value of the input
-    console.log(value);
     const fPosts = props.posts.filter(post => { //filter the posts
       const { title, description, tags, author } = post;  //get the frontmatter of the post
       return (

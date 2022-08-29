@@ -3,9 +3,9 @@ layout: ../../layouts/BlogPost.astro
 title: Searchbar Using Solidjs
 publishDate: 26 AUG 2022
 writer: Mark
-description: A simple button, to navigate to the most recent post. I had a navigation bar but nothing posted to it aside from what I was referring to as Dashboard that took you to the front page and links to my social sites. I wanted to add a bit of complexity and decided on something fairly simple just to get my head around the way Astros framework works.
-img: /assets/images/mailboxes.avif
-alt: mailboxes
+description: How to use the solidjs to create a searchbar
+img: /assets/blog/Solid_logo.svg
+alt: 
 tags: A New Start
 draft: true
 ---
@@ -14,25 +14,73 @@ When I think of navigation I don't really think about links, buttons, or even dr
 
 # The First Steps
 
-For this feature I've chosen Solid-JS. This is a framework built on the premise of being `reactive`. Oh, but what is reactivity you say? Instead of refreshing the whole page and redownloading the whole package we only need the component to update. When we trigger an event this will cause only the component to refresh.
+For this feature I've chosen Solid-JS. This is a framework built on the premise of being `reactive`. Oh, but what is reactivity you say? Instead of refreshing the page and redownloading the the content again, solidjs will granularly update the main component. Essentially, when we trigger an event this will cause only the component to refresh.
 
 ## The Breakdown
 
-We need to define some core primatives of our component. I want to make it so that when I type into search it will imediately return the results. Narrowing the search the more accurate the query becomes.
+We need to define some core primatives of our component. I want to make it so that when I type into search it will imediately return the results in a list. Narrowing the search the more accurate the query becomes.
 
 # Setting Up The Envioroment
 
-```js title="Search.tsx"
-/** @jsxImportSource solid-js */
-import { createSignal, For, Show } from "solid-js";
+Because we're using Astro, we need to integreate Solid-js into our astro configuration file. The steps below can be found more in detail in the [Astro Docs](https://docs.astro.build/en/guides/integrations-guide/solid-js/).
+
+First step is to install Solid via the terminal.
+
+```
+npm run astro add solid
 ```
 
+Next we will want to set up our astro config file so that way we can integrate solid into Astro.
 
-```js
+```js title="astro.config.mjs"
+import solid from '@astrojs/solid-js';
+
+export default {
+  // ...
+  integrations: [solid()],
+}
+```
+
+Now that we have our config file setup. Lets create a new component! I'm going to create a new component in the `components` directory. Inside of this folder we will create a tsx and a .css file.
+
+```
+src
+├───components
+│   ├───blog
+│   └───search          <-- component folder
+│       ├───search.tsx  <-- component
+│       └───search.css  <-- style
+├───layouts
+├───pages
+│   └───blog
+└───styles
+```
+
+Inside of our search.tsx file we will want to set up the import statement along with some functions we'll need from the Solid-js API.
+
+```tsx title="Search.tsx"
+/** @jsxImportSource solid-js */  <-- import statement
+
+import { createSignal, For, Show } from "solid-js";
+```
+<br/>
+### Solid API Properties: 
+
+- "The createSignal tracks a single value (which can be any JavaScript object) that changes over time."
+  - The createSignal function returns a pair of functions as a two-element array: a getter (or accessor) and a setter. In typical use, you would destructure this array into a named Signal. 
+- "The FOR is a referentially keyed loop with efficient updating of only changed items."
+    - This is an HTML element that is used to iterate over an array of items.
+- "The SHOW is a conditional rendering that only renders the content when the condition is true."
+    - This is an HTML element that is used to conditionally render content.
+
+<br/>
+
+```tsx title="Search.tsx"
 export default function Search(props: Props) {
     // our component will exist here.
 }
 ```
 
-
-
+```tsx
+    const [search, setSearch] = createSignal(""); //create a signal for the search input
+```

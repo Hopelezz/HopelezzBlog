@@ -3,9 +3,11 @@ import { MDXInstance } from "astro";
 import "../../styles/theme.postcss";
 import { Post } from "../../utils/types";
 import {getAuthor} from '../../utils/api.astro';
+
 export interface Props {
 	post: MDXInstance<Post>
 }
+
 const { post } = Astro.props;
 console.log(post.file);
 const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;

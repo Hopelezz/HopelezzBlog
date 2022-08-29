@@ -11,12 +11,13 @@ export interface Props {
 }
 
 const { title, writer, publishDate, alt, img, tags } = Astro.props;
-
+// const tag = tags.split(",")[0];
+console.log(tags);
 const { minutesRead } = Astro.props;
 
 //gets the writers name and returns the author data from JSON. Then deconstructing the data into variables
 const author = await getAuthor(writer);
-const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHandle, photo, bio } = author;
+const { name, twitter } = author;
 ---
 <div class="postContainer">
 	<article class="article">
@@ -26,10 +27,7 @@ const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHa
 			</div>
 			<div class="details">
 				<h1>{title}</h1>
-				<p>{name}</p>
-				<a href={twitter}><span>Twitter: {twitterHandle}</span></a>
-				<span>LinkedIn: <a href={linkedin}>{linkedinHandle}</a></span>
-				<span>Github: <a href={github}>{githubHandle}</a></span>
+				<a href={twitter}><p>{name}</p></a>
 				<span>{publishDate}  |  {tags}</span>
 				<p class="reading">📖{minutesRead}</p>
 			</div>

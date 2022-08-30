@@ -10,19 +10,26 @@ tags: A New Start
 draft: true
 ---
 
-When I think of navigation I don't really think about links, buttons, or even dropdown menus. My first thoughts are of a searchbar. Using keywords to find relavent information instead of scouring for it. Not sure if this comes from my early days on the internet and the means of discovery one could have by typing random words. Currently none of Astros example templates have a search feature built into them. Lets set out fixing this for our blog.
+When I talking about navigation I don't really think about links, buttons, or even dropdown menus. My first thoughts are of a searchbar. Using keywords to find relavent information instead of scouring for it. Not sure if this comes from my early days on the internet and the means of discovery one could have by typing random words. Currently none of Astros example templates have a search feature built into them. Lets set out fixing this for our blog.
 
 # The First Steps
 
 For this feature I've chosen Solid-JS. This is a framework built on the premise of being `reactive`. Oh, but what is reactivity you say? Instead of refreshing the page and redownloading the the content again, solidjs will granularly update the main component. Essentially, when we trigger an event this will cause only the component to refresh.
 
-## The Breakdown
+## The Layout
 
-We need to define some core primatives of our component. I want to make it so that when I type into search it will imediately return the results in a list. Narrowing the search the more accurate the query becomes.
+We need to define some core primatives of our component. I want to make it so that when I type into the search it will imediately return the results in a list. Narrowing the search the more accurate the query becomes. I also want to make it so that when I click on a result it will take me to the page.
+
+- Input a query that's filtered against an array of objects
+  - The filter should targeting the frontmatter of each post.
+- The Results should return a list of posts that match the query
+- Each list item will consist of a link and title
+
+<br />
 
 # Setting Up The Envioroment
 
-Because we're using Astro, we need to integreate Solid-js into our astro configuration file. The steps below can be found more in detail in the [Astro Docs](https://docs.astro.build/en/guides/integrations-guide/solid-js/).
+Because we're using Astro, we need to integreate Solid-js into our astro configuration file. The steps below can be found more in detail in the [Astro Docs](https://docs.astro.build/en/guides/integrations-guide/solid-js/). The following is how I've set up my config.
 
 First step is to install Solid via the terminal.
 
@@ -41,7 +48,13 @@ export default {
 }
 ```
 
-Now that we have our config file setup. Lets create a new component! I'm going to create a new component in the `components` directory. Inside of this folder we will create a tsx and a .css file.
+> Astro makes it really convenient to start using a lot of different integrations. See [Astro Docs](https://docs.astro.build/en/guides/integrations-guide/) for more details!
+
+## Making the Component
+
+Now that we have our config file setup. I'm going to create a new component in the `components` directory. Inside of this folder we will create a tsx and a .css file.
+
+The .tsx file will be the core of our component. The .css file will be the styling for our component. On the topic of styling I will leave this to a minimum and only reference the importing of the .css file to demonstrate how to target the classes. For styling searchbars there are a lot of resources online. I will leave this to the reader to find the best way to style a searchbar.
 
 ```
 src
@@ -49,22 +62,25 @@ src
 │   ├───blog
 │   └───search          <-- component folder
 │       ├───search.tsx  <-- component
-│       └───search.css  <-- style
+│       └───search.css  <-- stylesheet
 ├───layouts
 ├───pages
 │   └───blog
 └───styles
 ```
 
-Inside of our search.tsx file we will want to set up the import statement along with some functions we'll need from the Solid-js API.
+Inside of our search.tsx file we will want to set up the import statement, the import stylesheet, and some functions we'll need from the Solid-js API.
 
 ```tsx title="Search.tsx"
 /** @jsxImportSource solid-js */  <-- import statement
+import './search.css'; <-- import stylesheet -->
 
 import { createSignal, For, Show } from "solid-js";
 ```
+
 <br/>
-### Solid API Properties: 
+
+### Solid API: 
 
 - "The createSignal tracks a single value (which can be any JavaScript object) that changes over time."
     - The createSignal function returns a pair of functions as a two-element array: a getter (or accessor) and a setter. In typical use, you would destructure this array into a named Signal. 
@@ -98,22 +114,26 @@ To start with we need to set up a function that takes in the array of posts.
 
 ```tsx title="Search.tsx"
 export default function Search(props: Props) {
-  ...//our component will exist here.
+  ...// Everything to follow of our component will exist here.
 }
 ```
 
 Next we will define a getter and a setter in accoradance to the documentation. It is standard practice to name these functions `name` and `setName`. For our purpose we will call this search and setSearch. We will also want to setup a filteredPosts array to hold the posts that match our search. This will be initialized from an internal function.
 
-```tsx
-  const [search, setSearch] = createSignal(""); //create a signal for the search input
-  const [filteredPosts, setFilteredPosts] = createSignal(props.posts); //Initialize with all posts
+```tsx title="Search.tsx"
+  const [search, setSearch] = createSignal(""); //creates a signal for the search input
+  const [filteredPosts, setFilteredPosts] = createSignal(props.posts);  //creates a signal for the filtered posts
+```
 
+We will net set both the search and filteredPosts
+
+```tsx title="Search.tsx"
   function handleInput(e: any) {
     const { value } = e.currentTarget;  //get the value of the input
     setSearch(value.toLowerCase()); //set the search signal to the value of the input
     const fPosts = props.posts.filter(post => { //filter the posts
-      const { title, description, tags, author } = post;  //get the frontmatter of the post
-      return (
+      const { title, description, tags, author } = post;  //deconstruct the frontmatter of the post
+      return ( //check if the input is in the title, description, or tags if it is add it to the filteredPosts array
         title?.toLowerCase().includes(value) ||
         description?.toLowerCase().includes(value) ||
         author?.toLowerCase().includes(value) ||
@@ -121,8 +141,51 @@ Next we will define a getter and a setter in accoradance to the documentation. I
       )
     });
 
-    setFilteredPosts(fPosts) //set the filtered posts signal to the filtered posts
+    setFilteredPosts(fPosts)
   }
 ```
 
 
+## The Return
+
+Our return will consist soley of HTML for this Solid-js has supplied us with 2 new tags `<Show>` & `<For>` as previously mentioned. The return will contain two parts. The Input and the List.
+
+
+```tsx title="Search.tsx"
+
+  return (
+    <div class="searchContainer"> <-- container for the searchbar and results -->
+      <div class="search-input">  <-- searchbar container -->
+        <input
+          type="text"
+          placeholder="&lt;Search... &#47;&gt;"
+          onInput={handleInput}
+          value={search()}
+          class="surface3 searchBar"
+          role="search"
+        />  <-- searchbar input field -->
+        <i class="icon fas fa-search"></i> <-- search icon -->
+      </div>
+      ... <-- the list of results will be here -->
+    </div>
+  );
+  ```
+
+  ## The list
+
+Inside the return field after the searchbar we will want to render the list of results. We will use the `<Show>` tag to render a list only when the searchbar has a value. We will also be using the `<For>` tag to iterate over the filteredPosts array.
+
+```tsx title="Search.tsx
+
+      <Show when={search()}>  <-- show the results when the search signal is not empty -->
+          <ul class="list"> <-- list of results -->
+            <For each={filteredPosts()} fallback={<li class=" searchResult">No results found</li>}> <-- for each post in the filteredPosts array return the posts url & title -->
+              {(post, i) =>
+                <li class="searchResult">
+                  <a href={post.url}>{post.title}</a>
+                </li>
+              }
+            </For>
+          </ul>
+      </Show>
+```

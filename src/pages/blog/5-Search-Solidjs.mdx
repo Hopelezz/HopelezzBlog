@@ -150,7 +150,6 @@ We will net set both the search and filteredPosts
 
 Our return will consist soley of HTML for this Solid-js has supplied us with 2 new tags `<Show>` & `<For>` as previously mentioned. The return will contain two parts. The Input and the List.
 
-
 ```tsx title="Search.tsx"
 
   return (
@@ -166,7 +165,7 @@ Our return will consist soley of HTML for this Solid-js has supplied us with 2 n
         />  <-- searchbar input field -->
         <i class="icon fas fa-search"></i> <-- search icon -->
       </div>
-      ... <-- the list of results will be here -->
+      ... <-- list of results will be here -->
     </div>
   );
   ```
@@ -175,17 +174,19 @@ Our return will consist soley of HTML for this Solid-js has supplied us with 2 n
 
 Inside the return field after the searchbar we will want to render the list of results. We will use the `<Show>` tag to render a list only when the searchbar has a value. We will also be using the `<For>` tag to iterate over the filteredPosts array.
 
-```tsx title="Search.tsx
-
-      <Show when={search()}>  <-- show the results when the search signal is not empty -->
-          <ul class="list"> <-- list of results -->
-            <For each={filteredPosts()} fallback={<li class=" searchResult">No results found</li>}> <-- for each post in the filteredPosts array return the posts url & title -->
-              {(post, i) =>
-                <li class="searchResult">
-                  <a href={post.url}>{post.title}</a>
-                </li>
-              }
-            </For>
-          </ul>
-      </Show>
+```tsx title="Search.tsx"
+return {
+  ... <-- input field -->
+<Show when={search()}>  <-- show the results when the search signal is not empty -->
+    <ul class="list"> <-- list of results -->
+      <For each={filteredPosts()} fallback={<li class=" searchResult">No results found</li>}> <-- for each post in the filteredPosts array return the posts url & title -->
+        {(post, i) =>
+          <li class="searchResult">
+            <a href={post.url}>{post.title}</a>
+          </li>
+        }
+      </For>
+    </ul>
+</Show>
+}
 ```

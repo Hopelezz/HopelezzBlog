@@ -2,13 +2,14 @@
 
 ---
 
-<div class="ContactContainer">
-    <form netlify netlify-honeypot name="contact" method="POST" action="/success" class="hireform">
+<div class="contactContainer">
+    <form netlify netlify-honeypot="bot-field" name="contact" action="/submitConfirm" method="POST" class="hireform">
         <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
-          </p>
+        </p>
+        <input type="hidden" name="form-name" value="contact" />
         <label for="name">Name</label>
         <input class="name" type="text" name="name" id="name" />
 
@@ -21,13 +22,12 @@
         <label for="message">Message</label>
         <textarea class="message" name="message" id="message"></textarea>
 
-        <input class="submit" type="submit" value="Send" />
+        <input class="submit" type="submit" value="Send" onclick="confirmation()"/>
     </form>
 </div>
 
 <style>
-
-.ContactContainer {
+.contactContainer {
     flex-basis: var(--size-content-1);
     display: flex;
     flex-direction: column;

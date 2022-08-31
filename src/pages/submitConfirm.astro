@@ -1,0 +1,53 @@
+---
+import Meta from '../components/MetaTags.astro';
+import Cursor from '../components/cursorEffect/Cursor.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/footer/Footer.astro';
+
+
+---
+
+<html lang={'en'}>
+	<head>
+		
+	</head>
+    <body>
+        <Cursor />
+        <Navbar />
+
+        <div class="container">
+            <main class="submitCard">
+              <h1>Submission Received!</h1>
+              <p>Thank you for reaching out! I'll get back to you as soon as I can.</p>
+            <p>Head back to the <a href="/">home page</a>.</p>
+            </main>
+        </div>
+    </body>
+
+    <Footer />
+</html>
+
+<style>
+    .container {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+.submitCard {
+    background: var(--surface2);
+	border: 20px solid var(--surface2);
+	padding: var(--size-4);
+	border-radius: var(--radius-3);
+	box-shadow: var(--shadow-4);
+	border: 1px solid var(--brand);
+
+}
+
+</style>

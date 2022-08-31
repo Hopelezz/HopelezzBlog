@@ -42,7 +42,6 @@ const { name, twitter } = author;
 <style>
 
 .postContainer {
-	flex-basis: var(--size-content-4);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -50,12 +49,12 @@ const { name, twitter } = author;
 }
 
 .article {
-	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-top: 5rem;
+	max-width: 80rem;
 }
 
 .article {
@@ -67,9 +66,10 @@ const { name, twitter } = author;
 	border: 1px solid var(--brand);
 }
 
-.coffee{
+.coffee {
     width: 170px;
 }
+
 .coffee > img {
     border-radius: 5px;
 }

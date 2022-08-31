@@ -3,8 +3,12 @@
 ---
 
 <div class="ContactContainer">
-    <form name="contact" method="POST" data-netlify="true" class="hireform">
-
+    <form netlify netlify-honeypot name="contact" method="POST" action="/success" class="hireform">
+        <p class="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
         <label for="name">Name</label>
         <input class="name" type="text" name="name" id="name" />
 
@@ -12,7 +16,7 @@
         <input class="email" type="email" name="email" id="email" />
 
         <label for="phone">Phone</label>
-        <input class="phone" type="phone" name="phone" id="phone" />
+        <input class="phone" type="tel" name="phone" id="phone" />
 
         <label for="message">Message</label>
         <textarea class="message" name="message" id="message"></textarea>
@@ -96,6 +100,16 @@ input:focus, textarea:focus {
     background: var(--brand);
     box-shadow: var(--shadow-4);
     transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @media (max-width: 768px) {

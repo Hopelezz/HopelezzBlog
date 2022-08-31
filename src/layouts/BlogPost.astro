@@ -11,13 +11,15 @@ import type { MDXInstance } from 'astro';
 import { Post } from '../utils/types';
 
 export interface Props {
-    post: MDXInstance<Post>
+    post: MDXInstance<Post>,
+	frontmatter: Post
 }
+
 
 // const { minutesRead } = Astro.props.frontmatter;
 const { content } = Astro.props;
 const { title, publishDate, writer, href, description, img, alt, permalink } = content;
-const { minutesRead } = Astro.props.content;
+
 
 // console.log(minutesRead);
 ---
@@ -35,7 +37,7 @@ const { minutesRead } = Astro.props.content;
 				<div class="">
 					<div class="">
 						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
-							<p>{minutesRead}</p>
+							<p>📑{}</p>
 							<slot />
 						</BlogPost>
 					</div>

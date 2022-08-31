@@ -9,13 +9,12 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-console.log(post.file);
 const { title, publishDate, writer, href, description, img, alt, tags } = post.frontmatter;
 
 const tag = tags.split(",")[0]; // returns the first tag
-
 const author = await getAuthor(writer);
 const { name, twitter, twitterHandle, linkedin, linkedinHandle, github, githubHandle, photo, bio } = author;
+
 ---
 <!--Article-->
 <div class="postContainer">

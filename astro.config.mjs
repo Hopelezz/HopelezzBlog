@@ -22,7 +22,7 @@ export default defineConfig({
       wrap: true,
       langs: []
     },
-    remarkPlugins: [remarkReadingTime, [autolinkHeadings, { behavior: 'prepend' }]],
+    remarkPlugins: [remarkReadingTime],
   },
   output: 'server',
   adapter: netlify(),

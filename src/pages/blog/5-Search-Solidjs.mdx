@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: Searchbar Using Solidjs
+title: Search Using Astro & Solidjs
 publishDate: 26 AUG 2022
 writer: Mark
 description: How to use the solidjs to create a searchbar
@@ -50,6 +50,8 @@ export default {
 
 > Astro makes it really convenient to start using a lot of different integrations. See [Astro Docs](https://docs.astro.build/en/guides/integrations-guide/) for more details!
 
+<br />
+
 ## Making the Component
 
 Now that we have our config file setup. I'm going to create a new component in the `components` directory. Inside of this folder we will create a tsx and a .css file.
@@ -81,6 +83,8 @@ import { createSignal, For, Show } from "solid-js";
 <br/>
 
 ### Solid API: 
+
+<br />
 
 - "The createSignal tracks a single value (which can be any JavaScript object) that changes over time."
     - The createSignal function returns a pair of functions as a two-element array: a getter (or accessor) and a setter. In typical use, you would destructure this array into a named Signal. 
@@ -145,6 +149,7 @@ We will net set both the search and filteredPosts
   }
 ```
 
+<br />
 
 ## The Return
 
@@ -170,9 +175,11 @@ Our return will consist soley of HTML for this Solid-js has supplied us with 2 n
   );
   ```
 
+<br />
+
   ## The list
 
-Inside the return field after the searchbar we will want to render the list of results. We will use the `<Show>` tag to render a list only when the searchbar has a value. We will also be using the `<For>` tag to iterate over the filteredPosts array.
+Inside the return field after the searchbar we will want to render the list of results. To do so we will use the `<Show>` tag to render a list only when the searchbar has a value. We will also be using the `<For>` tag to iterate over the filteredPosts array.
 
 ```tsx title="Search.tsx"
 return {
@@ -190,3 +197,21 @@ return {
 </Show>
 }
 ```
+
+<br />
+
+# Codesandbox Demo
+
+I have taken the time to set up a live demo where you can navigate the code in its intirity.
+
+<iframe src="https://codesandbox.io/embed/laughing-lumiere-sokppz?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="laughing-lumiere-sokppz"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+## Solid-JS Playground Demo
+
+You can also view the demo using [Solid-JS Playground](https://playground.solidjs.com/?hash=-859007586&version=1.4.1).
+

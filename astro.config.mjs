@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import { remarkReadingTime } from './remark-reading-time.mjs';
 import preact from '@astrojs/preact';
 import mdx from "@astrojs/mdx";
 import image from '@astrojs/image';
@@ -8,12 +7,23 @@ import compress from "astro-compress";
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import netlify from '@astrojs/netlify/functions';
-import autolinkHeadings from 'remark-autolink-headings';
+import getReadingTime from "reading-time";
+import { toString } from "mdast-util-to-string";
 
-// https://astro.build/config
 export default defineConfig({
-  site: "https://blackskies.vercel.app/",
-  integrations: [sitemap(), robotsTxt(), solid(), preact(), mdx(), image(), compress()],
+  site: "https://blackskies.netlify.app/",
+  integrations: [
+    sitemap(), 
+    robotsTxt(), 
+    solid(), 
+    preact(), 
+    mdx({
+      remarkPlugins: {
+        // extends: [remarkReadingTime],
+      }
+    }), 
+  image(), 
+  compress()],
   markdown: {
     draft: true,
     syntaxHighlight: 'shiki',
@@ -21,9 +31,18 @@ export default defineConfig({
       theme: 'dracula',
       wrap: true,
       langs: []
-    },
-    remarkPlugins: [remarkReadingTime],
+    }
   },
   output: 'server',
   adapter: netlify(),
 });
+
+
+// function remarkReadingTime() {
+//   // adds a reading time to all mdx files
+//   return function (tree, file) {
+//     const textOnPage = toString(tree);
+//     const readingTime = getReadingTime(textOnPage);
+//     file.data.astro.frontmatter.minutesRead = readingTime.text;
+//   };
+// }

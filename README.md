@@ -8,6 +8,7 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Astro][astro-shield]][astro-url]
+[![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
 <!-- PROJECT LOGO -->
 <br />

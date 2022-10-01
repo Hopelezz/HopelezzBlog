@@ -27,27 +27,32 @@ const { title, publishDate, writer, href, description, img, alt, permalink } = c
 	<head>
 		<Meta title={title} description={description} permalink={permalink} />
 	</head>
-
-	<body>
+	<body class="bodyContainer">
 		<Cursor />
 		<Navbar />
-		<div class="container">
-			<main class="body home_content">
-				<div class="">
-					<div class="">
-						<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
-							<p>📑{}</p>
-							<slot />
-						</BlogPost>
-					</div>
-				</div>
-			</main>
-		</div>
+		<main class="mainContainer">
+			<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
+				<p>📑{}</p>
+				<slot />
+			</BlogPost>
+		</main>
 	</body>
-
 	<Footer />
-
 </html>
 
 <style>
+.bodyContainer > .mainContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 60rem;
+	height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.bodyContainer > .mainContainer{
+		max-width: 100%;
+	}
+}
 </style>

@@ -12,39 +12,48 @@ draft: true
 
 Have a directory with a bunch of files and subdirectories? Want to search for a specific file? How about writing a script to do just that?
 
-This is a guide on how to build a simple recursive search function that will search directories for a specific folder and open the path in file explorer. This guide is mostly directed at Powershell, but it can be adapted to other languages.
+This is a How-To guide on building a simple recursive search for windows. It will search directories for a specific folder and open the path in file explorer. This guide is mostly directed at Powershell, but it can be adapted to other languages. I have done one in Python, but I will not be covering that in this guide.
 
-Before we begin, if you at any point need to stop a process you can press `CTRL+C` to cancel. Thi will be useful if you are running a script and it is taking too long to complete.
 
-I have created a file called `FindFolder.ps1`. The .ps1 file extension is used to identify Powershell scripts. In windows there is a built in Powershell IDE that you can use to write and run your scripts from called Powershell ISE. You can also write purely in notepad and run the script from the command line. But using the built in ISE is the easiest way to get started.
+## Before we begin
 
-```powershell title="FindFolder.ps1"
+If at any point you need to stop a process you can press `CTRL+C` to cancel. This will be useful if you' a're running a script and it is taking too long to complete.
+
+I have created a file called `FindProject.ps1`. The .ps1 file extension is used to identify Powershell scripts. In windows there is a built in Powershell IDE that you can use to write and run your scripts called `Windows Powershell ISE`. You can also write purely in notepad or VSCode and run the script from the command line. But using the built-in ISE is the easiest way to get started.
+
+```powershell title="FindProject.ps1"
 # I will be placing my code here
 ```
-First thing we need to understand is that any thing with a `$` infront of it is known as a variable. 
+The first thing we need to understand is that anything with a `$` in front of it is known as a variable. 
 
-```powershell title="FindFolder.ps1"
+## Step 1: Get the Path and Search Term
+
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 ```
-Here we are creating two variables. The first is `$dirPath` and the second is `$searchInput`. The first variable is the path to the directory we want to search. The second variable is the name of the file we want to search for. The `Read-Host` command is used to get user input. It will display the text in the quotes and wait for the user to enter a value. The value the user enters will be stored in the `$searchInput` variable.
+Here we are creating two variables. The first is `$dirPath` and is used to define the default directory we want to search. The second variable $searchInput is the name of the file we want to search for. The `Read-Host` command is used to get user input. It will display the text in the quotes and wait for the user to enter a value. The value the user enters will be stored in the `$searchInput` variable.
+
+## Step 2: Using Read-Host to keep the script open
 
 If we run this it will close as soon as we press enter. This is because we have not told it to do anything and scripts by nature will close once they have completed their task. We can fix this by adding a `Read-Host` command at the end of the script.
 
-```powershell title="FindFolder.ps1"
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 Read-Host "Press enter to exit"
 ```
 <img src="/assets/images/SearchImages/Search2.png" alt="Image of Directory Path & Search Input Variables "  Max-height="400" />
 
-Now when we run the script it will wait for us to press enter before closing. This is useful if we want to see the output of the script before it closes.
+Now when we run the script it will wait for us to press enter before closing. This is useful if we want to see the output or any errors the script might produce before it closes.
 
-We need to setup a filter for our search. We will run our $searchInput variable through a filter. We can do things like adding wildcards `*` before and after the input. This allows the text entered to be anywhere inside the folder name. 
+## Step 3: Setting up a filter
 
-For example if we search for `rip` but didn't add `sc` in front and  and the `ts` at the end we would still return `scripts` as a result. 
+We need to set up a filter for our search. We will run our $searchInput variable through a filter. We can do things like adding wildcards `*` before and after the input. This allows the text entered to be anywhere inside the folder name. 
 
-Befor we can see any results we need to run a command called Get-ChildItem. This command will return a list of all the files and folders in the directory we specify. We can then run our filter on the results.
+For example, if we search for `rip` but didn't add `sc` in front and the `ts` at the end we would still return `scripts` as a result. 
+
+Before we can see any results we need to run a command called Get-ChildItem. This command will return a list of all the files and folders in the directory we specify. We can then run our filter on the results.
 
 - `-Recurse` flag to the command to tell it to search subdirectories as well.
 - `-Path` flag is used to specify the directory we want to search. 
@@ -52,19 +61,21 @@ Befor we can see any results we need to run a command called Get-ChildItem. This
 - `-Filter` flag is used to specify the filter we want to run on the results.
 - `-Depth` flag is used to specify how many subdirectories deep we want to search. 
 
-Some flags require a value to be passed to them. This can be done two ways. First by adding a `:` after the flag name and then the value. 
-> For example `-Path: "E:\CodeBase\"`. 
+Some flags require a value to be passed to them. This can be done in two ways. First by adding a `:` after the flag name and then the value. 
+> Example `-Path: "E:\CodeBase\"`. 
 
-The second way is by defining the value after the flag 
+The second way is by defining the value after the flag without the `:`. which is arguably harder to read. For this guide, I will be using the first method. 
 
->For example `-Path "E:\CodeBase\"`. 
+>Example `-Path "E:\CodeBase\"`. 
 
-We will be defining the Get-ChildItem commander to a variable called $files and then writting the results to the console. 
+## Step 4: Getting Child Items
 
-```powershell title="FindFolder.ps1"
+We will be defining the Get-ChildItem command to a variable called $files and then writing the results to the console. Here we will be using the flags defined in step 3.
+
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
-$files = Get-ChildItem -Recurse -filter $filter -Directory -Path $defaultPath -Depth 1 
+$files = Get-ChildItem -Recurse -filter: $filter -Directory -Path: $defaultPath -Depth 1 
 $files | Write-Host
 Read-Host "Press enter to exit"
 ```
@@ -72,7 +83,7 @@ Read-Host "Press enter to exit"
 
 Now we have a list of all the folders in the directory we specified. We can now run our filter on the results. We can do this by adding a `Where-Object` command to the end of the Get-ChildItem command. This will filter the results based on the condition we specify. 
 
-```powershell title="FindFolder.ps1"
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 $files = Get-ChildItem -Recurse -filter: $filter -Directory -Path: $dirPath -Depth 1 | Where-Object {$_.FullName -like "*$searchInput*"}
@@ -81,21 +92,21 @@ Read-Host "Press enter to exit"
 ```
 <img src="/assets/images/SearchImages/Search4.png" alt="Image of filtering folders that match the search input"  Max-height="400" />
 
-Just to reitterate: 
-- Get Folder List by recursively going through the path defind by $dirPath, but only the first level of subdirectories (depth 1)
+Just to reiterate: 
+- Get Folder List by recursively going through the path defined by $dirPath, but only the first level of subdirectories (depth 1)
 - Where-Object has a name that matches (-like) the search input add it to the list called $files
 - Write the results of $files to the console
 
-Cool, our script is returning folders names containing `scr` in the folder name, but it is not very useful... We want to open the folder in file explorer. We have to make a few changes to our script to do this.
+Cool, our script is returning folder names containing `scr` in the folder name, but it is not very useful... We want to open the folder in file explorer. We have to make a few changes to our script to do this.
 
-We will want to index these paths so we can select which path to open. This will be known as a key-value-pair or KVP. 
+We will want to index these paths so we can select which path to open. This will be known as a key-value pair or KVP. 
 
 > Key: The index number
 > <br />Value: The path to the folder
 
-We will want to create a Dictionary / Hash Table / Associative Array. For this we will call it $Hash{}. This is a collection of key-value-pairs. In order for us to add new items to the HashTable we'll be using the `-Add` command. 
+We will want to create a Dictionary / Hash Table / Associative Array. For this, we will call it $Hash{}. This is a collection of key-value pairs. For us to add new items to the HashTable, we'll be using the `-Add` command. 
 
-```powershell title="FindFolder.ps1"
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 $files = Get-ChildItem -Recurse -filter: $filter -Directory -Path: $dirPath -Depth 1 | Where-Object {$_.FullName -like "*$searchInput*"}
@@ -110,9 +121,9 @@ Read-Host "Press enter to exit"
 ```
 <img src="/assets/images/SearchImages/Search5.png" alt="Image of creating a Hash Table"  Max-height="400" />
 
-Oh... wait a minute. We have a problem. We are getting an error. Logically we should be able to see everything in $Hash like we did with $files. The reason is because in order to see anything written to $Hash we will need to enumerate() through each item in the Table. 
+Oh... wait a minute. We have a problem. We are getting an error. Logically we should be able to see everything in $Hash as we did with $files. The reason is that to see anything written to $Hash we will need to enumerate() through each item in the Table. 
 
-```powershell title="FindFolder.ps1"
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 $filter = "*$searchInput*"
@@ -130,7 +141,7 @@ Read-Host "Press enter to exit"
 
 Now it's as simple as selecting the index number and opening the folder in file explorer. 
 
-```powershell title="FindFolder.ps1"
+```powershell title="FindProject.ps1"
 $dirPath = "E:\CodeBase\"
 $searchInput = Read-Host "Enter a file name: "
 $filter = "*$searchInput*"
@@ -148,8 +159,10 @@ Start-Process $path
 Read-Host "Press enter to exit"
 ```
 
-We can now remove the read-host command because we are opening the folder in file explorer and sort the list 1 to index number. And we can sort the list by the index number. (This is not necessary but it makes it easier to find the folder you are looking for).
+We can now remove the read-host command because we are opening the folder in file explorer and sorting the list by the index number. (This is not necessary but it makes it easier to find the folder you are looking for).
 
-There are other steps you can take to make GUI Forms that are more user friendly. But this is a good start!
+That's it! We have a script that will search for a folder name and open it in file explorer.
+
+There are other steps you can take to make GUI Forms that are more user-friendly. But this is a good start!
 
 See https://github.com/Hopelezz/FindProject for the full script and a GUI version!

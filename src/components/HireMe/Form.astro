@@ -3,7 +3,14 @@
 ---
 
 <div class="contactContainer">
-    <form netlify netlify-honeypot="bot-field" name="contact" action="/submitConfirm" method="POST" class="hireform">
+    <form
+        netlify
+        netlify-honeypot
+        name="contact"
+        method="POST"
+        action="/submitConfirm"
+        class="hireform"
+    >
         <p class="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
@@ -11,16 +18,16 @@
         </p>
         <input type="hidden" name="form-name" value="contact" />
         <label for="name">Name</label>
-        <input class="name" type="text" name="name" id="name" />
+        <input class="name" type="text" name="name" id="name" required/>
 
         <label for="email">Email</label>
-        <input class="email" type="email" name="email" id="email" />
+        <input class="email" type="email" name="email" id="email" required/>
 
         <label for="phone">Phone</label>
-        <input class="phone" type="tel" name="phone" id="phone" />
+        <input class="phone" type="tel" name="phone" id="phone" required/>
 
         <label for="message">Message</label>
-        <textarea class="message" name="message" id="message"></textarea>
+        <textarea class="message" name="message" id="message" required></textarea>
 
         <input class="submit" type="submit" value="Send" onclick="confirmation()"/>
     </form>

@@ -4,10 +4,10 @@
 
 <div class="contactContainer">
     <form
-        netlify
-        netlify-honeypot
         name="contact"
         method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
         action="/submitConfirm"
         class="hireform"
     >
@@ -16,7 +16,6 @@
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
         </p>
-        <input type="hidden" name="form-name" value="contact" />
         <label for="name">Name</label>
         <input class="name" type="text" name="name" id="name" required/>
 

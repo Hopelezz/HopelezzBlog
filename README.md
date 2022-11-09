@@ -159,7 +159,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Mark Spratt - [@_hopelezz](https://twitter.com/_hopelezz)
 
-Project Link: [BlackSkies](https://blackskies.vercel.app/)
+Project Link: [BlackSkies](https://blackskies.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -14,11 +14,9 @@ export interface Props {
     post: MDXInstance<Post>,
 	frontmatter: Post
 }
-
 // const { minutesRead } = Astro.props.frontmatter;
 const { content } = Astro.props;
 const { title, publishDate, writer, href, description, img, alt, permalink } = content;
-
 
 // console.log(minutesRead);
 ---
@@ -32,7 +30,7 @@ const { title, publishDate, writer, href, description, img, alt, permalink } = c
 		<Navbar />
 		<main class="mainContainer">
 			<BlogPost title={title} publishDate={publishDate} writer={writer} href={href} img={img} description={description} alt={alt} >
-				<p>📑{}</p>
+				<p>{}</p>
 				<slot />
 			</BlogPost>
 		</main>
@@ -41,18 +39,25 @@ const { title, publishDate, writer, href, description, img, alt, permalink } = c
 </html>
 
 <style>
-.bodyContainer > .mainContainer{
+.mainContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-width: 60rem;
+	width: 100%;
 	height: 100%;
 }
 
-@media screen and (min-width: 768px) {
-	.bodyContainer > .mainContainer{
-		max-width: 100%;
+.bodyContainer {
+	background-color: var(--bg-color);
+}
+
+
+
+@media (min-width: 768px) {
+	.mainContainer {
+		width: 100%;
+		height: 100%;
 	}
 }
 </style>

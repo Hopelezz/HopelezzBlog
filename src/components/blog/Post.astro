@@ -37,78 +37,50 @@ const { name, twitter } = author;
 
 
 <style>
-
 .postContainer {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
+	align-items: center;
+}
+
+.article {
+	width: 100%;
+	max-width: 800px;
 	padding: 1rem;
 }
 
-.article {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 5rem;
-	max-width: 80rem;
-}
-
-.article {
-	background: var(--surface2);
-	border: 20px solid var(--surface2);
-	padding: var(--size-4);
-	border-radius: var(--radius-3);
-	box-shadow: var(--shadow-4);
-	border: 1px solid var(--brand);
-}
-
 .coffee {
-    width: 170px;
-}
-
-.coffee > img {
-    border-radius: 5px;
-}
-
-/* image golden ratio */
-.center-cropped {
-	object-fit: contain;
 	width: 100%;
-	height: auto;
-	max-height: 200px;
-	margin-top: var(--size-4);
-	margin-bottom: var(--size-4);
+	height: 50px;
 }
 
-/*--------Article Details-------------*/
 .details {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 1rem;
-	color: var(--text2);
 	align-items: center;
 }
 
-.details > h1 {
-	font-size: var(--size-7);
-	font-weight: var(--font-weight-9);
-	margin-bottom: var(--size-2);
-	color: var(--brand);
-	/* text-shadow: 0 0 10px var(--gray-9) */
+.details h1 {
+	font-size: 2rem;
 }
 
 .details p {
-    font-size: var(--size-6);
-    margin-top: 5px;
-    color: var(--text3);
-	font-weight: var(--size-3);
+	font-size: 1.5rem;
 }
 
 .details span {
-    text-transform: uppercase;
-    font-size: var(--size-5);
-    color: var(--text3);
+	font-size: 1rem;
 }
+
+
+@media (min-width: 768px) {
+	.details {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+
 </style>

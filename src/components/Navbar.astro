@@ -147,6 +147,7 @@ a {
     alight-items: center;
     padding-inline: 0 24px;
 }
+
 @media(max-width: 768px){
     li {
         min-height: 30px;
@@ -208,6 +209,37 @@ a {
         alight-items: center;
         padding-inline: 0 24px;
     }
+}
+
+@media(max-width: 500px){
+    .nav-menu {
+        width: 50%;
+    }
+
+    .nav-link {
+        margin: 16px 0;
+    }
+
+    .logo {
+        content: ["BS"];
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -50%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 50%;
+        background-color: var(--surface3);
+        text-align: center;
+        transition: 0.3s;
+    }
+    
 }
 </style>
 <!--

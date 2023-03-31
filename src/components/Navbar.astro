@@ -139,6 +139,14 @@ a {
         font-weight: bold;
     }
 }
+/* Keep the navbar size regardless of page size */
+.navbar {
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    alight-items: center;
+    padding-inline: 0 24px;
+}
 @media(max-width: 768px){
     li {
         min-height: 30px;
@@ -191,6 +199,14 @@ a {
 
     .logo {
         content: ["BS"];
+    }
+    /* Keep the navbar size regardless of page size */
+    .navbar {
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        alight-items: center;
+        padding-inline: 0 24px;
     }
 }
 </style>

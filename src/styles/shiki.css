@@ -42,3 +42,13 @@ pre .code-container {
     font-size: var(--size-4);
     background: var(--surface3) !important;
 }
+
+@media (min-width: 768px) {
+    pre{
+        width: 50%;
+    }
+
+    pre .code-container {
+        font-size: var(--size-5);
+    }
+}

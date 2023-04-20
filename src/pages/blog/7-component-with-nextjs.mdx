@@ -1,0 +1,67 @@
+---
+layout: ../../layouts/BlogPost.astro
+title: Creating a Component in NextJS
+publishDate: 4/20/2023
+writer: Mark
+description: a step-by-step guide for creating a reusable component within NextJS, including an example of how to define the component as a function that returns a JSX element and export it from a file.
+img: /assets/images/nextjs.jpg
+alt: 
+tags: NextJS, React, Web development, Component, Reusable code, JSX, Exporting, Front-end development, User interface, Code composition
+draft: true
+---
+
+
+NextJS is a popular framework for building React-based web applications. It comes with many features, including server-side rendering, automatic code splitting, and optimized performance. In this article, we will explore how to create a component within NextJS.
+
+# What is a Component in NextJS?
+In NextJS, a component is a reusable piece of code that represents a specific part of a web page. It can be a button, form, navigation menu, or any other element that you want to use across multiple pages. Components can be used to build complex user interfaces by composing them together.
+
+## Creating a Component in NextJS
+
+To create a component in NextJS, you need to follow these steps:
+
+ 1: Create a new file with a .jsx or .tsx extension in the components directory of your NextJS project. For example, if you want to create a button component, you can create a file named Button.jsx or Button.tsx in the components directory.
+
+ 2: Define your component as a function that returns a JSX element. For example, here's how you can define a simple button component:
+
+```jsx
+function Button(props) {
+  return (
+    <button className={props.className} onClick={props.onClick}>
+      {props.label}
+    </button>
+  );
+}
+```
+
+In this example, the Button function takes a props object as its parameter, which contains properties like className, onClick, and label. The function returns a `<button>` element with the `className`, `onClick`, and `label` properties set to the values provided by the props object.
+
+ 3: Export your component from the file. For example, you can export the Button component like this:
+
+```jsx
+export default Button;
+```
+
+ 4: Use your component in your NextJS pages by importing it from the components directory. For example, if you want to use the Button component in a page named HomePage.jsx, you can import it like this:
+```jsx
+import Button from '../components/Button';
+```
+
+You can then use the Button component in your HomePage page like any other JSX element:
+
+```jsx
+function HomePage() {
+  return (
+    <div>
+      <h1>Welcome to my NextJS app!</h1>
+      <Button label="Click me" onClick={() => alert('Button clicked!')} />
+    </div>
+  );
+}
+```
+
+In this example, the HomePage function returns a `<div>` element that contains an `<h1>` element and a `<Button>` element.
+
+## Conclusion
+
+Creating a component in NextJS is a straightforward process. By following the steps outlined in this article, you can easily create reusable components that can be used across multiple pages in your NextJS app. Components help you to build more complex user interfaces by composing simpler elements together.
